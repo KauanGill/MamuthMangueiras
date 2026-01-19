@@ -2,33 +2,37 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import ProductCard from '@/components/ProductCard'; // Certifique-se de que o caminho está correto
+import hydroShellUAP from '@/assets/images/vestimenta-protecao.png';
+import hydroShellSAP from '@/assets/images/hydro-shell-sap.png';
+import capaMangueira from '@/assets/images/capa-mangueira.png';
+import botaProtecao40k from '@/assets/images/bota-protecao-40k.png';
 
 const PaginaCategoria = () => {
   // Dados simulados para o "Produto 1"
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'Produto 1',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Hydro-Shell UAP',
+      description: 'Macacão de proteção indicado para trabalhadores do setor Naval, Oil & Gás, Petroquímico e/ou operações com bombas de hidrojateamento modelo UAP. Confeccionado em tripla camada de tecido tramado sintético de alta tenacidade impermeabilizado externamente com PVC, possui costuras impermeabilizadas.',
+      image: hydroShellUAP, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 2',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Hydro-Shell SAP',
+      description: 'Macacão de proteção indicado para trabalhadores do setor sucroalcooleiro e/ou operações com bombas de hidrojateamento modelo SAP. Confeccionado em dupla camada de tecido tramado sintético de alta tenacidade impermeabilizado externamente com PVC, possui costuras impermeabilizadas.',
+      image: hydroShellSAP, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 3',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Capa de Mangueira',
+      description: 'Capa protetora indicada para mangueiras que trabalham com pressões de até 2800 Bar, proteção em caso de ruptura acidental formando um escudo e impedindo que a água em alta pressão atinja o operador.',
+      image: capaMangueira, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 4',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Bota de Proteção 40K',
+      description: 'Especificamente projetada para fornecer proteção contra jatos de água em pressão ultra-alta até 40.000psi. Inclui meia embutida internamente ajustável para proporcionar maior conforto.',
+      image: botaProtecao40k, 
       category: 'Categoria Principal'
     },
    

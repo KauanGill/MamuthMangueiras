@@ -2,44 +2,49 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import ProductCard from '@/components/ProductCard'; // Certifique-se de que o caminho está correto
+import bombaMTI600 from '@/assets/images/bomba-mti600.png';
+import bombaMTI50FF from '@/assets/images/bomba-mti-50ff.png';
+import bombaMTI500 from '@/assets/images/bomba-mti500.png';
+import bombaMTI350 from '@/assets/images/bombas-altapressao.png';
+import bombaMTI250 from '@/assets/images/bomba-mti250.png';
 
 const PaginaCategoria = () => {
   // Dados simulados para o "Produto 1"
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'Produto 1',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Bomba MTI-600',
+      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 600 bar e vazão de até 35L/min.',
+      image: bombaMTI600, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 2',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Bomba-MTI-50FF',
+      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 160 bar e vazão de até 150L/min.',
+      image: bombaMTI50FF, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 3',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Bomba MTI-500',
+      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostáticos com pressão de 500 bar e vazão de 20L/min.',
+      image: bombaMTI500, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 4',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Bomba MTI-350',
+      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostáticos com pressão de 350 bar e vazão de 19L/min.',
+      image: bombaMTI350, 
       category: 'Categoria Principal'
     },{
-      name: 'Produto 5',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Bomba MTI-250',
+      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostáticos com pressão de 250 bar e vazão de 17L/min.',
+      image: bombaMTI250, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 6',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Bomba MTI-200',
+      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 200 bar e vazão de 45L/min.',
+      image: bombaMTI350, 
       category: 'Categoria Principal'
     }
    
