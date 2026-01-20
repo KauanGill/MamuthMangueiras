@@ -2,57 +2,65 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import ProductCard from '@/components/ProductCard'; // Certifique-se de que o caminho está correto
+import valvulaReguladora550bar from '@/assets/images/valvula-reguladora-550bar.png';
+import valvulaReguladora350bar from '@/assets/images/valvula-reguladora-350bar.png';
+import valvulaReguladora200bar from '@/assets/images/valvula-reguladora-200bar.png';
+import valvulaSeguranca660bar from '@/assets/images/valvula-seguranca-660bar.png'
+import pistola660bar from '@/assets/images/acessorios-lavadora.png';
+import pistola350bar from '@/assets/images/pistola-350bar.png';
+import pistola280bar from '@/assets/images/pistola-280bar.png';
+import bicoJatoAbrasivo from '@/assets/images/bico-jato-abrasivo-500bar.png';
 
 const PaginaCategoria = () => {
   // Dados simulados para o "Produto 1"
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'Produto 1',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Válvula Reguladora 550 bar',
+      description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança.',
+      image: valvulaReguladora550bar, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 2',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Válvula Reguladora 350 bar',
+      description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança.',
+      image: valvulaReguladora350bar, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 3',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Válvula Reguladora 200 bar Alta Vazão',
+      description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança. Indicada para bombas de alta vazão.',
+      image: valvulaReguladora200bar, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 4',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Válvula de Segurança 660 bar',
+      description: 'Válvula de Segurança que limita a pressão máxima do sistema de alta pressão. Quando for excedida a pressão a válvula abre liberando a pressão excessiva.',
+      image: valvulaSeguranca660bar, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 5',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Pistola 660 bar',
+      description: 'Gatilhos e lanças indicadas para hidrolavadoras de alta pressão',
+      image: pistola660bar, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 6',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Pistola 350 bar',
+      description: 'Gatilhos e lanças indicadas para hidrolavadoras de alta pressão',
+      image: pistola350bar, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 7',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Pistola 280 bar',
+      description: 'Gatilhos e lanças indicadas para hidrolavadoras de alta pressão',
+      image: pistola280bar, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 8',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Bico Jato Abrasivo 500bar',
+      description: 'Bico Jato Abrasivo 500bar',
+      image: bicoJatoAbrasivo, 
       category: 'Categoria Principal'
     }
    

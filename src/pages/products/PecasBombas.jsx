@@ -10,6 +10,11 @@ import sedeDupla from '@/assets/images/sede-dupla.png';
 import pistaoMetalUAP from '@/assets/images/pistao-metal-duro-uap.png';
 import pistaoMetalSAP from '@/assets/images/pistao-metal-duro-sap.png';
 import kitVedacaoUAP from '@/assets/images/pecas-para-bomba.png';
+import kitVedacaoSAP from '@/assets/images/kit-vedacao-sap.png';
+import intermediariaUAP from '@/assets/images/intermediaria-uap.png';
+import intermediariaSAP from '@/assets/images/intermediaria-sap.png';
+import cestoTampaoUAP from '@/assets/images/cesto-tampao-uap.png';
+import cestoTampaoSAP from '@/assets/images/cesto-tampao-sap.png';
 
 const PaginaCategoria = () => {
   // Dados simulados para o "Produto 1"
@@ -63,33 +68,33 @@ const PaginaCategoria = () => {
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 9',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Kit de Vedação SAP',
+      description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
+      image: kitVedacaoSAP, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 10',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Intermediária UAP',
+      description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
+      image: intermediariaUAP, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Produto 11',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Intermediária SAP',
+      description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade  ',
+      image: intermediariaSAP, 
       category: 'Categoria Principal'
     },
      {
-      name: 'Produto 12',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Cesto Tampão UAP',
+      description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
+      image: cestoTampaoUAP, 
       category: 'Categoria Principal'
     },
      {
-      name: 'Produto 13',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: 'Cesto Tampão SAP',
+      description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade.',
+      image: cestoTampaoSAP, 
       category: 'Categoria Principal'
     },
   ];

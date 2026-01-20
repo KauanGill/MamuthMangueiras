@@ -20,6 +20,11 @@ import HidroAcessorios from '@/pages/products/HidroAcessorios';
 import AcessoriosLavadora from '@/pages/products/AcessoriosLavadora';
 import Typhoon500Trifasico from '@/pages/products/lavadoras/Typhoonjet500Trifasico';
 import Typhoon500Gasolina from '@/pages/products/lavadoras/Typhoonjet500Gasolina';
+import Typhoon350Trifasico from '@/pages/products/lavadoras/Typhoonjet350Trifasico';
+import Typhoon200Trifasico from '@/pages/products/lavadoras/Typhoonjet200Trifasico';
+import Typhoon200Gasolina from '@/pages/products/lavadoras/Typhoonjet200Gasolina';
+import Typhoon170Monofasico from '@/pages/products/lavadoras/Typhoonjet170Monofasico';
+import Typhoon50cvEletrica from '@/pages/products/lavadoras/TyphoonJet50cvEletrica';
 import { Toaster } from '@/components/ui/toaster';
 
 function App() {
@@ -47,6 +52,11 @@ function App() {
             <Route path="/acessorios-lavadoras" element={<AcessoriosLavadora />} />
             <Route path="/lavadoras/typhoon-jet-500-trifasico" element={<Typhoon500Trifasico />} />
             <Route path="/lavadoras/typhoon-jet-500-gasolina" element={<Typhoon500Gasolina />} />
+            <Route path="/lavadoras/typhoon-jet-350-trifasico" element={<Typhoon350Trifasico />} />
+            <Route path="/lavadoras/typhoon-jet-200-trifasico" element={<Typhoon200Trifasico />} />
+            <Route path="/lavadoras/typhoon-jet-200-gasolina" element={<Typhoon200Gasolina />} />
+            <Route path="/lavadoras/typhoon-jet-170-monofasico" element={<Typhoon170Monofasico />} />
+            <Route path="/lavadoras/typhoon-jet-50cv-eletrica" element={<Typhoon50cvEletrica />} />
           </Routes>
         </main>
         <Footer />
