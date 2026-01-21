@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 // Import da imagem
 import typhoonJet170Monofasico from '@/assets/images/typhoonjet-170-bar-monofasico.png';
 
-const Typhoon500Gasolina = () => {
+const Typhoon170Monofasico = () => {
   const navigate = useNavigate();
 
   // Garante que a página inicie no topo
@@ -198,4 +198,4 @@ const Typhoon500Gasolina = () => {
   );
 };
 
-export default Typhoon500Gasolina;
+export default Typhoon170Monofasico;

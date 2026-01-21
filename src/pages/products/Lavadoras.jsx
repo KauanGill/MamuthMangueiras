@@ -64,12 +64,14 @@ const PaginaCategoria = () => {
     },
     {
       name: 'Typhoon-Jet 50cv Diesel',
+      path: '/lavadoras/typhoon-jet-50cv-diesel',
       description: 'As hidrojateadoras Typhoon-Jet são ideais para trabalhos que são exclusivos e rápidos. Equipadas com um motor Diesel refrigerado à água, elas oferecem potência confiável e eficiência em ambientes exigentes. O painel digital integrado facilita a partida e permite a leitura dos instrumentos de temperatura da água, óleo, carga da bateria, rotações do motor, entre outros, garantindo um monitoramento preciso durante a operação. Além disso, seu design prático permite fácil entrega e posicionamento em diferentes locais.',
       image: typhoonJetDiesel, 
       category: 'Categoria Principal'
     },
     {
       name: 'Lavadora de alta pressão Typhoon-Jet 350 BAR (5076 PSI) 1.1020 L/H Gasolina',
+      path: '/lavadoras/typhoon-jet-350-gasolina',
       description: 'O Typhoon-Jet 350 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 350 bar, uma vazão de 17 L/min e uma potência de 15 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.',
       image: typhoonJet500Gasolina, 
       category: 'Categoria Principal'

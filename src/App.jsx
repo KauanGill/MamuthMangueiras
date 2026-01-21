@@ -24,7 +24,10 @@ import Typhoon350Trifasico from '@/pages/products/lavadoras/Typhoonjet350Trifasi
 import Typhoon200Trifasico from '@/pages/products/lavadoras/Typhoonjet200Trifasico';
 import Typhoon200Gasolina from '@/pages/products/lavadoras/Typhoonjet200Gasolina';
 import Typhoon170Monofasico from '@/pages/products/lavadoras/Typhoonjet170Monofasico';
-import Typhoon50cvEletrica from '@/pages/products/lavadoras/TyphoonJet50cvEletrica';
+import Typhoon50cvEletrica from '@/pages/products/lavadoras/Typhoonjet50cvEletrica';
+import Typhoon50cvDiesel from '@/pages/products/lavadoras/Typhoonjet50cvDiesel';
+import Typhoon350Gasolina from '@/pages/products/lavadoras/Typhoonjet350Gasolina';
+import HydroShellUAP from '@/pages/products/vestimentas/HydroShellUap';
 import { Toaster } from '@/components/ui/toaster';
 
 function App() {
@@ -57,6 +60,10 @@ function App() {
             <Route path="/lavadoras/typhoon-jet-200-gasolina" element={<Typhoon200Gasolina />} />
             <Route path="/lavadoras/typhoon-jet-170-monofasico" element={<Typhoon170Monofasico />} />
             <Route path="/lavadoras/typhoon-jet-50cv-eletrica" element={<Typhoon50cvEletrica />} />
+            <Route path="/lavadoras/typhoon-jet-50cv-diesel" element={<Typhoon50cvDiesel />} />
+            <Route path="/lavadoras/typhoon-jet-350-gasolina" element={<Typhoon350Gasolina/>}/>
+            <Route path="/vestimentas/hydro-shell-uap" element={<HydroShellUAP/>}/>
+
           </Routes>
         </main>
         <Footer />

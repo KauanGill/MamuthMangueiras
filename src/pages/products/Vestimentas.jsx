@@ -6,6 +6,7 @@ import hydroShellUAP from '@/assets/images/vestimenta-protecao.png';
 import hydroShellSAP from '@/assets/images/hydro-shell-sap.png';
 import capaMangueira from '@/assets/images/capa-mangueira.png';
 import botaProtecao40k from '@/assets/images/bota-protecao-40k.png';
+import path from 'node:path';
 
 const PaginaCategoria = () => {
   // Dados simulados para o "Produto 1"
@@ -13,6 +14,7 @@ const PaginaCategoria = () => {
   const produtosDaCategoria = [
     {
       name: 'Hydro-Shell UAP',
+      path: '/vestimentas/hydro-shell-uap',
       description: 'Macacão de proteção indicado para trabalhadores do setor Naval, Oil & Gás, Petroquímico e/ou operações com bombas de hidrojateamento modelo UAP. Confeccionado em tripla camada de tecido tramado sintético de alta tenacidade impermeabilizado externamente com PVC, possui costuras impermeabilizadas.',
       image: hydroShellUAP, 
       category: 'Categoria Principal'

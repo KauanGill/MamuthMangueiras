@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 // Import da imagem
-import typhoonJetEletrica from '@/assets/images/typhoonjet-50cv-eletrica.jpg';
+import typhoonJetDiesel from '@/assets/images/typhoonjet-50cv-diesel.jpg'
 
-const Typhoon50cvEletrica = () => {
+const Typhoon50cvDiesel = () => {
   const navigate = useNavigate();
 
   // Garante que a página inicie no topo
@@ -17,7 +17,7 @@ const Typhoon50cvEletrica = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white w-full">
       <Helmet>
-        <title>Typhoon Jet 50cv Elétrica - Mamuth</title>
+        <title>Typhoon Jet 50cv Diesel - Mamuth</title>
       </Helmet>
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
@@ -43,7 +43,7 @@ const Typhoon50cvEletrica = () => {
             className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
           >
             <img 
-              src={typhoonJetEletrica} 
+              src={typhoonJetDiesel} 
               alt="Typhoon Jet 500" 
               className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
             />
@@ -52,7 +52,7 @@ const Typhoon50cvEletrica = () => {
       </section>
 
       {/* SEÇÃO DE TEXTOS: BRANCA - SEUS TEXTOS ORIGINAIS AQUI */}
-      <section className="py-20 px-4 bg-white"> 
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
@@ -62,11 +62,7 @@ const Typhoon50cvEletrica = () => {
           </h2>
 
           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-            As hidrojateadoras Typhoon-Jet são ideais para trabalhos que são exclusivos e rápidos. 
-            Equipadas com um motor Diesel refrigerado à água, elas oferecem potência confiável e eficiência em ambientes
-            exigentes. O painel digital integrado facilita a partida e permite a leitura dos instrumentos de temperatura
-            da água, óleo, carga da bateria, rotações do motor, entre outros, garantindo um monitoramento preciso durante 
-            a operação. Além disso, seu design prático permite fácil entrega e posicionamento em diferentes locais.
+            As hidrojateadoras Typhoon-Jet são ideais para trabalhos que são exclusivos e rápidos. Equipadas com um motor elétrico trifásico, elas oferecem potência e eficiência na limpeza de superfícies difíceis. A sua construção robusta e componentes de alta qualidade garantem durabilidade e desempenho consistente, mesmo nas condições mais exigentes, enquanto o seu design permite fácil movimentação e posicionamento em diferentes ambientes.
           </p>
           
         </div>
@@ -167,4 +163,4 @@ const Typhoon50cvEletrica = () => {
   );
 };
 
-export default Typhoon50cvEletrica;
+export default Typhoon50cvDiesel;
