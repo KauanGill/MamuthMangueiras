@@ -28,6 +28,14 @@ import Typhoon50cvEletrica from '@/pages/products/lavadoras/Typhoonjet50cvEletri
 import Typhoon50cvDiesel from '@/pages/products/lavadoras/Typhoonjet50cvDiesel';
 import Typhoon350Gasolina from '@/pages/products/lavadoras/Typhoonjet350Gasolina';
 import HydroShellUAP from '@/pages/products/vestimentas/HydroShellUap';
+import HydroShellSAP from '@/pages/products/vestimentas/HydroShellSap';
+import CapaMangueira from '@/pages/products/vestimentas/CapaMangueira';
+import BotasProtecao40K from '@/pages/products/vestimentas/BotaProtecao40K';
+import PoliamidaSAP1500 from '@/pages/products/mangueirasEConexoes/PoliamidaSap1500';
+import PoliamidaUAP2800 from '@/pages/products/mangueirasEConexoes/PoliamidaUap2800';
+import NiplesM24DKO1 from '@/pages/products/mangueirasEConexoes/NiplesM24DKO1';
+import NiplesAdaptadorHP from '@/pages/products/mangueirasEConexoes/NiplesAdaptadorHP';
+import MangueiraWaterblast from '@/pages/products/mangueirasEConexoes/MangueiraWaterblast';
 import { Toaster } from '@/components/ui/toaster';
 
 function App() {
@@ -63,7 +71,14 @@ function App() {
             <Route path="/lavadoras/typhoon-jet-50cv-diesel" element={<Typhoon50cvDiesel />} />
             <Route path="/lavadoras/typhoon-jet-350-gasolina" element={<Typhoon350Gasolina/>}/>
             <Route path="/vestimentas/hydro-shell-uap" element={<HydroShellUAP/>}/>
-
+            <Route path="/vestimentas/hydro-shell-sap" element={<HydroShellSAP/>}/>
+            <Route path="/vestimentas/capa-de-mangueira" element={<CapaMangueira/>}/>
+            <Route path="/vestimentas/bota-de-protecao-40k" element={<BotasProtecao40K/>}/>
+            <Route path="/mangueiras-conexoes/poliamida-sap-1500bar" element={<PoliamidaSAP1500/>}/>
+            <Route path="/mangueiras-conexoes/poliamida-uap-2800bar" element={<PoliamidaUAP2800/>}/>
+            <Route path="/mangueiras-conexoes/niples-m24dko1" element={<NiplesM24DKO1/>}/>
+            <Route path="/mangueiras-conexoes/niples-adaptador-hp-9-16" element={<NiplesAdaptadorHP/>}/>
+            <Route path="/mangueiras-conexoes/mangueira-waterblast" element={<MangueiraWaterblast/>}/>
           </Routes>
         </main>
         <Footer />
