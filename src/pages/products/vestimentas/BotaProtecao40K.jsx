@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 // Import da imagem
-import typhoonJetEletrica from '@/assets/images/typhoonjet-50cv-eletrica.jpg';
+import botaProtecao40k from '@/assets/images/bota-protecao-40k.png';
 
-const Typhoon50cvEletrica = () => {
+const BotasProtecao40K = () => {
   const navigate = useNavigate();
 
   // Garante que a página inicie no topo
@@ -17,7 +17,7 @@ const Typhoon50cvEletrica = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white w-full">
       <Helmet>
-        <title>Typhoon Jet 50cv Elétrica - Mamuth</title>
+        <title>Bota de Proteção 40K- Mamuth</title>
       </Helmet>
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
@@ -33,7 +33,7 @@ const Typhoon50cvEletrica = () => {
             className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
             style={{ lineHeight: '1.4' }}
           >
-            Typhoon-Jet 50cv Elétrica
+            Bota de Proteção 40K
           </motion.h1>
 
           <motion.div 
@@ -43,7 +43,7 @@ const Typhoon50cvEletrica = () => {
             className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
           >
             <img 
-              src={typhoonJetEletrica} 
+              src={botaProtecao40k} 
               alt="Typhoon Jet 500" 
               className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
             />
@@ -52,7 +52,7 @@ const Typhoon50cvEletrica = () => {
       </section>
 
       {/* SEÇÃO DE TEXTOS: BRANCA - SEUS TEXTOS ORIGINAIS AQUI */}
-      <section className="py-20 px-4 bg-white"> 
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
             className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
@@ -62,13 +62,33 @@ const Typhoon50cvEletrica = () => {
           </h2>
 
           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-            As hidrojateadoras Typhoon-Jet são ideais para trabalhos que são exclusivos e rápidos. 
-            Equipadas com um motor Diesel refrigerado à água, elas oferecem potência confiável e eficiência em ambientes
-            exigentes. O painel digital integrado facilita a partida e permite a leitura dos instrumentos de temperatura
-            da água, óleo, carga da bateria, rotações do motor, entre outros, garantindo um monitoramento preciso durante 
-            a operação. Além disso, seu design prático permite fácil entrega e posicionamento em diferentes locais.
+            Especificamente projetada para fornecer proteção contra jatos de água em pressão ultra-alta 
+            até 40.000psi. Inclui meia embutida internamente ajustável para proporcionar maior conforto.
           </p>
           
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+            Resistência a jato de água com pressão de até 40.000 psi (2800bar); <br/>
+
+
+
+            Proteção interna em aço e revestimento em borracha; <br/>
+
+
+
+            Alta resistência a produtos químicos abrasivos; <br/>
+
+
+
+            Resistência Elétrica a até 18kV; <br/>
+
+
+
+            Salto com reforço de aço para apoio, sendo possível permanecer por longos períodos de tempo em escadas por exemplo; <br/>
+
+
+
+            Protetor superior de nylon, ajustável e impede a entrada de água e detritos.
+          </p>
         </div>
       </section>
 
@@ -92,32 +112,18 @@ const Typhoon50cvEletrica = () => {
             <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
                   <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Potência (cv)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 font-bold text-lg">Dimensões(mm)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Construção</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Typhoon-Jet 600</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">600</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">35</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">50</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">550</td>
-                  <td className="py-8 px-4 text-xl font-semibold">1400 x 1000 x 1000</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Typhoon-Jet 1000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">19</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">50</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">960</td>
-                  <td className="py-8 px-4 text-xl font-semibold">1400 x 1000 x 1000</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Botas 40k</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0495</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Hidrotex / Poliéster</td>
                 </tr>
               </tbody>
             </table>
@@ -167,4 +173,4 @@ const Typhoon50cvEletrica = () => {
   );
 };
 
-export default Typhoon50cvEletrica;
+export default BotasProtecao40K;

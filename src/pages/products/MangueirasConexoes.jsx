@@ -13,6 +13,7 @@ import luvasEmendaUap from '@/assets/images/luvas-emenda-uap.png';
 import engatesRapidos from '@/assets/images/engates-rapidos.png';
 import distribuidoresUap from '@/assets/images/distribuidores-uap-em-y.png';
 import distribuidorFluxo from '@/assets/images/distribuidores-fluxo-sap.png'
+import path from 'path';
 
 const PaginaCategoria = () => {
   // Dados simulados para o "Produto 1"
@@ -20,29 +21,34 @@ const PaginaCategoria = () => {
   const produtosDaCategoria = [
     {
       name: 'Poliamida SAP até 1.500 bar',
+      path: '/mangueiras-conexoes/poliamida-sap-1500bar',
       description: 'APLICAÇÃO Utilizadas em sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento. São também conhecidas popularmente como “rabichos” ou “lanças flexíveis”',
       image: poliamidaSap1500, 
       category: 'Categoria Principal'
     },
     {
       name: 'Poliamida UAP até 2.800 bar',
+      path: '/mangueiras-conexoes/poliamida-uap-2800bar',
       description: 'APLICAÇÃO Utilizadas em sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento. São também conhecidas popularmente como “rabichos” ou “lanças flexíveis”',
       image: poliamidaUap2800, 
       category: 'Categoria Principal'
     },
     {
       name: 'Niples M24DKO-1',
+      path: '/mangueiras-conexoes/niples-m24dko1',
       description: 'Conexões, Uniões, Adaptadores e Engates, são itens necessários para unir, acoplar e adaptar mangueiras e acessórios. A MAMUTH possui uma linha completa destes itens para atender todas as necessidades. Também atendemos solicitações e fabricamos itens sob medida e encomenda. Nosso portfólio de divide em duas linhas, a limitada até 1500 BAR e a que pode ser utilizada em pressões de até 2800 Bar todos esses itens são fabricados em aço inoxidável de alta performance.',
       image: niplesM24DKO, 
       category: 'Categoria Principal'
     },
     {
       name: 'Niples (Adaptador HP 9-16 HP X 9-16 JIC-1)',
+      path: '/mangueiras-conexoes/niples-adaptador-hp-9-16',
       description: 'Conexões, Uniões, Adaptadores e Engates, são itens necessários para unir, acoplar e adaptar mangueiras e acessórios. A MAMUTH possui uma linha completa destes itens para atender todas as necessidades. Também atendemos solicitações e fabricamos itens sob medida e encomenda. Nosso portfólio de divide em duas linhas, a limitada até 1500 BAR e a que pode ser utilizada em pressões de até 2800 Bar todos esses itens são fabricados em aço inoxidável de alta performance.',
       image: niplesAdaptador, 
       category: 'Categoria Principal'
     },{
       name: 'Mangueira Waterblast para Hidrojateamento',
+      path:'/mangueiras-conexoes/mangueira-waterblast',
       description: 'Recomendadas para sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento; Tubo interno fabricado em borracha sintética resistente a água envolta por espirais trançadas de fio de aço, coberta com uma camada de borracha sintética resistente ao ozônio, intempéries e calor;',
       image: mangueiraWaterblast, 
       category: 'Categoria Principal'
