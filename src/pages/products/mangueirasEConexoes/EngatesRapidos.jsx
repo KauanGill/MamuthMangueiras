@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 // Import da imagem
-import mangueiraWaterblast from '@/assets/images/mangueira-waterblast.jpg';
+import engatesRapidos from '@/assets/images/engates-rapidos.png';
 
-const MangueiraWaterblast = () => {
+const EngatesRapidos = () => {
   const navigate = useNavigate();
 
   // Garante que a página inicie no topo
@@ -17,7 +17,7 @@ const MangueiraWaterblast = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white w-full">
       <Helmet>
-        <title>Mangueira Waterblast para Hidrojateamento - Mamuth</title>
+        <title>Engates Rápidos - Mamuth</title>
       </Helmet>
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
@@ -33,7 +33,7 @@ const MangueiraWaterblast = () => {
             className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
             style={{ lineHeight: '1.4' }}
           >
-         Mangueira Waterblast para Hidrojateamento
+         Engates Rápidos
           </motion.h1>
 
           <motion.div 
@@ -43,7 +43,7 @@ const MangueiraWaterblast = () => {
             className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
           >
             <img 
-              src={mangueiraWaterblast} 
+              src={engatesRapidos} 
               alt="Typhoon Jet 500" 
               className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
             />
@@ -61,13 +61,8 @@ const MangueiraWaterblast = () => {
             Outras Informações
           </h2>
           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-           APLICAÇÃO: Recomendadas para sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento;
-          </p>
-           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-           CONSTRUÇÃO: Tubo interno fabricado em borracha sintética resistente a água envolta por espirais trançadas de fio de aço, coberta com uma camada de borracha sintética resistente ao ozônio, intempéries e calor;
-          </p>
-           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-           TEMPERATURA DE TRABALHO: Indicadas para operações em temperatura entre - 10°C até +70°C. Temperatura máxima de trabalho intermitente: +93°C
+           Os Engates Rápido modelos ER12 e ER20 são indicados para unir mangueiras de forma prática e segura. 
+           Estes engates possuem uma porca roscada que rosqueiam e engatam os lados macho e fêmea não havendo a necessidade da utilização de uma chave para torquear, somente o aperto manual.
           </p>
         </div>
       </section>
@@ -92,72 +87,79 @@ const MangueiraWaterblast = () => {
             <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
                   <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Interno (mm)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Externo (mm)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Trabalho(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Trabalho(psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Ruptura(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Ruptura(psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Raio de Curvatura (mm.r)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso por metro (kg/m)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro no terminal (mm)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX(bar)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Lado Macho</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Lado Fêmea</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3/8 - 1250</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">10,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">21,4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.250</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">18.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3.125</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">45.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">150</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,850</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">25,0</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">ER12</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3020.0019</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Rosca 1/8 BSP (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Rosca 1/8 BSP (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
                 </tr>
               </tbody>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1/2 - 1100</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">13,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">25,4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.100</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">16.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2.750</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">40.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">200</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.260</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">28,5</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">ER12</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3020.0027</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Rosca 1/4 BSP (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Rosca 1/4 BSP (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
                 </tr>
               </tbody>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1/2 - 1450</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">13,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">29,5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.400</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">20.300</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">50.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">200</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.750</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">32,5</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">ER12</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3020.0003</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Rosca 1/2 BSP (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Rosca 1/2 BSP (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
                 </tr>
               </tbody>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3/4 - 1000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">20,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">31,8</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">4</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">ER12</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3020.0023</td>
                   <td className="py-8 px-4 border-r border-gray-200 text-xl">1.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">14.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">36.250</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">280</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.780</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">33,5</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Rosca 1/2 NPT (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Rosca 1/2 NPT (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr className="bg-white text-gray-800 border-b border-gray-200">
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">5</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">ER12</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3020.0021</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Rosca M22 PL (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Rosca M22 PL (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr className="bg-white text-gray-800 border-b border-gray-200">
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">6</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3020.0024</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.000</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Rosca M35 PL(Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Rosca M35 PL(Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
                 </tr>
               </tbody>
             </table>
@@ -207,4 +209,4 @@ const MangueiraWaterblast = () => {
   );
 };
 
-export default MangueiraWaterblast;
+export default EngatesRapidos;
