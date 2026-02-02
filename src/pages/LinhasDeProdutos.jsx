@@ -13,7 +13,7 @@ import mangueiraConexao from "@/assets/images/mangueiras-conexoes.jpg";
 import bicoHidrojato from "@/assets/images/bicos-hidrojatos.png";
 import bombaAltaPressao from "@/assets/images/bombas-altapressao.png";
 import pecasBomba from "@/assets/images/pecas-para-bomba.png";
-import acessoriosHidro from "@/assets/images/hidro-acessorios.jpg";
+import acessoriosHidro from "@/assets/images/hidro-acessorios.png";
 import acessoriosLavadora from "@/assets/images/acessorios-lavadora.png";
 
 const LinhasDeProdutos = () => {
