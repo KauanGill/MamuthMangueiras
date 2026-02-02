@@ -55,36 +55,42 @@ const PaginaCategoria = () => {
     },
     {
       name: 'Mangueira até 10.000 psi',
+      path: '/mangueiras-conexoes/mangueira-ate-10000psi',
       description: 'Recomendadas para sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento; Tubo interno fabricado em borracha sintética resistente a água envolta por espirais trançadas de fio de aço, coberta com uma camada de borracha sintética resistente ao ozônio, intempéries e calor;',
       image: mangueira10kPsi, 
       category: 'Categoria Principal'
     },
     {
       name: 'Luvas de União',
+      path: '/mangueiras-conexoes/luvas-de-uniao',
       description: 'Conexões indicadas para bombas, mangueiras e acessórios de hidrojateamento com pressão de até 1.500 bar (22.000 psi)',
       image: luvasUniao, 
       category: 'Categoria Principal'
     },
     {
       name: 'Luvas de Emenda UAP até 3.200bar',
+      path: '/mangueiras-conexoes/luvas-de-emenda-uap',
       description: 'Conexões indicadas para bombas, mangueiras, varetas e acessórios de hidrojateamento com pressão de até 3.200 bar (46.400 psi)',
       image: luvasEmendaUap, 
       category: 'Categoria Principal'
     },
     {
       name: 'Engates Rápidos',
+      path: '/mangueiras-conexoes/engates-rapidos',
       description: 'Os Engates Rápido modelos ER12 e ER20 são indicados para unir mangueiras de forma prática e segura. Estes engates possuem uma porca roscada que rosqueiam e engatam os lados macho e fêmea não havendo a necessidade da utilização de uma chave para torquear, somente o aperto manual.',
       image: engatesRapidos, 
       category: 'Categoria Principal'
     },
     {
       name: 'Distribuidores UAP em Y, T e cotovelo 90°',
+      path: '/mangueiras-conexoes/distribuidores-uap-y-t-90°',
       description: 'Distribuidores são usados para dividir o fluxo de água e multiplicar ou número de mangueiras a serem utilizadas em Ultra Alta Pressão.',
       image: distribuidoresUap, 
       category: 'Categoria Principal'
     },
     {
       name: 'Distribuidores de Fluxo SAP',
+      path: '/mangueiras-conexoes/distribuidores-fluxo-sap',
       description: 'Distribuidores são utilizados para dividir o fluxo de água e multiplicar o número de mangueiras a serem utilizadas, permitindo que múltiplas operações ocorram simultaneamente. Com esses dispositivos, é possível otimizar o uso de recursos hídricos, direcionando a água para diferentes pontos de aplicação de forma eficiente e controlada. Além disso, os distribuidores garantem uma distribuição uniforme do fluxo, essencial para a manutenção da pressão adequada em todas as saídas, o que resulta em maior produtividade e detalhes nas operações.',
       image: distribuidorFluxo, 
       category: 'Categoria Principal'

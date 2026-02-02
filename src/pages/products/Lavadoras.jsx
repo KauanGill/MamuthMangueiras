@@ -78,6 +78,7 @@ const PaginaCategoria = () => {
     },
     {
       name: 'Lavadora de alta pressão Typhoon-Jet 170 BAR (2465 PSI) 720 L/H Trifásico',
+      path: '/lavadoras/typhoon-jet-170-trifasico',
       description: 'O Typhoon-Jet 170 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas moderadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 170 bar (2465 PSI), uma vazão de 12 L/min (720 L/h) e uma potência de 5 cv, este equipamento garante resultados eficazes em desafios de limpeza de intensidade moderada.',
       image: typhoonJet170Monofasico, 
       category: 'Categoria Principal'

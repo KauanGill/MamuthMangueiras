@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 // Import da imagem
-import typhoonJet170Monofasico from '@/assets/images/typhoonjet-170-bar-monofasico.png';
+import distribuidorFluxo from '@/assets/images/distribuidores-fluxo-sap.png'
 
-const Typhoon170Trifasico= () => {
+const DistribuidoresFluxoSAP = () => {
   const navigate = useNavigate();
 
   // Garante que a página inicie no topo
@@ -17,7 +17,7 @@ const Typhoon170Trifasico= () => {
   return (
     <div className="flex flex-col min-h-screen bg-white w-full">
       <Helmet>
-        <title>Typhoon Jet 170 Trifásico - Mamuth</title>
+        <title>Distribuidores de Fluxo SAP - Mamuth</title>
       </Helmet>
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
@@ -33,7 +33,7 @@ const Typhoon170Trifasico= () => {
             className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
             style={{ lineHeight: '1.4' }}
           >
-            Lavadora de alta pressão Typhoon-Jet<br/>170 BAR (2465 PSI) 720 L/H Trifásico
+         Distribuidores de Fluxo SAP
           </motion.h1>
 
           <motion.div 
@@ -43,8 +43,8 @@ const Typhoon170Trifasico= () => {
             className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
           >
             <img 
-              src={typhoonJet170Monofasico} 
-              alt="Typhoon Jet 500" 
+              src={distribuidorFluxo} 
+              alt="Distribuidores de Fluxo SAP" 
               className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
             />
           </motion.div>
@@ -60,49 +60,12 @@ const Typhoon170Trifasico= () => {
           >
             Outras Informações
           </h2>
-
           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-            Typhoon-Jet 170: A Solução Completa para Limpeza Moderada
-          </p>
-          
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-            O Typhoon-Jet 170 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas moderadas 
-            em ambientes industriais, agrícolas e comerciais. Com uma pressão de 170 bar (2465 PSI), uma vazão de 12 L/min (720 L/h) 
-            e uma potência de 5 cv, este equipamento garante resultados eficazes em desafios de limpeza de intensidade moderada.
-          </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-            Sua estrutura leve de 40 kg é ideal para fácil transporte e uso em diferentes ambientes. Com dimensões de 950 x 640 x 540 mm
-            (C x L x A), o Typhoon-Jet 170 oferece praticidade e eficiência durante o uso, tornando-o ideal para uma variedade de aplicações.
-          </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-            Além disso, o Typhoon-Jet 170 é fácil de operar e manter, proporcionando uma experiência de limpeza eficiente
-            e sem complicações. Com ele, você pode remover sujeira leve a moderada de forma rápida e eficaz, economizando tempo e esforço.
-          </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-            Ideal para pequenos estabelecimentos comerciais, oficinas, condomínios, e outras áreas que necessitem de limpezas moderadas.
-          </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
-            Itens Inclusos: <br/>
-
-
-
-            1 mangueira 3/8 de 20 metros de alta pressão <br/>
-
-
-
-            1 pistola de alta pressão Typhoon <br/>
-
-
-
-            1 bico leque de alta pressão Typhoon <br/>
-
-
-
-            1 regulador de pressão <br/>
-
-
-
-            1 carrinho 
+           Distribuidores são utilizados para dividir o fluxo de água e multiplicar o número de mangueiras a serem utilizadas, 
+           permitindo que múltiplas operações ocorram simultaneamente. Com esses dispositivos, é possível otimizar o uso 
+           de recursos hídricos, direcionando a água para diferentes pontos de aplicação de forma eficiente e controlada. 
+           Além disso, os distribuidores garantem uma distribuição uniforme do fluxo, essencial para a manutenção da pressão 
+           adequada em todas as saídas, o que resulta em maior produtividade e detalhes nas operações.
           </p>
         </div>
       </section>
@@ -127,28 +90,35 @@ const Typhoon170Trifasico= () => {
             <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
                   <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (PSI)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/h)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Potência (cv)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Tipo de Tensão</th>
-                  <th className="py-6 px-4 font-bold text-lg">Dimensões(mm)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX(bar)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Lado Entrada (Rosca)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Lado Saída (Rosca)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Typhoon-Jet 170</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">170</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2465</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">12</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">720</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">40</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">Trifásico</td>
-                  <td className="py-8 px-4 text-xl font-semibold">950 x 640 x 540</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Tipo T</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0014</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M30 PL (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">M22 PL (2x) (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr className="bg-white text-gray-800 border-b border-gray-200">
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Flauta</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0046</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M30 PL (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">M22 PL (3x) (Fêmea)</td>
+                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
                 </tr>
               </tbody>
             </table>
@@ -198,4 +168,4 @@ const Typhoon170Trifasico= () => {
   );
 };
 
-export default Typhoon170Trifasico;
+export default DistribuidoresFluxoSAP;

@@ -15,6 +15,7 @@ import intermediariaUAP from '@/assets/images/intermediaria-uap.png';
 import intermediariaSAP from '@/assets/images/intermediaria-sap.png';
 import cestoTampaoUAP from '@/assets/images/cesto-tampao-uap.png';
 import cestoTampaoSAP from '@/assets/images/cesto-tampao-sap.png';
+import path from 'node:path';
 
 const PaginaCategoria = () => {
   // Dados simulados para o "Produto 1"
@@ -22,77 +23,91 @@ const PaginaCategoria = () => {
   const produtosDaCategoria = [
     {
       name: 'Válvula Sucção UAP',
+      path: '/pecas-para-bombas-de-hidrojatos/valvula-de-succao-uap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade.',
       image: valvulaSuccaoUAP, 
       category: 'Categoria Principal'
     },
     {
       name: 'Válvulas Pressão SAP',
+      path: '/pecas-para-bombas-de-hidrojatos/valvula-de-pressao-sap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade.',
       image: valvulaPressaoSAP, 
       category: 'Categoria Principal'
     },
     {
       name: 'Válvula Pressão UAP',
+      path: '/pecas-para-bombas-de-hidrojatos/valvula-de-pressao-uap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
       image: valvulaPressaoUAP, 
       category: 'Categoria Principal'
     },
     {
       name: 'Sede dupla UAP',
+      path:'/pecas-para-bombas-de-hidrojatos/sede-dupla',
+      path: '/pecas-para-bombas-de-hidrojatos/sede-dupla-uap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
       image: sedeDuplaUAP, 
       category: 'Categoria Principal'
     },{
       name: 'Sede Dupla',
+      path:'/pecas-para-bombas-de-hidrojatos/sede-dupla',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade.',
       image: sedeDupla, 
       category: 'Categoria Principal'
     },
     {
       name: 'Pistão de Metal Duro UAP',
+      path:'/pecas-para-bombas-de-hidrojatos/pistao-de-metal-duro-uap', 
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade.',
       image: pistaoMetalUAP, 
       category: 'Categoria Principal'
     },
     {
       name: 'Pistão de Metal Duro SAP',
+      path:'/pecas-para-bombas-de-hidrojatos/pistao-de-metal-duro-sap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
       image: pistaoMetalSAP, 
       category: 'Categoria Principal'
     },
     {
       name: 'Kit de Vedação UAP',
+      path: '/pecas-para-bombas-de-hidrojatos/kit-de-vedacao-uap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
       image: kitVedacaoUAP, 
       category: 'Categoria Principal'
     },
     {
       name: 'Kit de Vedação SAP',
+      path: '/pecas-para-bombas-de-hidrojatos/kit-de-vedacao-sap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
       image: kitVedacaoSAP, 
       category: 'Categoria Principal'
     },
     {
       name: 'Intermediária UAP',
+      path: '/pecas-para-bombas-de-hidrojatos/intermediaria-uap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
       image: intermediariaUAP, 
       category: 'Categoria Principal'
     },
     {
       name: 'Intermediária SAP',
+      path: '/pecas-para-bombas-de-hidrojatos/intermediaria-sap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade  ',
       image: intermediariaSAP, 
       category: 'Categoria Principal'
     },
      {
       name: 'Cesto Tampão UAP',
+      path: '/pecas-para-bombas-de-hidrojatos/cesto-tampao-uap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
       image: cestoTampaoUAP, 
       category: 'Categoria Principal'
     },
      {
       name: 'Cesto Tampão SAP',
+      path: '/pecas-para-bombas-de-hidrojatos/cesto-tampao-sap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade.',
       image: cestoTampaoSAP, 
       category: 'Categoria Principal'
