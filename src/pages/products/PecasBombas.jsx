@@ -44,7 +44,6 @@ const PaginaCategoria = () => {
     },
     {
       name: 'Sede dupla UAP',
-      path:'/pecas-para-bombas-de-hidrojatos/sede-dupla',
       path: '/pecas-para-bombas-de-hidrojatos/sede-dupla-uap',
       description: 'A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite garantir altos padrões de qualidade e durabilidade. ',
       image: sedeDuplaUAP, 
