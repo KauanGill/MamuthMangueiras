@@ -80,8 +80,16 @@ import KitVedacaoUAP from '@/pages/products/pecasBombasHidrojato/KitVedacaoUAP';
 import KitVedacaoSAP from '@/pages/products/pecasBombasHidrojato/KitVedacaoSAP';
 import IntermediariaUAP from '@/pages/products/pecasBombasHidrojato/IntermediariaUAP';
 import IntermediariaSAP from '@/pages/products/pecasBombasHidrojato/IntermediariaSAP';
-import CestoTampaoUAP from './pages/products/pecasBombasHidrojato/CestoTampaoUAP';
-import CestoTampaoSAP from './pages/products/pecasBombasHidrojato/CestoTampaoSAP';
+import CestoTampaoUAP from '@/pages/products/pecasBombasHidrojato/CestoTampaoUAP';
+import CestoTampaoSAP from '@/pages/products/pecasBombasHidrojato/CestoTampaoSAP';
+{/*Hidrojatos e Acessórios   */}
+import TubeClean from '@/pages/products/hidrojatoAcessorios/TubecleanMamuth';
+import PowerBox2800 from '@/pages/products/hidrojatoAcessorios/PowerBoxMamuth2800';
+import PistolaRotativaViper40K from '@/pages/products/hidrojatoAcessorios/PistolaRotativaViper40k';
+import PistolaPneumatica2G from '@/pages/products/hidrojatoAcessorios/PistolaPneumatica2G';
+import PistolaFluxoFechado from '@/pages/products/hidrojatoAcessorios/PistolaFluxoFechado';
+import PistolaFluxoAberto from '@/pages/products/hidrojatoAcessorios/PistolaFluxoAberto';
+import PedalFluxoAberto from '@/pages/products/hidrojatoAcessorios/PedalFluxoAberto';
 
 import { Toaster } from '@/components/ui/toaster';
 
@@ -172,8 +180,16 @@ function App() {
             <Route path="/pecas-para-bombas-de-hidrojatos/intermediaria-sap" element={<IntermediariaSAP/>}/>
             <Route path="/pecas-para-bombas-de-hidrojatos/cesto-tampao-uap" element={<CestoTampaoUAP/>}/>
             <Route path="/pecas-para-bombas-de-hidrojatos/cesto-tampao-sap" element={<CestoTampaoSAP/>}/>
+            {/*Hidrojatos e Acessórios   */}
+            <Route path="/hidrojatos-e-acessorios/tubeclean-mamuth" element={<TubeClean/>}/>
+            <Route path="/hidrojatos-e-acessorios/powerbox-mamuth-2800" element={<PowerBox2800/>}/>
+            <Route path="/hidrojatos-e-acessorios/pistola-rotativa-viper-40k" element={<PistolaRotativaViper40K/>}/>
+            <Route path="/hidrojatos-e-acessorios/pistola-pneumatica-2g-mtpt-2800" element={<PistolaPneumatica2G/>}/>
+            <Route path="/hidrojatos-e-acessorios/pistola-fluxo-fechado-mtff-1200" element={<PistolaFluxoFechado/>}/>
+            <Route path="/hidrojatos-e-acessorios/pistola-fluxo-aberto-mtfa-1400" element={<PistolaFluxoAberto/>}/>
+            <Route path="/hidrojatos-e-acessorios/pedal-fluxo-aberto-mtpa-1400" element={<PedalFluxoAberto/>}/>
           </Routes>
-        </main>
+        </main> 
         <Footer />
         <Toaster />
       </div>

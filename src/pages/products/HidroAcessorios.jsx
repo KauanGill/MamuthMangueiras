@@ -14,6 +14,7 @@ import lancaTuboinox from '@/assets/images/lanca-tubo-inox.png';
 import lacoSeguranca from '@/assets/images/laco-seguranca.png';
 import distorcedorMangueiraUap from '@/assets/images/distorcedor-mangueira-uap.jpeg';
 import cabecoteRotativo3D from '@/assets/images/cabecote-rotativo-3d.png';
+import path from 'node:path';
 
 const PaginaCategoria = () => {
   // Dados simulados para o "Produto 1"
@@ -21,36 +22,42 @@ const PaginaCategoria = () => {
   const produtosDaCategoria = [
     {
       name: 'Tubeclean Mamuth',
+      path: '/hidrojatos-e-acessorios/tubeclean-mamuth',
       description: 'Ferramenta projetada para auxiliar o operador na limpeza eficiente de evaporadores e diversas tubulações, especialmente em posições verticais. Ideal para remover resíduos e obstruções, garantindo a manutenção adequada e o funcionamento contínuo dos sistemas.',
       image: tubecleanMamuth, 
       category: 'Categoria Principal'
     },
     {
       name: 'Power Box MAMUTH 2.800',
+      path: '/hidrojatos-e-acessorios/powerbox-mamuth-2800',
       description: 'O Power Box MAMUTH 2800 Bar é um acessório que deve ser utilizado em conjunto com a pistola MTP 2.800 Bar Gatilho Duplo ou com a Pistola Rotativa Viper 40K,',
       image: powerBoxMamuth, 
       category: 'Categoria Principal'
     },
     {
       name: 'Pistola Rotativa Viper 40k',
+      path: '/hidrojatos-e-acessorios/pistola-rotativa-viper-40k',
       description: 'O sistema é projetado para isolar o circuito pneumático, garantindo que a pressão de água e a rotação da lança sejam acionadas somente quando ambos os gatilhos são pressionados simultaneamente, proporcionando um controle preciso e seguro.',
       image: pistolaRotativaViper40k, 
       category: 'Categoria Principal'
     },
     {
       name: 'Pistola Pneumática 2G MTPT 2.800 Bar',
+      path: '/hidrojatos-e-acessorios/pistola-Pneumatica-2g-mtpt-2800',
       description: 'Proporcionam maior robustez e durabilidade, garantindo que o equipamento suporte condições de trabalho exigentes sem comprometer a integridade estrutural.',
       image: pistolaPneumatica2G, 
       category: 'Categoria Principal'
     },
     {
       name: 'Pistola Fluxo Fechado MTFF 1.200 Bar',
+      path: '/hidrojatos-e-acessorios/pistola-fluxo-fechado-mtff-1200',
       description: 'Desenvolvido para suportar condições extremas, proporcionando durabilidade e longa vida útil ao equipamento.',
       image: pistolaFluxoFechadoMTFF, 
       category: 'Categoria Principal'
     },
     {
       name: 'Pistola Fluxo Aberto MTFA 1.400 Bar',
+      path: '/hidrojatos-e-acessorios/pistola-fluxo-aberto-mtfa-1400',
       description: 'Equipamentos de última geração para aplicações industriais exigentes.',
       image: pistolaFluxoAbertoMTFA, 
       category: 'Categoria Principal'
