@@ -55,29 +55,29 @@ const PistolaFluxoAberto = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Sistema de fluxo aberto:
             Permite o funcionamento contínuo e eficiente, adequado para diversas aplicações industriais.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Acionamento por válvula ON/OFF:
             Facilita o controle preciso do sistema, oferecendo praticidade no uso e segurança nas operações.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Fácil manutenção:
             Projetado para simplificar processos de manutenção, garantindo menos tempo de inatividade e maior durabilidade do equipamento.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Pressão máxima de trabalho: 1.400 bar:
             Alta capacidade de pressão, ideal para trabalhos que exigem desempenho elevado e confiabilidade.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Pressão máxima de trabalho até 1.200 bar:
             Ideal para aplicações que exigem alta pressão, garantindo eficiência e eficácia em operações exigentes.
           </p>

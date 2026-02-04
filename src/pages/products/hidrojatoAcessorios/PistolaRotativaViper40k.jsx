@@ -55,37 +55,37 @@ const PistolaRotativaViper40K = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            Sistema de acionamento por isolamento do circuito pneumático:
            O sistema é projetado para isolar o circuito pneumático, garantindo que a pressão de 
            água e a rotação da lança sejam acionadas somente quando ambos os gatilhos são 
            pressionados simultaneamente, proporcionando um controle preciso e seguro.      
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            Maior segurança ao operador:
            O fluxo de água e a rotação da lança só são ativados quando os dois gatilhos são 
            pressionados ao mesmo tempo, minimizando o risco de acionamentos acidentais e 
            aumentando significativamente a segurança durante a operação.
    
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            Fácil manutenção:
            O sistema foi projetado para permitir uma manutenção rápida e eficiente, reduzindo o 
            tempo de inatividade e garantindo que o equipamento permaneça em operação com 
            mínima interrupção.
 
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            Pressão máxima de trabalho: 2.800 bar:
            Capaz de suportar e operar sob altíssimas pressões, ideal para aplicações industriais que requerem força e desempenho excepcionais.    
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            Compatível com o Power Box MAMUTH 40K:
            Deve ser utilizado em conjunto com o Power Box MAMUTH 40K, assegurando uma 
            integração perfeita e um desempenho otimizado nas operações de alta pressão.  

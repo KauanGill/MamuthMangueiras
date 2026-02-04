@@ -55,13 +55,13 @@ const TubeClean = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-1 text-left">
             Ferramenta projetada para auxiliar o operador na limpeza eficiente de evaporadores e 
             diversas tubulações, especialmente em posições verticais. Ideal para remover resíduos 
             e obstruções, garantindo a manutenção adequada e o funcionamento contínuo dos

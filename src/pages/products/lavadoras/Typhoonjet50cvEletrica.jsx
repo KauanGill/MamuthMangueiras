@@ -55,13 +55,13 @@ const Typhoon50cvEletrica = () => {
       <section className="py-20 px-4 bg-white"> 
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             As hidrojateadoras Typhoon-Jet são ideais para trabalhos que são exclusivos e rápidos. 
             Equipadas com um motor Diesel refrigerado à água, elas oferecem potência confiável e eficiência em ambientes
             exigentes. O painel digital integrado facilita a partida e permite a leitura dos instrumentos de temperatura

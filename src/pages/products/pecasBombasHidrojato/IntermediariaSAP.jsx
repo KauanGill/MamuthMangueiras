@@ -55,12 +55,12 @@ const IntermediariaSAP = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo 
             diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite 
             garantir altos padrões de qualidade e durabilidade. Cada componente passa por um rigoroso controle de qualidade 

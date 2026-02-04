@@ -55,12 +55,12 @@ const LuvasDeUniao = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl tex-gray-600 leading-relaxed mb-10 text-left">
            Conexões indicadas para bombas, mangueiras e acessórios de hidrojateamento com pressão de até 1.500 bar (22.000 psi)
           </p>
         </div>

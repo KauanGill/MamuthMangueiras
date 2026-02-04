@@ -19,7 +19,7 @@ const CTAButton = ({ children, onClick, href, className = '', icon = true }) => 
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         className={buttonClasses}
-        style={{ backgroundColor: 'var(--color-orange)' }}
+        style={{ backgroundColor: '#FF5101' }}
       >
         {buttonContent}
       </motion.a>
@@ -32,7 +32,7 @@ const CTAButton = ({ children, onClick, href, className = '', icon = true }) => 
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={buttonClasses}
-      style={{ backgroundColor: 'var(--color-orange)' }}
+      style={{ backgroundColor: '#FF5101' }}
     >
       {buttonContent}
     </motion.button>

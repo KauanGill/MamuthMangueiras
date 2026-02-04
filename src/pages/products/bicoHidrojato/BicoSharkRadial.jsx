@@ -55,12 +55,12 @@ const BicoSharkRadial = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             O Shark-Jet Radial é uma ferramenta rotativa auto-propulsora indicada para limpeza e desobstrução de tubulações 
             com pressões de até 2800 bar (40.000psi) e vazão de até 40 L/min. Seus componentes internos tem o sistema de lubrificação 
             e refrigeração por óleo, além de um freio hidráulico para limitar as rotações. Esta ferramenta utiliza duas configurações 

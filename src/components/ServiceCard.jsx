@@ -12,7 +12,7 @@ const ServiceCard = ({ icon: Icon, title, description, benefits, onCTAClick }) =
       whileHover={{ y: -5 }}
       className="bg-white rounded-xl shadow-lg p-6 h-full flex flex-col"
     >
-      <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: 'var(--color-orange)' }}>
+      <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: '#FF5101' }}>
         <Icon className="w-8 h-8 text-white" />
       </div>
       <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--color-dark-blue)' }}>
@@ -23,7 +23,7 @@ const ServiceCard = ({ icon: Icon, title, description, benefits, onCTAClick }) =
         <ul className="mb-4 space-y-2 flex-grow">
           {benefits.map((benefit, index) => (
             <li key={index} className="text-sm text-gray-600 flex items-start">
-              <span className="mr-2 mt-0.5" style={{ color: 'var(--color-orange)' }}>✓</span>
+              <span className="mr-2 mt-0.5" style={{ color: '#FF5101' }}>✓</span>
               {benefit}
             </li>
           ))}

@@ -76,7 +76,7 @@ const Sobre = () => {
               transition={{ duration: 0.6 }}
               className="flex flex-col items-center text-center lg:items-start lg:text-left"
             >
-              <div className="w-20 h-20 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: 'var(--color-orange)' }}>
+              <div className="w-20 h-20 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: '#FF5101' }}>
                 <Target className="w-10 h-10 text-white" />
               </div>
               <h2 className="text-3xl font-bold mb-4" style={{ color: 'var(--color-dark-blue)' }}>
@@ -181,7 +181,7 @@ const Sobre = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-xl p-6 text-center"
               >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'var(--color-orange)' }}>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#FF5101' }}>
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--color-dark-blue)' }}>
@@ -202,7 +202,7 @@ const Sobre = () => {
             subtitle="Décadas de crescimento e inovação no setor industrial"
           />
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 hidden md:block" style={{ backgroundColor: 'var(--color-orange)' }}></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 hidden md:block" style={{ backgroundColor: '#FF5101' }}></div>
             <div className="space-y-12">
               {timeline.map((item, index) => (
                 <motion.div
@@ -226,7 +226,7 @@ const Sobre = () => {
                       <p className="text-gray-600">{item.description}</p>
                     </div>
                   </div>
-                  <div className="w-8 h-8 rounded-full flex-shrink-0 hidden md:block" style={{ backgroundColor: 'var(--color-orange)' }}></div>
+                  <div className="w-8 h-8 rounded-full flex-shrink-0 hidden md:block" style={{ backgroundColor: '#FF5101' }}></div>
                   <div className="flex-1"></div>
                 </motion.div>
               ))}

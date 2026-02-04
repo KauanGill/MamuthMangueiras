@@ -186,7 +186,7 @@ const LinhasDeProdutos = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 text-white" style={{ backgroundColor: 'var(--color-orange)' }}>
+      <section className="py-16 text-white" style={{ backgroundColor: '#FF5101' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

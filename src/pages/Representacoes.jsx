@@ -113,7 +113,7 @@ const Representacoes = () => {
                 whileHover={{ y: -5 }}
                 className="bg-white rounded-xl shadow-lg p-6 flex flex-col h-full"
               >
-                <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: 'var(--color-orange)' }}>
+                <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: '#FF5101' }}>
                   <brand.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--color-dark-blue)' }}>
@@ -129,7 +129,7 @@ const Representacoes = () => {
                       <span
                         key={idx}
                         className="text-xs px-3 py-1 rounded-full text-white"
-                        style={{ backgroundColor: 'var(--color-orange)' }}
+                        style={{ backgroundColor: '#FF5101' }}
                       >
                         {specialty}
                       </span>
@@ -139,7 +139,7 @@ const Representacoes = () => {
                 <button
                   onClick={() => handleLearnMore(brand.name)}
                   className="font-semibold hover:underline inline-flex items-center"
-                  style={{ color: 'var(--color-orange)' }}
+                  style={{ color: '#FF5101' }}
                 >
                   Saiba Mais →
                 </button>

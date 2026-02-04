@@ -55,22 +55,22 @@ const PedalFluxoAberto = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             O Pedal de Fluxo Aberto MTPA 1.400 Bar é indicado para trabalhos quando o operador de hidrojato precisa utilizar as duas mãos, ideais para executar limpeza em trocadores de calor ou tubulações em geral, esse acessório traz maior segurança e conforto visto que o operador possui total controle na liberação do fluxo de água nos pés. O sistema de fluxo aberto simplifica a sua utilização e traz maior segurança ao sistema de alta pressão e ao operador.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Um amortecedor interno reduz o impacto de acionamento do fluxo;
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Uma válvula tipo cartucho pode ser facilmente substituído em campo;
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Maximiza a segurança na operação de hidrojato pois o operador tem total controle no acionamento do fluxo de água em alta pressão
           </p>
         </div>

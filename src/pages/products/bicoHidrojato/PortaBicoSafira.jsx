@@ -60,12 +60,12 @@ const PortaBicoSafira = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            O suporte para fixação de Bico de Safira 3/8” é um componente essencial em operações de limpeza, 
            jateamento ou corte utilizando pistolas de Ultra Alta Pressão. Este suporte foi projetado para 
            garantir uma fixação segura e estável do bico, proporcionando precisão e eficiência durante o uso.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
           Recomendado para aplicações que envolvem pressões de até 2.800 bar (40.600 psi), o suporte é ideal para 
           trabalhos que exigem alta performance e confiabilidade, assegurando a durabilidade e a integridade do equipamento mesmo sob condições extremas.
           </p>
