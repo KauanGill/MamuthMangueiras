@@ -60,7 +60,7 @@ const BicoSafira = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Os bicos ou insertos são utilizados em acessórios aplicados no processo de hidrojateamento 
            como por exemplo: Pistolas, Ferramentas Rotativas, Barras Spray, Bicos Rotativos entre outros. 
            As configurações devem ser observadas a cada aplicação, especificações e limitações de pressão 

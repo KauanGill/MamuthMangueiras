@@ -60,7 +60,7 @@ const BicoRotativoTitan = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            O Bico Titan é um bico rotativo auto-propulsor desenvolvido para limpeza e desobstrução de tubulações 
            em geral com pressões entre 1.000 bar e 2.800 bar. As cabeças do bico rotativo são fabricadas em 
            diferentes configurações de orifícios. A cabeça Polisher conta quatro orifícios radiais, a Unplugger 

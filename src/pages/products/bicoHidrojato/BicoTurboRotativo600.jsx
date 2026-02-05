@@ -60,7 +60,7 @@ const BicoRotativo600 = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb- text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb- text-left">
            Bicos indicados para hidrojateadoras até 500 bar, podem ser utilizados para jateamento de superfícies tubulações ou jateamento com abrasivo.
           </p>
         </div>

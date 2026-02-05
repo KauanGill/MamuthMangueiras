@@ -60,7 +60,7 @@ const DistribuidoresFluxoSAP = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="ttext-lg text-gray-600 leading-relaxed mb-10 text-left">
            Distribuidores são utilizados para dividir o fluxo de água e multiplicar o número de mangueiras a serem utilizadas, 
            permitindo que múltiplas operações ocorram simultaneamente. Com esses dispositivos, é possível otimizar o uso 
            de recursos hídricos, direcionando a água para diferentes pontos de aplicação de forma eficiente e controlada. 

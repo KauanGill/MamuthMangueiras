@@ -60,7 +60,7 @@ const SedeDupla = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo 
             diversas marcas e modelos disponíveis no mercado. Nossas peças são de fabricação própria, o que nos permite 
             garantir altos padrões de qualidade e durabilidade. Cada componente passa por um rigoroso controle de qualidade 

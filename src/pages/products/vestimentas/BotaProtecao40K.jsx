@@ -61,29 +61,29 @@ const BotasProtecao40K = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg mb-10 text-gray-600 leading-relaxed text-left">
             Especificamente projetada para fornecer proteção contra jatos de água em pressão ultra-alta 
             até 40.000psi. Inclui meia embutida internamente ajustável para proporcionar maior conforto.
           </p>
           
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-            Resistência a jato de água com pressão de até 40.000 psi (2800bar); <br/>
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
+            Resistência a jato de água com pressão de até 40.000 psi (2800bar); <br/> <br/>
 
 
 
-            Proteção interna em aço e revestimento em borracha; <br/>
+            Proteção interna em aço e revestimento em borracha; <br/> <br/>
 
 
 
-            Alta resistência a produtos químicos abrasivos; <br/>
+            Alta resistência a produtos químicos abrasivos; <br/> <br/>
 
 
 
-            Resistência Elétrica a até 18kV; <br/>
+            Resistência Elétrica a até 18kV; <br/> <br/>
 
 
 
-            Salto com reforço de aço para apoio, sendo possível permanecer por longos períodos de tempo em escadas por exemplo; <br/>
+            Salto com reforço de aço para apoio, sendo possível permanecer por longos períodos de tempo em escadas por exemplo; <br/> <br/>
 
 
 

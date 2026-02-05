@@ -61,7 +61,7 @@ const TubeClean = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-1 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-1 text-left">
             Ferramenta projetada para auxiliar o operador na limpeza eficiente de evaporadores e 
             diversas tubulações, especialmente em posições verticais. Ideal para remover resíduos 
             e obstruções, garantindo a manutenção adequada e o funcionamento contínuo dos

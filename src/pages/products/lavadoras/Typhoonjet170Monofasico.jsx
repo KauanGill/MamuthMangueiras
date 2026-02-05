@@ -61,44 +61,44 @@ const Typhoon170Monofasico = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Typhoon-Jet 170: A Solução Completa para Limpeza Moderada
           </p>
           
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
           O Typhoon-Jet 170 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas moderadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 170 bar (2465 PSI), uma vazão de 12 L/min (720 L/h) e uma potência de 5 cv, este equipamento garante resultados eficazes em desafios de limpeza de intensidade moderada.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
           Sua estrutura leve de 40 kg é ideal para fácil transporte e uso em diferentes ambientes. Com dimensões de 950 x 640 x 540 mm (C x L x A), o Typhoon-Jet 170 oferece praticidade e eficiência durante o uso, tornando-o ideal para uma variedade de aplicações.
 
 
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Além disso, o Typhoon-Jet 170 é fácil de operar e manter, proporcionando uma experiência de limpeza eficiente e sem complicações. Com ele, você pode remover sujeira leve a moderada de forma rápida e eficaz, economizando tempo e esforço.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Ideal para pequenos estabelecimentos comerciais, oficinas, condomínios, e outras áreas que necessitem de limpezas moderadas.
 
 
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-            Itens Inclusos: <br/>
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
+            Itens Inclusos: <br/><br/>
 
 
 
-            1 mangueira 3/8 de 20 metros de alta pressão <br/>
+            1 mangueira 3/8 de 20 metros de alta pressão <br/><br/>
 
 
 
-            1 pistola de alta pressão Typhoon <br/>
+            1 pistola de alta pressão Typhoon <br/><br/>
 
 
 
-            1 bico leque de alta pressão Typhoon <br/>
+            1 bico leque de alta pressão Typhoon <br/><br/>
 
 
 
-            1 regulador de pressão <br/>
+            1 regulador de pressão <br/><br/>
 
 
 
