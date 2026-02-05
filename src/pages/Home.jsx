@@ -153,14 +153,14 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold mb-6" style={{ color: '#FF5101' }}>
-                Presente em toda a América Latina
+              <h2 className="text-3xl font-bold mb-6" style={{ color: '#FF5101' }}>
+                Presente em toda a América Latina a Mamuth alia experiência e excelência para atender às demandas
+                do mercado internacional, oferecendo soluções robustas e seguras
+                para operações industriais de alta complexidade.
               </h2>
 
               <p className="text-lg text-gray-700 mb-8">
-                A Mamuth alia experiência e excelência para atender às demandas
-                do mercado internacional, oferecendo soluções robustas e seguras
-                para operações industriais de alta complexidade.
+                
               </p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -169,7 +169,7 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="flex flex-wrap items-center gap-3 mb-10">
                 <img
-                  src="src/assets/images/bandeira-do-brasil.avif"
+                  src="src/assets/images/bandeira-do-peru.png"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
@@ -179,7 +179,49 @@ const Home = () => {
                   className="h-10 object-contain"
                 />
                 <img
-                  src="src/assets/images/bandeira-do-brasil.avif"
+                  src="src/assets/images/bandeira-da-argentina.avif"
+                  alt="Países de atuação da Mamuth"
+                  className="h-10 object-contain"
+                />
+                <img
+                  src="src/assets/images/bandeira-do-mexico.png"
+                  alt="Países de atuação da Mamuth"
+                  className="h-10 object-contain"
+                />
+                <img
+                  src="src/assets/images/bandeira-da-colombia.avif"
+                  alt="Países de atuação da Mamuth"
+                  className="h-10 object-contain"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-wrap items-center gap-3 mb-10 ml-5">
+                <img
+                  src="src/assets/images/bandeira-da-guatemala.png"
+                  alt="Países de atuação da Mamuth"
+                  className="h-10 object-contain"
+                />
+                <img
+                  src="src/assets/images/bandeira-da-venezuela.avif"
+                  alt="Países de atuação da Mamuth"
+                  className="h-10 object-contain"
+                />
+                <img
+                  src="src/assets/images/bandeira-da-bolivia.png"
+                  alt="Países de atuação da Mamuth"
+                  className="h-10 object-contain"
+                />
+                <img
+                  src="src/assets/images/bandeira-do-equador.svg"
+                  alt="Países de atuação da Mamuth"
+                  className="h-10 object-contain"
+                />
+                <img
+                  src="src/assets/images/bandeira-do-paraguai.png"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
@@ -235,9 +277,9 @@ const Home = () => {
               className="relative"
             >
               <img
-                src="src/assets/images/mapa-america-do-sul.jpg"
+                src="src/assets/images/mapa-america-do-sul.png"
                 alt="Presença da Mamuth na América Latina"
-                className="w-full max-w-lg mx-auto"
+                className="w-full max-w-4x1 mx-auto"
               />
             </motion.div>
 

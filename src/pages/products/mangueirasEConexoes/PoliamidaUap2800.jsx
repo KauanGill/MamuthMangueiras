@@ -61,19 +61,19 @@ const PoliamidaSAP1500 = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed font-bold mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed font-bold mb-10 text-left">
             Todas as mangueiras Mamuth são testadas em bancada de teste hidrostático de 6.900 
             bar (100.050 psi) e emitido Certificado de Teste Hidrostático.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             APLICAÇÃO Utilizadas em sistemas de limpeza, desobstrução, remoção de resíduos e preparação 
             de superfícies com o uso de Hidrojateamento. São também conhecidas popularmente como “rabichos” ou “lanças flexíveis”;
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             CONSTRUÇÃO Tubo interno fabricado em Poliamida rígido envolto por camadas 
             de espirais trançadas de fios de aço e cobertura de Poliamida;
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            TEMPERATURA DE TRABALHO Indicadas para operações em temperatura entre - 10°C até +70°C;
           </p>
           

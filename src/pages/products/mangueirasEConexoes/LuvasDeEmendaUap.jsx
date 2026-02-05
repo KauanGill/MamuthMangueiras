@@ -60,7 +60,7 @@ const LuvasDeEmendaUAP = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Conexões indicadas para bombas, mangueiras, varetas e acessórios de hidrojateamento com pressão de até 3.200 bar (46.400 psi)
           </p>
         </div>

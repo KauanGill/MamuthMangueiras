@@ -60,7 +60,7 @@ const PortaBicoRetoELeque = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            O suporte para Bico Reto Forma 4 e Bico Leque Forma 19 é principalmente utilizado nas operações de limpeza, 
            jateamento ou corte com pistolas de alta pressão. São recomendados para aplicações com até 1.500 bar / 21.750 psi.
           </p>

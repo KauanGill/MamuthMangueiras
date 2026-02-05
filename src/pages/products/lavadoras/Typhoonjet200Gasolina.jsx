@@ -61,50 +61,50 @@ const Typhoon500Gasolina = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Typhoon-Jet 200: Desempenho Superior para Limpeza Pesada
           </p>
           
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            O Typhoon-Jet 200 é um equipamento de alta pressão projetado para oferecer desempenho 
            excepcional em limpezas pesadas em ambientes industriais, agrícolas e comerciais. 
            Com uma pressão de 200 bar, uma vazão de 45 L/min e uma potência de 20 cv,
            este equipamento garante resultados superiores em qualquer desafio de limpeza.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Sua estrutura robusta e resistente é construída para suportar as demandas mais exigentes, garantindo durabilidade e confiabilidade. 
            Com um peso de 280 kg e dimensões de 1200 x 800 x 900 mm (C x L x A), o Typhoon-Jet 200 oferece estabilidade
             e facilidade de manobra durante o uso, tornando-o ideal para uma variedade de aplicações.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Além disso, o Typhoon-Jet 200 é fácil de operar e manter, proporcionando uma experiência 
             de limpeza eficiente e sem complicações. Com ele, você pode remover sujeira pesada, 
             graxa, óleo e outros resíduos de forma rápida e eficaz, economizando tempo e esforço.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Ideal para postos de gasolina, médios e grandes lava-rápidos, indústrias, construtoras, 
             transportadoras, empresas de ônibus e turismo, comércios, condomínios, limpadoras agropecuárias, entre outros.
 
 
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-            Itens Inclusos: <br/>
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
+            Itens Inclusos: <br/><br/>
 
 
 
-            1 mangueira 3/8 de 20 metros de alta pressão <br/>
+            1 mangueira 3/8 de 20 metros de alta pressão <br/><br/>
 
 
 
-            1 pistola de alta pressão Typhoon <br/>
+            1 pistola de alta pressão Typhoon <br/><br/>
 
 
 
-            1 bico leque de alta pressão Typhoon <br/>
+            1 bico leque de alta pressão Typhoon <br/><br/>
 
 
 
-            1 regulador de pressão <br/>
+            1 regulador de pressão <br/><br/>
 
 
 

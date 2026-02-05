@@ -61,7 +61,7 @@ const Typhoon50cvDiesel = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             As hidrojateadoras Typhoon-Jet são ideais para trabalhos que são exclusivos e rápidos. Equipadas com um motor elétrico trifásico, elas oferecem potência e eficiência na limpeza de superfícies difíceis. A sua construção robusta e componentes de alta qualidade garantem durabilidade e desempenho consistente, mesmo nas condições mais exigentes, enquanto o seu design permite fácil movimentação e posicionamento em diferentes ambientes.
           </p>
           

@@ -61,32 +61,32 @@ const PistolaPneumatica2G = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
           Dois punhos fabricados em plástico de alta resistência:
           Proporcionam maior robustez e durabilidade, garantindo que o equipamento suporte condições de trabalho exigentes sem comprometer a integridade estrutural. 
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
           Sistema de acionamento por 2 válvulas pneumáticas:
           Oferece controle preciso e confiável do fluxo, permitindo uma operação segura e eficiente em ambientes industriais.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
           Maior segurança ao operador:
           O fluxo de operação é acionado somente quando ambos os gatilhos são pressionados simultaneamente, minimizando o risco de acidentes e aumentando a segurança do operador.
 
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Fácil manutenção:
            Projeto otimizado para simplificar processos de manutenção, reduzindo o tempo de inatividade e os custos operacionais ao longo da vida útil do equipamento.   
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Cor laranja padrão WJTA:
            Facilita a identificação visual do equipamento, atendendo aos padrões de segurança internacionais da WJTA e assegurando conformidade em ambientes de trabalho.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Pressão máxima de trabalho até 2.800 bar:
            Adequado para operações que exigem altíssima pressão, oferecendo desempenho excepcional em tarefas críticas.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Compatível com o Power Box MAMUTH 40K:
            Deve ser utilizado em conjunto com o Power Box MAMUTH 40K para garantir desempenho e segurança máximos em aplicações de alta pressão.
           </p>

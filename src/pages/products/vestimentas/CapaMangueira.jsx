@@ -61,7 +61,7 @@ const CapaMangueira = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Capa protetora indicada para mangueiras que trabalham com pressões de até 2800 Bar, proteção 
             em caso de ruptura acidental formando um escudo e impedindo que a água em alta pressão atinja o operador.
           </p>

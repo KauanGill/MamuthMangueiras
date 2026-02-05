@@ -61,7 +61,7 @@ const Typhoon170Monofasico = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Macacão de proteção indicado para trabalhadores do setor Naval, Oil & Gás, Petroquímico e/ou operações
             com bombas de hidrojateamento modelo UAP. Confeccionado em tripla camada de tecido tramado sintético de alta 
             tenacidade impermeabilizado externamente com PVC, possui costuras impermeabilizadas. O fechamento frontal 
@@ -71,24 +71,24 @@ const Typhoon170Monofasico = () => {
             ajustes de altura por fecho rápido, isso ajuda a sustentar do peso do traje.
           </p>
           
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-            Vestimenta composta por <br/>
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
+            Vestimenta composta por <br/> <br/>
 
 
 
-            Jaqueta Hydro-Shell UAP; <br/>
+            Jaqueta Hydro-Shell UAP; <br/> <br/>
 
 
 
-            Calça Hydro-Shell UAP; <br/>
+            Calça Hydro-Shell UAP; <br/> <br/>
 
 
 
-            Luvas de Proteção; <br/>
+            Luvas de Proteção; <br/> <br/>
 
 
 
-            Botas de Proteção UAP; <br/>
+            Botas de Proteção UAP; <br/> <br/>
 
 
 

@@ -60,7 +60,7 @@ const NiplesAdaptadorHP = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Conexões, Uniões, Adaptadores e Engates, são itens necessários para unir, acoplar e adaptar 
            mangueiras e acessórios. A MAMUTH possui uma linha completa destes itens para atender todas 
            as necessidades. Também atendemos solicitações e fabricamos itens sob medida e encomenda. 

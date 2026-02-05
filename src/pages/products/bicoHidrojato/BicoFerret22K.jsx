@@ -60,17 +60,17 @@ const BicoFerret22K = () => {
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             O bico fixo tipo “ Foguetinho” é indicado para limpeza e desobstrução das paredes internas 
             de tubulações de trocadores de calor, evaporadores e linhas de tubos em geral. 
             Esses bicos estão disponíveis em diversos diâmetros variados e orifícios dimensionados 
             de acordo com a vazão, este modelo conta com 8 furos, sendo 2 frontais de ataque e 6 traseiros furos de limpeza e propulsão.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Pressão Máxima de Trabalho 1.000 bar
 
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Max. Working Pressure 14.500 psi
           </p>
         </div>

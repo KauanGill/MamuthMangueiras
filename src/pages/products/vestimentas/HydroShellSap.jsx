@@ -61,7 +61,7 @@ const HydroShellSAP = () => {
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg leading-relaxed mb-10 text-left">
          Macacão de proteção indicado para trabalhadores do setor sucroalcooleiro e/ou operações com bombas de 
          hidrojateamento modelo SAP. Confeccionado em dupla camada de tecido tramado sintético de 
          alta tenacidade impermeabilizado externamente com PVC, possui costuras impermeabilizadas. O fechamento 
@@ -71,24 +71,24 @@ const HydroShellSAP = () => {
          interna com ajustes de altura por fecho rápido, isso ajuda a sustentar do peso do traje.
           </p>
           
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-            Vestimenta composta por <br/>
+          <p className="text-lg leading-relaxed mb-10 text-left">
+            Vestimenta composta por <br/> <br/>
 
 
 
-            Jaqueta Hydro-Shell UAP; <br/>
+            Jaqueta Hydro-Shell UAP; <br/> <br/>
 
 
 
-            Calça Hydro-Shell UAP; <br/>
+            Calça Hydro-Shell UAP; <br/> <br/>
 
 
 
-            Luvas de Proteção; <br/>
+            Luvas de Proteção; <br/> <br/>
 
 
 
-            Botas de Proteção UAP; <br/>
+            Botas de Proteção UAP; <br/> <br/>
 
 
 
