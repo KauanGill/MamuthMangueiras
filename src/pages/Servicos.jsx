@@ -156,7 +156,7 @@ const Servicos = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'var(--color-orange)' }}>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#FF5101' }}>
                   <differential.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-bold mb-3" style={{ color: 'var(--color-dark-blue)' }}>
@@ -170,7 +170,7 @@ const Servicos = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 text-white" style={{ backgroundColor: 'var(--color-orange)' }}>
+      <section className="py-16 text-white" style={{ backgroundColor: '#FF5101' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

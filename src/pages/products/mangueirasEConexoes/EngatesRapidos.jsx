@@ -55,12 +55,12 @@ const EngatesRapidos = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            Os Engates Rápido modelos ER12 e ER20 são indicados para unir mangueiras de forma prática e segura. 
            Estes engates possuem uma porca roscada que rosqueiam e engatam os lados macho e fêmea não havendo a necessidade da utilização de uma chave para torquear, somente o aperto manual.
           </p>

@@ -33,7 +33,7 @@ const NewsCard = ({ id, image, date, title, excerpt }) => {
         <Link
           to={`/noticias/${id}`}
           className="font-semibold hover:underline inline-flex items-center"
-          style={{ color: 'var(--color-orange)' }}
+          style={{ color: '#FF5101' }}
         >
           Leia Mais →
         </Link>

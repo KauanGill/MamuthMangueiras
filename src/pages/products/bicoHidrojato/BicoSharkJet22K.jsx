@@ -55,12 +55,12 @@ const BicoShark22K = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             O Shark-Jet 22K e 40K é uma ferramenta rotativa auto-propulsora indicada para jateamento, limpeza 
             e preparação de superfícies planas ou irregulares. Disponível em duas configurações, a primeira trabalha 
             com pressões de até 1.500 bar (22.000 psi) e vazão de até 40L/min, a segunda opção é configurada 

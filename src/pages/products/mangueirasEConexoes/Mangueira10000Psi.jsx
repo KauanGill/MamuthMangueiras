@@ -55,18 +55,18 @@ const Mangueira10000PSI = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            APLICAÇÃO: Recomendadas para sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento;
           </p>
-           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            CONSTRUÇÃO: Tubo interno fabricado em borracha sintética resistente a água envolta por espirais trançadas de fio de aço, coberta com uma camada de borracha sintética resistente ao ozônio, intempéries e calor;
           </p>
-           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            TEMPERATURA DE TRABALHO: Indicadas para operações em temperatura entre - 40°C até +100°C. Temperatura máxima de trabalho intermitente: +121°C
           </p>
         </div>

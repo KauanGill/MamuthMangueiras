@@ -50,7 +50,7 @@ const ProductCard = ({ image, name, description, specs, path, onCTAClick }) => {
           <ul className="mb-4 space-y-1">
             {specs.map((spec, index) => (
               <li key={index} className="text-sm text-gray-500 flex items-start">
-                <span className="mr-2" style={{ color: 'var(--color-orange)' }}>•</span>
+                <span className="mr-2" style={{ color: '#FF5101' }}>•</span>
                 {spec}
               </li>
             ))}

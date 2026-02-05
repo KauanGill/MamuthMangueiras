@@ -43,7 +43,7 @@ const Navbar = () => {
                     ? 'text-white'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
-                style={isActive(link.path) ? { backgroundColor: 'var(--color-orange)' } : {}}
+                style={isActive(link.path) ? { backgroundColor: '#FF5101' } : {}}
               >
                 {link.name}
               </Link>

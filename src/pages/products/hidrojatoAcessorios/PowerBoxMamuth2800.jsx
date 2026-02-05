@@ -55,13 +55,13 @@ const PowerBox2800 = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             O Power Box MAMUTH 2800 Bar é um acessório que deve ser utilizado em conjunto 
             com a pistola MTP 2.800 Bar Gatilho Duplo ou com a Pistola Rotativa Viper 40K, o 
             acionamento ocorre quando os dois gatilhos da pistola são pressionados 

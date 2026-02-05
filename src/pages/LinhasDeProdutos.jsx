@@ -13,7 +13,7 @@ import mangueiraConexao from "@/assets/images/mangueiras-conexoes.jpg";
 import bicoHidrojato from "@/assets/images/bicos-hidrojatos.png";
 import bombaAltaPressao from "@/assets/images/bombas-altapressao.png";
 import pecasBomba from "@/assets/images/pecas-para-bomba.png";
-import acessoriosHidro from "@/assets/images/hidro-acessorios.jpg";
+import acessoriosHidro from "@/assets/images/hidro-acessorios.png";
 import acessoriosLavadora from "@/assets/images/acessorios-lavadora.png";
 
 const LinhasDeProdutos = () => {
@@ -186,7 +186,7 @@ const LinhasDeProdutos = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 text-white" style={{ backgroundColor: 'var(--color-orange)' }}>
+      <section className="py-16 text-white" style={{ backgroundColor: '#FF5101' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

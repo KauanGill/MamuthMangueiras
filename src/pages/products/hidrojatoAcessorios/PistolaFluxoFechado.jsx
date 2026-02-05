@@ -55,29 +55,29 @@ const PistolaFluxoFechado = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Punho fabricado em plástico de alta resistência:
             Desenvolvido para suportar condições extremas, proporcionando durabilidade e longa vida útil ao equipamento.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10  text-left">
             Sistema de fluxo fechado com acionamento por válvula mecânica:
             Garante maior controle e precisão durante a operação, reduzindo o risco de vazamentos e aumentando a segurança.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10  text-left">
             Maior conforto na operação:
             Ergonomicamente projetado para reduzir a fadiga do operador, permitindo uso prolongado sem comprometer o desempenho.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10  text-left">
             Cor verde padrão WJTA:
             Identificação visual rápida e conforme os padrões internacionais de segurança da WJTA.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Pressão máxima de trabalho até 1.200 bar:
             Ideal para aplicações que exigem alta pressão, garantindo eficiência e eficácia em operações exigentes.
           </p>

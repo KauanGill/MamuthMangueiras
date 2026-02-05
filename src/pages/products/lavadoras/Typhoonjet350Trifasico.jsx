@@ -55,38 +55,38 @@ const Typhoon350trifasico = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 md:text-left "
+            className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
             Outras Informações
           </h2>
 
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            Typhoon-Jet 350: A Solução Completa para Limpeza Pesada
           </p>
           
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
            O Typhoon-Jet 350 é um equipamento de alta pressão projetado para oferecer desempenho excepcional 
            em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 350 bar, uma vazão 
            de 17 L/min e uma potência de 15 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
           Sua estrutura robusta e resistente é construída para suportar as demandas mais exigentes, garantindo durabilidade e 
           confiabilidade. Com um peso de 280 kg e dimensões de 1200 x 800 x 900 mm (C x L x A), o Typhoon-Jet 350 oferece
            estabilidade e facilidade de manobra durante o uso, tornando-o ideal para uma variedade de aplicações.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Além disso, o Typhoon-Jet 350 é fácil de operar e manter, proporcionando uma experiência
              de limpeza eficiente e sem complicações. Com ele, você pode remover sujeira
               pesada, graxa, óleo e outros resíduos de forma rápida e eficaz, economizando tempo e esforço.
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Ideal para postos de gasolina, médios e grandes lava-rápidos, indústrias, construtoras, 
             transportadoras, empresas de ônibus e turismo, comércios, condomínios, limpadoras agropecuárias, entre outros.
 
 
           </p>
-          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-justify md:text-left">
+          <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
             Itens Inclusos: <br/>
 
 
