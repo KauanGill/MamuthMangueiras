@@ -169,27 +169,27 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="flex flex-wrap items-center gap-3 mb-10">
                 <img
-                  src="src/assets/images/bandeira-do-peru.png"
+                  src="img/bandeira-do-peru.png"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="src/assets/images/bandeira-do-brasil.avif"
+                  src="img/bandeira-do-brasil.avif"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="src/assets/images/bandeira-da-argentina.avif"
+                  src="img/bandeira-da-argentina.avif"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="src/assets/images/bandeira-do-mexico.png"
+                  src="img/bandeira-do-mexico.png"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="src/assets/images/bandeira-da-colombia.avif"
+                  src="img/bandeira-da-colombia.avif"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
@@ -201,27 +201,27 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="flex flex-wrap items-center gap-3 mb-10 ml-5">
                 <img
-                  src="src/assets/images/bandeira-da-guatemala.png"
+                  src="img/bandeira-da-guatemala.png"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="src/assets/images/bandeira-da-venezuela.avif"
+                  src="img/bandeira-da-venezuela.avif"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="src/assets/images/bandeira-da-bolivia.png"
+                  src="img/bandeira-da-bolivia.png"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="src/assets/images/bandeira-do-equador.svg"
+                  src="img/bandeira-do-equador.svg"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="src/assets/images/bandeira-do-paraguai.png"
+                  src="img/bandeira-do-paraguai.png"
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
@@ -277,7 +277,7 @@ const Home = () => {
               className="relative"
             >
               <img
-                src="src/assets/images/mapa-america-do-sul.png"
+                src="img/mapa-america-do-sul.png"
                 alt="Presença da Mamuth na América Latina"
                 className="w-full max-w-4x1 mx-auto"
               />
