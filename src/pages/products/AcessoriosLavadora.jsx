@@ -10,6 +10,7 @@ import pistola660bar from '@/assets/images/acessorios-lavadora.png';
 import pistola350bar from '@/assets/images/pistola-350bar.png';
 import pistola280bar from '@/assets/images/pistola-280bar.png';
 import bicoJatoAbrasivo from '@/assets/images/bico-jato-abrasivo-500bar.png';
+import path from 'path';
 
 const PaginaCategoria = () => {
   // Dados simulados para o "Produto 1"
@@ -17,48 +18,56 @@ const PaginaCategoria = () => {
   const produtosDaCategoria = [
     {
       name: 'Válvula Reguladora 550 bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-550bar',
       description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança.',
       image: valvulaReguladora550bar, 
       category: 'Categoria Principal'
     },
     {
       name: 'Válvula Reguladora 350 bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-350bar',
       description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança.',
       image: valvulaReguladora350bar, 
       category: 'Categoria Principal'
     },
     {
       name: 'Válvula Reguladora 200 bar Alta Vazão',
+      path: '/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-200bar-alta-vazao',
       description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança. Indicada para bombas de alta vazão.',
       image: valvulaReguladora200bar, 
       category: 'Categoria Principal'
     },
     {
       name: 'Válvula de Segurança 660 bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/valvula-de-seguranca-660bar',
       description: 'Válvula de Segurança que limita a pressão máxima do sistema de alta pressão. Quando for excedida a pressão a válvula abre liberando a pressão excessiva.',
       image: valvulaSeguranca660bar, 
       category: 'Categoria Principal'
     },
     {
       name: 'Pistola 660 bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/pistola-660bar',
       description: 'Gatilhos e lanças indicadas para hidrolavadoras de alta pressão',
       image: pistola660bar, 
       category: 'Categoria Principal'
     },
     {
       name: 'Pistola 350 bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/pistola-350bar',
       description: 'Gatilhos e lanças indicadas para hidrolavadoras de alta pressão',
       image: pistola350bar, 
       category: 'Categoria Principal'
     },
     {
       name: 'Pistola 280 bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/pistola-280bar',
       description: 'Gatilhos e lanças indicadas para hidrolavadoras de alta pressão',
       image: pistola280bar, 
       category: 'Categoria Principal'
     },
     {
       name: 'Bico Jato Abrasivo 500bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/bico-jato-abrasivo-500bar',
       description: 'Bico Jato Abrasivo 500bar',
       image: bicoJatoAbrasivo, 
       category: 'Categoria Principal'

@@ -64,36 +64,42 @@ const PaginaCategoria = () => {
     },
     {
       name: 'Pedal de Fluxo Aberto MTPA 1.400 Bar',
+      path: '/hidrojatos-e-acessorios/pedal-fluxo-aberto-mtpa-1400',
       description: 'O Pedal de Fluxo Aberto MTPA 1.400 Bar é indicado para trabalhos quando o operador de hidrojato precisa utilizar as duas mãos, ideais para executar limpeza em trocadores de calor ou tubulações em geral, esse acessório traz maior segurança e conforto visto que o operador possui total controle na liberação do fluxo de água nos pés.',
       image: pedalFluxoAbertoMTPA, 
       category: 'Categoria Principal'
     },
     {
       name: 'Malha de Segurança',
+      path: '/hidrojatos-e-acessorios/malha-de-seguranca',
       description: 'Dispositivo de segurança utilizado em uniões de mangueiras e tubos com o objetivo de evitar o movimento brusco ou chicoteamento em caso de rompimento das conexões.',
       image: malhaSeguranca, 
       category: 'Categoria Principal'
     },
     {
       name: 'Lança e Tubo Inox',
+      path: '/hidrojatos-e-acessorios/lanca-e-tubo-inox',
       description: 'Conhecidas como Varetas ou Lanças, essas são utilizadas como condutoras de fluxo, ou como prolongadores para bicos e mangueiras. Podem ser fabricadas em qualquer comprimento.',
       image: lancaTuboinox, 
       category: 'Categoria Principal'
     },
     {
       name: 'Laço de Segurança',
+      path: '/hidrojatos-e-acessorios/laco-de-seguranca',
       description: 'Dispositivo de segurança utilizado em uniões de mangueiras e tubos com o objetivo de evitar o movimento brusco ou chicoteamento em caso de rompimento das conexões.',
       image: lacoSeguranca, 
       category: 'Categoria Principal'
     },
     {
       name: 'Distorcedor de Mangueira UAP MT2800',
+      path: '/hidrojatos-e-acessorios/distorcedor-de-mangueira-uap',
       description: 'O Distorcedor é um item de segurança que quando utilizado junto a mangueira elimina o esforço por torção do terminal, evitando assim a quebra prematura e posteriores acidentes.',
       image: distorcedorMangueiraUap, 
       category: 'Categoria Principal'
     },
     {
       name: 'Cabeçote Rotativo 3D Torrent NLB',
+      path: '/hidrojatos-e-acessorios/cabecote-rotativo-3d-torrent-nlb',
       description: 'O Cabeçote 3D Torrent NLB é uma ferramenta avançada projetada especificamente para a limpeza eficiente de tanques. Este dispositivo não apenas reduz drasticamente o tempo de limpeza, mas também proporciona total segurança na operação, eliminando a necessidade de um operador em espaços confinados, o que é essencial para minimizar riscos.',
       image: cabecoteRotativo3D, 
       category: 'Categoria Principal'

@@ -90,6 +90,20 @@ import PistolaPneumatica2G from '@/pages/products/hidrojatoAcessorios/PistolaPne
 import PistolaFluxoFechado from '@/pages/products/hidrojatoAcessorios/PistolaFluxoFechado';
 import PistolaFluxoAberto from '@/pages/products/hidrojatoAcessorios/PistolaFluxoAberto';
 import PedalFluxoAberto from '@/pages/products/hidrojatoAcessorios/PedalFluxoAberto';
+import MalhaDeSeguranca from '@/pages/products/hidrojatoAcessorios/MalhaSegurança';
+import LancaTuboInox from '@/pages/products/hidrojatoAcessorios/LancaETuboInox';
+import LacoDeSeguranca from '@/pages/products/hidrojatoAcessorios/LacoDeSeguranca';
+import DistorcedorMangueiraUAP from '@/pages/products/hidrojatoAcessorios/DistorcedorDeMangueiraUAP';
+import CabecoteRotativo3d from '@/pages/products/hidrojatoAcessorios/CabecoteRotativo3d';
+{/* Acessórios para Lavadoras de Alta Pressão  */}
+import ValvulaReguladora550 from '@/pages/products/acessoriosLavadoras/ValvulaReguladora550Bar';
+import ValvulaReguladora350 from '@/pages/products/acessoriosLavadoras/ValvularReguladora350Nar';
+import ValvulaReguladora200AltaVazao from '@/pages/products/acessoriosLavadoras/ValvulaReguladora200BarAltaVazao';
+import ValvulaSeguranca660 from '@/pages/products/acessoriosLavadoras/ValvulaSeguranca660Bar';
+import Pistola660bar from '@/pages/products/acessoriosLavadoras/Pistola660bar';
+import Pistola350bar from '@/pages/products/acessoriosLavadoras/Pistola350Bar';
+import Pistola280bar from '@/pages/products/acessoriosLavadoras/Pistola280Bar';
+import BicoJatoAbrasivo from '@/pages/products/acessoriosLavadoras/BicoJatoAbrasivo500Bar';
 
 import { Toaster } from '@/components/ui/toaster';
 
@@ -188,6 +202,20 @@ function App() {
             <Route path="/hidrojatos-e-acessorios/pistola-fluxo-fechado-mtff-1200" element={<PistolaFluxoFechado/>}/>
             <Route path="/hidrojatos-e-acessorios/pistola-fluxo-aberto-mtfa-1400" element={<PistolaFluxoAberto/>}/>
             <Route path="/hidrojatos-e-acessorios/pedal-fluxo-aberto-mtpa-1400" element={<PedalFluxoAberto/>}/>
+            <Route path="/hidrojatos-e-acessorios/malha-de-seguranca" element={<MalhaDeSeguranca/>}/>
+            <Route path="/hidrojatos-e-acessorios/lanca-e-tubo-inox" element={<LancaTuboInox/>}/>
+            <Route path="/hidrojatos-e-acessorios/laco-de-seguranca" element={<LacoDeSeguranca/>}/>
+            <Route path="/hidrojatos-e-acessorios/distorcedor-de-mangueira-uap" element={<DistorcedorMangueiraUAP/>}/>
+            <Route path="/hidrojatos-e-acessorios/cabecote-rotativo-3d-torrent-nlb" element={<CabecoteRotativo3d/>}/>
+            {/* Acessórios para Lavadoras de Alta Pressão  */}
+            <Route path="/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-550bar" element={<ValvulaReguladora550/>}/>
+            <Route path="/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-350bar" element={<ValvulaReguladora350/>}/>
+            <Route path="/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-200bar-alta-vazao" element={<ValvulaReguladora200AltaVazao/>}/>
+            <Route path="/acessorios-lavadoras-de-alta-pressao/valvula-de-seguranca-660bar" element={<ValvulaSeguranca660/>}/>
+            <Route path="/acessorios-lavadoras-de-alta-pressao/pistola-660bar" element={<Pistola660bar/>}/>
+            <Route path="/acessorios-lavadoras-de-alta-pressao/pistola-350bar" element={<Pistola350bar/>}/>
+            <Route path="/acessorios-lavadoras-de-alta-pressao/pistola-280bar" element={<Pistola280bar/>}/>
+            <Route path="/acessorios-lavadoras-de-alta-pressao/bico-jato-abrasivo-500bar" element={<BicoJatoAbrasivo/>}/>
           </Routes>
         </main> 
         <Footer />
