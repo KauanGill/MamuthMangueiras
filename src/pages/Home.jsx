@@ -13,7 +13,17 @@ import bombaAltaPressao from "@/assets/images/bomba-alta-pressao-titulo.png";
 import lavadoraAltaPressao from "@/assets/images/lavadora-alta-pressao.png";
 import vestimentaProtecao from "@/assets/images/vestimenta-protecao.png";
 import mangueiraConexao from "@/assets/images/mangueiras-conexoes.jpg";
-
+import argentina from "@/assets/images/bandeira-da-argentina.avif";
+import bolivia from "@/assets/images/bandeira-da-bolivia.png";
+import colombia from "@/assets/images/bandeira-da-colombia.avif";
+import guatemala from "@/assets/images/bandeira-da-guatemala.png";
+import venezuela from "@/assets/images/bandeira-da-venezuela.avif";
+import brasil from "@/assets/images/bandeira-do-brasil.avif";
+import equador from "@/assets/images/bandeira-do-equador.svg";
+import mexico from "@/assets/images/bandeira-do-mexico.png";
+import paraguai from "@/assets/images/bandeira-do-paraguai.png";
+import peru from "@/assets/images/bandeira-do-peru.png";
+import americaDoSul from "@/assets/images/mapa-america-do-sul.png";
 
 const Home = () => {
   const { toast } = useToast();
@@ -169,27 +179,27 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="flex flex-wrap items-center gap-3 mb-10">
                 <img
-                  src="img/bandeira-do-peru.png"
+                  src={peru}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="img/bandeira-do-brasil.avif"
+                  src={brasil}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="img/bandeira-da-argentina.avif"
+                  src={argentina}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="img/bandeira-do-mexico.png"
+                  src={mexico}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="img/bandeira-da-colombia.avif"
+                  src={colombia}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
@@ -201,27 +211,27 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="flex flex-wrap items-center gap-3 mb-10 ml-5">
                 <img
-                  src="img/bandeira-da-guatemala.png"
+                  src={guatemala}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="img/bandeira-da-venezuela.avif"
+                  src={venezuela}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="img/bandeira-da-bolivia.png"
+                  src={bolivia}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="img/bandeira-do-equador.svg"
+                  src={equador}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
                 <img
-                  src="img/bandeira-do-paraguai.png"
+                  src={paraguai}
                   alt="Países de atuação da Mamuth"
                   className="h-10 object-contain"
                 />
@@ -277,7 +287,7 @@ const Home = () => {
               className="relative"
             >
               <img
-                src="img/mapa-america-do-sul.png"
+                src={americaDoSul}
                 alt="Presença da Mamuth na América Latina"
                 className="w-full max-w-4x1 mx-auto"
               />
