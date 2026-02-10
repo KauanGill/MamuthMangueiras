@@ -1,6 +1,8 @@
 import React from 'react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X } from 'lucide-react';
 import { Helmet } from 'react-helmet';
-import { motion } from 'framer-motion';
 import { Droplet, Wrench, Settings, Zap, Shield, Award, Clock, Users } from 'lucide-react';
 import CTAButton from '@/components/CTAButton';
 import SectionTitle from '@/components/SectionTitle';
@@ -13,21 +15,24 @@ import bombaAltaPressao from "@/assets/images/bomba-alta-pressao-titulo.png";
 import lavadoraAltaPressao from "@/assets/images/lavadora-alta-pressao.png";
 import vestimentaProtecao from "@/assets/images/vestimenta-protecao.png";
 import mangueiraConexao from "@/assets/images/mangueiras-conexoes.jpg";
-import argentina from "@/assets/images/bandeira-da-argentina.avif";
+import argentina from "@/assets/images/bandeira-da-argentina.png";
 import bolivia from "@/assets/images/bandeira-da-bolivia.png";
-import colombia from "@/assets/images/bandeira-da-colombia.avif";
+import colombia from "@/assets/images/bandeira-da-colombia.png";
 import guatemala from "@/assets/images/bandeira-da-guatemala.png";
-import venezuela from "@/assets/images/bandeira-da-venezuela.avif";
-import brasil from "@/assets/images/bandeira-do-brasil.avif";
+import venezuela from "@/assets/images/bandeira-da-venezuela.png";
+import brasil from "@/assets/images/bandeira-do-brasil.png";
 import equador from "@/assets/images/bandeira-do-equador.svg";
 import mexico from "@/assets/images/bandeira-do-mexico.png";
 import paraguai from "@/assets/images/bandeira-do-paraguai.png";
 import peru from "@/assets/images/bandeira-do-peru.png";
-import americaDoSul from "@/assets/images/mapa-america-do-sul.png";
+import americaDoSul from "@/assets/images/mapa_atuacao_mamuth_sem_fundo.png";
+import seloParker from "@/assets/images/selo-certificado-parker.png";
+import imagemCertificado from "@/assets/images/certificado_mamuth.jpg";
 
 const Home = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
 
   const handleCTAClick = () => {
     navigate('/contato');
@@ -152,152 +157,95 @@ const Home = () => {
         </div>
       </section>
       {/* Latin America Presence Section */}
-      <section className="py-20 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<section className="relative overflow-hidden bg-white">
 
-            {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold mb-6" style={{ color: '#FF5101' }}>
-                Presente em toda a América Latina a Mamuth alia experiência e excelência para atender às demandas
-                do mercado internacional, oferecendo soluções robustas e seguras
-                para operações industriais de alta complexidade.
-              </h2>
+  {/* Background Map */}
+  <div className="absolute top-0 left-1/2 ml-[14rem] -translate-x-1/2">
+    <img
+      src={americaDoSul}
+      alt="Presença da Mamuth na América Latina"
+      className="object-contain w-[650px]"
+    />
+  </div>
 
-              <p className="text-lg text-gray-700 mb-8">
-                
-              </p>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="flex flex-wrap items-center gap-3 mb-10">
-                <img
-                  src={peru}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-                <img
-                  src={brasil}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-                <img
-                  src={argentina}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-                <img
-                  src={mexico}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-                <img
-                  src={colombia}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="flex flex-wrap items-center gap-3 mb-10 ml-5">
-                <img
-                  src={guatemala}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-                <img
-                  src={venezuela}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-                <img
-                  src={bolivia}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-                <img
-                  src={equador}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-                <img
-                  src={paraguai}
-                  alt="Países de atuação da Mamuth"
-                  className="h-10 object-contain"
-                />
-              </motion.div>
-              <h3
-                className="text-2xl font-bold mb-4"
-                style={{ color: 'var(--color-dark-blue)' }}
-              >
-                Nossos setores
-              </h3>
+  {/* Content */}
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-                  <span>
-                    Limpeza de evaporadores, caldeiras, aquecedores, linha de xarope
-                    e tubulações em geral.
-                  </span>
-                </li>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="max-w-3xl"
+    >
 
-                <li className="flex items-start gap-3">
-                  <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-                  <span>
-                    Hidrojateamento, limpeza de concreto, preparação de superfície
-                    e apicoamento.
-                  </span>
-                </li>
+      <h2 className="text-4xl font-bold mb-6" style={{ color: '#FF5101' }}>
+        Presente em toda a América Latina a Mamuth alia experiência e excelência
+        para atender às demandas do mercado internacional, oferecendo soluções
+        robustas e seguras para operações industriais de alta complexidade.
+      </h2>
 
-                <li className="flex items-start gap-3">
-                  <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-                  <span>
-                    Limpeza de trocadores de calor, tubulações, corte de refratários
-                    e limpeza de tanques e caldeiras.
-                  </span>
-                </li>
+      {/* Flags */}
+      <div className="flex flex-wrap gap-3 mb-10">
+        <img src={peru} alt="Peru" className="h-10 object-contain" />
+        <img src={brasil} alt="Brasil" className="h-10 object-contain" />
+        <img src={argentina} alt="Argentina" className="h-10 object-contain" />
+        <img src={mexico} alt="México" className="h-10 object-contain" />
+        <img src={colombia} alt="Colômbia" className="h-10 object-contain" />
+      </div>
+      <div className="flex flex-wrap gap-3 mb-10">
+        <img src={guatemala} alt="Guatemala" className="h-10 object-contain" />
+        <img src={venezuela} alt="Venezuela" className="h-10 object-contain" />
+        <img src={bolivia} alt="Bolívia" className="h-10 object-contain" />
+        <img src={equador} alt="Equador" className="h-10 object-contain" />
+        <img src={paraguai} alt="Paraguai" className="h-10 object-contain" />
+      </div>
 
-                <li className="flex items-start gap-3">
-                  <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-                  <span>
-                    Limpeza de duto forno, tubulações, corte de refratários
-                    e limpeza de torre ciclone.
-                  </span>
-                </li>
-              </ul>
-            </motion.div>
+      <h3
+        className="text-3xl font-bold mb-6"
+        style={{ color: 'var(--color-dark-blue)' }}
+      >
+        Nossos setores
+      </h3>
 
-            {/* Map Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <img
-                src={americaDoSul}
-                alt="Presença da Mamuth na América Latina"
-                className="w-full max-w-4x1 mx-auto"
-              />
-            </motion.div>
+      <ul className="space-y-4 text-gray-800">
+        <li className="flex items-start gap-3">
+          <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
+          <span>
+            Limpeza de evaporadores, caldeiras, aquecedores, linha de xarope
+            e tubulações em geral.
+          </span>
+        </li>
 
-          </div>
-        </div>
-      </section>
+        <li className="flex items-start gap-3">
+          <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
+          <span>
+            Hidrojateamento, limpeza de concreto, preparação de superfície
+            e apicoamento.
+          </span>
+        </li>
 
-      {/* Institutional Section */}
+        <li className="flex items-start gap-3">
+          <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
+          <span>
+            Limpeza de trocadores de calor, tubulações, corte de refratários
+            e limpeza de tanques e caldeiras.
+          </span>
+        </li>
+
+        <li className="flex items-start gap-3">
+          <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
+          <span>
+            Limpeza de duto forno, tubulações, corte de refratários
+            e limpeza de torre ciclone.
+          </span>
+        </li>
+      </ul>
+
+    </motion.div>
+  </div>
+</section>
+ {/* Institutional Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center mb-12">
@@ -356,7 +304,7 @@ const Home = () => {
             <h2 className="text-5x1 md:text-5xl font-bold mb-4 text-white">
               Nossas Linhas de Produtos
             </h2>
-            <p className="text-lg text-gray-300 max-w-xl mx-auto">
+            <p className="text-3xl text-gray-300 max-w-xl mx-auto">
               Equipamentos de alta qualidade para todas as suas necessidades industriais
             </p>
           </div>
@@ -390,7 +338,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Final CTA Section */}
       <section className="py-16 text-white" style={{ backgroundColor: '#FF5101' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -416,6 +363,92 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+    <section
+      className="py-24 text-white relative"
+      style={{ backgroundColor: 'var(--color-dark-blue)' }}
+    >
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center"
+        >
+          {/* Badge */}
+          <div className="mb-8">
+            <img
+              src={seloParker}
+              alt="Certificação Parker"
+              className="w-28 md:w-36 mx-auto"
+            />
+          </div>
+
+          {/* Title */}
+          <h2 className="text-4xl font-bold mb-4">
+            Mangueira Polyflex
+          </h2>
+
+          {/* Subtitle */}
+          <p className="text-lg text-gray-300 mb-6">
+            Certificado de Montador e Distribuidor
+          </p>
+
+          {/* Company */}
+          <p className="text-base md:text-xl font-semibold text-[#FF5101] mb-10">
+            Mamuth Mangueiras e Conexões <br className="hidden md:block" />
+            Vila Maria – São Paulo
+          </p>
+
+          {/* CTA */}
+          <button
+            onClick={() => setOpen(true)}
+            className="inline-flex items-center gap-2 px-10 py-4 rounded-full
+                       bg-[#FF5101] hover:bg-[#e54800] transition
+                       text-white font-semibold"
+          >
+            CONFIRA
+          </button>
+        </motion.div>
+      </div>
+
+      {/* MODAL */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+            onClick={() => setOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative bg-white rounded-xl p-4 max-w-3xl w-full mx-4"
+            >
+              {/* Close */}
+              <button
+                onClick={() => setOpen(false)}
+                className="absolute top-3 right-3 text-gray-700 hover:text-black"
+              >
+                <X size={28} />
+              </button>
+
+              {/* Image */}
+              <img
+                src={imagemCertificado}
+                alt="Certificado Parker"
+                className="w-full h-auto rounded-lg"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
     </>
   );
 };
