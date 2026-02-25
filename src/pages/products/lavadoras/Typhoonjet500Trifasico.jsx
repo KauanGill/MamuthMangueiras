@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react';
-import { color, motion } from 'framer-motion';
+import React, { useEffect, useState  } from 'react';
+import { color, motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 // Import da imagem
 import typhoon500 from "@/assets/images/lavadora-typhoon-jet-500bar.jpeg"; 
+import typhoon5002 from "@/assets/images/typhoonjet-500bar-1200L.png"; 
+import typhoon5003 from "@/assets/images/typhoonjet-500bar-1200L.png";
 
 const Typhoon500Trifasico = () => {
   const navigate = useNavigate();
+
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -36,18 +41,53 @@ const Typhoon500Trifasico = () => {
             Lavadora de alta pressão Typhoon-Jet <br/> 500 BAR (7251 PSI) 1.200 L/H Trifásico
           </motion.h1>
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={typhoon500} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+          <div className="relative flex items-center justify-center overflow-hidden py-10">
+
+  {(() => {
+    const images = [typhoon500, typhoon5002, typhoon5003];
+    const prevIndex = (index - 1 + images.length) % images.length;
+    const nextIndex = (index + 1) % images.length;
+
+    return (
+      <>
+        {/* Imagem esquerda */}
+        <motion.img
+          key={prevIndex}
+          src={images[prevIndex]}
+          onClick={() => setIndex(prevIndex)}
+          className="absolute left-12 w-[30%] opacity-40 scale-90 blur-sm cursor-pointer rounded-3xl"
+          initial={{ x: -40 }}
+          animate={{ x: -80 }}
+          transition={{ duration: 0.4 }}
+        />
+
+        {/* Imagem central */}
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={index}
+            src={images[index]}
+            className="w-[30%] z-10 rounded-3xl shadow-2xl"
+            initial={{ scale: 0.85, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.85, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+          />
+        </AnimatePresence>
+
+        {/* Imagem direita */}
+        <motion.img
+          key={nextIndex}
+          src={images[nextIndex]}
+          onClick={() => setIndex(nextIndex)}
+          className="absolute right-12 w-[30%] opacity-40 scale-90 blur-sm cursor-pointer rounded-3xl"
+          initial={{ x: 40 }}
+          animate={{ x: 80 }}
+          transition={{ duration: 0.4 }}
+        />
+      </>
+    );
+  })()}
+</div>
         </div>
       </section>
 

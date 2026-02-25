@@ -13,7 +13,6 @@ const Navbar = () => {
     { name: 'Sobre', path: '/sobre' },
     { name: 'Produtos', path: '/produtos' },
     { name: 'Representações', path: '/representacoes' },
-    { name: 'Serviços', path: '/servicos' },
     { name: 'Notícias', path: '/noticias' },
     { name: 'Contato', path: '/contato' },
   ];
@@ -43,7 +42,7 @@ const Navbar = () => {
                     ? 'text-white'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
-                style={isActive(link.path) ? { backgroundColor: '#FF5101' } : {}}
+                style={isActive(link.path) ? { backgroundColor: '#FE5100' } : {}}
               >
                 {link.name}
               </Link>

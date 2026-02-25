@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Helmet } from 'react-helmet';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 import { Building2, Globe, Award, TrendingUp } from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
 import { useToast } from '@/components/ui/use-toast';
 
+import seloParker from "@/assets/images/selo-certificado-parker.png";
+import imagemCertificado from "@/assets/images/certificado_mamuth.jpg";
+import seloFalch from "@/assets/images/logo_falch_certificado.png"
+
 const Representacoes = () => {
   const { toast } = useToast();
+
+   const [open, setOpen] = useState(false);
 
   const handleLearnMore = (brandName) => {
     toast({
@@ -18,8 +25,8 @@ const Representacoes = () => {
   const brands = [
     {
       icon: Building2,
-      name: 'International Pump Systems',
-      description: 'Líder mundial em bombas de alta pressão com tecnologia de ponta. Parceria estabelecida desde 2010, trazendo as mais avançadas soluções em sistemas de bombeamento para o mercado brasileiro.',
+      name: 'Parker Hannifin',
+      description: 'A Parker-Hannifin é líder global em tecnologias de movimento e controle, fornecendo componentes essenciais para sistemas de hidrojateamento, como mangueiras, conexões e válvulas de alta pressão. Reconhecida pela qualidade e confiabilidade, a empresa possui forte atuação no Brasil, oferecendo soluções seguras e eficientes para aplicações industriais.',
       specialties: ['Bombas industriais', 'Sistemas de alta pressão', 'Automação']
     },
     {
@@ -70,7 +77,7 @@ const Representacoes = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Nossas Representações</h1>
-            <p className="text-xl max-w-3xl mx-auto">
+            <p className="text-lg md:text-2xl max-w-2xl mx-auto">
               Parcerias estratégicas com as marcas mais respeitadas do mercado mundial
             </p>
           </motion.div>
@@ -196,6 +203,130 @@ const Representacoes = () => {
           </div>
         </div>
       </section>
+       <section
+      className="py-24 text-white relative"
+      style={{ backgroundColor: 'var(--color-dark-blue)' }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+            {/* COLUNA 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col items-center text-center"
+            >
+              <div className="mb-8">
+                <img
+                  src={seloParker}
+                  alt="Certificação Parker"
+                  className="w-28 md:w-36 mx-auto"
+                />
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Mangueira Polyflex
+              </h2>
+
+              <p className="text-xl md:text-2xl text-gray-300 mb-6">
+                Certificado de Montador e Distribuidor
+              </p>
+
+              <p className="text-base md:text-xl font-semibold text-[#FF5101] mb-10">
+                Mamuth Mangueiras e Conexões <br className="hidden md:block" />
+                Vila Maria – São Paulo
+              </p>
+
+              <button
+                onClick={() => setOpen(true)}
+                className="inline-flex items-center gap-2 px-10 py-4 rounded-full
+                          bg-[#FF5101] hover:bg-[#e54800] transition
+                          text-white font-semibold"
+              >
+                CONFIRA
+              </button>
+            </motion.div>
+
+
+            {/* COLUNA 2 (CÓPIA) */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col items-center text-center"
+            >
+              <div className="mb-8">
+                <img
+                  src={seloFalch}
+                  alt="Certificação Parker"
+                  className="w-28 md:w-36 mx-auto"
+                />
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Máquinas de Hidrojato
+              </h2>
+
+              <p className="text-xl md:text-2xl text-gray-300 mb-6">
+                Certificado de Montador e Distribuidor
+              </p>
+
+              <p className="text-base md:text-xl font-semibold text-[#FF5101] mb-10">
+                Mamuth Mangueiras e Conexões <br className="hidden md:block" />
+                Vila Maria – São Paulo
+              </p>
+
+              <button
+                onClick={() => setOpen(true)}
+                className="inline-flex items-center gap-2 px-10 py-4 rounded-full
+                          bg-[#FF5101] hover:bg-[#e54800] transition
+                          text-white font-semibold"
+              >
+                CONFIRA
+              </button>
+            </motion.div>
+
+          </div>
+        </div>
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+              onClick={() => setOpen(false)}
+            >
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                onClick={(e) => e.stopPropagation()}
+                className="relative bg-white rounded-xl p-4 max-w-4xl w-full mx-4"
+              >
+                {/* Botão fechar */}
+                <button
+                  onClick={() => setOpen(false)}
+                  className="absolute top-3 right-3 text-gray-700 hover:text-black"
+                >
+                  <X size={28} />
+                </button>
+
+                {/* IMAGEM DO CERTIFICADO */}
+                <img
+                  src={imagemCertificado}
+                  alt="Certificado"
+                  className="w-full h-auto rounded-lg"
+                />
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+            </section>
     </>
   );
 };

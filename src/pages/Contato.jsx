@@ -156,7 +156,7 @@ const Contato = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Entre em Contato</h1>
-            <p className="text-xl max-w-3xl mx-auto">
+            <p className="text-lg md:text-2xl max-w-2xl mx-auto">
               Estamos prontos para atender suas necessidades e responder suas dúvidas
             </p>
           </motion.div>
@@ -339,7 +339,7 @@ const Contato = () => {
                 <Button
                   type="submit"
                   className="w-full py-3 text-white font-semibold rounded-lg transition-all hover:shadow-lg flex items-center justify-center"
-                  style={{ backgroundColor: 'var(--color-orange)' }}
+                  style={{ backgroundColor: '#FF5101' }}
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Enviar Mensagem
@@ -362,7 +362,7 @@ const Contato = () => {
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start space-x-4">
-                      <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'var(--color-orange)' }}>
+                      <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0" style={{ backgroundColor: '#FF5101' }}>
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
@@ -375,7 +375,7 @@ const Contato = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hover:underline"
-                            style={{ color: 'var(--color-orange)' }}
+                            style={{ color: '#FF5101' }}
                           >
                             {info.content}
                           </a>

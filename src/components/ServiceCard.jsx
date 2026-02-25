@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import CTAButton from '@/components/CTAButton';
 
-const ServiceCard = ({ icon: Icon, title, description, benefits, onCTAClick }) => {
+const ServiceCard = ({ icon: Icon, title, description, benefits, buttonText, onCTAClick }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -29,8 +29,8 @@ const ServiceCard = ({ icon: Icon, title, description, benefits, onCTAClick }) =
           ))}
         </ul>
       )}
-      <CTAButton onClick={onCTAClick} className="w-full">
-        Solicitar Serviço
+      <CTAButton onClick={onCTAClick} className="w-full text-sm">
+        {buttonText}
       </CTAButton>
     </motion.div>
   );
