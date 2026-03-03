@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from 'react-helmet';
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import { Target, Eye, Award, Leaf, Lightbulb, Shield } from 'lucide-react';
+import { Target, Eye, Award, Leaf, Lightbulb, Shield, Building2, Globe} from 'lucide-react';
 import SectionTitle from '@/components/SectionTitle';
 import videoSobre from '@/assets/images/video-sobre.mp4';
 
@@ -13,6 +13,31 @@ import seloFalch from "@/assets/images/logo_falch_certificado.png"
 const Sobre = () => {
 
   const [open, setOpen] = useState(false);
+
+  const [selectedBrand, setSelectedBrand] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleLearnMore = (brandName) => {
+    toast({
+      title: "Informações",
+      description: `Em breve mais detalhes sobre ${brandName} estarão disponíveis.`,
+    });
+  };
+
+   const brands = [
+    {
+      icon: Building2,
+      name: 'Parker Hannifin',
+      description: 'A Parker-Hannifin é líder global em tecnologias de movimento e controle, fornecendo componentes essenciais para sistemas de hidrojateamento, como mangueiras, conexões e válvulas de alta pressão. Reconhecida pela qualidade e confiabilidade, a empresa possui forte atuação no Brasil, oferecendo soluções seguras e eficientes para aplicações industriais.',
+      specialties: ['Alta Pressão', 'Controle Preciso', 'Confiabilidade Industrial']
+    },
+    {
+      icon: Globe,
+      name: 'Falch GmbHs',
+      description: 'A Falch GmbH é uma fabricante alemã especializada em equipamentos de hidrojateamento e sistemas de alta pressão para aplicações industriais. Com mais de 40 anos de experiência, desenvolve soluções robustas e inovadoras, reconhecidas pela eficiência, durabilidade e alto desempenho em operações exigentes.',
+      specialties: ['Performance Extrema', 'Tecnologia Avançada', 'Engenharia Alemã']
+    }
+  ];
 
   const values = [
     {
@@ -201,6 +226,112 @@ const Sobre = () => {
           </div>
         </div>
       </section>
+        <section className="py-16 bg-gray-50">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <SectionTitle
+                  title="Marcas Representadas"
+                  subtitle="Selecionamos cuidadosamente cada parceiro para oferecer o melhor ao mercado brasileiro"
+                />
+                <div className="flex flex-wrap justify-center gap-8">
+                  {brands.map((brand, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      whileHover={{ y: -5 }}
+                      className="bg-white rounded-xl shadow-lg p-6 flex flex-col h-full 
+                      w-full md:w-[48%] lg:w-[32%]"
+                    >
+                      <div className="w-16 h-16 rounded-lg flex items-center justify-center mb-4" style={{ backgroundColor: '#FF5101' }}>
+                        <brand.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                        {brand.name}
+                      </h3>
+                      <p className="text-gray-600 mb-4 flex-grow">{brand.description}</p>
+                      <div className="mb-4">
+                        <h4 className="font-semibold text-sm mb-2" style={{ color: 'var(--color-dark-blue)' }}>
+                          Especialidades:
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {brand.specialties.map((specialty, idx) => (
+                            <span
+                              key={idx}
+                              className="text-xs px-3 py-1 rounded-full text-white"
+                              style={{ backgroundColor: '#FF5101' }}
+                            >
+                              {specialty}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => {
+                          setSelectedBrand(brand);
+                          setIsOpen(true);
+                        }}
+                        className="font-semibold hover:underline inline-flex items-center"
+                        style={{ color: '#FF5101' }}
+                      >
+                        Saiba Mais →
+                      </button>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.div
+                    className="fixed inset-0 z-50 flex items-center justify-center 
+                    bg-black/40 backdrop-blur-md"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <motion.div
+                      initial={{ scale: 0.92, opacity: 0, y: 20 }}
+                      animate={{ scale: 1, opacity: 1, y: 0 }}
+                      exit={{ scale: 0.92, opacity: 0, y: 20 }}
+                      transition={{ duration: 0.35, ease: "easeOut" }}
+                      onClick={(e) => e.stopPropagation()}
+                      className="relative bg-white/90 backdrop-blur-xl 
+                      rounded-3xl p-10 max-w-xl w-full shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)]"
+                    >
+                      <button
+                        onClick={() => setIsOpen(false)}
+                        className="absolute top-5 right-5 text-gray-500 
+                        hover:text-black transition"
+                      >
+                        ✕
+                      </button>
+
+                      <h3 className="text-3xl font-bold mb-6 text-[#FF5101]">
+                        {selectedBrand?.name}
+                      </h3>
+
+                      <p className="text-gray-700 mb-6 leading-relaxed">
+                        {selectedBrand?.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-3">
+                        {selectedBrand?.specialties.map((item, index) => (
+                          <span
+                            key={index}
+                            className="text-xs px-4 py-2 rounded-full 
+                            bg-[#FF5101] text-white font-medium"
+                          >
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </section>
 
       {/* Timeline Section */}
       <section className="py-16 bg-gray-50">

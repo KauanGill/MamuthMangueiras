@@ -27,13 +27,13 @@ const Representacoes = () => {
       icon: Building2,
       name: 'Parker Hannifin',
       description: 'A Parker-Hannifin é líder global em tecnologias de movimento e controle, fornecendo componentes essenciais para sistemas de hidrojateamento, como mangueiras, conexões e válvulas de alta pressão. Reconhecida pela qualidade e confiabilidade, a empresa possui forte atuação no Brasil, oferecendo soluções seguras e eficientes para aplicações industriais.',
-      specialties: ['Bombas industriais', 'Sistemas de alta pressão', 'Automação']
+      specialties: ['Alta Pressão', 'Controle Preciso', 'Confiabilidade Industrial']
     },
     {
       icon: Globe,
-      name: 'HydroTech Solutions',
-      description: 'Especialista em sistemas de hidrojateamento e limpeza industrial. Inovação constante em tecnologias de limpeza sustentável e eficiente, com presença em mais de 40 países.',
-      specialties: ['Hidrojateamento', 'Limpeza industrial', 'Tecnologia verde']
+      name: 'Falch GmbHs',
+      description: 'A Falch GmbH é uma fabricante alemã especializada em equipamentos de hidrojateamento e sistemas de alta pressão para aplicações industriais. Com mais de 40 anos de experiência, desenvolve soluções robustas e inovadoras, reconhecidas pela eficiência, durabilidade e alto desempenho em operações exigentes.',
+      specialties: ['Performance Extrema', 'Tecnologia Avançada', 'Engenharia Alemã']
     },
     {
       icon: Award,

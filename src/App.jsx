@@ -103,6 +103,9 @@ import Pistola660bar from '@/pages/products/acessoriosLavadoras/Pistola660bar';
 import Pistola350bar from '@/pages/products/acessoriosLavadoras/Pistola350Bar';
 import Pistola280bar from '@/pages/products/acessoriosLavadoras/Pistola280Bar';
 import BicoJatoAbrasivo from '@/pages/products/acessoriosLavadoras/BicoJatoAbrasivo500Bar';
+{/* Acessórios para Lavadoras de Alta Pressão  */}
+import FeiraFenasucro from '@/pages/noticias/feira-fenasucro';
+import FeiraNavalShore from '@/pages/noticias/feira-navalshore';
 
 import { Toaster } from '@/components/ui/toaster';
 
@@ -214,6 +217,8 @@ function App() {
             <Route path="/acessorios-lavadoras-de-alta-pressao/pistola-350bar" element={<Pistola350bar/>}/>
             <Route path="/acessorios-lavadoras-de-alta-pressao/pistola-280bar" element={<Pistola280bar/>}/>
             <Route path="/acessorios-lavadoras-de-alta-pressao/bico-jato-abrasivo-500bar" element={<BicoJatoAbrasivo/>}/>
+            <Route path="/noticias/feira-fenasucro" element={<FeiraFenasucro />} />
+            <Route path="/noticias/feira-navalshore" element={<FeiraNavalShore />} />
           </Routes>
         </main> 
         <Footer />

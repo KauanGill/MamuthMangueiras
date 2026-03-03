@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import typhoon500 from "@/assets/images/lavadora-typhoon-jet-500bar.jpeg"; 
 import typhoon5002 from "@/assets/images/typhoonjet-500bar-1200L.png"; 
 import typhoon5003 from "@/assets/images/typhoonjet-500bar-1200L.png";
+import typhoonVideo from "@/assets/images/video-sobre.mp4"
 
 const Typhoon500Trifasico = () => {
   const navigate = useNavigate();
@@ -26,70 +27,101 @@ const Typhoon500Trifasico = () => {
       </Helmet>
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
-      <section 
-        className="relative pt-10 pb-20 px-4 w-full" 
-        style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
-      >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-            Lavadora de alta pressão Typhoon-Jet <br/> 500 BAR (7251 PSI) 1.200 L/H Trifásico
-          </motion.h1>
-
-          <div className="relative flex items-center justify-center overflow-hidden py-10">
+     <section 
+  className="relative pt-10 pb-20 px-4 w-full" 
+  style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
+>
+  <div className="max-w-7xl mx-auto text-center">
+    
+    <motion.h1 
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
+      style={{ lineHeight: '1.4' }}
+    >
+      Lavadora de alta pressão Typhoon-Jet <br/> 
+      500 BAR (7251 PSI) 1.200 L/H Trifásico
+    </motion.h1>
+<div className="relative flex items-center justify-center overflow-hidden py-10">
 
   {(() => {
-    const images = [typhoon500, typhoon5002, typhoon5003];
-    const prevIndex = (index - 1 + images.length) % images.length;
-    const nextIndex = (index + 1) % images.length;
+    const items = [
+      { type: "image", src: typhoon500 },
+      { type: "image", src: typhoon5002 },
+      { type: "video", src: typhoonVideo }, // 👈 VIDEO AQUI
+      { type: "image", src: typhoon5003 },
+    ];
+
+    const prevIndex = (index - 1 + items.length) % items.length;
+    const nextIndex = (index + 1) % items.length;
+
+    const renderItem = (item, isCenter = false) => {
+      if (item.type === "video") {
+        return (
+          <video
+            src={item.src}
+            className="w-full rounded-2xl"
+            autoPlay={isCenter}
+            muted
+            loop
+            controls={isCenter}
+          />
+        );
+      }
+
+      return (
+        <img
+          src={item.src}
+          className="w-full rounded-2xl"
+        />
+      );
+    };
 
     return (
       <>
-        {/* Imagem esquerda */}
-        <motion.img
+        {/* ITEM ESQUERDA */}
+        <motion.div
           key={prevIndex}
-          src={images[prevIndex]}
           onClick={() => setIndex(prevIndex)}
-          className="absolute left-12 w-[30%] opacity-40 scale-90 blur-sm cursor-pointer rounded-3xl"
+          className="absolute left-12 w-[30%] bg-white p-3 rounded-3xl shadow-xl opacity-40 scale-90 blur-sm cursor-pointer"
           initial={{ x: -40 }}
           animate={{ x: -80 }}
           transition={{ duration: 0.4 }}
-        />
+        >
+          {renderItem(items[prevIndex])}
+        </motion.div>
 
-        {/* Imagem central */}
+        {/* ITEM CENTRAL */}
         <AnimatePresence mode="wait">
-          <motion.img
+          <motion.div
             key={index}
-            src={images[index]}
-            className="w-[30%] z-10 rounded-3xl shadow-2xl"
+            className="w-[30%] z-10 bg-white p-4 rounded-3xl shadow-2xl"
             initial={{ scale: 0.85, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.85, opacity: 0 }}
             transition={{ duration: 0.4 }}
-          />
+          >
+            {renderItem(items[index], true)}
+          </motion.div>
         </AnimatePresence>
 
-        {/* Imagem direita */}
-        <motion.img
+        {/* ITEM DIREITA */}
+        <motion.div
           key={nextIndex}
-          src={images[nextIndex]}
           onClick={() => setIndex(nextIndex)}
-          className="absolute right-12 w-[30%] opacity-40 scale-90 blur-sm cursor-pointer rounded-3xl"
+          className="absolute right-12 w-[30%] bg-white p-3 rounded-3xl shadow-xl opacity-40 scale-90 blur-sm cursor-pointer"
           initial={{ x: 40 }}
           animate={{ x: 80 }}
           transition={{ duration: 0.4 }}
-        />
+        >
+          {renderItem(items[nextIndex])}
+        </motion.div>
       </>
     );
   })()}
 </div>
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* SEÇÃO DE TEXTOS: BRANCA - SEUS TEXTOS ORIGINAIS AQUI */}
       <section className="py-20 px-4 bg-white">
