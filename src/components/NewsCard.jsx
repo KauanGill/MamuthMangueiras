@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar } from 'lucide-react';
 
-const NewsCard = ({ id, image, date, title, excerpt }) => {
+const NewsCard = ({ id, image, date, title, excerpt, buttonText, link }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -31,11 +31,11 @@ const NewsCard = ({ id, image, date, title, excerpt }) => {
         </h3>
         <p className="text-gray-600 mb-4 flex-grow">{excerpt}</p>
         <Link
-          to={`/noticias/${id}`}
+          to={link}
           className="font-semibold hover:underline inline-flex items-center"
           style={{ color: '#FF5101' }}
         >
-          Leia Mais →
+          {buttonText}
         </Link>
       </div>
     </motion.div>

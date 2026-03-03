@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from '@/components/Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isNoticiasOpen, setIsNoticiasOpen] = useState(false);
+  const [isNoticiasMobileOpen, setIsNoticiasMobileOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
@@ -13,7 +15,6 @@ const Navbar = () => {
     { name: 'Sobre', path: '/sobre' },
     { name: 'Produtos', path: '/produtos' },
     { name: 'Representações', path: '/representacoes' },
-    { name: 'Serviços', path: '/servicos' },
     { name: 'Notícias', path: '/noticias' },
     { name: 'Contato', path: '/contato' },
   ];
@@ -24,48 +25,96 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
+
           {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center hover:opacity-80 transition-opacity duration-300"
-          >
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
             <Logo size="md" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                  isActive(link.path)
-                    ? 'text-white'
-                    : 'text-gray-700 hover:bg-gray-100'
-                }`}
-                style={isActive(link.path) ? { backgroundColor: '#FF5101' } : {}}
-              >
-                {link.name}
-              </Link>
-            ))}
+          {/* Desktop */}
+          <div className="hidden md:flex items-center space-x-1 relative">
+            {navLinks.map((link) => {
+
+              if (link.name === 'Notícias') {
+                return (
+                  <div
+                    key={link.path}
+                    className="relative"
+                    onMouseEnter={() => setIsNoticiasOpen(true)}
+                    onMouseLeave={() => setIsNoticiasOpen(false)}
+                  >
+                    <Link
+                      to={link.path}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-1 transition-all ${
+                        isActive(link.path)
+                          ? 'text-white'
+                          : 'text-gray-700 hover:bg-gray-100'
+                      }`}
+                      style={isActive(link.path) ? { backgroundColor: '#FE5100' } : {}}
+                    >
+                      Notícias
+                      <ChevronDown size={16} />
+                    </Link>
+
+                    <AnimatePresence>
+                      {isNoticiasOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-[#FE5100] overflow-hidden"
+                        >
+                          <button
+                            className="block w-full text-left px-4 py-3 text-sm font-medium rounded-lg
+                            text-gray-700 transition-all
+                            hover:text-white hover:bg-[#FE5100]"
+                          >
+                            Materiais Ricos
+                          </button>
+
+                          <button
+                            className="block w-full text-left px-4 py-3 text-sm font-medium rounded-lg
+                            text-gray-700 transition-all
+                            hover:text-white hover:bg-[#FE5100]"
+                          >
+                            Artigos
+                          </button>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    isActive(link.path)
+                      ? 'text-white'
+                      : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                  style={isActive(link.path) ? { backgroundColor: '#FE5100' } : {}}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label="Toggle menu"
           >
-            {isOpen ? (
-              <X className="w-6 h-6" style={{ color: 'var(--color-dark-blue)' }} />
-            ) : (
-              <Menu className="w-6 h-6" style={{ color: 'var(--color-dark-blue)' }} />
-            )}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -76,21 +125,65 @@ const Navbar = () => {
             className="md:hidden border-t border-gray-200"
           >
             <div className="px-4 py-4 space-y-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                    isActive(link.path)
-                      ? 'text-white'
-                      : 'text-gray-700 hover:bg-gray-100'
-                  }`}
-                  style={isActive(link.path) ? { backgroundColor: 'var(--color-orange)' } : {}}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+
+                if (link.name === 'Notícias') {
+                  return (
+                    <div key={link.path}>
+                      <Link
+                        to={link.path}
+                        onClick={() => setIsOpen(false)}
+                        className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition"
+                      >
+                        Notícias
+                      </Link>
+
+                      <button
+                        onClick={() => setIsNoticiasMobileOpen(!isNoticiasMobileOpen)}
+                        className="w-full text-left px-6 py-2 text-sm text-gray-600"
+                      >
+                        ▼ Submenu
+                      </button>
+
+                      <AnimatePresence>
+                        {isNoticiasMobileOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="pl-8 mt-2 space-y-2 border-l-2 border-[#FE5100]"
+                          >
+                            <button className="block w-full text-left py-2 text-sm text-gray-600 hover:text-white hover:bg-[#FE5100] rounded-lg transition-all px-3">
+                              Materiais Ricos
+                            </button>
+
+                            <button className="block w-full text-left py-2 text-sm text-gray-600 hover:text-white hover:bg-[#FE5100] rounded-lg transition-all px-3">
+                              Artigos
+                            </button>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                      isActive(link.path)
+                        ? 'text-white'
+                        : 'text-gray-700 hover:bg-gray-100'
+                    }`}
+                    style={isActive(link.path) ? { backgroundColor: '#FE5100' } : {}}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
             </div>
           </motion.div>
         )}

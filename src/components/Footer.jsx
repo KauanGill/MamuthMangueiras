@@ -9,22 +9,21 @@ const Footer = () => {
     { name: 'Home', path: '/' },
     { name: 'Sobre', path: '/sobre' },
     { name: 'Produtos', path: '/produtos' },
-    { name: 'Serviços', path: '/servicos' },
     { name: 'Notícias', path: '/noticias' },
     { name: 'Contato', path: '/contato' },
   ];
 
   return (
-    <footer className="text-white" style={{ backgroundColor: 'var(--color-dark-blue)' }}>
+    <footer className="text-white" style={{ backgroundColor: '#14124F' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-4 hover:opacity-80 transition-opacity duration-300">
-              <Logo size="sm" />
+              <Logo size="md" className="brightness-0 invert"/>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Peso pesado em alta pressão. Soluções completas em equipamentos industriais e hidrojateamento.
+              Qualidade de peso, Garantia de força. Soluções completas em equipamentos industriais e hidrojateamento.
             </p>
           </div>
 

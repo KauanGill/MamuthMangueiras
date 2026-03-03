@@ -1,13 +1,19 @@
-import React, { useEffect } from 'react';
-import { color, motion } from 'framer-motion';
+import React, { useEffect, useState  } from 'react';
+import { color, motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 // Import da imagem
 import typhoon500 from "@/assets/images/lavadora-typhoon-jet-500bar.jpeg"; 
+import typhoon5002 from "@/assets/images/typhoonjet-500bar-1200L.png"; 
+import typhoon5003 from "@/assets/images/typhoonjet-500bar-1200L.png";
+import typhoonVideo from "@/assets/images/video-sobre.mp4"
 
 const Typhoon500Trifasico = () => {
   const navigate = useNavigate();
+
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -21,35 +27,101 @@ const Typhoon500Trifasico = () => {
       </Helmet>
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
-      <section 
-        className="relative pt-10 pb-20 px-4 w-full" 
-        style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
-      >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-            Lavadora de alta pressão Typhoon-Jet <br/> 500 BAR (7251 PSI) 1.200 L/H Trifásico
-          </motion.h1>
+     <section 
+  className="relative pt-10 pb-20 px-4 w-full" 
+  style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
+>
+  <div className="max-w-7xl mx-auto text-center">
+    
+    <motion.h1 
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
+      style={{ lineHeight: '1.4' }}
+    >
+      Lavadora de alta pressão Typhoon-Jet <br/> 
+      500 BAR (7251 PSI) 1.200 L/H Trifásico
+    </motion.h1>
+<div className="relative flex items-center justify-center overflow-hidden py-10">
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
+  {(() => {
+    const items = [
+      { type: "image", src: typhoon500 },
+      { type: "image", src: typhoon5002 },
+      { type: "video", src: typhoonVideo }, // 👈 VIDEO AQUI
+      { type: "image", src: typhoon5003 },
+    ];
+
+    const prevIndex = (index - 1 + items.length) % items.length;
+    const nextIndex = (index + 1) % items.length;
+
+    const renderItem = (item, isCenter = false) => {
+      if (item.type === "video") {
+        return (
+          <video
+            src={item.src}
+            className="w-full rounded-2xl"
+            autoPlay={isCenter}
+            muted
+            loop
+            controls={isCenter}
+          />
+        );
+      }
+
+      return (
+        <img
+          src={item.src}
+          className="w-full rounded-2xl"
+        />
+      );
+    };
+
+    return (
+      <>
+        {/* ITEM ESQUERDA */}
+        <motion.div
+          key={prevIndex}
+          onClick={() => setIndex(prevIndex)}
+          className="absolute left-12 w-[30%] bg-white p-3 rounded-3xl shadow-xl opacity-40 scale-90 blur-sm cursor-pointer"
+          initial={{ x: -40 }}
+          animate={{ x: -80 }}
+          transition={{ duration: 0.4 }}
+        >
+          {renderItem(items[prevIndex])}
+        </motion.div>
+
+        {/* ITEM CENTRAL */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            className="w-[30%] z-10 bg-white p-4 rounded-3xl shadow-2xl"
+            initial={{ scale: 0.85, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.85, opacity: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            <img 
-              src={typhoon500} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
+            {renderItem(items[index], true)}
           </motion.div>
-        </div>
-      </section>
+        </AnimatePresence>
+
+        {/* ITEM DIREITA */}
+        <motion.div
+          key={nextIndex}
+          onClick={() => setIndex(nextIndex)}
+          className="absolute right-12 w-[30%] bg-white p-3 rounded-3xl shadow-xl opacity-40 scale-90 blur-sm cursor-pointer"
+          initial={{ x: 40 }}
+          animate={{ x: 80 }}
+          transition={{ duration: 0.4 }}
+        >
+          {renderItem(items[nextIndex])}
+        </motion.div>
+      </>
+    );
+  })()}
+</div>
+  </div>
+</section>
 
       {/* SEÇÃO DE TEXTOS: BRANCA - SEUS TEXTOS ORIGINAIS AQUI */}
       <section className="py-20 px-4 bg-white">
