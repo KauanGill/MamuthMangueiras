@@ -148,21 +148,23 @@ const Contato = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 text-white" style={{ backgroundColor: 'var(--color-dark-blue)' }}>
+     <section className="relative py-20 text-white" style={{ backgroundColor: 'var(--color-dark-blue)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Entre em Contato</h1>
-            <p className="text-lg md:text-2xl max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Entre em Contato
+            </h1>
+
+            <p className="text-lg md:text-2xl max-w-5xl mx-auto">
               Estamos prontos para atender suas necessidades e responder suas dúvidas
             </p>
           </motion.div>
         </div>
       </section>
-
       {/* Contact Form and Info Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -45,7 +45,7 @@ const Navbar = () => {
                   >
                     <Link
                       to={link.path}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-1 transition-all ${
+                      className={`px-4 py-2 text-sm font-medium flex items-center gap-1 transition-all ${
                         isActive(link.path)
                           ? 'text-white'
                           : 'text-gray-700 hover:bg-gray-100'
@@ -63,10 +63,10 @@ const Navbar = () => {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-[#FE5100] overflow-hidden"
+                          className="absolute left-0 mt-2 bg-white shadow-xl border border-[#FE5100]"
                         >
                           <button
-                            className="block w-full text-left px-4 py-3 text-sm font-medium rounded-lg
+                            className="block w-40 whitespace-nowrap text-left px-4 py-2 text-sm font-medium
                             text-gray-700 transition-all
                             hover:text-white hover:bg-[#FE5100]"
                           >
@@ -74,7 +74,7 @@ const Navbar = () => {
                           </button>
 
                           <button
-                            className="block w-full text-left px-4 py-3 text-sm font-medium rounded-lg
+                            className="block w-40 whitespace-nowrap text-left px-4 py-2 text-sm font-medium
                             text-gray-700 transition-all
                             hover:text-white hover:bg-[#FE5100]"
                           >
@@ -91,7 +91,7 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                  className={`px-4 py-2 text-sm font-medium transition-all ${
                     isActive(link.path)
                       ? 'text-white'
                       : 'text-gray-700 hover:bg-gray-100'
@@ -107,7 +107,7 @@ const Navbar = () => {
           {/* Mobile Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 hover:bg-gray-100 transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -133,14 +133,14 @@ const Navbar = () => {
                       <Link
                         to={link.path}
                         onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition"
+                        className="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-100 transition"
                       >
                         Notícias
                       </Link>
 
                       <button
                         onClick={() => setIsNoticiasMobileOpen(!isNoticiasMobileOpen)}
-                        className="w-full text-left px-6 py-2 text-sm text-gray-600"
+                        className="text-left px-6 py-2 text-sm text-gray-600"
                       >
                         ▼ Submenu
                       </button>
@@ -152,13 +152,13 @@ const Navbar = () => {
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="pl-8 mt-2 space-y-2 border-l-2 border-[#FE5100]"
+                            className="pl-8 mt-2 space-y-1 border-l-2 border-[#FE5100]"
                           >
-                            <button className="block w-full text-left py-2 text-sm text-gray-600 hover:text-white hover:bg-[#FE5100] rounded-lg transition-all px-3">
+                            <button className="block w-40 whitespace-nowrap text-left py-2 text-sm text-gray-600 hover:text-white hover:bg-[#FE5100] transition-all px-3">
                               Materiais Ricos
                             </button>
 
-                            <button className="block w-full text-left py-2 text-sm text-gray-600 hover:text-white hover:bg-[#FE5100] rounded-lg transition-all px-3">
+                            <button className="block w-40 whitespace-nowrap text-left py-2 text-sm text-gray-600 hover:text-white hover:bg-[#FE5100] transition-all px-3">
                               Artigos
                             </button>
                           </motion.div>
@@ -173,7 +173,7 @@ const Navbar = () => {
                     key={link.path}
                     to={link.path}
                     onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                    className={`block px-4 py-3 text-sm font-medium transition-all ${
                       isActive(link.path)
                         ? 'text-white'
                         : 'text-gray-700 hover:bg-gray-100'

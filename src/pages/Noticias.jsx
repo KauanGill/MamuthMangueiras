@@ -52,7 +52,7 @@ const Noticias = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 text-white" style={{ backgroundColor: 'var(--color-dark-blue)' }}>
+     <section className="relative py-20 text-white" style={{ backgroundColor: 'var(--color-dark-blue)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ const Noticias = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Notícias</h1>
-            <p className="text-lg md:text-2xl max-w-2xl mx-auto">
+            <p className="text-lg md:text-2xl max-w-5xl mx-auto">
               Fique por dentro das últimas novidades e acontecimentos da Mamuth
             </p>
           </motion.div>

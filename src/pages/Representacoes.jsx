@@ -76,8 +76,11 @@ const Representacoes = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Nossas Representações</h1>
-            <p className="text-lg md:text-2xl max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Nossas Representações
+            </h1>
+
+            <p className="text-lg md:text-2xl max-w-5xl mx-auto">
               Parcerias estratégicas com as marcas mais respeitadas do mercado mundial
             </p>
           </motion.div>

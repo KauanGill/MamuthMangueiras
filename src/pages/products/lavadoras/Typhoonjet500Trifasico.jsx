@@ -1,127 +1,144 @@
-import React, { useEffect, useState  } from 'react';
-import { color, motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 // Import da imagem
-import typhoon500 from "@/assets/images/lavadora-typhoon-jet-500bar.jpeg"; 
-import typhoon5002 from "@/assets/images/typhoonjet-500bar-1200L.png"; 
-import typhoon5003 from "@/assets/images/typhoonjet-500bar-1200L.png";
-import typhoonVideo from "@/assets/images/video-sobre.mp4"
+import typhoon500 from "@/assets/images/lavadora-typhoon-jet-500bar.jpeg";
+import typhoonVideo from "@/assets/images/video-sobre.mp4";
 
 const Typhoon500Trifasico = () => {
+
   const navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
+  const [pause, setPause] = useState(false);
 
-  // Garante que a página inicie no topo
+  const items = [
+    { type: "image", src: typhoon500 },
+    { type: "image", src: typhoon500 },
+    { type: "video", src: typhoonVideo },
+    { type: "image", src: typhoon500 }
+  ];
+
+  // autoplay
+  useEffect(() => {
+    if (pause) return;
+
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % items.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [pause]);
+
+  // iniciar página no topo
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const prevIndex = (index - 1 + items.length) % items.length;
+  const nextIndex = (index + 1) % items.length;
+
+  const renderItem = (item, isCenter = false) => {
+
+  if (item.type === "video") {
+      return (
+        <video
+          src={item.src}
+          className={`rounded-2xl mx-auto ${
+            isCenter ? "w-[125%]" : "w-[95%]"
+          }`}
+          autoPlay={isCenter}
+          muted
+          loop
+          controls={isCenter}
+        />
+      );
+    }
+
+    return (
+      <img
+        src={item.src}
+        className={`rounded-2xl mx-auto ${
+          isCenter ? "w-[85%]" : "w-[75%]"
+        }`}
+      />
+    );
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-white w-full">
+
       <Helmet>
         <title>Typhoon Jet 500 Trifásico - Mamuth</title>
       </Helmet>
 
-      {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
-     <section 
-  className="relative pt-10 pb-20 px-4 w-full" 
-  style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
->
-  <div className="max-w-7xl mx-auto text-center">
-    
-    <motion.h1 
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-      style={{ lineHeight: '1.4' }}
-    >
-      Lavadora de alta pressão Typhoon-Jet <br/> 
-      500 BAR (7251 PSI) 1.200 L/H Trifásico
-    </motion.h1>
-<div className="relative flex items-center justify-center overflow-hidden py-10">
+      {/* HERO */}
+      <section
+        className="relative pt-10 pb-20 px-4 w-full"
+        style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
+      >
 
-  {(() => {
-    const items = [
-      { type: "image", src: typhoon500 },
-      { type: "image", src: typhoon5002 },
-      { type: "video", src: typhoonVideo }, // 👈 VIDEO AQUI
-      { type: "image", src: typhoon5003 },
-    ];
+        <div className="max-w-7xl mx-auto text-center">
 
-    const prevIndex = (index - 1 + items.length) % items.length;
-    const nextIndex = (index + 1) % items.length;
-
-    const renderItem = (item, isCenter = false) => {
-      if (item.type === "video") {
-        return (
-          <video
-            src={item.src}
-            className="w-full rounded-2xl"
-            autoPlay={isCenter}
-            muted
-            loop
-            controls={isCenter}
-          />
-        );
-      }
-
-      return (
-        <img
-          src={item.src}
-          className="w-full rounded-2xl"
-        />
-      );
-    };
-
-    return (
-      <>
-        {/* ITEM ESQUERDA */}
-        <motion.div
-          key={prevIndex}
-          onClick={() => setIndex(prevIndex)}
-          className="absolute left-12 w-[30%] bg-white p-3 rounded-3xl shadow-xl opacity-40 scale-90 blur-sm cursor-pointer"
-          initial={{ x: -40 }}
-          animate={{ x: -80 }}
-          transition={{ duration: 0.4 }}
-        >
-          {renderItem(items[prevIndex])}
-        </motion.div>
-
-        {/* ITEM CENTRAL */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            className="w-[30%] z-10 bg-white p-4 rounded-3xl shadow-2xl"
-            initial={{ scale: 0.85, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.85, opacity: 0 }}
-            transition={{ duration: 0.4 }}
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose"
           >
-            {renderItem(items[index], true)}
-          </motion.div>
-        </AnimatePresence>
+            Lavadora de alta pressão Typhoon-Jet <br />
+            500 BAR (7251 PSI) 1.200 L/H Trifásico
+          </motion.h1>
 
-        {/* ITEM DIREITA */}
-        <motion.div
-          key={nextIndex}
-          onClick={() => setIndex(nextIndex)}
-          className="absolute right-12 w-[30%] bg-white p-3 rounded-3xl shadow-xl opacity-40 scale-90 blur-sm cursor-pointer"
-          initial={{ x: 40 }}
-          animate={{ x: 80 }}
-          transition={{ duration: 0.4 }}
-        >
-          {renderItem(items[nextIndex])}
-        </motion.div>
-      </>
-    );
-  })()}
-</div>
-  </div>
-</section>
+          {/* CARROSSEL */}
+          <div
+            className="relative flex items-center justify-center overflow-hidden py-16"
+            onMouseEnter={() => setPause(true)}
+            onMouseLeave={() => setPause(false)}
+          >
+
+            {/* ESQUERDA */}
+            <motion.div
+              key={prevIndex}
+              onClick={() => setIndex(prevIndex)}
+              className="absolute left-10 w-[28%] opacity-40 blur-sm scale-90 cursor-pointer"
+              animate={{ x: -60 }}
+              transition={{ duration: 0.5 }}
+            >
+              {renderItem(items[prevIndex])}
+            </motion.div>
+
+            {/* CENTRO */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={index}
+                className="w-[36%] z-10"
+                initial={{ scale: 0.85, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.85, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                {renderItem(items[index], true)}
+              </motion.div>
+            </AnimatePresence>
+
+            {/* DIREITA */}
+            <motion.div
+              key={nextIndex}
+              onClick={() => setIndex(nextIndex)}
+              className="absolute right-10 w-[28%] opacity-40 blur-sm scale-90 cursor-pointer"
+              animate={{ x: 60 }}
+              transition={{ duration: 0.5 }}
+            >
+              {renderItem(items[nextIndex])}
+            </motion.div>
+
+          </div>
+
+        </div>
+      </section>
 
       {/* SEÇÃO DE TEXTOS: BRANCA - SEUS TEXTOS ORIGINAIS AQUI */}
       <section className="py-20 px-4 bg-white">

@@ -144,12 +144,13 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
 
             <h1 className="text-5xl md:text-7xl !leading-normal font-bold mb-6">
@@ -158,207 +159,121 @@ const Home = () => {
               Garantia de <br className="md:hidden" />
               Força
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+
+            <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-justify">
               Com anos de experiência, somos especialistas em fornecer mangueiras robustas de alta pressão, ideais para aplicações na indústria pesada. Nossos produtos garantem segurança e eficiência em diversos setores, como naval e siderúrgico.
             </p>
+
             <CTAButton onClick={handleCTAClick}>
               Fale com Nossos Especialistas
             </CTAButton>
+
           </motion.div>
         </div>
       </section>
       {/* Latin America Presence Section */}
- 
-<section className="relative bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="relative bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
-    <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 my-15 items-start">
+          {/* TÍTULO CENTRALIZADO NO TOPO */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            className="max-w-[1400px] mx-auto mb-20 px-4"
+          >
+            <h2 className="text-4xl font-bold text-[#FF5101] text-center leading-tight">
+              Com presença consolidada em diversos países da América Latina, a Mamuth atua com padrão global em soluções completas de hidrojato de Alta Pressão (SAP) e Ultra Alta Pressão (UHP), estabelecendo referências de desempenho, segurança e confiabilidade para o mercado industrial.
+            </h2>
+          </motion.div>
 
-      {/* COLUNA ESQUERDA - TEXTO */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.6 }}
-        className="max-w-3xl"
-      >
-        <h2 className="text-3xl font-bold mb-6 text-[#FF5101]">
-          Com presença consolidada em diversos países da América Latina, a Mamuth atua com padrão global em soluções completas de hidrojato de Alta Pressão (SAP) e Ultra Alta Pressão (UHP), estabelecendo referências de desempenho, segurança e confiabilidade para o mercado industrial.
-        </h2>
+          {/* GRID CONTEÚDO */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-        {/* Flags */}
-        <div className="flex flex-wrap gap-3 mb-10">
-          <img src={peru} alt="Peru" className="h-10 object-contain" />
-          <img src={brasil} alt="Brasil" className="h-10 object-contain" />
-          <img src={argentina} alt="Argentina" className="h-10 object-contain" />
-          <img src={mexico} alt="México" className="h-10 object-contain" />
-          <img src={colombia} alt="Colômbia" className="h-10 object-contain" />
+            {/* COLUNA ESQUERDA - FLAGS + SETORES */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6 }}
+            >
+
+              {/* Flags */}
+              <div className="flex flex-wrap gap-3 mb-10">
+                <img src={peru} alt="Peru" className="h-10 object-contain" />
+                <img src={brasil} alt="Brasil" className="h-10 object-contain" />
+                <img src={argentina} alt="Argentina" className="h-10 object-contain" />
+                <img src={mexico} alt="México" className="h-10 object-contain" />
+                <img src={colombia} alt="Colômbia" className="h-10 object-contain" />
+              </div>
+
+              <div className="flex flex-wrap gap-3 mb-12">
+                <img src={guatemala} alt="Guatemala" className="h-10 object-contain" />
+                <img src={venezuela} alt="Venezuela" className="h-10 object-contain" />
+                <img src={bolivia} alt="Bolívia" className="h-10 object-contain" />
+                <img src={equador} alt="Equador" className="h-10 object-contain" />
+                <img src={paraguai} alt="Paraguai" className="h-10 object-contain" />
+              </div>
+
+              <h3 className="text-3xl font-bold mb-6 text-[var(--color-dark-blue)]">
+                Nossos setores
+              </h3>
+
+              <ul className="space-y-4 text-gray-800">
+                <li className="flex items-start gap-3">
+                  <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
+                  <span className="text-lg">
+                    Limpeza de evaporadores, caldeiras, aquecedores, linha de xarope
+                    e tubulações em geral.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
+                  <span className="text-lg">
+                    Hidrojateamento, limpeza de concreto, preparação de superfície
+                    e apicoamento.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
+                  <span className="text-lg">
+                    Limpeza de trocadores de calor, tubulações, corte de refratários
+                    e limpeza de tanques e caldeiras.
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-3">
+                  <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
+                  <span className="text-lg">
+                    Limpeza de duto forno, tubulações, corte de refratários
+                    e limpeza de torre ciclone.
+                  </span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* COLUNA DIREITA - MAPA */}
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src={americaDoSul}
+                alt="Presença da Mamuth na América Latina"
+                className="w-[400px] md:w-[600px] lg:w-[700px] object-contain"
+              />
+            </div>
+
+          </div>
         </div>
-
-        <div className="flex flex-wrap gap-3 mb-10">
-          <img src={guatemala} alt="Guatemala" className="h-10 object-contain" />
-          <img src={venezuela} alt="Venezuela" className="h-10 object-contain" />
-          <img src={bolivia} alt="Bolívia" className="h-10 object-contain" />
-          <img src={equador} alt="Equador" className="h-10 object-contain" />
-          <img src={paraguai} alt="Paraguai" className="h-10 object-contain" />
-        </div>
-
-        <h3 className="text-3xl font-bold mb-6 text-[var(--color-dark-blue)]">
-          Nossos setores
-        </h3>
-
-        <ul className="space-y-4 text-gray-800">
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className='text-lg'>
-              Limpeza de evaporadores, caldeiras, aquecedores, linha de xarope
-              e tubulações em geral.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className='text-lg'>
-              Hidrojateamento, limpeza de concreto, preparação de superfície
-              e apicoamento.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 text-lg h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className='text-lg'>
-              Limpeza de trocadores de calor, tubulações, corte de refratários
-              e limpeza de tanques e caldeiras.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 text-lg h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className='text-lg'>
-              Limpeza de duto forno, tubulações, corte de refratários
-              e limpeza de torre ciclone.
-            </span>
-          </li>
-        </ul>
-      </motion.div>
-
-      {/* COLUNA DIREITA - MAPA */}
-      <div className="flex justify-center lg:justify-end self-start">
-        <img
-          src={americaDoSul}
-          alt="Presença da Mamuth na América Latina"
-          className="w-full max-w-none lg:w-[600px] xl:w-[680px] object-contain"
-        />
-      </div>
-
-    </div>
-  </div>
-</section>
-{/*Div 2*/}
-<section className="relative bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-
-    {/* TÍTULO CENTRALIZADO NO TOPO */}
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false }}
-      transition={{ duration: 0.6 }}
-      className="text-center max-w-4xl mx-auto mb-20"
-    >
-      <h2 className="text-4xl font-bold text-[#FF5101]">
-        Presente em toda a América Latina a Mamuth alia experiência e excelência
-        para atender às demandas do mercado internacional, oferecendo soluções
-        robustas e seguras para operações industriais de alta complexidade.
-      </h2>
-    </motion.div>
-
-    {/* GRID CONTEÚDO */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-
-      {/* COLUNA ESQUERDA - FLAGS + SETORES */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.6 }}
-      >
-
-        {/* Flags */}
-        <div className="flex flex-wrap gap-3 mb-10">
-          <img src={peru} alt="Peru" className="h-10 object-contain" />
-          <img src={brasil} alt="Brasil" className="h-10 object-contain" />
-          <img src={argentina} alt="Argentina" className="h-10 object-contain" />
-          <img src={mexico} alt="México" className="h-10 object-contain" />
-          <img src={colombia} alt="Colômbia" className="h-10 object-contain" />
-        </div>
-
-        <div className="flex flex-wrap gap-3 mb-12">
-          <img src={guatemala} alt="Guatemala" className="h-10 object-contain" />
-          <img src={venezuela} alt="Venezuela" className="h-10 object-contain" />
-          <img src={bolivia} alt="Bolívia" className="h-10 object-contain" />
-          <img src={equador} alt="Equador" className="h-10 object-contain" />
-          <img src={paraguai} alt="Paraguai" className="h-10 object-contain" />
-        </div>
-
-        <h3 className="text-3xl font-bold mb-6 text-[var(--color-dark-blue)]">
-          Nossos setores
-        </h3>
-
-        <ul className="space-y-4 text-gray-800">
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className="text-lg">
-              Limpeza de evaporadores, caldeiras, aquecedores, linha de xarope
-              e tubulações em geral.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className="text-lg">
-              Hidrojateamento, limpeza de concreto, preparação de superfície
-              e apicoamento.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className="text-lg">
-              Limpeza de trocadores de calor, tubulações, corte de refratários
-              e limpeza de tanques e caldeiras.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className="text-lg">
-              Limpeza de duto forno, tubulações, corte de refratários
-              e limpeza de torre ciclone.
-            </span>
-          </li>
-        </ul>
-      </motion.div>
-
-      {/* COLUNA DIREITA - MAPA */}
-      <div className="flex justify-center lg:justify-end">
-        <img
-          src={americaDoSul}
-          alt="Presença da Mamuth na América Latina"
-          className="w-[400px] md:w-[600px] lg:w-[700px] object-contain"
-        />
-      </div>
-
-    </div>
-  </div>
-</section>
-<section className="pb-20 pt-20" style={{ backgroundColor: 'var(--color-dark-blue)' }}>
+      </section>
+      <section className="pb-20 pt-20" style={{ backgroundColor: 'var(--color-dark-blue)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Nossas Linhas de Produtos
             </h2>
-            <p className="text-lg md:text-2xl max-w-2xl mx-auto text-white">
+            <p className="text-lg md:text-2xl max-w-4xl mx-auto text-white">
               Equipamentos de alta qualidade para todas as suas necessidades industriais
             </p>
           </div>
