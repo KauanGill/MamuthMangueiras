@@ -4,13 +4,16 @@ import { motion, AnimatePresence, color } from 'framer-motion';
 import { X } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { Droplet, Wrench, Settings, Zap, Shield, Award, Clock, Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import CTAButton from '@/components/CTAButton';
 import SectionTitle from '@/components/SectionTitle';
 import ProductCard from '@/components/ProductCard';
 import ServiceCard from '@/components/ServiceCard';
 import Logo from '@/components/Logo';
+import CertificacoesSection from "@/components/CertificadoSection";
+import Hero from "@/components/Hero"
 import { useToast } from '@/components/ui/use-toast';
-import { useNavigate } from 'react-router-dom';
+
 import bombaAltaPressao from "@/assets/images/bomba-alta-pressao-titulo.png";
 import lavadoraAltaPressao from "@/assets/images/lavadora-alta-pressao.png";
 import vestimentaProtecao from "@/assets/images/vestimenta-protecao.png";
@@ -168,92 +171,6 @@ const Home = () => {
         </div>
       </section>
       {/* Latin America Presence Section */}
- 
-<section className="relative bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-
-    <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 my-15 items-start">
-
-      {/* COLUNA ESQUERDA - TEXTO */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.6 }}
-        className="max-w-3xl"
-      >
-        <h2 className="text-3xl font-bold mb-6 text-[#FF5101]">
-          Com presença consolidada em diversos países da América Latina, a Mamuth atua com padrão global em soluções completas de hidrojato de Alta Pressão (SAP) e Ultra Alta Pressão (UHP), estabelecendo referências de desempenho, segurança e confiabilidade para o mercado industrial.
-        </h2>
-
-        {/* Flags */}
-        <div className="flex flex-wrap gap-3 mb-10">
-          <img src={peru} alt="Peru" className="h-10 object-contain" />
-          <img src={brasil} alt="Brasil" className="h-10 object-contain" />
-          <img src={argentina} alt="Argentina" className="h-10 object-contain" />
-          <img src={mexico} alt="México" className="h-10 object-contain" />
-          <img src={colombia} alt="Colômbia" className="h-10 object-contain" />
-        </div>
-
-        <div className="flex flex-wrap gap-3 mb-10">
-          <img src={guatemala} alt="Guatemala" className="h-10 object-contain" />
-          <img src={venezuela} alt="Venezuela" className="h-10 object-contain" />
-          <img src={bolivia} alt="Bolívia" className="h-10 object-contain" />
-          <img src={equador} alt="Equador" className="h-10 object-contain" />
-          <img src={paraguai} alt="Paraguai" className="h-10 object-contain" />
-        </div>
-
-        <h3 className="text-3xl font-bold mb-6 text-[var(--color-dark-blue)]">
-          Nossos setores
-        </h3>
-
-        <ul className="space-y-4 text-gray-800">
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className='text-lg'>
-              Limpeza de evaporadores, caldeiras, aquecedores, linha de xarope
-              e tubulações em geral.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className='text-lg'>
-              Hidrojateamento, limpeza de concreto, preparação de superfície
-              e apicoamento.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 text-lg h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className='text-lg'>
-              Limpeza de trocadores de calor, tubulações, corte de refratários
-              e limpeza de tanques e caldeiras.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 text-lg h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className='text-lg'>
-              Limpeza de duto forno, tubulações, corte de refratários
-              e limpeza de torre ciclone.
-            </span>
-          </li>
-        </ul>
-      </motion.div>
-
-      {/* COLUNA DIREITA - MAPA */}
-      <div className="flex justify-center lg:justify-end self-start">
-        <img
-          src={americaDoSul}
-          alt="Presença da Mamuth na América Latina"
-          className="w-full max-w-none lg:w-[600px] xl:w-[680px] object-contain"
-        />
-      </div>
-
-    </div>
-  </div>
-</section>
 {/*Div 2*/}
 <section className="relative bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -469,130 +386,9 @@ const Home = () => {
             </motion.div>
           </div>
         </section>
-    <section
-      className="py-24 text-white relative"
-      style={{ backgroundColor: 'var(--color-dark-blue)' }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-            {/* COLUNA 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col items-center text-center"
-            >
-              <div className="mb-8">
-                <img
-                  src={seloParker}
-                  alt="Certificação Parker"
-                  className="w-28 md:w-36 mx-auto"
-                />
-              </div>
-
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Mangueira Polyflex
-              </h2>
-
-              <p className="text-xl md:text-2xl text-gray-300 mb-6">
-                Certificado de Montador e Distribuidor
-              </p>
-
-              <p className="text-base md:text-xl font-semibold text-[#FF5101] mb-10">
-                Mamuth Mangueiras e Conexões <br className="hidden md:block" />
-                Vila Maria – São Paulo
-              </p>
-
-              <button
-                onClick={() => setOpen(true)}
-                className="inline-flex items-center gap-2 px-10 py-4 rounded-full
-                          bg-[#FF5101] hover:bg-[#e54800] transition
-                          text-white font-semibold"
-              >
-                CONFIRA
-              </button>
-            </motion.div>
-
-
-            {/* COLUNA 2 (CÓPIA) */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col items-center text-center"
-            >
-              <div className="mb-8">
-                <img
-                  src={seloFalch}
-                  alt="Certificação Parker"
-                  className="w-28 md:w-36 mx-auto"
-                />
-              </div>
-
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Máquinas de Hidrojato
-              </h2>
-
-              <p className="text-xl md:text-2xl text-gray-300 mb-6">
-                Certificado de Montador e Distribuidor
-              </p>
-
-              <p className="text-base md:text-xl font-semibold text-[#FF5101] mb-10">
-                Mamuth Mangueiras e Conexões <br className="hidden md:block" />
-                Vila Maria – São Paulo
-              </p>
-
-              <button
-                onClick={() => setOpen(true)}
-                className="inline-flex items-center gap-2 px-10 py-4 rounded-full
-                          bg-[#FF5101] hover:bg-[#e54800] transition
-                          text-white font-semibold"
-              >
-                CONFIRA
-              </button>
-            </motion.div>
-
-          </div>
-        </div>
-        <AnimatePresence>
-          {open && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
-              onClick={() => setOpen(false)}
-            >
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ duration: 0.25 }}
-                onClick={(e) => e.stopPropagation()}
-                className="relative bg-white rounded-xl p-4 max-w-4xl w-full mx-4"
-              >
-                {/* Botão fechar */}
-                <button
-                  onClick={() => setOpen(false)}
-                  className="absolute top-3 right-3 text-gray-700 hover:text-black"
-                >
-                  <X size={28} />
-                </button>
-
-                {/* IMAGEM DO CERTIFICADO */}
-                <img
-                  src={imagemCertificado}
-                  alt="Certificado"
-                  className="w-full h-auto rounded-lg"
-                />
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-            </section>
+    <>
+      <CertificacoesSection />
+    </>
             </>
           );
         };

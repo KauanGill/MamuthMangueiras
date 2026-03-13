@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
@@ -21,6 +23,11 @@ const Typhoon500Trifasico = () => {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
+  const slides = [
+  { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoon500, color: '#FF5101' },
+  { id: 2, title: 'Typhoon Jet 500', artist: 'Vista lateral', cover: typhoon5002, color: '#FF5101' },
+  { id: 3, title: 'Typhoon Jet 500', artist: 'Detalhes', cover: typhoon5003, color: '#FF5101' }
+];
   // Garante que a página inicie no topo
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -34,68 +41,13 @@ const Typhoon500Trifasico = () => {
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
      <section 
-  className="relative pt-10 pb-20 px-4 w-full" 
-  style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
->
-<div className="max-w-6xl mx-auto py-16">
-
-<Swiper
-  effect="coverflow"
-  grabCursor={true}
-  centeredSlides={true}
-  slidesPerView="auto"
-  navigation
-  pagination={{ clickable: true }}
-
-  coverflowEffect={{
-    rotate: 30,
-    stretch: 0,
-    depth: 150,
-    modifier: 1,
-    slideShadows: false
-  }}
-
-  modules={[EffectCoverflow, Navigation, Pagination]}
-  className="w-full"
->
-
-  {/* IMAGEM 1 */}
-  <SwiperSlide className="!w-[420px]">
-    <img
-      src={typhoon500}
-      className="rounded-3xl shadow-2xl"
-    />
-  </SwiperSlide>
-
-  {/* IMAGEM 2 */}
-  <SwiperSlide className="!w-[420px]">
-    <img
-      src={typhoon5002}
-      className="rounded-3xl shadow-2xl"
-    />
-  </SwiperSlide>
-
-  {/* VIDEO */}
-  <SwiperSlide className="!w-[420px]">
-    <video
-      src={typhoonVideo}
-      className="rounded-3xl shadow-2xl"
-      controls
-    />
-  </SwiperSlide>
-
-  {/* IMAGEM 3 */}
-  <SwiperSlide className="!w-[420px]">
-    <img
-      src={typhoon5003}
-      className="rounded-3xl shadow-2xl"
-    />
-  </SwiperSlide>
-
-</Swiper>
-
-</div>
-</section>
+        className="relative px-4 w-full"
+        style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
+      >
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
+        </div>
+      </section>
 
 
       {/* SEÇÃO DE TEXTOS: BRANCA - SEUS TEXTOS ORIGINAIS AQUI */}

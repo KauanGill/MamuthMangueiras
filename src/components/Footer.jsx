@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { FaTiktok } from "react-icons/fa";
 import Logo from '@/components/Logo';
 import { CONTACT_INFO } from '@/constants/contactInfo';
 
@@ -106,6 +107,25 @@ const Footer = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
+              <a
+                href="https://www.youtube.com/@Mamuth_HydroOficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@mamuth.hidrojato"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                aria-label="TikTok"
+              >
+                <FaTiktok className="w-5 h-5" />
+              </a>
+
             </div>
           </div>
         </div>

@@ -6,7 +6,6 @@ import Footer from '@/components/Footer';
 import Home from '@/pages/Home';
 import Sobre from '@/pages/Sobre';
 import LinhasDeProdutos from '@/pages/LinhasDeProdutos';
-import Representacoes from '@/pages/Representacoes';
 import Noticias from '@/pages/Noticias';
 import NoticiaDetalhe from '@/pages/NoticiaDetalhe';
 import Contato from '@/pages/Contato';
@@ -120,7 +119,6 @@ function App() {
             {/* Páginas padrões */}
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/produtos" element={<LinhasDeProdutos />} />
-            <Route path="/representacoes" element={<Representacoes />} />
             <Route path="/noticias" element={<Noticias />} />
             <Route path="/noticias/:id" element={<NoticiaDetalhe />} />
             <Route path="/contato" element={<Contato />} />

@@ -33,6 +33,10 @@ const Contato = () => {
   const knowledgeSources = [
     'Google',
     'Indicação',
+    'Facebook',
+    'Youtube',
+    'Tiktok',
+    'Linkedin',
     'Já Sou Cliente',
     'Outros'
   ];
@@ -128,8 +132,14 @@ const Contato = () => {
     },
     {
       icon: MapPin,
-      title: 'Endereço',
+      title: 'MATRIZ - São Paulo/SP',
       content: CONTACT_INFO.address.full,
+      link: null
+    },
+    {
+      icon: MapPin,
+      title: 'FILIAL - Macaé/RJ',
+      content: 'Rua MACAÈ 123 Bairro - Rio de Janeiro/RJ, CEP: 01123-000',
       link: null
     },
     {
@@ -390,15 +400,16 @@ const Contato = () => {
 
               {/* Google Maps */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                <iframe
-                  src={CONTACT_INFO.address.mapEmbedUrl}
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  title="Localização Mamuth"
-                ></iframe>
+               <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.465322530075!2d-46.5881926238852!3d-23.515760559920015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58d2b1123363%3A0x113d89cba51c4b4!2sMamuth%20-%20Mangueiras!5e0!3m2!1spt-PT!2sbr!4v1773413494886!5m2!1spt-PT!2sbr"
+                width="100%"
+                height="320"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização Mamuth"
+              ></iframe>
               </div>
             </motion.div>
           </div>
