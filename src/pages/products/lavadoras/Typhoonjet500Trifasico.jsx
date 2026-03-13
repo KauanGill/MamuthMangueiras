@@ -2,7 +2,13 @@ import React, { useEffect, useState  } from 'react';
 import { color, motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/pagination"; 5 
 // Import da imagem
 import typhoon500 from "@/assets/images/lavadora-typhoon-jet-500bar.jpeg"; 
 import typhoon5002 from "@/assets/images/typhoonjet-500bar-1200L.png"; 
@@ -31,97 +37,66 @@ const Typhoon500Trifasico = () => {
   className="relative pt-10 pb-20 px-4 w-full" 
   style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
 >
-  <div className="max-w-7xl mx-auto text-center">
-    
-    <motion.h1 
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-      style={{ lineHeight: '1.4' }}
-    >
-      Lavadora de alta pressão Typhoon-Jet <br/> 
-      500 BAR (7251 PSI) 1.200 L/H Trifásico
-    </motion.h1>
-<div className="relative flex items-center justify-center overflow-hidden py-10">
+<div className="max-w-6xl mx-auto py-16">
 
-  {(() => {
-    const items = [
-      { type: "image", src: typhoon500 },
-      { type: "image", src: typhoon5002 },
-      { type: "video", src: typhoonVideo }, // 👈 VIDEO AQUI
-      { type: "image", src: typhoon5003 },
-    ];
+<Swiper
+  effect="coverflow"
+  grabCursor={true}
+  centeredSlides={true}
+  slidesPerView="auto"
+  navigation
+  pagination={{ clickable: true }}
 
-    const prevIndex = (index - 1 + items.length) % items.length;
-    const nextIndex = (index + 1) % items.length;
+  coverflowEffect={{
+    rotate: 30,
+    stretch: 0,
+    depth: 150,
+    modifier: 1,
+    slideShadows: false
+  }}
 
-    const renderItem = (item, isCenter = false) => {
-      if (item.type === "video") {
-        return (
-          <video
-            src={item.src}
-            className="w-full rounded-2xl"
-            autoPlay={isCenter}
-            muted
-            loop
-            controls={isCenter}
-          />
-        );
-      }
+  modules={[EffectCoverflow, Navigation, Pagination]}
+  className="w-full"
+>
 
-      return (
-        <img
-          src={item.src}
-          className="w-full rounded-2xl"
-        />
-      );
-    };
+  {/* IMAGEM 1 */}
+  <SwiperSlide className="!w-[420px]">
+    <img
+      src={typhoon500}
+      className="rounded-3xl shadow-2xl"
+    />
+  </SwiperSlide>
 
-    return (
-      <>
-        {/* ITEM ESQUERDA */}
-        <motion.div
-          key={prevIndex}
-          onClick={() => setIndex(prevIndex)}
-          className="absolute left-12 w-[30%] bg-white p-3 rounded-3xl shadow-xl opacity-40 scale-90 blur-sm cursor-pointer"
-          initial={{ x: -40 }}
-          animate={{ x: -80 }}
-          transition={{ duration: 0.4 }}
-        >
-          {renderItem(items[prevIndex])}
-        </motion.div>
+  {/* IMAGEM 2 */}
+  <SwiperSlide className="!w-[420px]">
+    <img
+      src={typhoon5002}
+      className="rounded-3xl shadow-2xl"
+    />
+  </SwiperSlide>
 
-        {/* ITEM CENTRAL */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index}
-            className="w-[30%] z-10 bg-white p-4 rounded-3xl shadow-2xl"
-            initial={{ scale: 0.85, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.85, opacity: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            {renderItem(items[index], true)}
-          </motion.div>
-        </AnimatePresence>
+  {/* VIDEO */}
+  <SwiperSlide className="!w-[420px]">
+    <video
+      src={typhoonVideo}
+      className="rounded-3xl shadow-2xl"
+      controls
+    />
+  </SwiperSlide>
 
-        {/* ITEM DIREITA */}
-        <motion.div
-          key={nextIndex}
-          onClick={() => setIndex(nextIndex)}
-          className="absolute right-12 w-[30%] bg-white p-3 rounded-3xl shadow-xl opacity-40 scale-90 blur-sm cursor-pointer"
-          initial={{ x: 40 }}
-          animate={{ x: 80 }}
-          transition={{ duration: 0.4 }}
-        >
-          {renderItem(items[nextIndex])}
-        </motion.div>
-      </>
-    );
-  })()}
+  {/* IMAGEM 3 */}
+  <SwiperSlide className="!w-[420px]">
+    <img
+      src={typhoon5003}
+      className="rounded-3xl shadow-2xl"
+    />
+  </SwiperSlide>
+
+</Swiper>
+
 </div>
-  </div>
 </section>
+
 
       {/* SEÇÃO DE TEXTOS: BRANCA - SEUS TEXTOS ORIGINAIS AQUI */}
       <section className="py-20 px-4 bg-white">
