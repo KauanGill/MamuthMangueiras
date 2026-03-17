@@ -1,81 +1,72 @@
 .coverflow-container {
-  background: #0E0E68;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 50px;
 }
 
-.swiper {
+.mySwiper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 150px; /* Espaço para o reflexo e texto */
+  padding: 30px 0;
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px; /* Largura da capa */
-  height: 300px;
-  /* Transição suave para o brilho da borda */
-  transition: transform 0.3s;
+/* Definir a largura do slide ajuda o 'stretch' negativo a funcionar melhor */
+.swiper-slide-custom {
+  width: 300px; /* Ajuste aqui se quiser o card maior ou menor */
 }
 
 .album-wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
+  margin: 0 auto;
 }
 
-.album-wrapper img {
-  display: block;
+.album-image {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
 }
 
-/* O Reflexo Clássico */
 .reflection {
   position: absolute;
-  top: 100%;
-  left: 0;
   width: 100%;
-  height: 80%;
-  /* Inverte a imagem e cria o fade out */
-  -webkit-box-reflect: below 2px linear-gradient(transparent 60%, rgba(255, 255, 255, 0.1));
+  height: 35%;
+  bottom: -37%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent);
+  transform: scaleY(-1);
+  opacity: 0.3;
+  mask-image: linear-gradient(to bottom, transparent, black);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black);
   pointer-events: none;
 }
 
-/* Informações do Álbum (Só aparecem no Slide Ativo) */
 .album-info {
-  text-align: center;
   margin-top: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.swiper-slide-active .album-info {
-  opacity: 1;
-}
-
-.album-info h3 {
+  text-align: center;
   color: white;
-  font-size: 1.2rem;
-  margin: 0;
-  letter-spacing: 1px;
 }
 
-.album-info p {
-  color: #888;
-  margin: 5px 0;
+.album-info h3 { font-size: 1.1rem; font-weight: 700; }
+.album-info p { font-size: 0.85rem; color: #ccc; }
+
+.swiper-button-next, .swiper-button-prev {
+  color: #FF6B0A !important;
+  transform: scale(0.6);
 }
 
-/* Brilho Neon na Capa Ativa */
-.swiper-slide-active img {
-  border: 2px solid var(--accent-color);
-  box-shadow: 0 0 25px var(--accent-color);
+/* Sombra lateral discreta */
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 60%,     
+    rgba(0, 0, 0, 0.2) 100%  
+  ) !important;
+}
+.album-wrapper:hover .album-image {
+  transform: scale(1.15); /* Aumenta a imagem em 15% (1.15) */
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5); /* Aumenta a sombra para dar mais destaque */
 }

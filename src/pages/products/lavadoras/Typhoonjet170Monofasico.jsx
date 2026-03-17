@@ -3,12 +3,19 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import typhoonJet170Monofasico from '@/assets/images/typhoonjet-170-bar-monofasico.png';
 
 const Typhoon170Monofasico = () => {
   const navigate = useNavigate();
 
+  const slides = [
+    { id: 1, title: 'Typhoon Jet 170', artist: 'Trifásico', cover: typhoonJet170Monofasico, color: '#FF5101' },
+    { id: 2, title: 'Typhoon Jet 170', artist: 'Monofásico', cover: typhoonJet170Monofasico, color: '#FF5101' },
+    { id: 3, title: 'Typhoon Jet 170', artist: 'Detalhes', cover: typhoonJet170Monofasico, color: '#FF5101' }
+  ];
   // Garante que a página inicie no topo
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,29 +32,8 @@ const Typhoon170Monofasico = () => {
         className="relative pt-10 pb-20 px-4 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-            Lavadora de alta pressão Typhoon-Jet<br/>170 BAR (2465 PSI) 720 L/H Monofásico
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={typhoonJet170Monofasico} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,13 +44,8 @@ const Typhoon170Monofasico = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
-          </h2>
-
-          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Typhoon-Jet 170: A Solução Completa para Limpeza Moderada
-          </p>
-          
+          </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
           O Typhoon-Jet 170 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas moderadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 170 bar (2465 PSI), uma vazão de 12 L/min (720 L/h) e uma potência de 5 cv, este equipamento garante resultados eficazes em desafios de limpeza de intensidade moderada.
           </p>
@@ -124,7 +105,7 @@ const Typhoon170Monofasico = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
                   <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>

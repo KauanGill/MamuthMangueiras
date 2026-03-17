@@ -2,7 +2,6 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
@@ -17,12 +16,13 @@ const AppleCoverFlow = ({ slides }) => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={'auto'}
+        // slidesPerView 'auto' com o stretch negativo cria o visual coverflow ideal
+        slidesPerView={'auto'} 
         initialSlide={1}
         coverflowEffect={{
-          rotate: 50,
-          stretch: 0, 
-          depth: 100,
+          rotate: 35,    
+          stretch: -20,  // VALOR CHAVE: Negativo para aproximar os slides
+          depth: 120,    // Profundidade para destacar o central
           modifier: 1,
           slideShadows: true,
         }}
@@ -35,9 +35,9 @@ const AppleCoverFlow = ({ slides }) => {
         className="mySwiper"
       >
         {slides.map((album) => (
-          <SwiperSlide key={album.id} style={{ '--accent-color': album.color }}>
+          <SwiperSlide key={album.id} className="swiper-slide-custom">
             <div className="album-wrapper">
-              <img src={album.cover} alt={album.title} />
+              <img src={album.cover} alt={album.title} className="album-image" />
               <div className="reflection" />
               <div className="album-info">
                 <h3>{album.title}</h3>

@@ -42,23 +42,9 @@ const PaginaCategoria = () => {
       category: 'Categoria Principal'
     },
     {
-      name: 'Bico Turbo Rotativo 500',
-      path: '/bicos-hidrojatos/bico-turbo-rotativo-500',
-      description: 'Bicos indicados para hidrojateadoras até 500 bar, podem ser utilizados para jateamento de superfícies tubulações ou jateamento com abrasivo.',
-      image: bicoTurboRotativo600, 
-      category: 'Categoria Principal'
-    },
-    {
       name: 'Bico Torpedo de 1/2 Até 1',
       description: 'Equipamentos de última geração para aplicações industriais exigentes.',
       image: '../assets/images/produto1.jpg', 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Bico Shark-Radial 40K',
-      path: '/bicos-hidrojatos/bico-shark-radial-40k',
-      description: 'O Shark-Jet Radial é uma ferramenta rotativa auto-propulsora indicada para limpeza e desobstrução de tubulações com pressões de até 2800 bar (40.000psi) e vazão de até 40 L/min. Seus componentes internos tem o sistema de lubrificação e refrigeração por óleo, além de um freio hidráulico para limitar as rotações.',
-      image: bicoSharkRadial, 
       category: 'Categoria Principal'
     },
     {
@@ -76,30 +62,10 @@ const PaginaCategoria = () => {
       category: 'Categoria Principal'
     },
     {
-      name: 'Bico Safira',
-      path: '/bicos-hidrojatos/bico-safira',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: bicoSafira, 
-      category: 'Categoria Principal'
-    },
-    {
       name: 'Bico Rotativo Titan',
       path: '/bicos-hidrojatos/bico-rotativo-titan',
       description: 'O Bico Titan é um bico rotativo auto-propulsor desenvolvido para limpeza e desobstrução de tubulações em geral com pressões entre 1.000 bar e 2.800 bar. As cabeças do bico rotativo são fabricadas em diferentes configurações de orifícios.',
       image: bicoRotativoTitan, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Bico Rotativo R',
-      path:'/bicos-hidrojatos/bico-rotativo-r',
-      description: 'O bico rotativo modelo “R’’ foi especificamente desenvolvido para limpeza e remoção de incrustações nas paredes internas de tubulações de trocadores de calor, evaporadores e linhas de tubos em geral.',
-      image: bicoRotativoR, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Bico Reto e Leque 1/4 NPT',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
       category: 'Categoria Principal'
     },
     {

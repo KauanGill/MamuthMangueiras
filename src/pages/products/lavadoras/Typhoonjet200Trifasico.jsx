@@ -3,12 +3,18 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import typhoonJet200 from '@/assets/images/lavadora-typhoon-jet-500bar.jpeg';
 
 const Typhoon200Trifasico = () => {
   const navigate = useNavigate();
-
+  const slides = [
+      { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoonJet200, color: '#FF5101' },
+      { id: 2, title: 'Typhoon Jet 500', artist: 'Vista lateral', cover: typhoonJet200, color: '#FF5101' },
+      { id: 3, title: 'Typhoon Jet 500', artist: 'Detalhes', cover: typhoonJet200, color: '#FF5101' }
+    ];
   // Garante que a página inicie no topo
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,29 +31,8 @@ const Typhoon200Trifasico = () => {
         className="relative pt-10 pb-20 px-4 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-            Lavadora de alta pressão Typhoon-Jet<br/>200 BAR (2900 PSI) 2.700 L/H Gasolina
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={typhoonJet200} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,7 +43,7 @@ const Typhoon200Trifasico = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Typhoon-Jet 200 BAR (2900 PSI)
           </h2>
           
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">

@@ -24,10 +24,10 @@ const Typhoon500Trifasico = () => {
   const [index, setIndex] = useState(0);
 
   const slides = [
-  { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoon500, color: '#FF5101' },
-  { id: 2, title: 'Typhoon Jet 500', artist: 'Vista lateral', cover: typhoon5002, color: '#FF5101' },
-  { id: 3, title: 'Typhoon Jet 500', artist: 'Detalhes', cover: typhoon5003, color: '#FF5101' }
-];
+    { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoon500, color: '#FF5101' },
+    { id: 2, title: 'Typhoon Jet 500', artist: 'Vista lateral', cover: typhoon5002, color: '#FF5101' },
+    { id: 3, title: 'Typhoon Jet 500', artist: 'Detalhes', cover: typhoon5003, color: '#FF5101' }
+  ];
   // Garante que a página inicie no topo
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -41,7 +41,7 @@ const Typhoon500Trifasico = () => {
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
      <section 
-        className="relative px-4 w-full"
+        className="relative py-0 w-full"
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
         <div className="max-w-[1400px] mx-auto">
@@ -57,13 +57,8 @@ const Typhoon500Trifasico = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
-          </h2>
-
-          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Typhoon-Jet 500: A Solução Completa para Limpeza Pesada
-          </p>
-          
+          </h2>   
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             O Typhoon-Jet 500 é um equipamento de alta pressão projetado para oferecer desempenho excepcional 
             em limpezas realmente muito pesadas em ambientes industriais, agrícolas e comerciais. 
@@ -115,56 +110,53 @@ const Typhoon500Trifasico = () => {
 
       {/* SEÇÃO DE TABELA: CINZA CLARO COM CARD ARREDONDADO */}
       <section className="py-1 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center p-8 rounded-[30px] shadow-sm" style={{backgroundColor:'#d3d3d3'}}>
+        {/* Mantive o max-w-4xl conforme solicitado */}
+        <div className="max-w-4xl mx-auto text-center p-4 md:p-8 rounded-[30px] shadow-sm" style={{backgroundColor:'#d3d3d3'}}>
           
           <div className="flex flex-col items-center mb-10">
             <div 
-              className="w-10 h-10 rounded-full flex items-center justify-center rounded-[30px] mb-4 font-bold text-white shadow-lg"
+              className="w-10 h-10 rounded-full flex items-center justify-center mb-4 font-bold text-white shadow-lg"
               style={{ backgroundColor: '#FF6B0A' }}
             >
               i
             </div>
-            <h2 className="text-gray-800 text-2xl md:text-4xl font-bold">
+            <h2 className="text-gray-800 text-2xl md:text-3xl font-bold">
               Veja mais informações técnicas sobre este produto:
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          {/* Removemos o overflow-x-auto e a largura mínima da tabela */}
+          <div className="w-full">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (PSI)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/h)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Potência (cv)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Tipo de Tensão</th>
-                  <th className="py-6 px-4 font-bold text-lg">Dimensões(mm)</th>
+                  {/* Reduzi o padding (px-1) e o tamanho da fonte (text-xs) para caber tudo */}
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Pressão (bar)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Pressão (PSI)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Vazão (L/min)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Vazão (L/h)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Potência (cv)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Peso (kg)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Tensão</th>
+                  <th className="py-4 px-1 font-bold text-[10px] sm:text-xs md:text-sm">Dimensões</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Typhoon-Jet 500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">7252</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">20</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1200</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">20</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">320</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">Trifásico</td>
-                  <td className="py-8 px-4 text-xl font-semibold">1200x800x950</td>
+                  <td className="py-6 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base">Typhoon-Jet 500</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base">500</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base">7252</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base">20</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base">1200</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold">20</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold">320</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold">Trifásico</td>
+                  <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base font-semibold">1200x800x950</td>
                 </tr>
               </tbody>
             </table>
           </div>
-
-          <style dangerouslySetInnerHTML={{ __html: `
-            .custom-scrollbar::-webkit-scrollbar { height: 8px; }
-            .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-            .custom-scrollbar::-webkit-scrollbar-thumb { background: #FF6B0A; border-radius: 10px; }
-          `}} />
         </div>
       </section>
 
