@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
@@ -8,10 +9,6 @@ import CertificacoesSection from "@/components/CertificadoSection";
 import Hero from "@/components/Hero"
 
 import videoSobre from '@/assets/images/video-sobre.mp4';
-
-import seloParker from "@/assets/images/selo-certificado-parker.png";
-import imagemCertificado from "@/assets/images/certificado_mamuth.jpg";
-import seloFalch from "@/assets/images/logo_falch_certificado.png"
 
 const Sobre = () => {
 
@@ -247,8 +244,7 @@ const Sobre = () => {
 
   </div>
 </section>
-        ```jsx
-<section className="py-16 bg-gray-50">
+<section id="parceirosmamuth" className="py-16 bg-gray-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <SectionTitle
       title="Marcas Representadas"

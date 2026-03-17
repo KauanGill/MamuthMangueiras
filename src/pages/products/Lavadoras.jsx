@@ -21,13 +21,6 @@ const PaginaCategoria = () => {
       category: 'Categoria Principal'
     },
     {
-      name: 'Typhoon-Jet 500 BAR (7251 PSI)',
-      path: '/lavadoras/typhoon-jet-500-gasolina',
-      description: 'O Typhoon-Jet 500 é um equipamento de alta pressão projetado para oferecer desempenho superior em limpezas intensivas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 500 bar, uma vazão de 20 L/min e uma potência de 20 cv, este equipamento garante resultados excepcionais em desafios de limpeza mais exigentes.',
-      image: typhoonJet500Gasolina, 
-      category: 'Categoria Principal'
-    },
-    {
       name: 'Typhoon-Jet 350 BAR (5076 PSI)',
       path: '/lavadoras/typhoon-jet-350-trifasico',
       description: 'O Typhoon-Jet 350 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 350 bar, uma vazão de 17 L/min e uma potência de 15 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.',
@@ -42,13 +35,6 @@ const PaginaCategoria = () => {
       category: 'Categoria Principal'
     },
     {
-      name: 'Typhoon-Jet 200 BAR (2900 PSI)',
-      path: '/lavadoras/typhoon-jet-200-gasolina',
-      description: 'O Typhoon-Jet 200 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 200 bar, uma vazão de 45 L/min e uma potência de 20 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.',
-      image: typhoonJet500Gasolina, 
-      category: 'Categoria Principal'
-    },
-    {
       name: 'Typhoon-Jet 170 BAR (2465 PSI)',
       path: '/lavadoras/typhoon-jet-170-monofasico',
       description: 'O Typhoon-Jet 170 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas moderadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 170 bar (2465 PSI), uma vazão de 12 L/min (720 L/h) e uma potência de 5 cv, este equipamento garante resultados eficazes em desafios de limpeza de intensidade moderada.',
@@ -56,34 +42,12 @@ const PaginaCategoria = () => {
       category: 'Categoria Principal'
     },
     {
-      name: 'Typhoon-Jet 50cv Elétrica',
+      name: 'Typhoon-Jet 50cv',
       path: '/lavadoras/typhoon-jet-50cv-eletrica',
       description: 'As hidrojateadoras Typhoon-Jet são ideais para trabalhos que são exclusivos e rápidos. Equipadas com um motor elétrico trifásico, elas oferecem potência e eficiência na limpeza de superfícies difíceis. A sua construção robusta e componentes de alta qualidade garantem durabilidade e desempenho consistente, mesmo nas condições mais exigentes, enquanto o seu design permite fácil movimentação e posicionamento em diferentes ambientes.',
       image: typhoonJetEletrica, 
       category: 'Categoria Principal'
     },
-    {
-      name: 'Typhoon-Jet 50cv Diesel',
-      path: '/lavadoras/typhoon-jet-50cv-diesel',
-      description: 'As hidrojateadoras Typhoon-Jet são ideais para trabalhos que são exclusivos e rápidos. Equipadas com um motor Diesel refrigerado à água, elas oferecem potência confiável e eficiência em ambientes exigentes. O painel digital integrado facilita a partida e permite a leitura dos instrumentos de temperatura da água, óleo, carga da bateria, rotações do motor, entre outros, garantindo um monitoramento preciso durante a operação. Além disso, seu design prático permite fácil entrega e posicionamento em diferentes locais.',
-      image: typhoonJetDiesel, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Typhoon-Jet 350 BAR',
-      path: '/lavadoras/typhoon-jet-350-gasolina',
-      description: 'O Typhoon-Jet 350 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 350 bar, uma vazão de 17 L/min e uma potência de 15 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.',
-      image: typhoonJet500Gasolina, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Typhoon-Jet 170 BAR',
-      path: '/lavadoras/typhoon-jet-170-trifasico',
-      description: 'O Typhoon-Jet 170 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas moderadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 170 bar (2465 PSI), uma vazão de 12 L/min (720 L/h) e uma potência de 5 cv, este equipamento garante resultados eficazes em desafios de limpeza de intensidade moderada.',
-      image: typhoonJet170Monofasico, 
-      category: 'Categoria Principal'
-    },
-   
   ];
 
   const handleProductClick = (product) => {

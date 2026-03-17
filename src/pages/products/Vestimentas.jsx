@@ -13,14 +13,14 @@ const PaginaCategoria = () => {
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'Hydro-Shell UAP',
+      name: 'Macacão Hydro-Shell UAP',
       path: '/vestimentas/hydro-shell-uap',
       description: 'Macacão de proteção indicado para trabalhadores do setor Naval, Oil & Gás, Petroquímico e/ou operações com bombas de hidrojateamento modelo UAP. Confeccionado em tripla camada de tecido tramado sintético de alta tenacidade impermeabilizado externamente com PVC, possui costuras impermeabilizadas.',
       image: hydroShellUAP, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Hydro-Shell SAP',
+      name: 'Macacão Hydro-Shell SAP',
       path: '/vestimentas/hydro-shell-sap',
       description: 'Macacão de proteção indicado para trabalhadores do setor sucroalcooleiro e/ou operações com bombas de hidrojateamento modelo SAP. Confeccionado em dupla camada de tecido tramado sintético de alta tenacidade impermeabilizado externamente com PVC, possui costuras impermeabilizadas.',
       image: hydroShellSAP, 

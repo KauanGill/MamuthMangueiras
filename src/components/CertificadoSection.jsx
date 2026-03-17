@@ -29,7 +29,7 @@ export default function CertificacoesSection() {
           <img
             src={seloParker}
             alt="Certificação Parker"
-            className="w-20 md:w-24 mx-auto"
+            className="w-20 md:w-28 mx-auto"
           />
         </div>
 
@@ -68,7 +68,7 @@ export default function CertificacoesSection() {
           <img
             src={seloFalch}
             alt="Certificação Falch"
-            className="w-20 md:w-24 mx-auto"
+            className="w-20 md:w-28 mx-auto"
           />
         </div>
 

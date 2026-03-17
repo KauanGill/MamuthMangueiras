@@ -14,6 +14,9 @@ import CertificacoesSection from "@/components/CertificadoSection";
 import Hero from "@/components/Hero"
 import { useToast } from '@/components/ui/use-toast';
 
+import ProductCarousel from "@/components/ProductCarousel";
+
+
 import bombaAltaPressao from "@/assets/images/bomba-alta-pressao-titulo.png";
 import lavadoraAltaPressao from "@/assets/images/lavadora-alta-pressao.png";
 import vestimentaProtecao from "@/assets/images/vestimenta-protecao.png";
@@ -29,9 +32,10 @@ import mexico from "@/assets/images/bandeira-do-mexico.png";
 import paraguai from "@/assets/images/bandeira-do-paraguai.png";
 import peru from "@/assets/images/bandeira-do-peru.png";
 import americaDoSul from "@/assets/images/mapa_atuacao_mamuth_sem_fundo.png";
-import seloParker from "@/assets/images/selo-certificado-parker.png";
-import imagemCertificado from "@/assets/images/certificado_mamuth.jpg";
-import seloFalch from "@/assets/images/logo_falch_certificado.png"
+import bicoHidrojato from "@/assets/images/bicos-hidrojatos.png";
+import pecasBomba from "@/assets/images/pecas-para-bomba.png";
+import acessoriosHidro from "@/assets/images/hidro-acessorios.png";
+import acessoriosLavadora from "@/assets/images/acessorios-lavadora.png";
 
 const Home = () => {
   const { toast } = useToast();
@@ -83,6 +87,31 @@ const Home = () => {
       image: mangueiraConexao,
       specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
     },
+    {
+      name: 'Bicos para Hidrojato',
+      description: 'Projetos personalizados desenvolvidos especificamente para atender necessidades únicas de cada cliente.',
+      image: bicoHidrojato,
+      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
+    },
+    {
+      name: 'Peças para Bombas de Hidrojato',
+      description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações.',
+      image: pecasBomba,
+      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
+    },
+    {
+      name: 'Hidrojato/Acessórios',
+      description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações industriais.',
+      image: acessoriosHidro,
+      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
+    },
+    {
+      name: 'Acessórios para Lavadoras de Alta Pressão',
+      description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações industriais.',
+      image: acessoriosLavadora,
+      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
+    },
+    
   ];
 
   const services = [
@@ -113,7 +142,8 @@ const Home = () => {
       title: 'Parcerias Estratégicas Internacionais',
       description: 'A Mamuth mantém parcerias sólidas com fabricantes de referência internacional, levando ao mercado latino-americano soluções reconhecidas pela excelência em engenharia, robustez e confiabilidade operacional.',
       benefits: ['Parceria estratégica com Falch e Parker Polyflex, referências globais em hidrojato e alta pressão.', 'Acesso a tecnologias desenvolvidas sob rigorosos padrões da engenharia alemã.', 'Atuação como elo técnico entre fabricante e cliente final.', 'Suporte técnico, orientação de aplicação e acompanhamento pós-venda na América Latina.'],
-      buttonText: 'Saiba mais'
+      buttonText: 'Saiba mais',
+      link: "/sobre#parceirosmamuth"
     },
   ];
 
@@ -269,7 +299,7 @@ const Home = () => {
     </div>
   </div>
 </section>
-<section className="pb-20 pt-20" style={{ backgroundColor: 'var(--color-dark-blue)' }}>
+      <section className="pb-20 pt-20" style={{ backgroundColor: 'var(--color-dark-blue)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -279,15 +309,7 @@ const Home = () => {
               Equipamentos de alta qualidade para todas as suas necessidades industriais
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.map((product, index) => (
-              <ProductCard
-                key={index}
-                {...product}
-                onCTAClick={handleProductClick}
-              />
-            ))}
-          </div>
+            <ProductCarousel products={products} />
         </div>
       </section>
       <section className="py-16 bg-white">
