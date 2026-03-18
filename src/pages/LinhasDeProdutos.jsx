@@ -10,7 +10,7 @@ import CertificacoesSection from "@/components/CertificadoSection";
 import Hero from "@/components/Hero"
 
 // Imports de Imagens
-import lavadoraAltaPressao from "@/assets/images/lavadora-alta-pressao.png";
+import lavadoraAltaPressao from "@/assets/images/typhoonjet-50cv-eletrica.png";
 import vestimentaProtecao from "@/assets/images/vestimenta-protecao.png";
 import mangueiraConexao from "@/assets/images/mangueiras-conexoes.jpg";
 import bicoHidrojato from "@/assets/images/bicos-hidrojatos.png";
@@ -18,9 +18,6 @@ import bombaAltaPressao from "@/assets/images/bomba-alta-pressao-titulo.png";
 import pecasBomba from "@/assets/images/pecas-para-bomba.png";
 import acessoriosHidro from "@/assets/images/hidro-acessorios.png";
 import acessoriosLavadora from "@/assets/images/acessorios-lavadora.png";
-import seloParker from "@/assets/images/selo-certificado-parker.png";
-import imagemCertificado from "@/assets/images/certificado_mamuth.jpg";
-import seloFalch from "@/assets/images/logo_falch_certificado.png"
 
 const LinhasDeProdutos = () => {
   const { toast } = useToast();

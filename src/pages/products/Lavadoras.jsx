@@ -5,7 +5,7 @@ import ProductCard from '@/components/ProductCard'; // Certifique-se de que o ca
 import typhoonJet500 from '@/assets/images/lavadora-typhoon-jet-500bar.jpeg';
 import typhoonJet500Gasolina from '@/assets/images/typhoonjet-500bar-1200L.png';
 import typhoonJet170Monofasico from '@/assets/images/typhoonjet-170-bar-monofasico.png';
-import typhoonJetEletrica from '@/assets/images/typhoonjet-50cv-eletrica.jpg'
+import typhoonJetEletrica from '@/assets/images/typhoonjet-50cv-eletrica.png'
 import typhoonJetDiesel from '@/assets/images/typhoonjet-50cv-diesel.jpg'
 import path from 'node:path';
 
