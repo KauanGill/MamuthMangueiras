@@ -3,11 +3,18 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import niplesAdaptador from '@/assets/images/niples-adaptador-hp9-16.png';
 
 const NiplesAdaptadorHP = () => {
   const navigate = useNavigate();
+  const slides = [
+        { id: 1, title: 'Niples Adaptador HP', artist: 'Trifásico', cover: niplesAdaptador, color: '#FF5101' },
+        { id: 2, title: 'Niples Adaptador HP', artist: 'Vista lateral', cover: niplesAdaptador, color: '#FF5101' },
+        { id: 3, title: 'Niples Adaptador HP', artist: 'Detalhes', cover: niplesAdaptador, color: '#FF5101' }
+  ];
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -25,29 +32,8 @@ const NiplesAdaptadorHP = () => {
         className="relative pt-10 pb-20 px-4 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-         Niples (Adaptador HP 9-16 HP X 9-16 JIC-1)
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={niplesAdaptador} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,7 +44,7 @@ const NiplesAdaptadorHP = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Niples Adaptador HP 
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Conexões, Uniões, Adaptadores e Engates, são itens necessários para unir, acoplar e adaptar 

@@ -89,96 +89,40 @@ const BicoRotativoTitan = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Ø</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MÁX. (bar) </th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Cabeça</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão Entrada</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">TITAN 9.5 22K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.1050</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9.5 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Polisher</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">15-23 LPM</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M7</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">TITAN 13 22K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.1055</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">13 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Polisher</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">20-34 LPM</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/8 BSP</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">TITAN 13 40K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.1072</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">13 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Polisher</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">29-33 LPM</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8-24 LH</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">TITAN 18 22K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.1059</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">18 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Polisher</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">22-38 LPM</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 BSP</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">TITAN 18 40K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.1077</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">18 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Polisher</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">42-64 LPM</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8-24 LH</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">TITAN 24 22K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.1065</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">24 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Polisher</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">42-64 LPM</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8 BSP</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">TITAN 33 22K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.1086</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">33 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Universal</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">42-64 LPM</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/2 BSP</td>
-                </tr>
-              </tbody>
-            </table>
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
+  <thead>
+    <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+      <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Modelo</th>
+      <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Código</th>
+      <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Diâmetro</th>
+      <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Pressão (bar)</th>
+      <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Cabeça</th>
+      <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Vazão</th>
+      <th className="py-4 px-1 font-bold text-[10px] sm:text-xs md:text-sm text-center">Entrada</th>
+    </tr>
+  </thead>
+  <tbody>
+    {[
+      { mod: "TITAN 9.5 22K", cod: "2000.1050", dia: "9.5 mm", pre: "1.500", cab: "Polisher", vaz: "15-23 LPM", ent: "M7" },
+      { mod: "TITAN 13 22K", cod: "2000.1055", dia: "13 mm", pre: "1.500", cab: "Polisher", vaz: "20-34 LPM", ent: "1/8 BSP" },
+      { mod: "TITAN 13 40K", cod: "2000.1072", dia: "13 mm", pre: "2.800", cab: "Polisher", vaz: "29-33 LPM", ent: "3/8-24 LH" },
+      { mod: "TITAN 18 22K", cod: "2000.1059", dia: "18 mm", pre: "1.500", cab: "Polisher", vaz: "22-38 LPM", ent: "1/4 BSP" },
+      { mod: "TITAN 18 40K", cod: "2000.1077", dia: "18 mm", pre: "2.800", cab: "Polisher", vaz: "42-64 LPM", ent: "3/8-24 LH" },
+      { mod: "TITAN 24 22K", cod: "2000.1065", dia: "24 mm", pre: "1.500", cab: "Polisher", vaz: "42-64 LPM", ent: "3/8 BSP" },
+      { mod: "TITAN 33 22K", cod: "2000.1086", dia: "33 mm", pre: "1.500", cab: "Universal", vaz: "42-64 LPM", ent: "1/2 BSP" },
+    ].map((item, idx) => (
+      <tr key={idx} className={`${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'} text-gray-800 border-b border-gray-200`}>
+        <td className="py-4 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.mod}</td>
+        <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.cod}</td>
+        <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.dia}</td>
+        <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.pre}</td>
+        <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.cab}</td>
+        <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.vaz}</td>
+        <td className="py-4 px-1 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.ent}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
           </div>
 
           <style dangerouslySetInnerHTML={{ __html: `

@@ -29,7 +29,7 @@ const Typhoon170Monofasico = () => {
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
       <section 
-        className="relative pt-10 pb-20 px-4 w-full" 
+        className="relative py-0 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
         <div className="max-w-[1400px] mx-auto">

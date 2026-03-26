@@ -93,44 +93,43 @@ const BicoFerret22K = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MÁX (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão MÁX (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão Entrada</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Ø</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Comprimento</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação Diâmetro do Tubo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[8px] sm:text-[10px] md:text-xs text-center">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[8px] sm:text-[10px] md:text-xs text-center">Código</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[8px] sm:text-[10px] md:text-xs text-center">Pressão (bar)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[8px] sm:text-[10px] md:text-xs text-center">Vazão (L/min)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[8px] sm:text-[10px] md:text-xs text-center">Entrada</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[8px] sm:text-[10px] md:text-xs text-center">Diâmetro Ø</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[8px] sm:text-[10px] md:text-xs text-center">Compr.</th>
+                  <th className="py-4 px-1 font-bold text-[8px] sm:text-[10px] md:text-xs text-center leading-tight">Aplicação Tubo</th>
                 </tr>
               </thead>
               <tbody>
+                {/* Ferret 2° */}
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Ferret 2°</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.0014</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">55</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">FF 1/4 BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">33 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">50 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Tubos de "2 até 3""</td>
+                  <td className="py-6 px-1 border-r border-gray-200 font-bold text-[9px] sm:text-xs md:text-sm text-center">Ferret 2°</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">1001.0014</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">1.500</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">55</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center whitespace-nowrap">1/4 BSP</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">33 mm</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">50 mm</td>
+                  <td className="py-6 px-1 text-[9px] sm:text-xs md:text-sm text-center">2" até 3"</td>
+                </tr>
+                {/* Ferret° */}
+                <tr className="bg-gray-50 text-gray-800 border-b border-gray-200">
+                  <td className="py-6 px-1 border-r border-gray-200 font-bold text-[9px] sm:text-xs md:text-sm text-center">Ferret°</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">1001.0014</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">1.500</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">80</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center whitespace-nowrap">1/4 BSP</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">33 mm</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[9px] sm:text-xs md:text-sm text-center">103 mm</td>
+                  <td className="py-6 px-1 text-[9px] sm:text-xs md:text-sm text-center">4" até 6"</td>
                 </tr>
               </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Ferret°</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.0014</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">80</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">FF 1/4 BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">33mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">103mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Tubos de 4" até 6"</td>
-                </tr>
-              </tbody>
-
             </table>
           </div>
 

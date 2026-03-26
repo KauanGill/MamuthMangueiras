@@ -36,6 +36,7 @@ import bicoHidrojato from "@/assets/images/bicos-hidrojatos.png";
 import pecasBomba from "@/assets/images/pecas-para-bomba.png";
 import acessoriosHidro from "@/assets/images/hidro-acessorios.png";
 import acessoriosLavadora from "@/assets/images/acessorios-lavadora.png";
+import path from 'node:path';
 
 const Home = () => {
   const { toast } = useToast();
@@ -67,49 +68,57 @@ const Home = () => {
       name: 'Bombas de Alta Pressão',
       description: 'Peças originais e de alta qualidade para manutenção e prolongamento da vida útil dos equipamentos.',
       image: bombaAltaPressao,
-      specs: ['Pressão até 3000 bar', 'Alta durabilidade', 'Manutenção facilitada']
+      specs: ['Pressão até 3000 bar', 'Alta durabilidade', 'Manutenção facilitada'],
+      path :'/bombas-alta-pressao'
     },
     {
       name: 'Lavadoras de Alta Pressão',
       description: 'Equipamentos robustos projetados para operações industriais de alta exigência, com tecnologia de ponta e máxima eficiência.',
       image: lavadoraAltaPressao,
-      specs: ['Tecnologia avançada', 'Economia de água', 'Resultados superiores']
+      specs: ['Tecnologia avançada', 'Economia de água', 'Resultados superiores'],
+      path: '/lavadoras'
     },
     {
       name: 'Vestimentas de Proteção',
       description: 'Soluções completas para limpeza de alta pressão, ideais para remoção de incrustações e contaminantes.',
       image: vestimentaProtecao,
-      specs: ['Alta confiabilidade', 'Eficiência energética', 'Suporte técnico']
+      specs: ['Alta confiabilidade', 'Eficiência energética', 'Suporte técnico'],
+      path: '/vestimentas'
     },
     {
       name: 'Mangueiras e Conexões',
       description: 'Linha completa de equipamentos hidráulicos de precisão para diversas aplicações industriais.',
       image: mangueiraConexao,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
+      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
+      path: '/mangueiras-conexoes'
     },
     {
       name: 'Bicos para Hidrojato',
       description: 'Projetos personalizados desenvolvidos especificamente para atender necessidades únicas de cada cliente.',
       image: bicoHidrojato,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
+      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
+      path: '/bicos-hidrojatos'
     },
     {
       name: 'Peças para Bombas de Hidrojato',
       description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações.',
       image: pecasBomba,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
+      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
+      path: '/pecas-bombas'
     },
     {
       name: 'Hidrojato/Acessórios',
       description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações industriais.',
       image: acessoriosHidro,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
+      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
+      path: '/hidrojato-acessorios'
     },
     {
       name: 'Acessórios para Lavadoras de Alta Pressão',
       description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações industriais.',
       image: acessoriosLavadora,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida']
+      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
+      path: '/acessorios-lavadoras'
     },
     
   ];
@@ -211,9 +220,9 @@ const Home = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 0.6 }}
-      className="text-center max-w-4xl mx-auto mb-20"
+      className="text-center max-w-5xl mx-auto mb-20"
     >
-      <h2 className="text-4xl font-bold text-[#FF5101]">
+      <h2 className="text-2xl md:text-4xl font-bold text-[#FF5101]">
         Presente em toda a América Latina a Mamuth alia experiência e excelência
         para atender às demandas do mercado internacional, oferecendo soluções
         robustas e seguras para operações industriais de alta complexidade.
@@ -232,7 +241,7 @@ const Home = () => {
       >
 
         {/* Flags */}
-        <div className="flex flex-wrap gap-3 mb-10">
+        <div className="flex flex-wrap gap-3 mb-10 justify-center md:justify-start">
           <img src={peru} alt="Peru" className="h-10 object-contain" />
           <img src={brasil} alt="Brasil" className="h-10 object-contain" />
           <img src={argentina} alt="Argentina" className="h-10 object-contain" />
@@ -240,7 +249,7 @@ const Home = () => {
           <img src={colombia} alt="Colômbia" className="h-10 object-contain" />
         </div>
 
-        <div className="flex flex-wrap gap-3 mb-12">
+        <div className="flex flex-wrap gap-3 mb-12 justify-center md:justify-start">
           <img src={guatemala} alt="Guatemala" className="h-10 object-contain" />
           <img src={venezuela} alt="Venezuela" className="h-10 object-contain" />
           <img src={bolivia} alt="Bolívia" className="h-10 object-contain" />

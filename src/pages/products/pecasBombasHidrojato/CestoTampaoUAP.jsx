@@ -2,12 +2,18 @@ import React, { useEffect } from 'react';
 import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
+import AppleCoverFlow from "@/components/AppleCoverFlow";
 
 // Import da imagem
 import cestoTampaoUAP from '@/assets/images/cesto-tampao-uap.png';
 
 const CestoTampaoUAP = () => {
   const navigate = useNavigate();
+  const slides = [
+        { id: 1, title: 'Cesto Tampão UAP', artist: 'Trifásico', cover: cestoTampaoUAP, color: '#FF5101' },
+        { id: 2, title: 'Cesto Tampão UAP', artist: 'Vista lateral', cover: cestoTampaoUAP, color: '#FF5101' },
+        { id: 3, title: 'Cesto Tampão UAP', artist: 'Detalhes', cover: cestoTampaoUAP, color: '#FF5101' }
+  ];
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -25,32 +31,10 @@ const CestoTampaoUAP = () => {
         className="relative pt-10 pb-20 px-4 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-         Cesto Tampão UAP
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={cestoTampaoUAP} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
-
       {/* SEÇÃO DE TEXTOS: BRANCA - SEUS TEXTOS ORIGINAIS AQUI */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
@@ -58,7 +42,7 @@ const CestoTampaoUAP = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Cesto Tampão UAP
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo 

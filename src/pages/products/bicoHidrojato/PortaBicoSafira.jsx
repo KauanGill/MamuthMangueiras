@@ -89,26 +89,48 @@ const PortaBicoSafira = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão Entrada</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8-24 UNF</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1341.0092</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9/16-18 LH</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+            Perfeito, mantendo o padrão das tabelas anteriores que ajustamos para o projeto da Mamuth: removemos a largura mínima fixa que causa o scroll e aplicamos o layout fluido para que ela se adapte perfeitamente à largura da tela.
 
+Aqui está o código ajustado:
+
+JavaScript
+<div className="w-full overflow-hidden rounded-xl shadow-md">
+      <table className="w-full border-collapse table-fixed bg-white">
+        <thead>
+          <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+            <th className="py-6 px-2 border-r border-orange-400 font-bold text-base md:text-lg w-[25%] text-center">
+              Modelo
+            </th>
+            <th className="py-6 px-2 border-r border-orange-400 font-bold text-base md:text-lg w-[25%] text-center">
+              Código
+            </th>
+            <th className="py-6 px-2 border-r border-orange-400 font-bold text-base md:text-lg w-[25%] text-center">
+              Pressão MAX(bar)
+            </th>
+            <th className="py-6 px-2 font-bold text-base md:text-lg w-[25%] text-center">
+              Conexão Entrada
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="text-gray-800 border-b border-gray-200">
+            <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-xl text-center">
+              3/8-24 UNF
+            </td>
+            <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-xl text-center">
+              1341.0092
+            </td>
+            <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-xl text-center">
+              2.800
+            </td>
+            <td className="py-8 px-2 text-sm md:text-xl text-center">
+              9/16-18 LH
+            </td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+        </div>
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }
             .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }

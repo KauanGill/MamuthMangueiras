@@ -3,11 +3,18 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import niplesM24DKO from '@/assets/images/niples-m24dko-1.png';
 
 const PoliamidaSAP1500 = () => {
   const navigate = useNavigate();
+  const slides = [
+        { id: 1, title: 'Niples M24DKO-1', artist: 'Trifásico', cover: niplesM24DKO, color: '#FF5101' },
+        { id: 2, title: 'Niples M24DKO-1', artist: 'Vista lateral', cover: niplesM24DKO, color: '#FF5101' },
+        { id: 3, title: 'Niples M24DKO-1', artist: 'Detalhes', cover: niplesM24DKO, color: '#FF5101' }
+  ];
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -17,7 +24,7 @@ const PoliamidaSAP1500 = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white w-full">
       <Helmet>
-        <title>Niples M24DKO-1- Mamuth</title>
+        <title>Niples M24DKO-1 Mamuth</title>
       </Helmet>
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
@@ -25,29 +32,8 @@ const PoliamidaSAP1500 = () => {
         className="relative pt-10 pb-20 px-4 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-          Niples M24DKO-1
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={niplesM24DKO} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,7 +44,7 @@ const PoliamidaSAP1500 = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Niples M24DKO-1
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Conexões, Uniões, Adaptadores e Engates, são itens necessários para unir, acoplar e adaptar mangueiras e 

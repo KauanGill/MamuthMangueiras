@@ -93,119 +93,42 @@ const BicoFixoFoguetinho = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">L</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Ø A - 3X</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Ø B - 3X</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Ø C - 2X</th>
+           <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
+            <thead>
+              <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Modelo</th>
+                <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Código</th>
+                <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">L</th>
+                <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Rosca</th>
+                <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Ø A</th>
+                <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Ø B</th>
+                <th className="py-4 px-1 font-bold text-[9px] sm:text-xs md:text-sm text-center">Ø C</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { mod: "D10", cod: "2000.0500", l: "31", r: "M7", a: "XB", b: "X", c: "X" },
+                { mod: "D12", cod: "2000.0501", l: "40", r: "1/8 BSP", a: "x", b: "X", c: "XC" },
+                { mod: "D16", cod: "2000.0502", l: "47", r: "1/4 BSP", a: "X", b: "X", c: "X" },
+                { mod: "D22", cod: "2000.0503", l: "55", r: "1/4 BSP", a: "XB", b: "X", c: "X" },
+                { mod: "D28", cod: "2000.0554", l: "65", r: "1/2 BSP", a: "X", b: "X", c: "X" },
+                { mod: "D30", cod: "2000.0530", l: "76", r: "1/2 BSP", a: "X", b: "X", c: "X" },
+                { mod: "D40", cod: "2000.0513", l: "87", r: "M22x1,5", a: "X", b: "X", c: "X" },
+                { mod: "D50", cod: "2000.0514", l: "102", r: "M30x1,5", a: "X", b: "X", c: "X" },
+                { mod: "D70", cod: "2000.0507", l: "120", r: "M50x1,5", a: "X", b: "X", c: "X" },
+              ].map((item, idx) => (
+                <tr key={idx} className={`${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'} text-gray-800 border-b border-gray-200`}>
+                  <td className="py-4 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center">{item.mod}</td>
+                  <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.cod}</td>
+                  <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.l}</td>
+                  <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.r}</td>
+                  <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.a}</td>
+                  <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.b}</td>
+                  <td className="py-4 px-1 text-[10px] sm:text-xs md:text-base text-center">{item.c}</td>
                 </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">D10</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.0500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">31</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M7</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">XB</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">D12</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.0501</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">40</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/8 BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">x</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">XC</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">D16</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.0502</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">47</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">D22</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.0503</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">55</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">XB</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">D28</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.0554</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">65</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/2 BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">D30</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.0530</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">76</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/2 BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">D40</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.0513</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">87</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">MM22x1,5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">D50</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.0514</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">102</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M30x,15</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">D70</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2000.0507</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">120</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M50x1,5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">X</td>
-                </tr>
-              </tbody>
-
-            </table>
+              ))}
+            </tbody>
+          </table>
           </div>
 
           <style dangerouslySetInnerHTML={{ __html: `

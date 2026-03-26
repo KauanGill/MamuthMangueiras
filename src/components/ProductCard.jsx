@@ -18,51 +18,53 @@ const ProductCard = ({ image, name, description, specs, path, onCTAClick }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      whileHover={{ y: -5 }}
-      className="bg-white rounded-xl shadow-lg overflow-hidden h-full flex flex-col"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5 }}
+  whileHover={{ y: -5 }}
+  className="bg-white rounded-xl shadow-lg overflow-hidden h-full flex flex-col"
+>
+  {/* AJUSTE AQUI: Mudei de h-48 para h-64 (você pode testar h-72 ou h-80 se quiser maior) */}
+  <div className="h-64 overflow-hidden cursor-pointer" onClick={handleDetailsClick}>
+    <img
+      src={image}
+      alt={name}
+      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+      loading="lazy"
+    />
+  </div>
+
+  <div className="p-6 flex flex-col flex-grow">
+    <h3 
+      className="text-xl font-bold mb-3 cursor-pointer" 
+      style={{ color: 'var(--color-dark-blue)' }}
+      onClick={handleDetailsClick}
     >
-      {/* 5. Dica: Envolva a imagem com um cursor pointer para indicar que é clicável */}
-      <div className="h-48 overflow-hidden cursor-pointer" onClick={handleDetailsClick}>
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-          loading="lazy"
-        />
-      </div>
+      {name}
+    </h3>
+    
+    <p className="text-gray-600 mb-4 flex-grow">{description}</p>
 
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 
-          className="text-xl font-bold mb-3 cursor-pointer" 
-          style={{ color: 'var(--color-dark-blue)' }}
-          onClick={handleDetailsClick} // Título também clicável
-        >
-          {name}
-        </h3>
-        
-        <p className="text-gray-600 mb-4 flex-grow">{description}</p>
+    {specs && (
+      <ul className="mb-4 space-y-1">
+        {specs.map((spec, index) => (
+          <li key={index} className="text-sm text-gray-500 flex items-start">
+            <span className="mr-2" style={{ color: '#FF5101' }}>•</span>
+            {spec}
+          </li>
+        ))}
+      </ul>
+    )}
 
-        {specs && (
-          <ul className="mb-4 space-y-1">
-            {specs.map((spec, index) => (
-              <li key={index} className="text-sm text-gray-500 flex items-start">
-                <span className="mr-2" style={{ color: '#FF5101' }}>•</span>
-                {spec}
-              </li>
-            ))}
-          </ul>
-        )}
-
-        {/* 6. Altere o onClick do botão para a nossa nova função */}
-        <CTAButton onClick={handleDetailsClick} className="w-full">
-          {path ? "Ver Detalhes" : "Solicitar Orçamento"}
-        </CTAButton>
-      </div>
-    </motion.div>
+    <CTAButton 
+  onClick={handleDetailsClick} 
+  className="w-full py-2 px-4 text-sm md:text-base font-medium"
+>
+  {path ? "Ver Detalhes" : "Solicitar Orçamento"}
+</CTAButton>
+  </div>
+</motion.div>
   );
 };
 

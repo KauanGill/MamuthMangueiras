@@ -83,28 +83,32 @@ const BicoRotativo500 = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão Máx. (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão de Encaixe</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Temperatura Máx de trabalho</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Pressão (bar)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Pressão (psi)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Vazão</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Conexão</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Peso</th>
+                  <th className="py-4 px-1 font-bold text-[10px] sm:text-xs md:text-sm text-center">Temp. Máx</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Bico Turbo 6500 Bar</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">7252</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">80</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 NPT</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,700</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">90°C</td>
-                </tr>
+                {[
+                  { mod: "Bico Turbo 6500", bar: "500", psi: "7.252", vaz: "80 L/m", con: "1/4 NPT", pes: "0,700 kg", temp: "90°C" },
+                ].map((item, idx) => (
+                  <tr key={idx} className="bg-white text-gray-800 border-b border-gray-200">
+                    <td className="py-4 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.mod}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.bar}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.psi}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.vaz}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.con}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.pes}</td>
+                    <td className="py-4 px-1 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.temp}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

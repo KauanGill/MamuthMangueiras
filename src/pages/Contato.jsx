@@ -139,7 +139,7 @@ const Contato = () => {
     {
       icon: MapPin,
       title: 'FILIAL - Macaé/RJ',
-      content: 'Rua MACAÈ 123 Bairro - Rio de Janeiro/RJ, CEP: 01123-000',
+      content: 'Av. Pref. Aristeu Ferreira da Silva, 321 Novo Cavaleiros - Macaé/RJ',
       link: null
     },
     {

@@ -83,27 +83,27 @@ const BicoRotativo600 = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão Máx. (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão de Encaixe</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Temperatura Máx de trabalho</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Pressão (bar)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Pressão (psi)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Vazão Máx. (L/min)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Conexão de Encaixe</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Peso (kg)</th>
+                  <th className="py-4 px-1 font-bold text-[9px] sm:text-xs md:text-sm text-center leading-tight">Temp. Máx Trabalho</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Bico Turbo 600 Bar</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">600</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">8700</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">80</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 NPT</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,700</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">90°C</td>
+                  <td className="py-6 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center">Bico Turbo 600 Bar</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">600</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">8700</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">80</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">1/4 NPT</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">0,700</td>
+                  <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base text-center">90°C</td>
                 </tr>
               </tbody>
             </table>

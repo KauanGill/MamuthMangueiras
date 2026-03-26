@@ -3,11 +3,18 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import pistola660bar from '@/assets/images/acessorios-lavadora.png';
 
 const Pistola660bar = () => {
   const navigate = useNavigate();
+  const slides = [
+        { id: 1, title: 'Pistola 660 bar', artist: 'Trifásico', cover: pistola660bar, color: '#FF5101' },
+        { id: 2, title: 'Pistola 660 bar', artist: 'Vista lateral', cover: pistola660bar, color: '#FF5101' },
+        { id: 3, title: 'Pistola 660 bar', artist: 'Detalhes', cover: pistola660bar, color: '#FF5101' }
+  ];
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -22,32 +29,11 @@ const Pistola660bar = () => {
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
       <section 
-        className="relative pt-10 pb-20 px-4 w-full" 
+        className="relative py-0 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-            Pistola 660 bar
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={pistola660bar} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,7 +44,7 @@ const Pistola660bar = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            pistola 660 Bar
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
@@ -84,25 +70,25 @@ const Pistola660bar = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão de Entrada</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso(kg)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Comprimento</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Pressão MAX (bar)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Vazão (L/min)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Conexão de Entrada</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Peso(kg)</th>
+                  <th className="py-4 px-1 font-bold text-[10px] sm:text-xs md:text-sm text-center">Comprimento</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Pistola 600 Bar</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">660</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">60</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M22x1,5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1,5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1200mm</td>
+                  <td className="py-6 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center">Pistola 600 Bar</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">660</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">60</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">M22x1,5</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">1,5</td>
+                  <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base text-center">1200mm</td>
                 </tr>
               </tbody>
             </table>

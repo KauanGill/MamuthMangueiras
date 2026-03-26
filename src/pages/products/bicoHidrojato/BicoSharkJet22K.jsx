@@ -91,44 +91,37 @@ const BicoShark22K = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MÁX (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão Máx. (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão Entrada</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Ø</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Comprimento</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação Diâmetro de tubos</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Código</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Pressão</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Vazão</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Entrada</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Diâm.</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Compr.</th>
+                  <th className="py-4 px-1 font-bold text-[9px] sm:text-xs md:text-sm text-center">Peso</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Shark-Jet 22K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.0065</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">40</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">47 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">230 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1,3kg"</td>
-                </tr>
+                {[
+                  { mod: "Shark-Jet 22K", cod: "1001.0065", pre: "1.500 bar", vaz: "40 L/m", ent: "1/4 BSP", dia: "47 mm", com: "230 mm", pes: "1,3 kg" },
+                  { mod: "Shark-Jet 40K", cod: "1001.0065", pre: "2.800 bar", vaz: "30 L/m", ent: "9/16-18 LH", dia: "47 mm", com: "230 mm", pes: "1,5 kg" },
+                ].map((item, idx) => (
+                  <tr key={idx} className={`${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'} text-gray-800 border-b border-gray-200`}>
+                    <td className="py-4 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.mod}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">{item.cod}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.pre}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.vaz}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.ent}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.dia}</td>
+                    <td className="py-4 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.com}</td>
+                    <td className="py-4 px-1 text-[10px] sm:text-xs md:text-base text-center whitespace-nowrap">{item.pes}</td>
+                  </tr>
+                ))}
               </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Shark-Jet 40K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.0065</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">30</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9/16-18 LH</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">47 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">230 mm</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1,5kg</td>
-                </tr>
-              </tbody>
-            </table>
+</table>
           </div>
 
           <style dangerouslySetInnerHTML={{ __html: `

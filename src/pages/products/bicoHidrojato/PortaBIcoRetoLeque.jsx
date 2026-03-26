@@ -84,24 +84,40 @@ const PortaBicoRetoELeque = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão Entrada</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1341.0050</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 BSP</td>
-                </tr>
-              </tbody>
-            </table>
+            <table className="w-full border-collapse table-fixed">
+    <thead>
+      <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+        <th className="py-6 px-2 border-r border-orange-400 font-bold text-base md:text-lg w-[25%]">
+          Modelo
+        </th>
+        <th className="py-6 px-2 border-r border-orange-400 font-bold text-base md:text-lg w-[25%]">
+          Código
+        </th>
+        <th className="py-6 px-2 border-r border-orange-400 font-bold text-base md:text-lg w-[25%]">
+          Pressão MAX
+        </th>
+        <th className="py-6 px-2 font-bold text-base md:text-lg w-[25%]">
+          Conexão
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="bg-white text-gray-800 border-b border-gray-200">
+        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-xl text-center">
+          1/4 BSP
+        </td>
+        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-xl text-center">
+          1341.0050
+        </td>
+        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-xl text-center">
+          1.500 bar
+        </td>
+        <td className="py-8 px-2 text-sm md:text-xl text-center">
+          1/4 BSP
+        </td>
+      </tr>
+    </tbody>
+  </table>
           </div>
 
           <style dangerouslySetInnerHTML={{ __html: `

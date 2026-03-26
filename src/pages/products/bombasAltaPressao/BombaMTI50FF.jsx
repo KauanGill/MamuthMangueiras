@@ -3,12 +3,18 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import bombaMTI50FF from '@/assets/images/bomba-mti-50ff.png';
 
 const BombaMTI50FF = () => {
   const navigate = useNavigate();
-
+  const slides = [
+        { id: 1, title: 'Bomba MTI 50 FF', artist: 'Trifásico', cover: bombaMTI50FF, color: '#FF5101' },
+        { id: 2, title: 'Bomba MTI 50 FF', artist: 'Vista lateral', cover: bombaMTI50FF, color: '#FF5101' },
+        { id: 3, title: 'Bomba MTI 50 FF', artist: 'Detalhes', cover: bombaMTI50FF, color: '#FF5101' }
+  ];
   // Garante que a página inicie no topo
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,35 +25,14 @@ const BombaMTI50FF = () => {
       <Helmet>
         <title>Bomba MTI-50FF - Mamuth</title>
       </Helmet>
-
+ 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
       <section 
         className="relative pt-10 pb-20 px-4 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-         Bomba MTI-50FF
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={bombaMTI50FF} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+       <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,7 +43,7 @@ const BombaMTI50FF = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Bomba MTI 50FF
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 160 bar e vazão de até 150L/min.
@@ -83,30 +68,30 @@ const BombaMTI50FF = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Potência (cv)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rotação (cv)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro do Eixo(mm)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">MTS-50FF</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">130 - 160</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">120-150</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">50</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">900 - 1000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">40</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+  <table className="w-full border-collapse table-fixed bg-white">
+    <thead>
+      <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Modelo</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Pressão (bar)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Vazão (L/min)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Potência (cv)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Rotação (cv)</th>
+        <th className="py-6 px-1 font-bold text-sm md:text-base whitespace-nowrap text-center">Eixo (mm)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="text-gray-800 border-b border-gray-200">
+        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">MTS-50FF</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">130 - 160</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">120 - 150</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">50</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">900 - 1000</td>
+        <td className="py-8 px-1 text-xs md:text-lg text-center whitespace-nowrap">40</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }

@@ -7,14 +7,16 @@ import AppleCoverFlow from "@/components/AppleCoverFlow";
 
 // Import da imagem
 import typhoonJetEletrica from '@/assets/images/typhoonjet-50cv-eletrica.jpg';
+import typhoonJet50cv from '@/assets/images/typhoon-jet-50-cv-eletrica.png'
+import typhoonJet50cvDiesel from '@/assets/images/typhoon-jet-50cv-Diesel-1.png'
 
 const Typhoon50cvEletrica = () => {
   const navigate = useNavigate();
 
   const slides = [
-      { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoonJetEletrica, color: '#FF5101' },
-      { id: 2, title: 'Typhoon Jet 500', artist: 'Vista lateral', cover: typhoonJetEletrica, color: '#FF5101' },
-      { id: 3, title: 'Typhoon Jet 500', artist: 'Detalhes', cover: typhoonJetEletrica, color: '#FF5101' }
+      { id: 1, title: 'Typhoon Jet 50 CV', artist: 'Trifásico', cover: typhoonJetEletrica, color: '#FF5101' },
+      { id: 2, title: 'Typhoon Jet 50 CV', artist: 'Elétrica', cover: typhoonJet50cv, color: '#FF5101' },
+      { id: 3, title: 'Typhoon Jet 50 CV', artist: 'Diesel', cover:typhoonJet50cvDiesel, color: '#FF5101' }
   ];
 
   // Garante que a página inicie no topo
@@ -76,35 +78,35 @@ const Typhoon50cvEletrica = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Potência (cv)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 font-bold text-lg">Dimensões(mm)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Modelo</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Pressão (bar)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Vazão (L/min)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Potência (cv)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Peso (kg)</th>
+                  <th className="py-4 px-2 font-bold text-[10px] sm:text-xs md:text-sm text-center">Dimensões(mm)</th>
                 </tr>
               </thead>
               <tbody>
+                {/* Typhoon-Jet 600 */}
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Typhoon-Jet 600</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">600</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">35</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">50</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">550</td>
-                  <td className="py-8 px-4 text-xl font-semibold">1400 x 1000 x 1000</td>
+                  <td className="py-6 px-2 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center">Typhoon-Jet 600</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">600</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">35</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">50</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">550</td>
+                  <td className="py-6 px-2 text-[10px] sm:text-xs md:text-base font-semibold text-center whitespace-nowrap">1400x1000x1000</td>
                 </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Typhoon-Jet 1000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">19</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">50</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">960</td>
-                  <td className="py-8 px-4 text-xl font-semibold">1400 x 1000 x 1000</td>
+                {/* Typhoon-Jet 1000 */}
+                <tr className="bg-gray-50 text-gray-800 border-b border-gray-200">
+                  <td className="py-6 px-2 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center">Typhoon-Jet 1000</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">1000</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">19</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">50</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">960</td>
+                  <td className="py-6 px-2 text-[10px] sm:text-xs md:text-base font-semibold text-center whitespace-nowrap">1400x1000x1000</td>
                 </tr>
               </tbody>
             </table>

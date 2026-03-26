@@ -28,7 +28,7 @@ const Typhoon200Trifasico = () => {
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
       <section 
-        className="relative pt-10 pb-20 px-4 w-full" 
+        className="relative py-0 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
         <div className="max-w-[1400px] mx-auto">
@@ -112,31 +112,31 @@ const Typhoon200Trifasico = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (PSI)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/h)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Potência (cv)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Tipo de Tensão</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Pressão (bar)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Pressão (PSI)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Vazão (L/min)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Vazão (L/h)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Potência (cv)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Peso (kg)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Tipo de Tensão</th>
                   <th className="py-6 px-4 font-bold text-lg">Dimensões(mm)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Typhoon-Jet 200</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">200</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2900</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">45</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2700</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">20</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">280</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">Trifásico</td>
-                  <td className="py-8 px-4 text-xl font-semibold">1200x800x900</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Typhoon-Jet 200</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">200</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">2900</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">45</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">2700</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm font-semibold">20</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm font-semibold">280</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm font-semibold">Trifásico</td>
+                  <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base font-semibold">1200x800x900</td>
                 </tr>
               </tbody>
             </table>

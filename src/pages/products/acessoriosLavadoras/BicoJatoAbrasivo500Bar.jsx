@@ -3,11 +3,18 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import valvulaReguladora200bar from '@/assets/images/valvula-reguladora-200bar.png';
 
 const BicoJatoAbrasivo = () => {
   const navigate = useNavigate();
+  const slides = [
+        { id: 1, title: 'Bico Jato Abrasivo 500bar', artist: 'Trifásico', cover: valvulaReguladora200bar, color: '#FF5101' },
+        { id: 2, title: 'Bico Jato Abrasivo 500bar', artist: 'Vista lateral', cover: valvulaReguladora200bar, color: '#FF5101' },
+        { id: 3, title: 'Bico Jato Abrasivo 500bar', artist: 'Detalhes', cover: valvulaReguladora200bar, color: '#FF5101' }
+  ];
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -22,32 +29,11 @@ const BicoJatoAbrasivo = () => {
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
       <section 
-        className="relative pt-10 pb-20 px-4 w-full" 
+        className="relative py-0 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-            Bico Jato Abrasivo 500bar
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={valvulaReguladora200bar} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,7 +44,7 @@ const BicoJatoAbrasivo = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Bico Jato Abrasivo 500bar
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">

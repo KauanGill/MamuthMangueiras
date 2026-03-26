@@ -3,11 +3,18 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import valvulaReguladora200bar from '@/assets/images/valvula-reguladora-200bar.png';
 
 const ValvulaReguladora200AltaVazao = () => {
   const navigate = useNavigate();
+  const slides = [
+        { id: 1, title: 'Válvula Reguladora 200 bar Alta Vazão', artist: 'Trifásico', cover: valvulaReguladora200bar, color: '#FF5101' },
+        { id: 2, title: 'Válvula Reguladora 200 bar Alta Vazão', artist: 'Vista lateral', cover: valvulaReguladora200bar, color: '#FF5101' },
+        { id: 3, title: 'Válvula Reguladora 200 bar Alta Vazão', artist: 'Detalhes', cover: valvulaReguladora200bar, color: '#FF5101' }
+  ];
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -22,32 +29,11 @@ const ValvulaReguladora200AltaVazao = () => {
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
       <section 
-        className="relative pt-10 pb-20 px-4 w-full" 
+        className="relative py-0 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-            Válvula Reguladora 200 bar Alta Vazão
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={valvulaReguladora200bar} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,7 +44,7 @@ const ValvulaReguladora200AltaVazao = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Válvula Reguladora 200 bar Alta Vazão
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
@@ -84,27 +70,27 @@ const ValvulaReguladora200AltaVazao = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX (psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão de Entrada</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão de Saída</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Função</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Pressão MAX (bar)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Pressão MAX (psi)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Vazão (L/min)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Conexão Entrada</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[9px] sm:text-xs md:text-sm text-center">Conexão Saída</th>
+                  <th className="py-4 px-1 font-bold text-[9px] sm:text-xs md:text-sm text-center">Função</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">VB-200 Alta Vazão</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">200</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.900</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">200</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1" BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1" BSP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Regulador de Pressão</td>
+                  <td className="py-6 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center">VB-200 Alta Vazão</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">200</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">2.900</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">200</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">1" BSP</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">1" BSP</td>
+                  <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base text-center leading-tight italic">Regulador de Pressão</td>
                 </tr>
               </tbody>
             </table>

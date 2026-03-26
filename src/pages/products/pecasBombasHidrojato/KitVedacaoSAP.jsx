@@ -3,11 +3,18 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import kitVedacaoSAP from '@/assets/images/kit-vedacao-sap.png';
 
 const KitVedacaoSAP = () => {
   const navigate = useNavigate();
+  const slides = [
+        { id: 1, title: 'Kit de Vedação SAP', artist: 'Trifásico', cover: kitVedacaoSAP, color: '#FF5101' },
+        { id: 2, title: 'Kit de Vedação SAP', artist: 'Vista lateral', cover: kitVedacaoSAP, color: '#FF5101' },
+        { id: 3, title: 'Kit de Vedação SAP', artist: 'Detalhes', cover: kitVedacaoSAP, color: '#FF5101' }
+  ];
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -25,29 +32,8 @@ const KitVedacaoSAP = () => {
         className="relative pt-10 pb-20 px-4 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-         Kit de Vedação SAP
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={kitVedacaoSAP} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,7 +44,7 @@ const KitVedacaoSAP = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Kit de Vedação SAP
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             A MAMUTH oferece uma linha completa de peças para Bombas de Alta e Ultra-Alta Pressão, abrangendo 

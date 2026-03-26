@@ -69,45 +69,43 @@ const DistorcedorMangueiraUAP = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca A (Parafuso Vazado)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca A (Anilha)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca B (Parafuso Vazado)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca B (Anilha)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[3%]">#</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[10%] uppercase">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[10%] uppercase">Código</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[9%] uppercase">P. MAX</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[13%] uppercase">Rosca A (Paraf.)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[13%] uppercase">Rosca A (Anil.)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[13%] uppercase">Rosca B (Paraf.)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[13%] uppercase">Rosca B (Anil.)</th>
+                  <th className="py-4 px-1 font-bold text-[10px] md:text-xs text-center w-[16%] uppercase">Aplicação</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">5/6 - 5/8</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.0061</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/4 UNF</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8 UNF LH</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/4 UNF</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8 UNF LH</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras UAP</td>
+                <tr className="text-gray-800 border-b border-gray-200">
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center font-bold">1</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center whitespace-nowrap">5/6 - 5/8</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center whitespace-nowrap">1001.0061</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">2.800</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">3/4 UNF</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">3/8 UNF LH</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">3/4 UNF</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">3/8 UNF LH</td>
+                  <td className="py-6 px-1 text-[10px] md:text-sm text-center">Mangueiras UAP</td>
                 </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">8/6 - 8/8</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.0067</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M26</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9/16 UNF LH</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M26</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9/16 UNF Lh</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras UAP</td>
+                <tr className="text-gray-800 border-b border-gray-200">
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center font-bold">2</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center whitespace-nowrap">8/6 - 8/8</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center whitespace-nowrap">1001.0067</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">2.800</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">M26</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">9/16 UNF LH</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">M26</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">9/16 UNF LH</td>
+                  <td className="py-6 px-1 text-[10px] md:text-sm text-center">Mangueiras UAP</td>
                 </tr>
               </tbody>
             </table>

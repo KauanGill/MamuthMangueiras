@@ -14,41 +14,42 @@ const PaginaCategoria = () => {
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'Bomba MTI-600',
+      name: 'MTI-600',
       path: '/bombas-de-alta-pressao/bomba-mti-600',
       description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 600 bar e vazão de até 35L/min.',
       image: bombaMTI600, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Bomba-MTI-50FF',
+      name: 'MTI-50FF',
       path: '/bombas-de-alta-pressao/bomba-mti-50ff',
       description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 160 bar e vazão de até 150L/min.',
       image: bombaMTI50FF, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Bomba MTI-500',
+      name: 'MTI-500',
       path: '/bombas-de-alta-pressao/bomba-mti-500',
       description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostáticos com pressão de 500 bar e vazão de 20L/min.',
       image: bombaMTI500, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Bomba MTI-350',
+      name: 'MTI-350',
       path: '/bombas-de-alta-pressao/bomba-mti-350',
       description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostáticos com pressão de 350 bar e vazão de 19L/min.',
       image: bombaMTI350, 
       category: 'Categoria Principal'
     },{
-      name: 'Bomba MTI-250',
+      name: 'MTI-250',
       path: '/bombas-de-alta-pressao/bomba-mti-250',
       description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostáticos com pressão de 250 bar e vazão de 17L/min.',
       image: bombaMTI250, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Bomba MTI-200',
+      name: 'MTI-200',
+      path: '/bombas-de-alta-pressao/bomba-mti-200',
       description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 200 bar e vazão de 45L/min.',
       image: bombaMTI350, 
       category: 'Categoria Principal'

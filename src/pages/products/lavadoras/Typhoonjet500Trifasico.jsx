@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
+import ProductVideo from "@/components/ProductVideo";
 import AppleCoverFlow from "@/components/AppleCoverFlow";
 
 import "swiper/css";
@@ -12,8 +13,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination"; 5 
 // Import da imagem
-import typhoon500 from "@/assets/images/lavadora-typhoon-jet-500bar.jpeg"; 
-import typhoon5002 from "@/assets/images/typhoonjet-500bar-1200L.png"; 
+import typhoon500Trifasico from "@/assets/images/typhoon-jet-500-trifasico.png"; 
+import typhoon500Combustao from "@/assets/images/typhoon-jet-200-combustao.png"; 
 import typhoon5003 from "@/assets/images/typhoonjet-500bar-1200L.png";
 import typhoonVideo from "@/assets/images/video-sobre.mp4"
 
@@ -24,9 +25,14 @@ const Typhoon500Trifasico = () => {
   const [index, setIndex] = useState(0);
 
   const slides = [
-    { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoon500, color: '#FF5101' },
-    { id: 2, title: 'Typhoon Jet 500', artist: 'Vista lateral', cover: typhoon5002, color: '#FF5101' },
+    { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoon500Trifasico, color: '#FF5101' },
+    { id: 2, title: 'Typhoon Jet 500', artist: 'Gasolina', cover: typhoon500Combustao, color: '#FF5101' },
     { id: 3, title: 'Typhoon Jet 500', artist: 'Detalhes', cover: typhoon5003, color: '#FF5101' }
+  ];
+  const currentProduct = [
+    {
+      videoUrl: typhoonVideo,
+    },
   ];
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -159,7 +165,7 @@ const Typhoon500Trifasico = () => {
           </div>
         </div>
       </section>
-
+      <ProductVideo videoUrl={typhoonVideo} />
       {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">

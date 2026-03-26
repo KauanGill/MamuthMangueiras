@@ -3,11 +3,18 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
 import distribuidorFluxo from '@/assets/images/distribuidores-fluxo-sap.png'
 
 const DistribuidoresFluxoSAP = () => {
   const navigate = useNavigate();
+  const slides = [
+        { id: 1, title: 'Distribuidor de Fluxo SAP', artist: 'Trifásico', cover: distribuidorFluxo, color: '#FF5101' },
+        { id: 2, title: 'Distribuidor de Fluxo SAP', artist: 'Vista lateral', cover: distribuidorFluxo, color: '#FF5101' },
+        { id: 3, title: 'Distribuidor de Fluxo SAP', artist: 'Detalhes', cover: distribuidorFluxo, color: '#FF5101' }
+  ];
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -25,29 +32,8 @@ const DistribuidoresFluxoSAP = () => {
         className="relative pt-10 pb-20 px-4 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-         Distribuidores de Fluxo SAP
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={distribuidorFluxo} 
-              alt="Distribuidores de Fluxo SAP" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,9 +44,9 @@ const DistribuidoresFluxoSAP = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Distribuidores de Fluxo SAP
           </h2>
-          <p className="ttext-lg text-gray-600 leading-relaxed mb-10 text-left">
+          <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Distribuidores são utilizados para dividir o fluxo de água e multiplicar o número de mangueiras a serem utilizadas, 
            permitindo que múltiplas operações ocorram simultaneamente. Com esses dispositivos, é possível otimizar o uso 
            de recursos hídricos, direcionando a água para diferentes pontos de aplicação de forma eficiente e controlada. 

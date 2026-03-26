@@ -9,6 +9,8 @@ import CertificacoesSection from "@/components/CertificadoSection";
 import Hero from "@/components/Hero"
 
 import videoSobre from '@/assets/images/video-sobre.mp4';
+import logoFalch from '@/assets/images/logo-falch-800x600.png'
+import logoParker from '@/assets/images/logo-parker-800x600.svg'
 
 const Sobre = () => {
 
@@ -26,14 +28,14 @@ const Sobre = () => {
 
    const brands = [
     {
-      icon: Building2,
       name: 'Parker Polyflex',
+      image: logoParker,
       description: 'A Parker-Hannifin é líder global em tecnologias de movimento e controle, fornecendo componentes essenciais para sistemas de hidrojateamento, como mangueiras, conexões e válvulas de alta pressão. Reconhecida pela qualidade e confiabilidade, a empresa possui forte atuação no Brasil, oferecendo soluções seguras e eficientes para aplicações industriais.',
       specialties: ['Alta Pressão', 'Controle Preciso', 'Confiabilidade Industrial']
     },
     {
-      icon: Globe,
       name: 'Falch',
+      image: logoFalch,
       description: 'A Falch GmbH é uma fabricante alemã especializada em equipamentos de hidrojateamento e sistemas de alta pressão para aplicações industriais. Com mais de 40 anos de experiência, desenvolve soluções robustas e inovadoras, reconhecidas pela eficiência, durabilidade e alto desempenho em operações exigentes.',
       specialties: ['Performance Extrema', 'Tecnologia Avançada', 'Engenharia Alemã']
     }
@@ -267,11 +269,13 @@ const Sobre = () => {
           className="bg-white rounded-xl shadow-lg p-6 flex flex-col h-full 
           w-full md:w-[48%] lg:w-[32%] cursor-pointer"
         >
-          <div
-            className="w-16 h-16 rounded-lg flex items-center justify-center mb-4"
-            style={{ backgroundColor: '#FF5101' }}
-          >
-            <brand.icon className="w-8 h-8 text-white" />
+          {/* Container do Logo - Mantive a cor de fundo laranja original */}
+          <div className="w-full h-16 flex items-center justify-start mb-4">
+            <img 
+              src={brand.image} 
+              alt={`Logo da marca ${brand.name}`} 
+              className="max-w-[140px] max-h-full object-contain object-left" 
+            />
           </div>
 
           <h3
@@ -317,6 +321,7 @@ const Sobre = () => {
     </div>
   </div>
 
+  {/* Modal de Detalhes - Mantido sem alterações */}
   <AnimatePresence>
     {isOpen && (
       <motion.div
@@ -349,6 +354,11 @@ const Sobre = () => {
             {selectedBrand?.name}
           </h3>
 
+          {/* Opcional: Adicionar o logo também dentro do modal */}
+          {/* {selectedBrand?.image && (
+            <img src={selectedBrand.image} alt={selectedBrand.name} className="h-12 mb-6 object-contain block" />
+          )} */}
+
           <p className="text-gray-700 mb-6 leading-relaxed">
             {selectedBrand?.description}
           </p>
@@ -369,7 +379,6 @@ const Sobre = () => {
     )}
   </AnimatePresence>
 </section>
-```
 
 
       {/* Timeline Section */}
@@ -395,7 +404,7 @@ const Sobre = () => {
                 >
                   <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
                     <div className="bg-white rounded-xl shadow-lg p-6">
-                      <span className="text-2xl font-bold" style={{ color: 'var(--color-orange)' }}>
+                      <span className="text-2xl font-bold" style={{ color: '#FF5101' }}>
                         {item.year}
                       </span>
                       <h3 className="text-xl font-bold mt-2 mb-3" style={{ color: 'var(--color-dark-blue)' }}>
