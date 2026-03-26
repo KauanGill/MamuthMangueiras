@@ -71,70 +71,38 @@ const CapaMangueira = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md border border-gray-200">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Comprimento</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[8%] uppercase">#</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[20%] uppercase">Material</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[22%] uppercase">Código</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[20%] uppercase">Compr.</th>
+                  <th className="py-4 px-1 font-bold text-[10px] md:text-xs text-center w-[30%] uppercase">Aplicação</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Aramida</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0132</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1m</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras de Hidrojato</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Aramida</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0074</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2m</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras de Hidrojato</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Aramida</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0020</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3m</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras de Hidrojato</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">PVC</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0131</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1m</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras de Hidrojato</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">PVC</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0073</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2m</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras de Hidrojato</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">6</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">PVC</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0043</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3m</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras de Hidrojato</td>
-                </tr>
+                {[
+                  { id: 1, mat: "Aramida", cod: "1320.0132", comp: "1,0 m" },
+                  { id: 2, mat: "Aramida", cod: "1320.0074", comp: "2,0 m" },
+                  { id: 3, mat: "Aramida", cod: "1320.0020", comp: "3,0 m" },
+                  { id: 4, mat: "PVC", cod: "1320.0131", comp: "1,0 m" },
+                  { id: 5, mat: "PVC", cod: "1320.0073", comp: "2,0 m" },
+                  { id: 6, mat: "PVC", cod: "1320.0043", comp: "3,0 m" },
+                ].map((item) => (
+                  <tr key={item.id} className="text-gray-800 border-b border-gray-200 hover:bg-orange-50 transition-colors">
+                    <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-bold">{item.id}</td>
+                    <td className={`py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-semibold ${item.mat === 'Aramida' ? 'text-orange-700' : 'text-blue-700'}`}>
+                      {item.mat}
+                    </td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-mono">{item.cod}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-medium bg-gray-50/50">{item.comp}</td>
+                    <td className="py-6 px-1 text-[10px] md:text-sm text-center italic text-gray-500 leading-tight">
+                      Proteção Hidrojato
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

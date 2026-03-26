@@ -7,6 +7,8 @@ import AppleCoverFlow from "@/components/AppleCoverFlow";
 
 // Import da imagem
 import typhoon500 from "@/assets/images/typhoonjet-500bar-1200L.png"; 
+import iconCombustao from "@/assets/images/icon-combustao.svg"
+import iconTrifasico from "@/assets/images/icon-trifasico.svg"
 
 const Typhoon350trifasico = () => {
   const navigate = useNavigate();
@@ -48,12 +50,11 @@ const Typhoon350trifasico = () => {
           </h2>  
           <p className="text-lg max-w-3xl text-gray-600 leading-relaxed mb-10 text-left">
            O Typhoon-Jet 350 é um equipamento de alta pressão projetado para oferecer desempenho excepcional 
-           em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 350 bar, uma vazão 
-           de 17 L/min e uma potência de 15 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.
+           em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Este equipamento garante resultados superiores em qualquer desafio de limpeza.
           </p>
           <p className="text-lg max-w-3xl text-gray-600 leading-relaxed mb-10 text-left">
           Sua estrutura robusta e resistente é construída para suportar as demandas mais exigentes, garantindo durabilidade e 
-          confiabilidade. Com um peso de 280 kg e dimensões de 1200 x 800 x 900 mm (C x L x A), o Typhoon-Jet 350 oferece
+          confiabilidade.O Typhoon-Jet 350 oferece
            estabilidade e facilidade de manobra durante o uso, tornando-o ideal para uma variedade de aplicações.
           </p>
           <p className="text-lg max-w-3xl text-gray-600 leading-relaxed mb-10 text-left">
@@ -110,6 +111,14 @@ const Typhoon350trifasico = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
+          <div className="flex items-center justify-center gap-4 mb-8">
+              <img 
+                src={iconTrifasico} 
+                alt="Ícone Técnico" 
+                className="w-12 h-12 object-contain" 
+              />
+              <span className="text-gray-700 text-lg">Trifásico</span>
+            </div>
             <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
@@ -140,12 +149,45 @@ const Typhoon350trifasico = () => {
               </tbody>
             </table>
           </div>
-
-          <style dangerouslySetInnerHTML={{ __html: `
-            .custom-scrollbar::-webkit-scrollbar { height: 8px; }
-            .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-            .custom-scrollbar::-webkit-scrollbar-thumb { background: #FF6B0A; border-radius: 10px; }
-          `}} />
+          <div className="overflow-x-auto pb-4 custom-scrollbar">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <img 
+                src={iconCombustao} 
+                alt="Ícone Técnico" 
+                className="w-12 h-12 object-contain" 
+              />
+              <span className="text-gray-700 text-lg">Combustão</span>
+            </div>
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
+              <thead>
+                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                  {/* Reduzi o padding lateral (px-1) e a fonte para garantir o encaixe */}
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Pressão (bar)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Pressão (PSI)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Vazão (L/min)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Vazão (L/h)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Potência (cv)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Peso (kg)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm text-center">Tipo de Tensão</th>
+                  <th className="py-4 px-1 font-bold text-[10px] sm:text-xs md:text-sm text-center">Dimensões(mm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white text-gray-800 border-b border-gray-200">
+                  <td className="py-6 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center">Typhoon-Jet 350</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">350</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">5076</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">17</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">1020</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">15</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">280</td>
+                  <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">Gasolina</td>
+                  <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base font-semibold text-center">1200x800x900</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 

@@ -69,57 +69,32 @@ const MalhaDeSeguranca = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[5%]">#</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">Modelo</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[20%]">Código</th>
+                  <th className="py-6 px-4 font-bold text-sm md:text-base text-center w-[60%]">Aplicação</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">DN3 - DN4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3010.0098</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras Termoplásticas DN3 e DN4</td>
-                </tr>
+                {[
+                  { id: 1, mod: "DN3 - DN4", cod: "3010.0098", app: "Mangueiras Termoplásticas DN3 e DN4" },
+                  { id: 2, mod: "DN5 - DN6", cod: "3010.0103", app: "Mangueiras Termoplásticas DN5 e DN6" },
+                  { id: 3, mod: "DN8", cod: "3010.0104", app: "Mangueiras Termoplásticas DN8" },
+                  { id: 4, mod: "3/8 - 1/2", cod: "3010.0100", app: "Mangueiras de Borracha 3/8 e 1/2" },
+                  { id: 5, mod: "3/4", cod: "3010.0101", app: "Mangueiras de Borracha 3/4" },
+                ].map((item) => (
+                  <tr key={item.id} className="text-gray-800 border-b border-gray-200">
+                    <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center font-bold">{item.id}</td>
+                    <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">{item.mod}</td>
+                    <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">{item.cod}</td>
+                    <td className="py-8 px-4 text-sm md:text-lg text-center">{item.app}</td>
+                  </tr>
+                ))}
               </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">DN5 - DN6</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3010.0103</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras Termoplásticas DN5 e DN6</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">DN8</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3010.0104</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras Termoplásticas DN8</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8 - 1/2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3010.0100</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras de Borracha 3/8 e 1/2</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3010.0101</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras de Borracha 3/4</td>
-                </tr>
-              </tbody>
-
             </table>
           </div>
 

@@ -68,85 +68,41 @@ const LuvasDeEmendaUAP = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca A (Parafuso Vazado)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca A (Anilha)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca B(Parafuso Vazado)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca B(Anilha)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[4%] uppercase">#</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[10%] uppercase">Modelo</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[12%] uppercase">Código</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[8%] uppercase">P. Max</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[13%] uppercase">R.A (Vazado)</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[13%] uppercase">R.A (Anilha)</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[13%] uppercase">R.B (Vazado)</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[13%] uppercase">R.B (Anilha)</th>
+                  <th className="py-6 px-1 font-bold text-[10px] md:text-xs text-center w-[14%] uppercase">Aplicação</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0213</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/4 UNF</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/4 UNF</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3/8 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0053</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M26</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M26</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3/8 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0224</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M26</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M26</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">9/16 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0022</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M26</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9/16 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M26</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">9/16 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-               <tbody>
-               <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0040</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.1/8 UNF</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9/16 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.1/8 UNF</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">9/16 UNF Esq</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
+                {[
+                  { id: 1, cod: "3006.0213", p: "2.800", ra_v: "3/4 UNF", ra_a: "3/8 UNF Esq", rb_v: "3/4 UNF", rb_a: "3/8 UNF Esq" },
+                  { id: 2, cod: "3006.0053", p: "2.800", ra_v: "M26", ra_a: "3/8 UNF Esq", rb_v: "M26", rb_a: "3/8 UNF Esq" },
+                  { id: 3, cod: "3006.0224", p: "2.800", ra_v: "M26", ra_a: "3/8 UNF Esq", rb_v: "M26", rb_a: "9/16 UNF Esq" },
+                  { id: 4, cod: "3006.0022", p: "2.800", ra_v: "M26", ra_a: "9/16 UNF Esq", rb_v: "M26", rb_a: "9/16 UNF Esq" },
+                  { id: 5, cod: "3006.0040", p: "2.800", ra_v: "1.1/8 UNF", ra_a: "9/16 UNF Esq", rb_v: "1.1/8 UNF", rb_a: "9/16 UNF Esq" },
+                ].map((item) => (
+                  <tr key={item.id} className="text-gray-800 border-b border-gray-200">
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center font-bold">{item.id}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">Luva</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-xs text-center font-semibold">{item.cod}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center">{item.p}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-xs text-center">{item.ra_v}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-xs text-center">{item.ra_a}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-xs text-center">{item.rb_v}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-xs text-center font-bold text-[#FF6B0A]">{item.rb_a}</td>
+                    <td className="py-6 px-1 text-[10px] md:text-xs text-center">Varetas, Mang...</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

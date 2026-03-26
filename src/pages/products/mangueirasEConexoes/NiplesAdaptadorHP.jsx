@@ -73,87 +73,41 @@ const NiplesAdaptadorHP = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca A (tipo)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca B(Tipo)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Niple</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0394</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">9/16 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras, acessórios, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Niple</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0588</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3/8 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">7/16 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras, acessórios, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Niple</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0018</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9/16 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">9/16 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras, acessórios, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Niple</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0299</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9/16 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">9/16 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras, acessórios, etc.</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Niple</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0557</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9/16 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">7/16 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras, acessórios, etc.</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">6</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Niple</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0275</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">7/8 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">7/8 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras, acessórios, etc.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+         <div className="w-full overflow-hidden rounded-xl shadow-md border border-gray-200">
+  <table className="w-full border-collapse table-fixed bg-white">
+    <thead>
+      <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[5%] uppercase">#</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[12%] uppercase">Modelo</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[15%] uppercase">Código</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[10%] uppercase">P. Max (bar)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[18%] uppercase">Rosca A (Tipo)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[18%] uppercase">Rosca B (Tipo)</th>
+        <th className="py-6 px-1 font-bold text-xs md:text-sm text-center w-[22%] uppercase">Aplicação</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[
+        { id: 1, cod: "3006.0394", p: "2.800", ra: "3/8 UNF LH (M)", rb: "9/16 UNF LH (M)" },
+        { id: 2, cod: "3006.0588", p: "2.800", ra: "3/8 UNF LH (M)", rb: "7/16 UNF LH (M)" },
+        { id: 3, cod: "3006.0018", p: "2.800", ra: "9/16 UNF LH (M)", rb: "9/16 UNF LH (M)" },
+        { id: 4, cod: "3006.0299", p: "2.800", ra: "9/16 UNF LH (M)", rb: "9/16 UNF LH (M)" },
+        { id: 5, cod: "3006.0557", p: "2.800", ra: "9/16 UNF LH (M)", rb: "7/16 UNF LH (M)" },
+        { id: 6, cod: "3006.0275", p: "2.800", ra: "7/8 UNF LH (M)", rb: "7/8 UNF LH (M)" },
+      ].map((item) => (
+        <tr key={item.id} className="text-gray-800 border-b border-gray-200 hover:bg-orange-50 transition-colors">
+          <td className="py-6 px-1 border-r border-gray-200 text-sm text-center font-bold">{item.id}</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-sm text-center font-medium">Niple</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-sm text-center font-mono text-gray-600">{item.cod}</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-sm text-center">{item.p}</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center">{item.ra}</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-bold text-[#FF6B0A]">{item.rb}</td>
+          <td className="py-6 px-1 text-xs md:text-sm text-center text-gray-500 italic">Mangueiras, acessórios...</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
 
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }

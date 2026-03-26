@@ -70,31 +70,31 @@ const LacoDeSeguranca = () => {
           </div>
 
           <div className="w-full overflow-hidden rounded-xl shadow-md">
-  <table className="w-full border-collapse table-fixed bg-white">
-    <thead>
-      <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[5%]">#</th>
-        <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">Modelo</th>
-        <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">Código</th>
-        <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">P. MAX (bar)</th>
-        <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">Rosca 1</th>
-        <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">Rosca 2</th>
-        <th className="py-6 px-2 font-bold text-sm md:text-base text-center w-[20%]">Aplicação</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr className="text-gray-800 border-b border-gray-200">
-        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center font-bold">1</td>
-        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">1/8</td>
-        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">3010.0010</td>
-        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center">500</td>
-        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center">---</td>
-        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center">---</td>
-        <td className="py-8 px-2 text-sm md:text-lg text-center">Mangueiras 3/8 - 3/4</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+            <table className="w-full border-collapse table-fixed bg-white">
+              <thead>
+                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[5%]">#</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">Modelo</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">Código</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">P. MAX (bar)</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">Rosca 1</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%]">Rosca 2</th>
+                  <th className="py-6 px-2 font-bold text-sm md:text-base text-center w-[20%]">Aplicação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="text-gray-800 border-b border-gray-200">
+                  <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center font-bold">1</td>
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">1/8</td>
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">3010.0010</td>
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center">500</td>
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center">---</td>
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center">---</td>
+                  <td className="py-8 px-2 text-sm md:text-lg text-center">Mangueiras 3/8 - 3/4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }

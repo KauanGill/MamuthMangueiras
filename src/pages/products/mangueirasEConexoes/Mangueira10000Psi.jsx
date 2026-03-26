@@ -74,49 +74,36 @@ const Mangueira10000PSI = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md border border-gray-200">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Interno (mm)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Externo (mm)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Trabalho(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Trabalho(psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Ruptura(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Ruptura(psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Raio de Curvatura (mm.r)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso por metro (kg/m)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro no terminal (mm)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[7%] uppercase">Mod.</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[9%] uppercase">Ø Int. (mm)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[9%] uppercase">Ø Ext. (mm)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[12%] uppercase">P. Trab. (bar/psi)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[12%] uppercase">P. Rupt. (bar/psi)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[9%] uppercase">Raio Curv.</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[9%] uppercase">Peso (kg/m)</th>
+                  <th className="py-4 px-1 font-bold text-[10px] md:text-xs text-center w-[9%] uppercase">Ø Term. (mm)</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1/4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">6,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">14,7</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">700</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">10.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1.450</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">21.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">100</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,370</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">18,0</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3/8</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">10,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">16,8</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">700</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">10.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1.450</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">21.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">127</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,395</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">22,5</td>
-                </tr>
+                {[
+                  { mod: "1/4", int: "6,0", ext: "14,7", p_t: "700 / 10k", p_r: "1.450 / 21k", raio: "100", peso: "0,370", term: "18,0" },
+                  { mod: "3/8", int: "10,0", ext: "16,8", p_t: "700 / 10k", p_r: "1.450 / 21k", raio: "127", peso: "0,395", term: "22,5" },
+                ].map((item, idx) => (
+                  <tr key={idx} className="text-gray-800 border-b border-gray-200 hover:bg-orange-50 transition-colors">
+                    <td className="py-6 px-1 border-r border-gray-200 text-sm md:text-base text-center font-bold">{item.mod}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-sm text-center">{item.int}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-sm text-center">{item.ext}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center font-medium bg-gray-50">{item.p_t}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center font-bold text-[#FF6B0A] bg-orange-50/30">{item.p_r}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-sm text-center">{item.raio}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-sm text-center">{item.peso}</td>
+                    <td className="py-6 px-1 text-sm text-center">{item.term}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

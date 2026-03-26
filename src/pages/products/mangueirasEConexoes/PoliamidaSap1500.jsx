@@ -84,132 +84,45 @@ const PoliamidaSAP1500 = () => {
           </div>
 
           <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+            <table className="w-full min-w-[1200px] border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
                   <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmtro interno(mm)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmtro externo(mm)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Trabalho(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressao de Trabalho(psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Ruptura(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de Ruptura(psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Raio de Curvatura(mm.r)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso por metro(kg/m)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro no terminal(kg/m)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Interno (mm)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Externo (mm)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">P. Trabalho (bar)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">P. Trabalho (psi)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg text-orange-200">P. Ruptura (bar)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">P. Ruptura (psi)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Raio Curvatura (mm)</th>
+                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg/m)</th>
+                  <th className="py-6 px-4 font-bold text-lg">Ø Terminal (mm)</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3/2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">7,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.100</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">15.950</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2.750</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">39.875</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">60</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,072</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9,0</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">4/2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">4,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">7,7</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.200</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">17.400</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">43.511</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">75</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,100</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9,5</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">4/2W</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">4,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">7,9</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">21.750</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">55.114</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">75</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0.110</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">10,0</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">5/2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">5,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">9,5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">14.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">36.250</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">95</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,140</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">12,0</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">5/4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">5,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">11,5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">26.100</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">4.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">65.250</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">130</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,290</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">15,0</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">6/2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">11,5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.100</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">15.950</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2.750</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">39.875</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">110</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,200</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">15,0</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">8/2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">8,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">15,8</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">14.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">36.250</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">90</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,350</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">20,0</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">8/4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">8,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">15,2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">21.750</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">54.375</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">175</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">0,440</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">20,5</td>
-                </tr>
+                {[
+                  { mod: "3/2", di: "3,0", de: "7,0", ptb: "1.100", ptp: "15.950", prb: "2.750", prp: "39.875", rc: "60", p: "0,072", dt: "9,0" },
+                  { mod: "4/2", di: "4,0", de: "7,7", ptb: "1.200", ptp: "17.400", prb: "3.000", prp: "43.511", rc: "75", p: "0,100", dt: "9,5" },
+                  { mod: "4/2W", di: "4,0", de: "7,9", ptb: "1.500", ptp: "21.750", prb: "3.800", prp: "55.114", rc: "75", p: "0,110", dt: "10,0" },
+                  { mod: "5/2", di: "5,0", de: "9,5", ptb: "1.000", ptp: "14.500", prb: "2.500", prp: "36.250", rc: "95", p: "0,140", dt: "12,0" },
+                  { mod: "5/4", di: "5,0", de: "11,5", ptb: "1.800", ptp: "26.100", prb: "4.500", prp: "65.250", rc: "130", p: "0,290", dt: "15,0" },
+                  { mod: "6/2", di: "6,0", de: "11,5", ptb: "1.100", ptp: "15.950", prb: "2.750", prp: "39.875", rc: "110", p: "0,200", dt: "15,0" },
+                  { mod: "8/2", di: "8,0", de: "15,8", ptb: "1.000", ptp: "14.500", prb: "2.500", prp: "36.250", rc: "90", p: "0,350", dt: "20,0" },
+                  { mod: "8/4", di: "8,0", de: "15,2", ptb: "1.500", ptp: "21.750", prb: "3.800", prp: "54.375", rc: "175", p: "0,440", dt: "20,5" },
+                ].map((item, index) => (
+                  <tr key={index} className="bg-white text-gray-800 border-b border-gray-200 hover:bg-orange-50 transition-colors">
+                    <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">{item.mod}</td>
+                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.di}</td>
+                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.de}</td>
+                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.ptb}</td>
+                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.ptp}</td>
+                    <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl text-center text-orange-600 bg-orange-50/10">{item.prb}</td>
+                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.prp}</td>
+                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.rc}</td>
+                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.p}</td>
+                    <td className="py-8 px-4 text-xl text-center font-semibold">{item.dt}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

@@ -75,32 +75,32 @@ const PowerBox2800 = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MÁX (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão MÁX (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão Entrada</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão de entrada de ar</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Power Box 2800BAR</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.0006</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2.800</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">27</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">18,0</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.1/8 UNF - 9/16-18 LH</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">7 Bar</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+  <table className="w-full border-collapse table-fixed bg-white">
+    <thead>
+      <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[18%] uppercase">Modelo</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[12%] uppercase">Código</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[12%] uppercase">P. Máx (bar)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[10%] uppercase">Vazão</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[10%] uppercase">Peso (kg)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[23%] uppercase">Entrada</th>
+        <th className="py-6 px-1 font-bold text-[10px] md:text-xs text-center w-[15%] uppercase">Entrada Ar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="text-gray-800 border-b border-gray-200">
+        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-base text-center font-bold">Power Box 2800BAR</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-base text-center">1001.0006</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-base text-center">2.800</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-base text-center">27</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-base text-center">18,0</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-[11px] md:text-sm text-center">1.1/8 UNF - 9/16-18 LH</td>
+        <td className="py-8 px-1 text-sm md:text-base text-center">7 Bar</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }

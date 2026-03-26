@@ -99,37 +99,34 @@ const Typhoon170Monofasico = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md border border-gray-200">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão Max.</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Tamanhos</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Construção</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[6%] uppercase">#</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[18%] uppercase">Código</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[25%] uppercase">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[15%] uppercase">Pressão</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[12%] uppercase">Tam.</th>
+                  <th className="py-4 px-1 font-bold text-[10px] md:text-xs text-center w-[24%] uppercase">Construção</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0432</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Jaqueta Hydro-Shell UAP</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2800 bar</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">P/M/G/GG/EXG</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">Tecido Sintético + PVC</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0433</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Calça Hydro-Shell</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2800 bar</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">P/M/G/GG/EXG</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">Tecido Sintético + PVC</td>
-                </tr>
+                {[
+                  { id: 1, cod: "1320.0432", mod: "Jaqueta Hydro-Shell UAP", pres: "2.800 bar", tam: "P a EXG", const: "Sintético + PVC" },
+                  { id: 2, cod: "1320.0433", mod: "Calça Hydro-Shell UAP", pres: "2.800 bar", tam: "P a EXG", const: "Sintético + PVC" },
+                ].map((item) => (
+                  <tr key={item.id} className="text-gray-800 border-b border-gray-200 hover:bg-orange-50 transition-colors">
+                    <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-bold">{item.id}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center font-mono">{item.cod}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-semibold">{item.mod}</td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-[10px] md:text-sm text-center font-extrabold text-orange-600 bg-orange-50/30">
+                      {item.pres}
+                    </td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center">{item.tam}</td>
+                    <td className="py-6 px-1 text-[10px] md:text-sm text-center italic text-gray-500">{item.const}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

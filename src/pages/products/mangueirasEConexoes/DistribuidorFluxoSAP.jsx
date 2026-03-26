@@ -72,40 +72,34 @@ const DistribuidoresFluxoSAP = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Lado Entrada (Rosca)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Lado Saída (Rosca)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[5%] uppercase">#</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[15%] uppercase">Modelo</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[15%] uppercase">Código</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[10%] uppercase">P. Max</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[20%] uppercase">Entrada (Rosca)</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[20%] uppercase">Saída (Rosca)</th>
+                  <th className="py-6 px-1 font-bold text-xs md:text-sm text-center w-[15%] uppercase">Aplicação</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Tipo T</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0014</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M30 PL (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">M22 PL (2x) (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Flauta</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0046</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M30 PL (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">M22 PL (3x) (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Mangueiras</td>
-                </tr>
+                {[
+                  { id: 1, mod: "Tipo T", cod: "3006.0014", pres: "1.500", ent: "M30 PL (F)", sai: "M22 PL (2x) (F)", app: "Mangueiras" },
+                  { id: 2, mod: "Flauta", cod: "3006.0046", pres: "1.500", ent: "M30 PL (F)", sai: "M22 PL (3x) (F)", app: "Mangueiras" },
+                ].map((item) => (
+                  <tr key={item.id} className="text-gray-800 border-b border-gray-200">
+                    <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center font-bold">{item.id}</td>
+                    <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center">{item.mod}</td>
+                    <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-base text-center font-semibold">{item.cod}</td>
+                    <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center">{item.pres}</td>
+                    <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-base text-center">{item.ent}</td>
+                    <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-base text-center font-bold text-[#FF6B0A]">{item.sai}</td>
+                    <td className="py-8 px-1 text-sm md:text-lg text-center">{item.app}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>

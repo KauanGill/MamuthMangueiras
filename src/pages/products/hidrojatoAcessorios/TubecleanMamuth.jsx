@@ -74,22 +74,22 @@ const TubeClean = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[10%] uppercase">#</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[40%] uppercase">Modelo</th>
+                  <th className="py-6 px-2 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[30%] uppercase">Código</th>
+                  <th className="py-6 px-4 font-bold text-sm md:text-base text-center w-[20%] uppercase">Peso (kg)</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Tube Clean</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.0055</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2,5</td>
+                <tr className="text-gray-800 border-b border-gray-200">
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center font-bold">1</td>
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center font-semibold">Tube Clean</td>
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">1001.0055</td>
+                  <td className="py-8 px-4 text-sm md:text-lg text-center">2,5</td>
                 </tr>
               </tbody>
             </table>

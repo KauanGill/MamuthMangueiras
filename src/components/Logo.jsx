@@ -9,7 +9,7 @@ const Logo = ({ size = 'md', className = '' }) => {
 
   return (
     <img
-      src="https://horizons-cdn.hostinger.com/6ad4ee89-979b-44b1-a2d4-f4e67081681a/586963316ea14914d5954d0eda4ba7a5.png"
+      src={imgLogo}
       alt="Mamuth"
       className={`${sizeClasses[size] || sizeClasses.md} w-auto object-contain transition-all duration-300 drop-shadow-md ${className}`}
     />

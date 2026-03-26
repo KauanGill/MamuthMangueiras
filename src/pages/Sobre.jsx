@@ -9,7 +9,7 @@ import CertificacoesSection from "@/components/CertificadoSection";
 import Hero from "@/components/Hero"
 
 import videoSobre from '@/assets/images/video-sobre.mp4';
-import logoFalch from '@/assets/images/logo-falch-800x600.png'
+import logoFalch from '@/assets/images/logo-falch-completo.svg'
 import logoParker from '@/assets/images/logo-parker-800x600.svg'
 
 const Sobre = () => {

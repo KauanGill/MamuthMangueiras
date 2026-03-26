@@ -7,6 +7,8 @@ import AppleCoverFlow from "@/components/AppleCoverFlow";
 
 // Import da imagem
 import typhoonJet170Monofasico from '@/assets/images/typhoonjet-170-bar-monofasico.png';
+import iconCombustao from "@/assets/images/icon-combustao.svg"
+import iconTrifasico from "@/assets/images/icon-trifasico.svg"
 
 const Typhoon170Monofasico = () => {
   const navigate = useNavigate();
@@ -47,12 +49,10 @@ const Typhoon170Monofasico = () => {
             Typhoon-Jet 170: A Solução Completa para Limpeza Moderada
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
-          O Typhoon-Jet 170 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas moderadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 170 bar (2465 PSI), uma vazão de 12 L/min (720 L/h) e uma potência de 5 cv, este equipamento garante resultados eficazes em desafios de limpeza de intensidade moderada.
+          O Typhoon-Jet 170 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas moderadas em ambientes industriais, agrícolas e comerciais. Este equipamento garante resultados eficazes em desafios de limpeza de intensidade moderada.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
-          Sua estrutura leve de 40 kg é ideal para fácil transporte e uso em diferentes ambientes. Com dimensões de 950 x 640 x 540 mm (C x L x A), o Typhoon-Jet 170 oferece praticidade e eficiência durante o uso, tornando-o ideal para uma variedade de aplicações.
-
-
+          Ideal para fácil transporte e uso em diferentes ambientes. o Typhoon-Jet 170 oferece praticidade e eficiência durante o uso, tornando-o ideal para uma variedade de aplicações.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Além disso, o Typhoon-Jet 170 é fácil de operar e manter, proporcionando uma experiência de limpeza eficiente e sem complicações. Com ele, você pode remover sujeira leve a moderada de forma rápida e eficaz, economizando tempo e esforço.
@@ -104,36 +104,84 @@ const Typhoon170Monofasico = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão (PSI)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão (L/h)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Potência (cv)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Tipo de Tensão</th>
-                  <th className="py-6 px-4 font-bold text-lg">Dimensões(mm)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Typhoon-Jet 170</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">170</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">2465</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">12</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">720</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">40</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl font-semibold">Monofásico 220V</td>
-                  <td className="py-8 px-4 text-xl font-semibold">950 x 640 x 540</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+            <div className="w-full mt-16 mb-6">
+                     <div className="flex items-center justify-center gap-4 mb-8">
+                         <img 
+                           src={iconTrifasico} 
+                           alt="Ícone Técnico" 
+                           className="w-12 h-12 object-contain" 
+                         />
+                         <span className="text-gray-700 text-lg">Trifásico</span>
+                       </div>
+                     <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
+                       <thead>
+                         <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Modelo</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Pressão (bar)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Pressão (PSI)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Vazão (L/min)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Vazão (L/h)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Potência (cv)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Peso (kg)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Tensão</th>
+                           <th className="py-4 px-1 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Dimensões</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr className="bg-white text-gray-800 border-b border-gray-200">
+                           <td className="py-6 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center italic">Typhoon-Jet 170</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">170</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">2465</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">12</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">720</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">5</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">40</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">Trifásico</td>
+                           <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base font-semibold text-center">950x640x540</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+           
+                   {/* Segunda Div: Mantendo a proporção de maior em cima e menor embaixo */}
+                   <div className="w-full mt-16 mb-6">
+                     <div className="flex items-center justify-center gap-4 mb-8">
+                         <img 
+                           src={iconTrifasico} 
+                           alt="Ícone Técnico" 
+                           className="w-12 h-12 object-contain" 
+                         />
+                         <span className="text-gray-700 text-lg">Monofásico</span>
+                       </div>
+                     <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
+                       <thead>
+                         <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Modelo</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Pressão (bar)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Pressão (PSI)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Vazão (L/min)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Vazão (L/h)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Potência (cv)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Peso (kg)</th>
+                           <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Tensão</th>
+                           <th className="py-4 px-1 font-bold text-[10px] sm:text-xs md:text-sm uppercase">Dimensões</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr className="bg-white text-gray-800 border-b border-gray-200">
+                           <td className="py-6 px-1 border-r border-gray-200 font-bold text-[10px] sm:text-xs md:text-base text-center italic">Typhoon-Jet 170</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">170</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">2465</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">12</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">720</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">5</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">40</td>
+                           <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center text-green-700">Monofásico</td>
+                           <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base font-semibold text-center">950x640x540</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
 
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }

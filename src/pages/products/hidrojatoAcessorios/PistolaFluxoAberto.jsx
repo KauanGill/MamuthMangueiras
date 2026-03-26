@@ -86,30 +86,30 @@ const PistolaFluxoAberto = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MÁX (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Conexão Entrada</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">comprimento total</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Pistola MTFA 1400BAR</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.4005</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.400</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">4,2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Engate ER - 12 M22 PL</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1200mm</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+  <table className="w-full border-collapse table-fixed bg-white">
+    <thead>
+      <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[22%] uppercase">Modelo</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[13%] uppercase">Código</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%] uppercase">Pressão (bar)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[10%] uppercase">Peso (kg)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[25%] uppercase">Entrada</th>
+        <th className="py-6 px-1 font-bold text-sm md:text-base text-center w-[15%] uppercase">Comp. Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="text-gray-800 border-b border-gray-200">
+        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center font-bold">Pistola MTFA 1400BAR</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">1001.4005</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center">1.400</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center">4,2</td>
+        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-base text-center">Engate ER - 12 M22 PL</td>
+        <td className="py-8 px-1 text-sm md:text-lg text-center whitespace-nowrap">1200mm</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }

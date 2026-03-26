@@ -7,6 +7,8 @@ import AppleCoverFlow from "@/components/AppleCoverFlow";
 
 // Import da imagem
 import typhoonJet200 from '@/assets/images/lavadora-typhoon-jet-500bar.jpeg';
+import iconCombustao from "@/assets/images/icon-combustao.svg"
+import iconTrifasico from "@/assets/images/icon-trifasico.svg"
 
 const Typhoon200Trifasico = () => {
   const navigate = useNavigate();
@@ -47,16 +49,12 @@ const Typhoon200Trifasico = () => {
           </h2>
           
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
-          O Typhoon-Jet 200 é um equipamento de alta pressão projetado para oferecer desempenho excepcional
-           em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 200 bar,
-            uma vazão de 45 L/min e uma potência de 20 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.
-
-
+            O Typhoon-Jet 200 é um equipamento de alta pressão projetado para oferecer desempenho excepcional
+            em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Este equipamento garante resultados superiores em qualquer desafio de limpeza.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Sua estrutura robusta e resistente é construída para suportar as demandas mais exigentes,
-            garantindo durabilidade e confiabilidade. Com um peso de 280 kg e dimensões de 1200 x 800 x 900 mm (C x L x A),
-             o Typhoon-Jet 200 oferece estabilidade e facilidade de manobra durante o uso, tornando-o ideal para uma variedade de aplicações.
+            garantindo durabilidade e confiabilidade. O Typhoon-Jet 200 oferece estabilidade e facilidade de manobra durante o uso, tornando-o ideal para uma variedade de aplicações.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             Além disso, o Typhoon-Jet 200 é fácil de operar e manter, proporcionando uma experiência de 
@@ -111,7 +109,15 @@ const Typhoon200Trifasico = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
+          <div className="overflow-x-auto pb-4  mt-16 mb-6">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <img 
+                src={iconTrifasico} 
+                alt="Ícone Técnico" 
+                className="w-12 h-12 object-contain" 
+              />
+              <span className="text-gray-700 text-lg">Trifásico</span>
+            </div>
             <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
@@ -141,6 +147,45 @@ const Typhoon200Trifasico = () => {
               </tbody>
             </table>
           </div>
+          <div className="overflow-x-auto pb-4 custom-scrollbar  mt-16 mb-6">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <img 
+                src={iconCombustao} 
+                alt="Ícone Técnico" 
+                className="w-12 h-12 object-contain" 
+              />
+              <span className="text-gray-700 text-lg">Combustão</span>
+            </div>
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
+              <thead>
+                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Pressão (bar)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Pressão (PSI)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Vazão (L/min)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Vazão (L/h)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Potência (cv)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Peso (kg)</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Tipo de Tensão</th>
+                  <th className="py-6 px-4 font-bold text-lg">Dimensões(mm)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white text-gray-800 border-b border-gray-200">
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">Typhoon-Jet 200</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">200</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">2900</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">45</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm">2700</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm font-semibold">20</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm font-semibold">280</td>
+                  <td className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] sm:text-xs md:text-sm font-semibold">Gasolina</td>
+                  <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base font-semibold">1200x800x900</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
 
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }

@@ -68,120 +68,44 @@ const LuvasDeUniao = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
-              <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MAX(bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca A (tipo)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Rosca B(Tipo)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Aplicação</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0115</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M7 (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">M7 (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">2</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0624</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M7 (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1/8 BSP (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">3</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0019</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/8 BSP (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1/8 BSP (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">4</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0084</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/8 BSP (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1/3 BSP (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">5</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0080</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/8 BSP (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">M18 PL (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">6</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0020</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.000</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">7/8 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">7/8 UNF LH (Macho)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">7</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0079</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 BSP (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">M18 PL (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">8</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0475</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1/4 BSP (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1/2 BSP (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Varetas, Mangueiras, etc.</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">9</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Luva</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">3006.0275</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.500</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">M35 PL (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">M35 PL (Fêmea)</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Tubos, Mangueiras, Bicos, etc.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+  <table className="w-full border-collapse table-fixed bg-white">
+    <thead>
+      <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[4%] uppercase">#</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[12%] uppercase">Modelo</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[14%] uppercase">Código</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[10%] uppercase">P. Max</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[20%] uppercase">Rosca A (Tipo)</th>
+        <th className="py-6 px-1 border-r border-orange-400 font-bold text-xs md:text-sm text-center w-[20%] uppercase">Rosca B (Tipo)</th>
+        <th className="py-6 px-1 font-bold text-xs md:text-sm text-center w-[20%] uppercase">Aplicação</th>
+      </tr>
+    </thead>
+    <tbody>
+      {[
+        { id: 1, cod: "3006.0115", p: "1.500", ra: "M7 (F)", rb: "M7 (F)", app: "Varetas..." },
+        { id: 2, cod: "3006.0624", p: "1.500", ra: "M7 (F)", rb: "1/8 BSP (F)", app: "Varetas..." },
+        { id: 3, cod: "3006.0019", p: "1.500", ra: "1/8 BSP (F)", rb: "1/8 BSP (F)", app: "Varetas..." },
+        { id: 4, cod: "3006.0084", p: "1.500", ra: "1/8 BSP (F)", rb: "1/3 BSP (F)", app: "Varetas..." },
+        { id: 5, cod: "3006.0080", p: "1.500", ra: "1/8 BSP (F)", rb: "M18 PL (F)", app: "Varetas..." },
+        { id: 6, cod: "3006.0020", p: "1.000", ra: "7/8 UNF LH (M)", rb: "7/8 UNF LH (M)", app: "Varetas..." },
+        { id: 7, cod: "3006.0079", p: "1.500", ra: "1/4 BSP (F)", rb: "M18 PL (F)", app: "Varetas..." },
+        { id: 8, cod: "3006.0475", p: "1.500", ra: "1/4 BSP (F)", rb: "1/2 BSP (F)", app: "Varetas..." },
+        { id: 9, cod: "3006.0275", p: "1.500", ra: "M35 PL (F)", rb: "M35 PL (F)", app: "Tubos, Bicos..." },
+      ].map((item) => (
+        <tr key={item.id} className="text-gray-800 border-b border-gray-200">
+          <td className="py-6 px-1 border-r border-gray-200 text-sm md:text-base text-center font-bold">{item.id}</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-sm md:text-base text-center">Luva</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-sm md:text-sm text-center font-semibold">{item.cod}</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-sm md:text-base text-center">{item.p}</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center">{item.ra}</td>
+          <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-bold text-[#FF6B0A]">{item.rb}</td>
+          <td className="py-6 px-1 text-xs md:text-sm text-center">{item.app}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
 
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }

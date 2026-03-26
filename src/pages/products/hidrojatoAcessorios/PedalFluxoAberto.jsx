@@ -77,24 +77,24 @@ const PedalFluxoAberto = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Pressão MÁX (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Vazão MÁX (L/min)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg)</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[30%]">Modelo</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[20%]">Código</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[20%]">Pressão (bar)</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[18%]">Vazão (L/min)</th>
+                  <th className="py-6 px-1 font-bold text-sm md:text-base text-center w-[12%]">Peso (kg)</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">Pedal Fluxo Aberto 22K</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1001.4015</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1.400</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">130</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">14,0</td>
+                <tr className="text-gray-800 border-b border-gray-200">
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center font-bold">Pedal Fluxo Aberto 22K</td>
+                  <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">1001.4015</td>
+                  <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center">1.400</td>
+                  <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center">130</td>
+                  <td className="py-8 px-1 text-sm md:text-lg text-center">14,0</td>
                 </tr>
               </tbody>
             </table>

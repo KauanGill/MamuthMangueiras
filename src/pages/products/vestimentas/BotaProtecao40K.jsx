@@ -94,23 +94,35 @@ const BotasProtecao40K = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1000px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md border border-gray-200">
+            <table className="w-full border-collapse table-fixed bg-white">
               <thead>
                 <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">#</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Código</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Construção</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[10%] uppercase">#</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[25%] uppercase">Modelo</th>
+                  <th className="py-4 px-1 border-r border-orange-400 font-bold text-[10px] md:text-xs text-center w-[25%] uppercase">Código</th>
+                  <th className="py-4 px-1 font-bold text-[10px] md:text-xs text-center w-[40%] uppercase">Construção e Materiais</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white text-gray-800 border-b border-gray-200">
-                  <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">1</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Botas 40k</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">1320.0495</td>
-                  <td className="py-8 px-4 border-r border-gray-200 text-xl">Hidrotex / Poliéster</td>
-                </tr>
+                {[
+                  { id: 1, mod: "Botas 40k", cod: "1320.0495", const: "Hidrotex / Poliéster" },
+                ].map((item) => (
+                  <tr key={item.id} className="text-gray-800 border-b border-gray-200 hover:bg-orange-50 transition-colors">
+                    <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-bold">
+                      {item.id}
+                    </td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-semibold">
+                      {item.mod}
+                    </td>
+                    <td className="py-6 px-1 border-r border-gray-200 text-xs md:text-sm text-center font-mono">
+                      {item.cod}
+                    </td>
+                    <td className="py-6 px-1 text-xs md:text-sm text-center italic text-gray-600">
+                      {item.const}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
