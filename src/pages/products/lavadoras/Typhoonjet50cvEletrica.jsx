@@ -14,7 +14,6 @@ const Typhoon50cvEletrica = () => {
   const navigate = useNavigate();
 
   const slides = [
-      { id: 1, title: 'Typhoon Jet 50 CV', artist: 'Trifásico', cover: typhoonJetEletrica, color: '#FF5101' },
       { id: 2, title: 'Typhoon Jet 50 CV', artist: 'Elétrica', cover: typhoonJet50cv, color: '#FF5101' },
       { id: 3, title: 'Typhoon Jet 50 CV', artist: 'Diesel', cover:typhoonJet50cvDiesel, color: '#FF5101' }
   ];

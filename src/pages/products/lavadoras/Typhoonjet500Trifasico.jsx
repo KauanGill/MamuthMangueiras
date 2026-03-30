@@ -131,7 +131,7 @@ const Typhoon500Trifasico = () => {
 
           {/* Removemos o overflow-x-auto e a largura mínima da tabela */}
           {/* Primeira Div: Espaço grande no topo e menor embaixo */}
-        <div className="w-full mt-16 mb-6">
+        <div className="w-full my-12">
           <div className="flex items-center justify-center gap-4 mb-8">
               <img 
                 src={iconTrifasico} 
@@ -171,7 +171,7 @@ const Typhoon500Trifasico = () => {
         </div>
 
         {/* Segunda Div: Mantendo a proporção de maior em cima e menor embaixo */}
-        <div className="w-full mt-16 mb-6">
+        <div className="w-full my-12">
           <div className="flex items-center justify-center gap-4 mb-8">
               <img 
                 src={iconCombustao} 

@@ -13,9 +13,8 @@ import iconTrifasico from "@/assets/images/icon-trifasico.svg"
 const Typhoon200Trifasico = () => {
   const navigate = useNavigate();
   const slides = [
-      { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoonJet200, color: '#FF5101' },
-      { id: 2, title: 'Typhoon Jet 500', artist: 'Vista lateral', cover: typhoonJet200, color: '#FF5101' },
-      { id: 3, title: 'Typhoon Jet 500', artist: 'Detalhes', cover: typhoonJet200, color: '#FF5101' }
+      { id: 1, title: 'Typhoon Jet 200', artist: 'Trifásico', cover: typhoonJet200, color: '#FF5101' },
+      { id: 2, title: 'Typhoon Jet 200', artist: 'Vista lateral', cover: typhoonJet200, color: '#FF5101' },
     ];
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -109,7 +108,7 @@ const Typhoon200Trifasico = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4  mt-16 mb-6">
+          <div className="overflow-x-auto pb-4  my-12">
             <div className="flex items-center justify-center gap-4 mb-8">
               <img 
                 src={iconTrifasico} 
@@ -147,7 +146,7 @@ const Typhoon200Trifasico = () => {
               </tbody>
             </table>
           </div>
-          <div className="overflow-x-auto pb-4 custom-scrollbar  mt-16 mb-6">
+          <div className="overflow-x-auto pb-4 custom-scrollbar  my-12">
             <div className="flex items-center justify-center gap-4 mb-8">
               <img 
                 src={iconCombustao} 

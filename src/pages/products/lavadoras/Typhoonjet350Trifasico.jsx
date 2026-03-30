@@ -6,7 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import AppleCoverFlow from "@/components/AppleCoverFlow";
 
 // Import da imagem
-import typhoon500 from "@/assets/images/typhoonjet-500bar-1200L.png"; 
+import typhoonjet350Trifasico from "@/assets/images/Typhoon-Jet-350-trifasico.png";
+import typhoonjet350Combustao from "@/assets/images/Typhoon-Jet-350-combustao.png";  
 import iconCombustao from "@/assets/images/icon-combustao.svg"
 import iconTrifasico from "@/assets/images/icon-trifasico.svg"
 
@@ -14,9 +15,8 @@ const Typhoon350trifasico = () => {
   const navigate = useNavigate();
 
   const slides = [
-    { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoon500, color: '#FF5101' },
-    { id: 2, title: 'Typhoon Jet 500', artist: 'Vista lateral', cover: typhoon500, color: '#FF5101' },
-    { id: 3, title: 'Typhoon Jet 500', artist: 'Detalhes', cover: typhoon500, color: '#FF5101' }
+    { id: 1, title: 'Typhoon Jet 350', artist: 'Trifásico', cover: typhoonjet350Trifasico, color: '#FF5101' },
+    { id: 2, title: 'Typhoon Jet 350', artist: 'Combustão', cover: typhoonjet350Combustao, color: '#FF5101' }
   ];
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -110,7 +110,7 @@ const Typhoon350trifasico = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
+          <div className="overflow-x-auto my-12">
           <div className="flex items-center justify-center gap-4 mb-8">
               <img 
                 src={iconTrifasico} 
@@ -149,7 +149,7 @@ const Typhoon350trifasico = () => {
               </tbody>
             </table>
           </div>
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
+          <div className="overflow-x-auto my-12">
             <div className="flex items-center justify-center gap-4 mb-8">
               <img 
                 src={iconCombustao} 
