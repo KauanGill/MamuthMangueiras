@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { color, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ import imgFeira from '@/assets/images/feira-navalshore.jpg'
 
 const FeiraNavalShore = () => {
   const navigate = useNavigate();
+  const {t} = useTranslation();
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -33,7 +35,7 @@ const FeiraNavalShore = () => {
             className="text-white text-4xl md:text-6xl font-bold mb-12 tracking-tight leading-loose" 
             style={{ lineHeight: '1.4' }}
           >
-            Feira Navalshore
+            {t('navalshore.title')}
           </motion.h1>
 
           <motion.div 
@@ -58,17 +60,17 @@ const FeiraNavalShore = () => {
             className="text-5xl md:text-5xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            R$ 12 Bilhões em Negócios. E Você, Onde Estará?
+            {t('navalshore.subtitle')}
           </h2>
 
           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-           A Navalshore é o principal evento da indústria naval e offshore da América Latina, reunindo estaleiros, armadores, fornecedores de tecnologia, empresas de energia e especialistas do setor marítimo. Reconhecida como uma das mais importantes vitrines de inovação e negócios da área, a feira apresenta soluções voltadas à construção naval, manutenção, operações portuárias e exploração offshore, além de promover debates estratégicos sobre o futuro da indústria marítima no Brasil e no mundo.
+            {t('navalshore.texto1')}
           </p>
           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-          Realizada no estado do Rio de Janeiro, a Navalshore conecta os principais players do mercado, criando um ambiente propício para networking qualificado, geração de oportunidades comerciais e fortalecimento de parcerias estratégicas. O evento também destaca avanços em tecnologia, segurança operacional e eficiência produtiva, pilares fundamentais para o crescimento sustentável do setor naval e offshore.
+            {t('navalshore.texto2')}
           </p>
           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-          Em 2026, a Mamuth realiza sua primeira participação na Navalshore, marcando um novo momento em sua trajetória de expansão e posicionamento estratégico. A presença no evento reforça o compromisso da empresa em ampliar sua atuação no setor marítimo, apresentando soluções de alta performance voltadas para operações industriais exigentes. Essa estreia representa um passo importante na consolidação da Mamuth como parceira confiável e inovadora em diferentes segmentos da indústria pesada.
+            {t('navalshore.texto3')}
           </p>
         </div>
       </section>

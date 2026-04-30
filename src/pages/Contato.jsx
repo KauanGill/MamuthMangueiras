@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Loader2 } from 'lucide-react'; // Adicionado Loader2
 import { useToast } from '@/components/ui/use-toast';
+import WhatsappButton from '@/components/WhatsappButton';
 import { Button } from '@/components/ui/button';
+import CTASection from "@/components/CTASection";
 import { CONTACT_INFO } from '@/constants/contactInfo';
+import emailjs from '@emailjs/browser'; // 1. Importação do EmailJS
 
 const Contato = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
+  const [isSending, setIsSending] = useState(false); // 2. Estado de carregamento
+
   const [formData, setFormData] = useState({
     nome: '',
     empresa: '',
@@ -22,23 +29,24 @@ const Contato = () => {
   const [errors, setErrors] = useState({});
 
   const subjects = [
-    'Orçamento de Produto',
-    'Orçamento de Serviço',
-    'Suporte Técnico',
-    'Informações Gerais',
-    'Parcerias',
-    'Outros'
+    t('assunto.orcamentoP'),
+    t('assunto.orcamentoS'),
+    t('assunto.suporte'),
+    t('assunto.infos'),
+    t('assunto.parceiras'),
+    t('assunto.outros')
   ];
 
   const knowledgeSources = [
     'Google',
-    'Indicação',
+    t('assunto.indicacao'),
+    'Instagram',
     'Facebook',
     'Youtube',
     'Tiktok',
     'Linkedin',
-    'Já Sou Cliente',
-    'Outros'
+    t('assunto.cliente'),
+    t('assunto.outros')
   ];
 
   const handleChange = (e) => {
@@ -47,7 +55,6 @@ const Contato = () => {
       ...prev,
       [name]: value
     }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
         ...prev,
@@ -58,55 +65,66 @@ const Contato = () => {
 
   const validateForm = () => {
     const newErrors = {};
-
-    if (!formData.nome.trim()) {
-      newErrors.nome = 'Nome é obrigatório';
-    }
-
+    if (!formData.nome.trim()) newErrors.nome = t('form.erroNome');
     if (!formData.email.trim()) {
-      newErrors.email = 'E-mail é obrigatório';
+      newErrors.email = t('form.erroEmail');
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'E-mail inválido';
+      newErrors.email = t('form.erroEmail2');
     }
-
-    if (!formData.telefone.trim()) {
-      newErrors.telefone = 'Telefone é obrigatório';
-    }
-
-    if (!formData.assunto) {
-      newErrors.assunto = 'Selecione um assunto';
-    }
-
-    if (!formData.mensagem.trim()) {
-      newErrors.mensagem = 'Mensagem é obrigatória';
-    }
+    if (!formData.telefone.trim()) newErrors.telefone = t('form.erroTelefone');
+    if (!formData.assunto) newErrors.assunto = t('form.erroAssunto');
+    if (!formData.mensagem.trim()) newErrors.mensagem = t('form.erroMensagem');
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
+  // 3. Função handleSubmit Atualizada
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (validateForm()) {
-      // Simulate form submission
-      console.log('Form Submitted:', formData);
-      
-      toast({
-        title: "Mensagem Enviada!",
-        description: "Obrigado pelo contato. Nossa equipe responderá em breve.",
-      });
+      setIsSending(true);
 
-      // Clear form
-      setFormData({
-        nome: '',
-        empresa: '',
-        email: '',
-        telefone: '',
-        assunto: '',
-        mensagem: '',
-        howYouKnew: '',
-        howYouKnewOther: ''
+      // Mapeia os dados para as chaves {{}} do seu template no EmailJS
+      const templateParams = {
+        nome: formData.nome,
+        empresa: formData.empresa || "Não informada",
+        email: formData.email,
+        telefone: formData.telefone,
+        assunto: formData.assunto,
+        mensagem: formData.mensagem,
+        conheceu_por: formData.howYouKnew === 'Outros' ? formData.howYouKnewOther : formData.howYouKnew
+      };
+
+      emailjs.send(
+        'service_b5u193t',   // Substitua pelo seu Service ID
+        'template_sd4h82m',  // Substitua pelo seu Template ID
+        templateParams,
+        'bwtI0ttfSyrQOiJQ4'    // Substitua pela sua Public Key
+      )
+      .then(() => {
+        toast({
+          title: "Mensagem Enviada!",
+          description: "Obrigado pelo contato. Nossa equipe responderá em breve.",
+        });
+
+        // Limpa o formulário após sucesso
+        setFormData({
+          nome: '', empresa: '', email: '', telefone: '',
+          assunto: '', mensagem: '', howYouKnew: '', howYouKnewOther: ''
+        });
+      })
+      .catch((err) => {
+        console.error('Erro ao enviar e-mail:', err);
+        toast({
+          title: "Erro no envio",
+          description: "Não conseguimos enviar sua mensagem. Tente novamente ou use o WhatsApp.",
+          variant: "destructive"
+        });
+      })
+      .finally(() => {
+        setIsSending(false);
       });
     } else {
       toast({
@@ -120,7 +138,7 @@ const Contato = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Telefone / WhatsApp',
+      title: t('contato.titlefone'),
       content: CONTACT_INFO.phone.display,
       link: CONTACT_INFO.phone.whatsapp
     },
@@ -132,20 +150,20 @@ const Contato = () => {
     },
     {
       icon: MapPin,
-      title: 'MATRIZ - São Paulo/SP',
-      content: CONTACT_INFO.address.full,
+      title: t('contato.matriz'),
+      content: t('footer.endereco'),
       link: null
     },
     {
       icon: MapPin,
-      title: 'FILIAL - Macaé/RJ',
+      title: t('contato.filial'),
       content: 'Av. Pref. Aristeu Ferreira da Silva, 321 Novo Cavaleiros - Macaé/RJ',
       link: null
     },
     {
       icon: Clock,
-      title: 'Horário de Atendimento',
-      content: 'Seg - Sex: 8h às 18h',
+      title: t('contato.titleHorario'),
+      content: t('contato.horario'),
       link: null
     }
   ];
@@ -165,19 +183,19 @@ const Contato = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Entre em Contato</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('contato.titleContato')}</h1>
             <p className="text-lg md:text-2xl max-w-2xl mx-auto">
-              Estamos prontos para atender suas necessidades e responder suas dúvidas
+              {t('contato.subtitleContato')}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Form and Info Section */}
+      {/* Contact Form Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -186,137 +204,112 @@ const Contato = () => {
               className="bg-white rounded-xl shadow-lg p-8"
             >
               <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-dark-blue)' }}>
-                Envie sua Mensagem
+                {t('form.titleMsg')}
               </h2>
               <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Campo Nome */}
                 <div>
                   <label htmlFor="nome" className="block text-sm font-medium text-gray-700 mb-1">
-                    Nome Completo *
+                    {t('form.nome')}*
                   </label>
                   <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    value={formData.nome}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all bg-white text-gray-900 ${
-                      errors.nome ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="Seu nome completo"
+                    type="text" id="nome" name="nome"
+                    value={formData.nome} onChange={handleChange}
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 transition-all bg-white text-gray-900 ${errors.nome ? 'border-red-500' : 'border-gray-300'}`}
+                    placeholder={t('form.placeNome')}
                   />
                   {errors.nome && <p className="text-red-500 text-sm mt-1">{errors.nome}</p>}
                 </div>
 
+                {/* Campo Empresa */}
                 <div>
                   <label htmlFor="empresa" className="block text-sm font-medium text-gray-700 mb-1">
-                    Empresa
+                    {t('form.empresa')}*
                   </label>
                   <input
-                    type="text"
-                    id="empresa"
-                    name="empresa"
-                    value={formData.empresa}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all bg-white text-gray-900"
-                    placeholder="Nome da empresa"
+                    type="text" id="empresa" name="empresa"
+                    value={formData.empresa} onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 transition-all bg-white text-gray-900"
+                    placeholder={t('form.placeEmpresa')}
                   />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Campo E-mail */}
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      E-mail *
+                      {t('form.Email')}*
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all bg-white text-gray-900 ${
-                        errors.email ? 'border-red-500' : 'border-gray-300'
-                      }`}
-                      placeholder="seu@email.com"
+                      type="email" id="email" name="email"
+                      value={formData.email} onChange={handleChange}
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 transition-all bg-white text-gray-900 ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+                      placeholder={t('form.placeEmail')}
                     />
                     {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                   </div>
 
+                  {/* Campo Telefone */}
                   <div>
                     <label htmlFor="telefone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Telefone *
+                      {t('form.Telefone')}*
                     </label>
                     <input
-                      type="tel"
-                      id="telefone"
-                      name="telefone"
-                      value={formData.telefone}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all bg-white text-gray-900 ${
-                        errors.telefone ? 'border-red-500' : 'border-gray-300'
-                      }`}
-                      placeholder="(11) 99999-9999"
+                      type="tel" id="telefone" name="telefone"
+                      value={formData.telefone} onChange={handleChange}
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 transition-all bg-white text-gray-900 ${errors.telefone ? 'border-red-500' : 'border-gray-300'}`}
+                      placeholder={t('form.placeTelefone')}
                     />
                     {errors.telefone && <p className="text-red-500 text-sm mt-1">{errors.telefone}</p>}
                   </div>
                 </div>
 
+                {/* Assunto */}
                 <div>
                   <label htmlFor="assunto" className="block text-sm font-medium text-gray-700 mb-1">
-                    Assunto *
+                    {t('form.assunto')} *
                   </label>
                   <select
-                    id="assunto"
-                    name="assunto"
-                    value={formData.assunto}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all bg-white text-gray-900 ${
-                      errors.assunto ? 'border-red-500' : 'border-gray-300'
-                    }`}
+                    id="assunto" name="assunto"
+                    value={formData.assunto} onChange={handleChange}
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 transition-all bg-white text-gray-900 ${errors.assunto ? 'border-red-500' : 'border-gray-300'}`}
                   >
-                    <option value="">Selecione um assunto</option>
+                    <option value="">{t('form.placeAssunto')}</option>
                     {subjects.map((subject, index) => (
-                      <option key={index} value={subject}>
-                        {subject}
-                      </option>
+                      <option key={index} value={subject}>{subject}</option>
                     ))}
                   </select>
                   {errors.assunto && <p className="text-red-500 text-sm mt-1">{errors.assunto}</p>}
                 </div>
 
+                {/* Mensagem */}
                 <div>
                   <label htmlFor="mensagem" className="block text-sm font-medium text-gray-700 mb-1">
-                    Mensagem *
+                    {t('mensagem')} *
                   </label>
                   <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    value={formData.mensagem}
-                    onChange={handleChange}
+                    id="mensagem" name="mensagem"
+                    value={formData.mensagem} onChange={handleChange}
                     rows="5"
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none bg-white text-gray-900 ${
-                      errors.mensagem ? 'border-red-500' : 'border-gray-300'
-                    }`}
-                    placeholder="Digite sua mensagem aqui..."
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 transition-all resize-none bg-white text-gray-900 ${errors.mensagem ? 'border-red-500' : 'border-gray-300'}`}
+                    placeholder={t('form.placemensagem')}
                   ></textarea>
                   {errors.mensagem && <p className="text-red-500 text-sm mt-1">{errors.mensagem}</p>}
                 </div>
 
+                {/* Como nos conheceu */}
                 <div>
                   <label htmlFor="howYouKnew" className="block text-sm font-medium text-gray-700 mb-1">
-                    Aonde conheceu a Mamuth?
+                    {t('form.conheceu')}
                   </label>
                   <select
-                    id="howYouKnew"
-                    name="howYouKnew"
-                    value={formData.howYouKnew}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all bg-white text-gray-900"
+                    id="howYouKnew" name="howYouKnew"
+                    value={formData.howYouKnew} onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 transition-all bg-white text-gray-900"
                   >
-                    <option value="">Selecione uma opção (Opcional)</option>
+                    <option value="">{t('form.placeConheceu')}</option>
                     {knowledgeSources.map((source, index) => (
-                      <option key={index} value={source}>
-                        {source}
-                      </option>
+                      <option key={index} value={source}>{source}</option>
                     ))}
                   </select>
                 </div>
@@ -327,32 +320,39 @@ const Contato = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
                       <label htmlFor="howYouKnewOther" className="block text-sm font-medium text-gray-700 mb-1">
                         Como nos conheceu?
                       </label>
                       <input
-                        type="text"
-                        id="howYouKnewOther"
-                        name="howYouKnewOther"
-                        value={formData.howYouKnewOther}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all bg-white text-gray-900"
+                        type="text" id="howYouKnewOther" name="howYouKnewOther"
+                        value={formData.howYouKnewOther} onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 transition-all bg-white text-gray-900"
                         placeholder="Por favor, especifique"
                       />
                     </motion.div>
                   )}
                 </AnimatePresence>
 
+                {/* Botão com Loading */}
                 <Button
                   type="submit"
-                  className="w-full py-3 text-white font-semibold rounded-lg transition-all hover:shadow-lg flex items-center justify-center"
+                  disabled={isSending}
+                  className="w-full py-3 text-white font-semibold rounded-lg transition-all hover:shadow-lg flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                   style={{ backgroundColor: '#FF5101' }}
                 >
-                  <Send className="w-5 h-5 mr-2" />
-                  Enviar Mensagem
+                  {isSending ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5 mr-2" />
+                      {t('form.btn')}
+                    </>
+                  )}
                 </Button>
               </form>
             </motion.div>
@@ -367,7 +367,7 @@ const Contato = () => {
             >
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-dark-blue)' }}>
-                  Informações de Contato
+                  {t('contato.titleInfos')}
                 </h2>
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
@@ -398,23 +398,21 @@ const Contato = () => {
                 </div>
               </div>
 
-              {/* Google Maps */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.465322530075!2d-46.5881926238852!3d-23.515760559920015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58d2b1123363%3A0x113d89cba51c4b4!2sMamuth%20-%20Mangueiras!5e0!3m2!1spt-PT!2sbr!4v1773413494886!5m2!1spt-PT!2sbr"
-                width="100%"
-                height="320"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Localização Mamuth"
-              ></iframe>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.465322530075!2d-46.5881926238852!3d-23.515760559920015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58d2b1123363%3A0x113d89cba51c4b4!2sMamuth%20-%20Mangueiras!5e0!3m2!1spt-PT!2sbr!4v1777496144166!5m2!1spt-PT!2sbr"
+                  width="100%" height="320" style={{ border: 0 }}
+                  allowFullScreen="" loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização Mamuth"
+                ></iframe>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+      <CTASection />
+      <WhatsappButton />
     </>
   );
 };

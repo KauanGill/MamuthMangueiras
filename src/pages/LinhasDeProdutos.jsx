@@ -1,27 +1,32 @@
 import React, { useState } from "react";
 import { Helmet } from 'react-helmet';
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 import { X } from "lucide-react";
 import SectionTitle from '@/components/SectionTitle';
+import WhatsappButton from '@/components/WhatsappButton';
 import ProductCard from '@/components/ProductCard';
 import { useToast } from '@/components/ui/use-toast';
 import { useNavigate } from 'react-router-dom';
 import CertificacoesSection from "@/components/CertificadoSection";
+import CTASection from "@/components/CTASection";
 import Hero from "@/components/Hero"
 
 // Imports de Imagens
 import lavadoraAltaPressao from "@/assets/images/typhoonjet-50cv-eletrica.png";
-import vestimentaProtecao from "@/assets/images/vestimenta-protecao.png";
+import vestimentaProtecao from '@/assets/images/vestimenta-protecao-cp.png';
 import mangueiraConexao from "@/assets/images/mangueiras-conexoes.jpg";
-import bicoHidrojato from "@/assets/images/bicos-hidrojatos.png";
-import bombaAltaPressao from "@/assets/images/bomba-alta-pressao-titulo.png";
-import pecasBomba from "@/assets/images/pecas-para-bomba.png";
-import acessoriosHidro from "@/assets/images/hidro-acessorios.png";
+import bicoHidrojato from "@/assets/images/bico-rotativo-r-cp.png";
+import bombaAltaPressao from "@/assets/images/falch-pump-500-cp-produtos.png";
+import pecasBomba from "@/assets/images/kit-vedacao-uap-cp-produtos.png";
+import acessoriosHidro from "@/assets/images/pistola-rotativa-viper-40k-cp.png";
 import acessoriosLavadora from "@/assets/images/acessorios-lavadora.png";
+import robocp from "@/assets/images/robo-line-worker-250-cp-produto.png";
 
 const LinhasDeProdutos = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
+  const {t} = useTranslation();
 
   const [open, setOpen] = useState(false);
   // Função de clique atualizada para tratar rotas internas e externas
@@ -41,109 +46,124 @@ const LinhasDeProdutos = () => {
 
   const products = [
     {
-      name: 'Lavadoras de Alta Pressão',
-      path: '/lavadoras', // LINK PARA SUA NOVA PÁGINA
-      description: 'Equipamentos robustos projetados para operações industriais de alta exigência, com tecnologia de ponta e máxima eficiência.',
-      image: lavadoraAltaPressao,
-      specs: [
-        'Pressão de até 3000 bar',
-        'Vazão variável conforme aplicação',
-        'Construção em aço inoxidável',
-        'Sistema de proteção contra sobrecarga',
-        'Manutenção facilitada'
-      ]
-    },
-    {
-      name: 'Vestimentas de Proteção',
-      path: '/vestimentas',
-      description: 'Soluções completas para limpeza de alta pressão, ideais para remoção de incrustações e contaminantes.',
-      image: vestimentaProtecao,
-      specs: [
-        'Tecnologia de jato de água',
-        'Economia de até 70% de água',
-        'Remoção eficiente de resíduos',
-        'Operação segura e controlada',
-        'Adaptável a diferentes superfícies'
-      ]
-    },
-    {
-      name: 'Mangueiras e Conexões',
+      name: t('produtos.titleMangueiras'),
       path: '/mangueiras-conexoes',
-      description: 'Linha completa de equipamentos hidráulicos de precisão para diversas aplicações industriais.',
+      description: t('produtos.textMangueiras'),
       image: mangueiraConexao,
       specs: [
-        'Alta confiabilidade operacional',
-        'Eficiência energética superior',
-        'Controle de precisão',
-        'Baixa necessidade de manutenção',
-        'Suporte técnico especializado'
+        t('produtos.desc1Mangueiras'),
+        t('produtos.desc2Mangueiras'),
+        t('produtos.desc3Mangueiras'),
+        t('produtos.desc4Mangueiras'),
+        t('produtos.desc5Mangueiras')
       ]
     },
     {
-      name: 'Bicos para Hidrojato',
-      path: '/bicos-hidrojatos',
-      description: 'Projetos personalizados desenvolvidos especificamente para atender necessidades únicas de cada cliente.',
-      image: bicoHidrojato,
+      name: t('produtos.titleLavadoras'),
+      path: '/lavadoras', // LINK PARA SUA NOVA PÁGINA
+      description: t('produtos.textLavadoras'),
+      image: lavadoraAltaPressao,
       specs: [
-        'Engenharia dedicada ao projeto',
-        'Flexibilidade total de configuração',
-        'Integração com sistemas existentes',
-        'Testes e validação completos',
-        'Garantia estendida'
+        t('produtos.desc1Lavadoras'),
+        t('produtos.desc2Lavadoras'),
+        t('produtos.desc3Lavadoras'),
+        t('produtos.desc4Lavadoras'),
+        t('produtos.desc5Lavadoras')
       ]
     },
     {
-      name: 'Bombas de Alta Pressão',
+      name: t('produtos.titleVestimentas'),
+      path: '/vestimentas',
+      description: t('produtos.textVestimentas'),
+      image: vestimentaProtecao,
+      specs: [
+        t('produtos.desc1Vestimentas'),
+        t('produtos.desc2Vestimentas'),
+        t('produtos.desc3Vestimentas'),
+        t('produtos.desc4Vestimentas'),
+        t('produtos.desc5Vestimentas')
+      ]
+    },
+    {
+      name: t('produtos.titleRobo'),
+      path: '/robo',
+      description: t('produtos.textRobo'),
+      image: robocp,
+      specs: [
+        t('produtos.desc1Robo'),
+        t('produtos.desc2Robo'),
+        t('produtos.desc3Robo'),
+        t('produtos.desc4Robo'),
+        t('produtos.desc5Robo')
+      ]
+    },
+    {
+      name: t('produtos.titleBombas'),
       path: '/bombas-alta-pressao',
-      description: 'Peças originais e de alta qualidade para manutenção e prolongamento da vida útil dos equipamentos.',
+      description: t('produtos.textBombas'),
       image: bombaAltaPressao,
       specs: [
-        'Peças originais certificadas',
-        'Estoque disponível',
-        'Entrega rápida',
-        'Compatibilidade garantida',
-        'Suporte técnico incluído'
+        t('produtos.desc1Bombas'),
+        t('produtos.desc2Bombas'),
+        t('produtos.desc3Bombas'),
+        t('produtos.desc4Bombas'),
+        t('produtos.desc5Bombas')
       ]
     },
     {
-      name: 'Peças para Bombas de Hidrojato',
-      path: '/pecas-bombas',
-      description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações.',
-      image: pecasBomba,
+      name: t('produtos.titleBicos'),
+      path: '/bicos-hidrojatos',
+      description: t('produtos.textBicos'),
+      image: bicoHidrojato,
       specs: [
-        'Mangueiras de alta pressão',
-        'Bicos e pistolas especializadas',
-        'Conexões e adaptadores',
-        'Válvulas de controle',
-        'Sistemas de filtragem'
+        t('produtos.desc1Bicos'),
+        t('produtos.desc2Bicos'),
+        t('produtos.desc3Bicos'),
+        t('produtos.desc4Bicos'),
+        t('produtos.desc5Bicos')
       ]
     },
     {
-      name: 'Hidrojato/Acessórios',
+      name: t('produtos.titleAcessorioHidro'),
       path: '/hidrojato-acessorios',
-      description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações industriais.',
+      description: t('produtos.textAcessorioHidro'),
       image: acessoriosHidro,
       specs: [
-        'Mangueiras de alta pressão',
-        'Bicos e pistolas especializadas',
-        'Conexões e adaptadores',
-        'Válvulas de controle',
-        'Sistemas de filtragem'
+        t('produtos.desc1AceHidro'),
+        t('produtos.desc2AceHidro'),
+        t('produtos.desc3AceHidro'),
+        t('produtos.desc4AceHidro'),
+        t('produtos.desc5AceHidro')
       ]
     },
     {
-      name: 'Acessórios para Lavadoras de Alta Pressão',
+      name: t('produtos.titleAcessoriosLavadoras'),
       path: '/acessorios-lavadoras',
-      description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações industriais.',
+      description: t('produtos.textAcessoriosLavadoras'),
       image: acessoriosLavadora,
       specs: [
-        'Mangueiras de alta pressão',
-        'Bicos e pistolas especializadas',
-        'Conexões e adaptadores',
-        'Válvulas de controle',
-        'Sistemas de filtragem'
+        t('produtos.desc1AceLava'),
+        t('produtos.desc2AceLava'),
+        t('produtos.desc3AceLava'),
+        t('produtos.desc4AceLava'),
+        t('produtos.desc5AceLava')
+      ]
+    },
+    {
+      name: t('produtos.titlePecas'),
+      path: '/pecas-bombas',
+      description: t('produtos.textPecas'),
+      image: pecasBomba,
+      specs: [
+        t('produtos.desc1Pecas'),
+        t('produtos.desc2Pecas'),
+        t('produtos.desc3Pecas'),
+        t('produtos.desc4Pecas'),
+        t('produtos.desc5Pecas')
       ]
     }
+    
+    
   ];
 
   return (
@@ -161,9 +181,9 @@ const LinhasDeProdutos = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Linhas de Produtos</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('produtos.titleProdutos')}</h1>
             <p className="text-lg md:text-2xl max-w-2xl mx-auto text-gray-200">
-              Soluções completas em equipamentos de alta pressão e sistemas industriais
+              {t('produtos.subtitleProdutos')}
             </p>
           </motion.div>
         </div>
@@ -173,8 +193,8 @@ const LinhasDeProdutos = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            title="Nossos Produtos"
-            subtitle="Equipamentos de alta qualidade para todas as suas necessidades industriais"
+            title= {t('produtos.titleCards')}
+            subtitle={t('produtos.subtitleCards')}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
@@ -188,9 +208,9 @@ const LinhasDeProdutos = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      <CTASection />
       <CertificacoesSection />
+      <WhatsappButton />
     </>
   );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrolltoTop';
 {/* Páginas padrões */}
 import Home from '@/pages/Home';
 import Sobre from '@/pages/Sobre';
@@ -17,6 +18,7 @@ import BombasAltaPressao from '@/pages/products/BombasAltaPressao';
 import PecasBombas from '@/pages/products/PecasBombas';
 import HidroAcessorios from '@/pages/products/HidroAcessorios';
 import AcessoriosLavadora from '@/pages/products/AcessoriosLavadora';
+import PaginaRobo from '@/pages/products/Robo';
 {/* Lavadoras */}
 import Typhoon500Trifasico from '@/pages/products/lavadoras/Typhoonjet500Trifasico';
 import Typhoon500Gasolina from '@/pages/products/lavadoras/Typhoonjet500Gasolina';
@@ -28,11 +30,11 @@ import Typhoon50cvEletrica from '@/pages/products/lavadoras/Typhoonjet50cvEletri
 import Typhoon50cvDiesel from '@/pages/products/lavadoras/Typhoonjet50cvDiesel';
 import Typhoon350Gasolina from '@/pages/products/lavadoras/Typhoonjet350Gasolina';
 import Typhoon170Trifasico from '@/pages/products/lavadoras/Typhoonjet170Trifasico';
+import TyphoonHot from '@/pages/products/lavadoras/TyphoonHot';
 {/* Vestimentas */}
 import HydroShellUAP from '@/pages/products/vestimentas/HydroShellUap';
 import HydroShellSAP from '@/pages/products/vestimentas/HydroShellSap';
 import CapaMangueira from '@/pages/products/vestimentas/CapaMangueira';
-import BotasProtecao40K from '@/pages/products/vestimentas/BotaProtecao40K';
 {/* Mangueiras e conexões */}
 import PoliamidaSAP1500 from '@/pages/products/mangueirasEConexoes/PoliamidaSap1500';
 import PoliamidaUAP2800 from '@/pages/products/mangueirasEConexoes/PoliamidaUap2800';
@@ -59,6 +61,7 @@ import BicoRotativoR from '@/pages/products/bicoHidrojato/BicoRotativoR';
 import BicoRetoLeque from '@/pages/products/bicoHidrojato/BicoRetoLeque';
 import BicoFixoFoguetinho from '@/pages/products/bicoHidrojato/BicoFixoFoguetinho';
 import BicoFerret22K from '@/pages/products/bicoHidrojato/BicoFerret22K';
+import BicoTorpedo from '@/pages/products/bicoHidrojato/BicoTorpedo';
 {/* Bombas de alta pressão*/}
 import BombaMTI600 from '@/pages/products/bombasAltaPressao/BombaMti600';
 import BombaMTI50FF from '@/pages/products/bombasAltaPressao/BombaMTI50FF';
@@ -66,20 +69,33 @@ import BombaMTI500 from '@/pages/products/bombasAltaPressao/BombaMTI500';
 import BombaMTI350 from '@/pages/products/bombasAltaPressao/BombaMTI350';
 import BombaMTI250 from '@/pages/products/bombasAltaPressao/BombaMTI250';
 import BombaMTI200 from '@/pages/products/bombasAltaPressao/BombaMTI200';
+import BombaFalch125 from '@/pages/products/bombasAltaPressao/BombaFalchPump125';
+import BombaFalch250 from '@/pages/products/bombasAltaPressao/BombaFalchPump250';
+import BombaFalch500 from '@/pages/products/bombasAltaPressao/BombaFalchPump500';
+{/*Marcas das peças de bombas para hidrojato  */}
+import BombasFalch from '@/pages/products/pecasBombasHidrojato/BombasFalch';
+import BombasFlow from '@/pages/products/pecasBombasHidrojato/BombasFlow';
+import BombasKamat from '@/pages/products/pecasBombasHidrojato/BombasKamat';
+import BombasNacionais from '@/pages/products/pecasBombasHidrojato/BombasNacionais';
+import BombasNlb from '@/pages/products/pecasBombasHidrojato/BombasNlb';
+import BombasWoma from '@/pages/products/pecasBombasHidrojato/BombasWoma';
 {/*Peças para bombas de Hidrojato   */}
-import ValvulaSuccaoUAP from '@/pages/products/pecasBombasHidrojato/ValvulaSuccaoUAP';
-import ValvulaPressaoSAP from '@/pages/products/pecasBombasHidrojato/ValvulaPressaoSAP'; 
-import ValvulaPressaoUAP from './pages/products/pecasBombasHidrojato/ValvulaPressaoUAP';
-import SedeDuplaUAP from '@/pages/products/pecasBombasHidrojato/SedeDuplaUAP'; 
-import SedeDupla from './pages/products/pecasBombasHidrojato/SedeDupla';
-import PistaoMetalDuroUAP from '@/pages/products/pecasBombasHidrojato/PistaoMetalDuroUAP';
-import PistaoMetalDuroSAP from '@/pages/products/pecasBombasHidrojato/PistaoMetalDuroSAP';
-import KitVedacaoUAP from '@/pages/products/pecasBombasHidrojato/KitVedacaoUAP';
-import KitVedacaoSAP from '@/pages/products/pecasBombasHidrojato/KitVedacaoSAP';
-import IntermediariaUAP from '@/pages/products/pecasBombasHidrojato/IntermediariaUAP';
-import IntermediariaSAP from '@/pages/products/pecasBombasHidrojato/IntermediariaSAP';
-import CestoTampaoUAP from '@/pages/products/pecasBombasHidrojato/CestoTampaoUAP';
-import CestoTampaoSAP from '@/pages/products/pecasBombasHidrojato/CestoTampaoSAP';
+import ValvulaSuccaoUAP from './pages/products/pecasBombasHidrojato/Nacional/ValvulaSuccaoUAP';
+import ValvulaPressaoSAP from '@/pages/products/pecasBombasHidrojato/Nacional/ValvulaPressaoSAP'; 
+import ValvulaPressaoUAP from './pages/products/pecasBombasHidrojato/Nacional/ValvulaPressaoUAP';
+import SedeDuplaUAP from '@/pages/products/pecasBombasHidrojato/Nacional/SedeDuplaUAP'; 
+import SedeDupla from './pages/products/pecasBombasHidrojato/Nacional/SedeDupla';
+import PistaoMetalDuroUAP from '@/pages/products/pecasBombasHidrojato/Nacional/PistaoMetalDuroUAP';
+import PistaoMetalDuroSAP from '@/pages/products/pecasBombasHidrojato/Nacional/PistaoMetalDuroSAP';
+import KitVedacaoUAP from '@/pages/products/pecasBombasHidrojato/Nacional/KitVedacaoUAP';
+import KitVedacaoSAP from '@/pages/products/pecasBombasHidrojato/Nacional/KitVedacaoSAP';
+import IntermediariaUAP from '@/pages/products/pecasBombasHidrojato/Nacional/IntermediariaUAP';
+import IntermediariaSAP from '@/pages/products/pecasBombasHidrojato/Nacional/IntermediariaSAP';
+import CestoTampaoUAP from '@/pages/products/pecasBombasHidrojato/Nacional/CestoTampaoUAP';
+import CestoTampaoSAP from '@/pages/products/pecasBombasHidrojato/Nacional/CestoTampaoSAP';
+{/*Robos   */}
+import RoboWorker250 from '@/pages/products/robo/RoboLineWorker250';
+import RoboMagnetico from './pages/products/robo/RoboMagneticoClimb';
 {/*Hidrojatos e Acessórios   */}
 import TubeClean from '@/pages/products/hidrojatoAcessorios/TubecleanMamuth';
 import PowerBox2800 from '@/pages/products/hidrojatoAcessorios/PowerBoxMamuth2800';
@@ -111,6 +127,7 @@ import { Toaster } from '@/components/ui/toaster';
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">
@@ -130,6 +147,7 @@ function App() {
             <Route path="/pecas-bombas" element={<PecasBombas />} />
             <Route path="/hidrojato-acessorios" element={<HidroAcessorios />} />
             <Route path="/acessorios-lavadoras" element={<AcessoriosLavadora />} />
+            <Route path="/robo" element={<PaginaRobo />} />
             {/* Lavadoras */}
             <Route path="/lavadoras/typhoon-jet-500-trifasico" element={<Typhoon500Trifasico />} />
             <Route path="/lavadoras/typhoon-jet-500-gasolina" element={<Typhoon500Gasolina />} />
@@ -141,11 +159,11 @@ function App() {
             <Route path="/lavadoras/typhoon-jet-50cv-diesel" element={<Typhoon50cvDiesel />} />
             <Route path="/lavadoras/typhoon-jet-350-gasolina" element={<Typhoon350Gasolina/>}/>
             <Route path="/lavadoras/typhoon-jet-170-trifasico" element={<Typhoon170Trifasico />} />
+            <Route path="/lavadoras/typhoon-hot" element={<TyphoonHot />} />
             {/* Vestimentas */}
             <Route path="/vestimentas/hydro-shell-uap" element={<HydroShellUAP/>}/>
             <Route path="/vestimentas/hydro-shell-sap" element={<HydroShellSAP/>}/>
             <Route path="/vestimentas/capa-de-mangueira" element={<CapaMangueira/>}/>
-            <Route path="/vestimentas/bota-de-protecao-40k" element={<BotasProtecao40K/>}/>
             {/* Mangueiras e conexões */}
             <Route path="/mangueiras-conexoes/poliamida-sap-1500bar" element={<PoliamidaSAP1500/>}/>
             <Route path="/mangueiras-conexoes/poliamida-uap-2800bar" element={<PoliamidaUAP2800/>}/>
@@ -172,6 +190,7 @@ function App() {
             <Route path="/bicos-hidrojatos/bico-reto-e-leque" element={<BicoRetoLeque/>}/>
             <Route path="/bicos-hidrojatos/bico-fixo-foguetinho" element={<BicoFixoFoguetinho/>}/>
             <Route path="/bicos-hidrojatos/bico-ferret-22k" element={<BicoFerret22K/>}/>
+            <Route path="/bicos-hidrojatos/bico-torpedo" element={<BicoTorpedo/>}/>
             {/* Bombas de alta pressão*/}
             <Route path="/bombas-de-alta-pressao/bomba-mti-600" element={<BombaMTI600/>}/>
             <Route path="/bombas-de-alta-pressao/bomba-mti-50ff" element={<BombaMTI50FF/>}/>
@@ -179,20 +198,33 @@ function App() {
             <Route path="/bombas-de-alta-pressao/bomba-mti-350" element={<BombaMTI350/>}/>
             <Route path="/bombas-de-alta-pressao/bomba-mti-250" element={<BombaMTI250/>}/>
             <Route path="/bombas-de-alta-pressao/bomba-mti-200" element={<BombaMTI200/>}/>
+            <Route path="/bombas-de-alta-pressao/bomba-falch-pump-125kw" element={<BombaFalch125/>}/>
+            <Route path="/bombas-de-alta-pressao/bomba-falch-pump-250kw" element={<BombaFalch250/>}/>
+            <Route path="/bombas-de-alta-pressao/bomba-falch-pump-500kw" element={<BombaFalch500/>}/>
+            {/*Marcas das peças de bombas para hidrojato   */}
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-falch" element={<BombasFalch/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-flow" element={<BombasFlow/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-kamat" element={<BombasKamat/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais" element={<BombasNacionais/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nlb" element={<BombasNlb/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-woma" element={<BombasWoma/>}/>
             {/*Peças para bombas de Hidrojato   */}
-            <Route path="/pecas-para-bombas-de-hidrojatos/valvula-de-succao-uap" element={<ValvulaSuccaoUAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/valvula-de-pressao-sap" element={<ValvulaPressaoSAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/valvula-de-pressao-uap" element={<ValvulaPressaoUAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/sede-dupla-uap" element={<SedeDuplaUAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/sede-dupla" element={<SedeDupla/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/pistao-de-metal-duro-uap" element={<PistaoMetalDuroUAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/pistao-de-metal-duro-sap" element={<PistaoMetalDuroSAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/kit-de-vedacao-uap" element={<KitVedacaoUAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/kit-de-vedacao-sap" element={<KitVedacaoSAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/intermediaria-uap" element={<IntermediariaUAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/intermediaria-sap" element={<IntermediariaSAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/cesto-tampao-uap" element={<CestoTampaoUAP/>}/>
-            <Route path="/pecas-para-bombas-de-hidrojatos/cesto-tampao-sap" element={<CestoTampaoSAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/valvula-de-succao-uap" element={<ValvulaSuccaoUAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/valvula-de-pressao-sap" element={<ValvulaPressaoSAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/valvula-de-pressao-uap" element={<ValvulaPressaoUAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/sede-dupla-uap" element={<SedeDuplaUAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/sede-dupla" element={<SedeDupla/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/pistao-de-metal-duro-uap" element={<PistaoMetalDuroUAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/pistao-de-metal-duro-sap" element={<PistaoMetalDuroSAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/kit-de-vedacao-uap" element={<KitVedacaoUAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/kit-de-vedacao-sap" element={<KitVedacaoSAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/intermediaria-uap" element={<IntermediariaUAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/intermediaria-sap" element={<IntermediariaSAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/cesto-tampao-uap" element={<CestoTampaoUAP/>}/>
+            <Route path="/pecas-para-bombas-de-hidrojatos/pecas-bombas-nacionais/cesto-tampao-sap" element={<CestoTampaoSAP/>}/>
+            {/*Robos  */}
+            <Route path="/robo/robo-line-worker-250" element={<RoboWorker250/>}/>
+            <Route path="/robo/robo-magnetico-climb-rob" element={<RoboMagnetico/>}/>
             {/*Hidrojatos e Acessórios   */}
             <Route path="/hidrojatos-e-acessorios/tubeclean-mamuth" element={<TubeClean/>}/>
             <Route path="/hidrojatos-e-acessorios/powerbox-mamuth-2800" element={<PowerBox2800/>}/>

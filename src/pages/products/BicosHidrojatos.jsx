@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import ProductCard from '@/components/ProductCard'; // Certifique-se de que o caminho está correto
 import portaBicoSafira from '@/assets/images/porta-bico-safira.png';
+import { useTranslation } from 'react-i18next';
 import portaBicoRetoELeque from '@/assets/images/porta-bico-reto-e-leque.png';
 import bicoTurboRotativo600 from '@/assets/images/bico-turbo-rotativo-600.jpg';
 import bicoSharkRadial from '@/assets/images/bico-shark-radial-40k.png';
@@ -10,89 +11,100 @@ import bicoSharkJet22K from '@/assets/images/bico-shark-jet-22k-40k.png';
 import bicoSafiraM10 from '@/assets/images/bico-safira-m10.png';
 import bicoSafira from '@/assets/images/bico-safira.png';
 import bicoRotativoTitan from '@/assets/images/bico-rotativo-titan.jpg';
-import bicoRotativoR from '@/assets/images/bico-rotativo-r.png';
+import bicoRotativoR from '@/assets/images/bico-rotativo-r-cp.png';
 import bicoRetoLeque from '@/assets/images/bico-reto-e-leque.png';
 import bicoFixoFoguetinho from '@/assets/images/bico-fixo-foguetinho.png';
 import bicoFerret22k from '@/assets/images/bico-ferret-22k.png';
+import bicoAttack14 from '@/assets/images/bico-attack-1-4.jpg';
+import bicoTorpedo from '@/assets/images/bico-torpedo-cp.png'
 import path from 'node:path';
 
 const PaginaCategoria = () => {
+  const {t} = useTranslation();
   // Dados simulados para o "Produto 1"
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'Porta Bico Safira',
-      path: '/bicos-hidrojatos/porta-bico-safira',
-      description: 'O suporte para fixação de Bico de Safira 3/8” é um componente essencial em operações de limpeza, jateamento ou corte utilizando pistolas de Ultra Alta Pressão. Este suporte foi projetado para garantir uma fixação segura e estável do bico, proporcionando precisão e eficiência durante o uso.',
-      image: portaBicoSafira, 
+      name: t('categorias.bicos.titleRotativo'),
+      path: '/bicos-hidrojatos/bico-rotativo-r',
+      description: t('categorias.bicos.subtitleRotativo'),
+      image: bicoRotativoR, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Porta Bico Reto e Leque',
-      path: '/bicos-hidrojatos/porta-bico-reto-e-leque',
-      description: 'O suporte para Bico Reto Forma 4 e Bico Leque Forma 19 é principalmente utilizado nas operações de limpeza, jateamento ou corte com pistolas de alta pressão. São recomendados para aplicações com até 1.500 bar / 21.750 psi.',
-      image: portaBicoRetoELeque, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Bico Turbo Rotativo 600',
-      path:'/bicos-hidrojatos/bico-turbo-rotativo-600',
-      description: 'Bicos indicados para hidrojateadoras até 500 bar, podem ser utilizados para jateamento de superfícies tubulações ou jateamento com abrasivo.',
-      image: bicoTurboRotativo600, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Bico Torpedo de 1/2 Até 1',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Bico Shark-Jet 22K e 40K',
-      path: '/bicos-hidrojatos/bico-shark-jet-22k',
-      description: 'O Shark-Jet 22K e 40K é uma ferramenta rotativa auto-propulsora indicada para jateamento, limpeza e preparação de superfícies planas ou irregulares.',
-      image: bicoSharkJet22K, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Bico Safira M10',
+      name: t('categorias.bicos.titleSafira'),
       path: '/bicos-hidrojatos/bico-safira-m10',
-      description: 'Os bicos ou insertos são utilizados em acessórios aplicados no processo de hidrojateamento como por exemplo: Pistolas, Ferramentas Rotativas, Barras Spray, Bicos Rotativos entre outros.',
+      description: t('categorias.bicos.subtitleSafira'),
       image: bicoSafiraM10, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Bico Rotativo Titan',
+      name: t('categorias.bicos.titlePortaSafira'),
+      path: '/bicos-hidrojatos/porta-bico-safira',
+      description: t('categorias.bicos.subtitlePortaSafira'),
+      image: portaBicoSafira, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.bicos.RetoLeque'),
+      path: '/bicos-hidrojatos/porta-bico-reto-e-leque',
+      description: t('categorias.bicos.subRetoLeque'),
+      image: portaBicoRetoELeque, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.bicos.titleRotativo600'),
+      path:'/bicos-hidrojatos/bico-turbo-rotativo-600',
+      description: t('categorias.bicos.subtitleRotativo600'),
+      image: bicoTurboRotativo600, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.bicos.titleTorpedo12'),
+      path: '/bicos-hidrojatos/bico-torpedo',
+      description: t('categorias.bicos.subtitleTorpedo12'),
+      image: bicoTorpedo, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.bicos.titleSharkJet'),
+      path: '/bicos-hidrojatos/bico-shark-jet-22k',
+      description: t('categorias.bicos.subtitleSharkJet'),
+      image: bicoSharkJet22K, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.bicos.titleRotativoTitan'),
       path: '/bicos-hidrojatos/bico-rotativo-titan',
-      description: 'O Bico Titan é um bico rotativo auto-propulsor desenvolvido para limpeza e desobstrução de tubulações em geral com pressões entre 1.000 bar e 2.800 bar. As cabeças do bico rotativo são fabricadas em diferentes configurações de orifícios.',
+      description: t('categorias.bicos.subtitleRotativoTitan'),
       image: bicoRotativoTitan, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Bico Reto e Leque',
+      name: t('categorias.bicos.titleBicoReto'),
       path: '/bicos-hidrojatos/bico-reto-e-leque',
-      description: 'Os bicos ou insertos são utilizados em acessórios aplicados no processo de hidrojateamento como por exemplo: Pistolas, Ferramentas Rotativas, Barras Spray, Bicos Rotativos entre outros.',
+      description: t('categorias.bicos.subtitleBicoReto'),
       image: bicoRetoLeque, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Bico Fixo Foguetinho',
+      name: t('categorias.bicos.titleFoguetinho'),
       path: '/bicos-hidrojatos/bico-fixo-foguetinho',
-      description: 'O bico fixo tipo “ Foguetinho” é indicado para limpeza e desobstrução das paredes internas de tubulações de trocadores de calor, evaporadores e linhas de tubos em geral.',
+      description: t('categorias.bicos.subtitleFoguetinho'),
       image: bicoFixoFoguetinho, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Bico Ferret 22K',
+      name: t('categorias.bicos.titleFerret'),
       path: '/bicos-hidrojatos/bico-ferret-22k',
-      description: 'O Bico Auto-Propulsor Ferret 22K é indicado para operações com pressões de até 1600 bar e Vazão de 80 L/min. Com essa ferramenta é possível trabalhar com desobstrução e limpeza de tubulações entre 2 e 6 especialmente em tubulações que possuam curvas de 90°.',
+      description: t('categorias.bicos.subtitleFerret'),
       image: bicoFerret22k, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Bico Attack 1/4',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
-      image: '../assets/images/produto1.jpg', 
+      name: t('categorias.bicos.titleAttack'),
+      description: t('categorias.bicos.subtitleAttack'),
+      image: bicoAttack14, 
       category: 'Categoria Principal'
     },
    
@@ -118,7 +130,7 @@ const PaginaCategoria = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight"
             >
-              Bicos para Hidrojato
+              {t('produtos.titleBicos')}
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
@@ -126,7 +138,7 @@ const PaginaCategoria = () => {
               transition={{ delay: 0.2 }}
               className="text-lg text-gray-300 max-w-2xl mx-auto"
             >
-              Soluções robustas e tecnologia de ponta para sua operação industrial.
+              {t('categorias.lavadoras.subtitle')}
             </motion.p>
           </div>
 

@@ -3,6 +3,8 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import CTASection from "@/components/CTASection";
+
 // Import da imagem
 import bicoTurboRotativo600 from '@/assets/images/bico-turbo-rotativo-600.jpg';
 
@@ -26,16 +28,6 @@ const BicoRotativoTitan = () => {
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
         <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-         Bico Turbo Rotativo 600
-          </motion.h1>
-
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -58,7 +50,7 @@ const BicoRotativoTitan = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+               Bico Turbo Rotativo 600
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            O Bico Titan é um bico rotativo auto-propulsor desenvolvido para limpeza e desobstrução de tubulações 
@@ -134,37 +126,9 @@ const BicoRotativoTitan = () => {
       </section>
 
       {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div 
-            className="rounded-[30px] p-8 md:p-12 border-2 shadow-2xl"
-            style={{ backgroundColor: '#d3d3d3', borderColor: '#FF6B0A' }}
-          >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              <div 
-                className="flex-shrink-0 w-16 h-16 rounded-full border-4 flex items-center justify-center text-4xl font-black"
-                style={{ color: '#FF6B0A', borderColor: '#FF6B0A' }}
-              >
-                !
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-black text-3xl font-bold mb-6">Atenção</h3>
-                <p className="text-black text-xl leading-relaxed mb-8">
-                  Para garantir a segurança e o desempenho ideal, utilize sempre 
-                  <span style={{ color: '#FF6B0A' }} className="font-bold"> Peças e Acessórios Originais Mamuth</span>.
-                </p>
-                <button
-                  onClick={() => navigate('/contato')}
-                  className="px-10 py-4 rounded-full font-bold text-black text-lg transition-all hover:scale-105"
-                  style={{ backgroundColor: '#FF6B0A' }}
-                >
-                  Fale Conosco
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className='pt-14'>
+        <CTASection />
+      </div>
     </div>
   );
 };

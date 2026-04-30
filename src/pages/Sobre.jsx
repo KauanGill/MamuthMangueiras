@@ -2,12 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 import { motion, AnimatePresence } from "framer-motion";
+import WhatsappButton from '@/components/WhatsappButton';
 import { X } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 import { Target, Eye, Award, Leaf, Lightbulb, Shield, Building2, Globe} from 'lucide-react';
-import SectionTitle from '@/components/SectionTitle';
-import CertificacoesSection from "@/components/CertificadoSection";
-import Hero from "@/components/Hero"
 
+import SectionTitle from '@/components/SectionTitle';
+import CTASection from "@/components/CTASection";
+import CertificacoesSection from "@/components/CertificadoSection";
+
+import logoFalchTrajetoria from "@/assets/images/logo-falch-800x600.png";
+import logoParkerTrajetoria from "@/assets/images/logo-parker-800x600.png";
 import videoSobre from '@/assets/images/video-sobre.mp4';
 import logoFalch from '@/assets/images/logo-falch-completo.svg'
 import logoParker from '@/assets/images/logo-parker-800x600.svg'
@@ -18,6 +23,7 @@ const Sobre = () => {
 
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const {t} = useTranslation();
 
   const handleLearnMore = (brandName) => {
     toast({
@@ -30,13 +36,13 @@ const Sobre = () => {
     {
       name: 'Parker Polyflex',
       image: logoParker,
-      description: 'A Parker-Hannifin é líder global em tecnologias de movimento e controle, fornecendo componentes essenciais para sistemas de hidrojateamento, como mangueiras, conexões e válvulas de alta pressão. Reconhecida pela qualidade e confiabilidade, a empresa possui forte atuação no Brasil, oferecendo soluções seguras e eficientes para aplicações industriais.',
+      description: t('sobre.subtitleParker'),
       specialties: ['Alta Pressão', 'Controle Preciso', 'Confiabilidade Industrial']
     },
     {
       name: 'Falch',
       image: logoFalch,
-      description: 'A Falch GmbH é uma fabricante alemã especializada em equipamentos de hidrojateamento e sistemas de alta pressão para aplicações industriais. Com mais de 40 anos de experiência, desenvolve soluções robustas e inovadoras, reconhecidas pela eficiência, durabilidade e alto desempenho em operações exigentes.',
+      description: t('sobre.subtitleFalch'),
       specialties: ['Performance Extrema', 'Tecnologia Avançada', 'Engenharia Alemã']
     }
   ];
@@ -44,37 +50,39 @@ const Sobre = () => {
   const values = [
     {
       icon: Award,
-      title: 'Qualidade',
-      description: 'Comprometimento com a excelência em todos os nossos produtos e serviços.'
+      title: t('sobre.titleQualidade'),
+      description: t('sobre.subtitleQualidade')
     },
     {
       icon: Lightbulb,
-      title: 'Inovação',
-      description: 'Busca constante por soluções tecnológicas avançadas e eficientes.'
+      title: t('sobre.titleInovacao'),
+      description: t('sobre.subtitleInovacao')
     },
     {
       icon: Shield,
-      title: 'Confiabilidade',
-      description: 'Parceiro de confiança para operações industriais críticas.'
+      title: t('sobre.titleConfiabilidade'),
+      description: t('sobre.subtitleConfiabilidade')
     },
     {
       icon: Leaf,
-      title: 'Sustentabilidade',
-      description: 'Práticas responsáveis que respeitam o meio ambiente.'
+      title: t('sobre.titleSustentabilidade'),
+      description: t('sobre.subtitleSustentabilidade')
     },
     {
       icon: Target,
-      title: 'Excelência',
-      description: 'Superação de expectativas em cada projeto e atendimento.'
+      title: t('sobre.titleExcelencia'),
+      description: t('sobre.subtitleExcelencia')
     }
   ];
 
   const timeline = [
-    { year: '2003', title: 'Fundação', description: 'Início das operações em São Paulo' },
-    { year: '2008', title: 'Expansão', description: 'Ampliação da linha de produtos' },
-    { year: '2013', title: 'Certificação ISO', description: 'Obtenção da certificação ISO 9001' },
-    { year: '2018', title: 'Novas Parcerias', description: 'Parcerias internacionais estabelecidas' },
-    { year: '2023', title: '20 Anos', description: 'Celebração de duas décadas de excelência' }
+    { year: '2003', title: t('sobre.subtitle2003'), description: t('sobre.text2003') },
+    { year: '2008', title: t('sobre.subtitle2008'), description: t('sobre.text2008') },
+    { year: '2013', title: t('sobre.subtitle2013'), description: t('sobre.text2013') },
+    { year: '2017', title: t('sobre.subtitle2017'), description: t('sobre.text2017') },
+    { year: '2019', title: t('sobre.subtitle2019'), description: t('sobre.text2019'), image:logoParkerTrajetoria },
+    { year: '2025', title: t('sobre.subtitle2025'), description: t('sobre.text2025'), image:logoFalchTrajetoria },
+    { year: '2026', title: t('sobre.subtitle2026'), description: t('sobre.text2026') }
   ];
 
   return (
@@ -92,9 +100,9 @@ const Sobre = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre a Mamuth</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('sobre.titleSobre')}</h1>
             <p className="text-lg md:text-2xl max-w-2xl mx-auto">
-              Mais de 20 anos de experiência em soluções industriais de alta pressão
+              {t('sobre.textSobre')}
             </p>
           </motion.div>
         </div>
@@ -115,10 +123,10 @@ const Sobre = () => {
                 <Target className="w-10 h-10 text-white" />
               </div>
               <h2 className="text-3xl font-bold mb-4" style={{ color: 'var(--color-dark-blue)' }}>
-                Nossa Missão
+                {t('sobre.titleMissao')}
               </h2>
               <p className="text-lg text-gray-600">
-                Fornecer soluções completas e inovadoras em equipamentos de alta pressão e serviços industriais, com qualidade excepcional, suporte técnico especializado e compromisso com a satisfação do cliente, contribuindo para o aumento da produtividade e eficiência operacional de nossos parceiros.
+                {t('sobre.textMissao')}
               </p>
             </motion.div>
             <motion.div
@@ -132,10 +140,10 @@ const Sobre = () => {
                 <Eye className="w-10 h-10 text-white" />
               </div>
               <h2 className="text-3xl font-bold mb-4" style={{ color: 'var(--color-dark-blue)' }}>
-                Nossa Visão
+                {t('sobre.titleVisao')}
               </h2>
               <p className="text-lg text-gray-600">
-                Ser reconhecida como a empresa líder em soluções de alta pressão no Brasil, referência em inovação, qualidade e atendimento, expandindo nossa atuação para novos mercados e consolidando parcerias estratégicas internacionais, sempre mantendo nosso compromisso com a excelência e sustentabilidade.
+                {t('sobre.textVisao')}
               </p>
             </motion.div>
           </div>
@@ -180,13 +188,11 @@ const Sobre = () => {
           className="text-3xl md:text-4xl font-bold mb-6" 
           style={{ color: 'var(--color-dark-blue)' }}
         >
-          Nossa Estrutura e Tecnologia
+          {t('sobre.titleEstrutura')}
         </h2>
         
         <p className="text-lg text-gray-600 leading-relaxed text-justify">
-          Com mais de duas décadas de atuação, a <strong>Mamuth</strong> é referência nacional em soluções de alta pressão. 
-          Unimos tradição e tecnologia de ponta para entregar equipamentos que garantem a máxima performance 
-          e segurança absoluta para as operações mais críticas da sua indústria.
+          {t('sobre.textEstrutura')}
         </p>
       </motion.div>
 
@@ -201,10 +207,10 @@ const Sobre = () => {
     
     <div className="text-center mb-12">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-        Nossos Valores
+       {t('sobre.titleValores')}
       </h2>
       <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-        Os princípios que guiam nossas ações e decisões diariamente
+        {t('sobre.subtitleValores')}
       </p>
     </div>
 
@@ -249,8 +255,8 @@ const Sobre = () => {
 <section id="parceirosmamuth" className="py-16 bg-gray-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <SectionTitle
-      title="Marcas Representadas"
-      subtitle="Selecionamos cuidadosamente cada parceiro para oferecer o melhor ao mercado brasileiro"
+      title= {t('sobre.titleMarcas')}
+      subtitle= {t('sobre.subtitleMarcas')}
     />
 
     <div className="flex flex-wrap justify-center gap-8">
@@ -266,7 +272,7 @@ const Sobre = () => {
             setSelectedBrand(brand);
             setIsOpen(true);
           }}
-          className="bg-white rounded-xl shadow-lg p-6 flex flex-col h-full 
+          className="bg-white rounded-xl shadow-lg p-6 flex flex-col h-auto
           w-full md:w-[48%] lg:w-[32%] cursor-pointer"
         >
           {/* Container do Logo - Mantive a cor de fundo laranja original */}
@@ -314,7 +320,7 @@ const Sobre = () => {
             className="font-semibold hover:underline inline-flex items-center"
             style={{ color: '#FF5101' }}
           >
-            Saiba Mais →
+            {t('sobre.btnMarcas')}
           </button>
         </motion.div>
       ))}
@@ -382,46 +388,77 @@ const Sobre = () => {
 
 
       {/* Timeline Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionTitle
-            title="Nossa Trajetória"
-            subtitle="Décadas de crescimento e inovação no setor industrial"
-          />
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 hidden md:block" style={{ backgroundColor: '#FF5101' }}></div>
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className={`flex flex-col md:flex-row items-center gap-6 ${
-                    index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                  }`}
-                >
-                  <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
-                    <div className="bg-white rounded-xl shadow-lg p-6">
+     <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionTitle
+          title={t('sobre.titleTrajetoria')}
+          subtitle={t('sobre.subtitleTrajetoria')}
+        />
+        
+        <div className="relative">
+          {/* Linha Central Vertical */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 hidden md:block" style={{ backgroundColor: '#FF5101' }}></div>
+          
+          <div className="space-y-12">
+            {timeline.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className={`flex flex-col md:flex-row items-center gap-6 ${
+                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                }`}
+              >
+                {/* CARD BRANCO */}
+                <div className="flex-1 w-full">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col sm:flex-row items-stretch min-h-[160px]">
+                    
+                    {/* 1. LADO DO TEXTO (Ocupa a maior parte: 3/4) */}
+                    <div className="p-6 flex-[3] flex flex-col justify-center">
                       <span className="text-2xl font-bold" style={{ color: '#FF5101' }}>
                         {item.year}
                       </span>
-                      <h3 className="text-xl font-bold mt-2 mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                      <h3 className="text-xl font-bold mt-1 mb-2" style={{ color: 'var(--color-dark-blue)' }}>
                         {item.title}
                       </h3>
-                      <p className="text-gray-600">{item.description}</p>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                        {item.description}
+                      </p>
                     </div>
+
+                    {/* 2. LADO DA IMAGEM (Reduzida para 1/4 da largura do card) */}
+                    {item.image && (
+                      <div className="sm:w-1/4 h-40 sm:h-auto shrink-0 bg-gray-50 flex items-center justify-center">
+                        <img 
+                          src={item.image} 
+                          alt={item.title} 
+                          className="w-24 h-auto object-cover"
+                          onContextMenu={(e) => e.preventDefault()}
+                          draggable="false"
+                        />
+                      </div>
+                    )}
+
                   </div>
-                  <div className="w-8 h-8 rounded-full flex-shrink-0 hidden md:block" style={{ backgroundColor: '#FF5101' }}></div>
-                  <div className="flex-1"></div>
-                </motion.div>
-              ))}
-            </div>
+                </div>
+
+                {/* Marcador da Linha (Bolinha) */}
+                <div className="w-8 h-8 rounded-full border-4 border-white shadow-md z-10 flex-shrink-0 hidden md:block" style={{ backgroundColor: '#FF5101' }}></div>
+
+                {/* Espaço vazio para manter o zigue-zague */}
+                <div className="flex-1 hidden md:block"></div>
+
+              </motion.div>
+            ))}
           </div>
         </div>
-      </section>
-      <CertificacoesSection />
+      </div>
+    </section>
+    <CTASection />      
+    <CertificacoesSection />
+    <WhatsappButton />
     </>
   );
 };

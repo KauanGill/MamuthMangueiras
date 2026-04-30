@@ -1,51 +1,60 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import ProductCard from '@/components/ProductCard'; // Certifique-se de que o caminho está correto
-import typhoonJet500 from '@/assets/images/lavadora-typhoon-jet-500bar.jpeg';
-import typhoonJet500Gasolina from '@/assets/images/typhoonjet-500bar-1200L.png';
-import typhoonJet170Monofasico from '@/assets/images/typhoonjet-170-bar-monofasico.png';
+import typhoonJet500 from '@/assets/images/typhoon-jet-todas-combustao-cp.png';
+import typhoon200 from '@/assets/images/typhoon-jet-200-trifasico-cp.png'
+import typhoonHot from '@/assets/images/typhoon-hot-eletrica-cp.png';
+import typhoonJet170Monofasico from '@/assets/images/typhoon-jet-170cv-eletrica-2-cp.png';
 import typhoonJetEletrica from '@/assets/images/typhoonjet-50cv-eletrica.png'
-import typhoonJetDiesel from '@/assets/images/typhoonjet-50cv-diesel.jpg'
 import path from 'node:path';
+import { t } from 'i18next';
 
 const PaginaCategoria = () => {
-  // Dados simulados para o "Produto 1"
-  // Você pode repetir este objeto ou criar um array com variações
+  const {t} = useTranslation();
   const produtosDaCategoria = [
     {
-      name: 'Typhoon-Jet 500 BAR (7251 PSI)',
+      name: t('categorias.lavadoras.title50cv'),
+      path: '/lavadoras/typhoon-jet-50cv-eletrica',
+      description: t('categorias.lavadoras.subtitle50cv'),
+      image: typhoonJetEletrica, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.lavadoras.title500'),
       path: '/lavadoras/typhoon-jet-500-trifasico',
-      description: 'O Typhoon-Jet 500 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas realmente muito pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 500 bar, uma vazão de 20 L/min e uma potência de 20 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.',
+      description: t('categorias.lavadoras.subtitle500'),
       image: typhoonJet500, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Typhoon-Jet 350 BAR (5076 PSI)',
+      name: t('categorias.lavadoras.title350'),
       path: '/lavadoras/typhoon-jet-350-trifasico',
-      description: 'O Typhoon-Jet 350 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 350 bar, uma vazão de 17 L/min e uma potência de 15 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.',
-      image: typhoonJet500, 
+      description: t('categorias.lavadoras.subtitle350'),
+      image: typhoon200, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Typhoon-Jet 200 BAR (2900 PSI)',
+      name: t('categorias.lavadoras.title200'),
       path: '/lavadoras/typhoon-jet-200-trifasico',
-      description: 'O Typhoon-Jet 200 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas pesadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 200 bar, uma vazão de 45 L/min e uma potência de 20 cv, este equipamento garante resultados superiores em qualquer desafio de limpeza.',
+      description: t('categorias.lavadoras.subtitle200'),
       image: typhoonJet500, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Typhoon-Jet 170 BAR (2465 PSI)',
+      name: t('categorias.lavadoras.title170'),
       path: '/lavadoras/typhoon-jet-170-monofasico',
-      description: 'O Typhoon-Jet 170 é um equipamento de alta pressão projetado para oferecer desempenho excepcional em limpezas moderadas em ambientes industriais, agrícolas e comerciais. Com uma pressão de 170 bar (2465 PSI), uma vazão de 12 L/min (720 L/h) e uma potência de 5 cv, este equipamento garante resultados eficazes em desafios de limpeza de intensidade moderada.',
+      description: t('categorias.lavadoras.subtitle170'),
       image: typhoonJet170Monofasico, 
       category: 'Categoria Principal'
     },
+    
     {
-      name: 'Typhoon-Jet 50cv',
-      path: '/lavadoras/typhoon-jet-50cv-eletrica',
-      description: 'As hidrojateadoras Typhoon-Jet são ideais para trabalhos que são exclusivos e rápidos. Equipadas com um motor elétrico trifásico, elas oferecem potência e eficiência na limpeza de superfícies difíceis. A sua construção robusta e componentes de alta qualidade garantem durabilidade e desempenho consistente, mesmo nas condições mais exigentes, enquanto o seu design permite fácil movimentação e posicionamento em diferentes ambientes.',
-      image: typhoonJetEletrica, 
+      name: t('categorias.lavadoras.titleHot'),
+      path: '/lavadoras/typhoon-hot',
+      description: t('categorias.lavadoras.subtitleHot'),
+      image: typhoonHot, 
       category: 'Categoria Principal'
     },
   ];
@@ -58,7 +67,7 @@ const PaginaCategoria = () => {
   return (
     <>
       <Helmet>
-        <title>Lavadoras de Alta Pressão - Mamuth Mangueiras</title>
+        <title>Hidrolavadoras de Alta Pressão - Mamuth Mangueiras</title>
       </Helmet>
 
       {/* Hero Section - Mesmo estilo da página de Linhas de Produtos */}
@@ -70,7 +79,7 @@ const PaginaCategoria = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight"
             >
-              Lavadoras de Alta Pressão
+              {t('produtos.titleLavadoras')}
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
@@ -78,7 +87,7 @@ const PaginaCategoria = () => {
               transition={{ delay: 0.2 }}
               className="text-lg text-gray-300 max-w-2xl mx-auto"
             >
-              Soluções robustas e tecnologia de ponta para sua operação industrial.
+             {t('categorias.lavadoras.subtitle')}
             </motion.p>
           </div>
 

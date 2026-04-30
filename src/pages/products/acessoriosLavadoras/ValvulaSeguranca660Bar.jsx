@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 import AppleCoverFlow from "@/components/AppleCoverFlow";
+import CTASection from "@/components/CTASection";
 
 // Import da imagem
 import valvulaReguladora200bar from '@/assets/images/valvula-reguladora-200bar.png';
@@ -11,9 +12,9 @@ import valvulaReguladora200bar from '@/assets/images/valvula-reguladora-200bar.p
 const ValvulaSeguranca660 = () => {
   const navigate = useNavigate();
   const slides = [
-        { id: 1, title: 'Válvula Reguladora 200 bar Alta Vazão', artist: 'Trifásico', cover: valvulaReguladora200bar, color: '#FF5101' },
-        { id: 2, title: 'Válvula Reguladora 200 bar Alta Vazão', artist: 'Vista lateral', cover: valvulaReguladora200bar, color: '#FF5101' },
-        { id: 3, title: 'Válvula Reguladora 200 bar Alta Vazão', artist: 'Detalhes', cover: valvulaReguladora200bar, color: '#FF5101' }
+        { id: 1, title: 'Válvula Reguladora 600 bar Alta Vazão', artist: 'Trifásico', cover: valvulaReguladora200bar, color: '#FF5101' },
+        { id: 2, title: 'Válvula Reguladora 600 bar Alta Vazão', artist: 'Vista lateral', cover: valvulaReguladora200bar, color: '#FF5101' },
+        { id: 3, title: 'Válvula Reguladora 600 bar Alta Vazão', artist: 'Detalhes', cover: valvulaReguladora200bar, color: '#FF5101' }
   ];
 
   // Garante que a página inicie no topo
@@ -24,7 +25,7 @@ const ValvulaSeguranca660 = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white w-full">
       <Helmet>
-        <title>Válvula Reguladora 200 bar Alta Vazão - Mamuth</title>
+        <title>Válvula Reguladora 600 bar Alta Vazão - Mamuth</title>
       </Helmet>
 
       {/* SEÇÃO SUPERIOR: AZUL ESCURO - TUDO CENTRALIZADO */}
@@ -44,7 +45,7 @@ const ValvulaSeguranca660 = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Válvula Reguladora 200 bar Alta Vazão
+            Válvula Reguladora 600 bar Alta Vazão
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
@@ -105,37 +106,9 @@ const ValvulaSeguranca660 = () => {
       </section>
 
       {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div 
-            className="rounded-[30px] p-8 md:p-12 border-2 shadow-2xl"
-            style={{ backgroundColor: '#d3d3d3', borderColor: '#FF6B0A' }}
-          >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              <div 
-                className="flex-shrink-0 w-16 h-16 rounded-full border-4 flex items-center justify-center text-4xl font-black"
-                style={{ color: '#FF6B0A', borderColor: '#FF6B0A' }}
-              >
-                !
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-black text-3xl font-bold mb-6">Atenção</h3>
-                <p className="text-black text-xl leading-relaxed mb-8">
-                  Para garantir a segurança e o desempenho ideal, utilize sempre 
-                  <span style={{ color: '#FF6B0A' }} className="font-bold"> Peças e Acessórios Originais Mamuth</span>.
-                </p>
-                <button
-                  onClick={() => navigate('/contato')}
-                  className="px-10 py-4 rounded-full font-bold text-black text-lg transition-all hover:scale-105"
-                  style={{ backgroundColor: '#FF6B0A' }}
-                >
-                  Fale Conosco
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className='pt-14'>
+        <CTASection />
+      </div>
     </div>
   );
 };

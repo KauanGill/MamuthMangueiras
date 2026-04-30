@@ -3,11 +3,21 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import CTASection from "@/components/CTASection";
+import AppleCoverFlow from "@/components/AppleCoverFlow";
+
 // Import da imagem
-import bicoSharkJet22K from '@/assets/images/bico-shark-jet-22k-40k.png';
+import bicoSharkJet from '@/assets/images/bico-shark-jet-22k-40k.png';
+import bicoSharkJet22k from '@/assets/images/bico-shark-jet.png';
+import bicoSharkJet40k from '@/assets/images/bico-shark-jet-40k.png'
 
 const BicoShark22K = () => {
   const navigate = useNavigate();
+  const slides = [
+          { id: 1, title: 'Bico Shark-Jet 22K',  cover: bicoSharkJet22k, color: '#FF5101' },
+          { id: 2, title: 'Bico Shark-Jet',  cover: bicoSharkJet, color: '#FF5101' },
+          { id: 3, title: 'Bico Shark-Jet 40K',  cover: bicoSharkJet40k, color: '#FF5101' }
+  ];
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -25,29 +35,8 @@ const BicoShark22K = () => {
         className="relative pt-10 pb-20 px-4 w-full" 
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-         Bico Shark-Jet 22K e 40K
-          </motion.h1>
-
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="relative inline-block bg-white p-2 rounded-[30px] shadow-2xl"
-          >
-            <img 
-              src={bicoSharkJet22K} 
-              alt="Typhoon Jet 500" 
-              className="mx-auto max-w-full h-auto md:max-h-[400px] rounded-[25px] block"
-            />
-          </motion.div>
+        <div className="max-w-[1400px] mx-auto">
+          <AppleCoverFlow slides={slides} />
         </div>
       </section>
 
@@ -58,7 +47,7 @@ const BicoShark22K = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Bico Shark-Jet 22K e 40K
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
             O Shark-Jet 22K e 40K é uma ferramenta rotativa auto-propulsora indicada para jateamento, limpeza 
@@ -121,49 +110,13 @@ const BicoShark22K = () => {
                   </tr>
                 ))}
               </tbody>
-</table>
-          </div>
-
-          <style dangerouslySetInnerHTML={{ __html: `
-            .custom-scrollbar::-webkit-scrollbar { height: 8px; }
-            .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-            .custom-scrollbar::-webkit-scrollbar-thumb { background: #FF6B0A; border-radius: 10px; }
-          `}} />
-        </div>
-      </section>
-
-      {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div 
-            className="rounded-[30px] p-8 md:p-12 border-2 shadow-2xl"
-            style={{ backgroundColor: '#d3d3d3', borderColor: '#FF6B0A' }}
-          >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              <div 
-                className="flex-shrink-0 w-16 h-16 rounded-full border-4 flex items-center justify-center text-4xl font-black"
-                style={{ color: '#FF6B0A', borderColor: '#FF6B0A' }}
-              >
-                !
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-black text-3xl font-bold mb-6">Atenção</h3>
-                <p className="text-black text-xl leading-relaxed mb-8">
-                  Para garantir a segurança e o desempenho ideal, utilize sempre 
-                  <span style={{ color: '#FF6B0A' }} className="font-bold"> Peças e Acessórios Originais Mamuth</span>.
-                </p>
-                <button
-                  onClick={() => navigate('/contato')}
-                  className="px-10 py-4 rounded-full font-bold text-black text-lg transition-all hover:scale-105"
-                  style={{ backgroundColor: '#FF6B0A' }}
-                >
-                  Fale Conosco
-                </button>
-              </div>
-            </div>
+            </table>
           </div>
         </div>
       </section>
+      <div className='pt-14'>
+        <CTASection />
+      </div>
     </div>
   );
 };

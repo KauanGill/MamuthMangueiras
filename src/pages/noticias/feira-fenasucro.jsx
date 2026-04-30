@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { color, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ import imgFeira from '@/assets/images/feira-fenasucro.jpg'
 
 const FeiraFenasucro = () => {
   const navigate = useNavigate();
+  const {t} = useTranslation();
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -33,7 +35,7 @@ const FeiraFenasucro = () => {
             className="text-white text-4xl md:text-6xl font-bold mb-12 tracking-tight leading-loose" 
             style={{ lineHeight: '1.4' }}
           >
-            Feira Fenasucro
+            {t('fenasucro.title')}
           </motion.h1>
 
           <motion.div 
@@ -58,14 +60,14 @@ const FeiraFenasucro = () => {
             className="text-5xl md:text-5xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            5 Anos Fazendo Parte da Maior Feira de Bioenergia do Mundo.
+            {t('fenasucro.subtitle')}
           </h2>
 
           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-           A Fenasucro & Agrocana é reconhecida como a maior feira mundial voltada à cadeia produtiva da bioenergia, reunindo empresas, especialistas e lideranças do setor sucroenergético para apresentar inovações, tecnologias e soluções voltadas à eficiência industrial e à sustentabilidade. Realizada anualmente em Sertãozinho, no interior de São Paulo, a feira se consolidou como um dos principais pontos de encontro do mercado de bioenergia, biocombustíveis e energias renováveis, promovendo networking estratégico, geração de negócios e debates técnicos de alto nível.
+           {t('fenasucro.texto1')}
           </p>
           <p className="text-2xl text-gray-600 leading-relaxed mb-10 text-left">
-          A Mamuth participa da Fenasucro há mais de cinco anos consecutivos, reforçando seu compromisso com inovação, qualidade e presença ativa no desenvolvimento do setor. Ao longo dessas edições, a empresa tem apresentado suas soluções e tecnologias voltadas para alta performance operacional, fortalecendo parcerias, ampliando sua visibilidade no mercado e acompanhando de perto as tendências que impulsionam a indústria. Essa presença constante demonstra o posicionamento sólido da Mamuth como referência técnica e parceira estratégica para o setor sucroenergético.
+          {t('fenasucro.texto2')}
           </p>
         </div>
       </section>

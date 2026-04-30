@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 import AppleCoverFlow from "@/components/AppleCoverFlow";
+import CTASection from "@/components/CTASection";
 
 // Import da imagem
 import pistola280bar from '@/assets/images/pistola-280bar.png';
@@ -15,6 +16,7 @@ const Pistola280bar = () => {
         { id: 2, title: 'Pistola 280 Bar', artist: 'Vista lateral', cover: pistola280bar, color: '#FF5101' },
         { id: 3, title: 'Pistola 280 Bar', artist: 'Detalhes', cover: pistola280bar, color: '#FF5101' }
   ];
+  
 
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -55,81 +57,53 @@ const Pistola280bar = () => {
 
       {/* SEÇÃO DE TABELA: CINZA CLARO COM CARD ARREDONDADO */}
       <section className="py-1 px-4 bg-white">
-  <div className="max-w-4xl mx-auto text-center p-4 md:p-8 rounded-[30px] shadow-sm" style={{backgroundColor:'#d3d3d3'}}>
-    
-    <div className="flex flex-col items-center mb-10">
-      <div 
-        className="w-10 h-10 rounded-full flex items-center justify-center mb-4 font-bold text-white shadow-lg"
-        style={{ backgroundColor: '#FF6B0A' }}
-      >
-        i
-      </div>
-      <h2 className="text-gray-800 text-2xl md:text-4xl font-bold">
-        Veja mais informações técnicas sobre este produto:
-      </h2>
-    </div>
-
-    {/* Removemos o overflow-x-auto para evitar o scroll e usamos w-full */}
-    <div className="w-full">
-      <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
-        <thead>
-          <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-            {/* px-2 e text-sm/base para garantir que caiba em telas menores */}
-            <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Modelo</th>
-            <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Pressão MAX (bar)</th>
-            <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Vazão (L/min)</th>
-            <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Conexão Entrada</th>
-            <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Peso (kg)</th>
-            <th className="py-4 px-2 font-bold text-xs md:text-lg">Comprimento</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="bg-white text-gray-800 border-b border-gray-200">
-            <td className="py-6 px-2 border-r border-gray-200 font-bold text-xs md:text-xl">Pistola 280 Bar</td>
-            <td className="py-6 px-2 border-r border-gray-200 text-xs md:text-xl">280</td>
-            <td className="py-6 px-2 border-r border-gray-200 text-xs md:text-xl">42</td>
-            <td className="py-6 px-2 border-r border-gray-200 text-xs md:text-xl">M22x1,5</td>
-            <td className="py-6 px-2 border-r border-gray-200 text-xs md:text-xl">0,9</td>
-            <td className="py-6 px-2 text-xs md:text-xl">1200mm</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-      {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div 
-            className="rounded-[30px] p-8 md:p-12 border-2 shadow-2xl"
-            style={{ backgroundColor: '#d3d3d3', borderColor: '#FF6B0A' }}
-          >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              <div 
-                className="flex-shrink-0 w-16 h-16 rounded-full border-4 flex items-center justify-center text-4xl font-black"
-                style={{ color: '#FF6B0A', borderColor: '#FF6B0A' }}
-              >
-                !
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-black text-3xl font-bold mb-6">Atenção</h3>
-                <p className="text-black text-xl leading-relaxed mb-8">
-                  Para garantir a segurança e o desempenho ideal, utilize sempre 
-                  <span style={{ color: '#FF6B0A' }} className="font-bold"> Peças e Acessórios Originais Mamuth</span>.
-                </p>
-                <button
-                  onClick={() => navigate('/contato')}
-                  className="px-10 py-4 rounded-full font-bold text-black text-lg transition-all hover:scale-105"
-                  style={{ backgroundColor: '#FF6B0A' }}
-                >
-                  Fale Conosco
-                </button>
-              </div>
+        <div className="max-w-4xl mx-auto text-center p-4 md:p-8 rounded-[30px] shadow-sm" style={{backgroundColor:'#d3d3d3'}}>
+          
+          <div className="flex flex-col items-center mb-10">
+            <div 
+              className="w-10 h-10 rounded-full flex items-center justify-center mb-4 font-bold text-white shadow-lg"
+              style={{ backgroundColor: '#FF6B0A' }}
+            >
+              i
             </div>
+            <h2 className="text-gray-800 text-2xl md:text-4xl font-bold">
+              Veja mais informações técnicas sobre este produto:
+            </h2>
+          </div>
+
+          {/* Removemos o overflow-x-auto para evitar o scroll e usamos w-full */}
+          <div className="w-full">
+            <table className="w-full border-collapse rounded-xl overflow-hidden shadow-md">
+              <thead>
+                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                  {/* px-2 e text-sm/base para garantir que caiba em telas menores */}
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Modelo</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Pressão MAX (bar)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Vazão (L/min)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Conexão Entrada</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold text-xs md:text-lg">Peso (kg)</th>
+                  <th className="py-4 px-2 font-bold text-xs md:text-lg">Comprimento</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white text-gray-800 border-b border-gray-200">
+                  <td className="py-6 px-2 border-r border-gray-200 font-bold text-xs md:text-xl">Pistola 280 Bar</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-xs md:text-xl">280</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-xs md:text-xl">42</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-xs md:text-xl">M22x1,5</td>
+                  <td className="py-6 px-2 border-r border-gray-200 text-xs md:text-xl">0,9</td>
+                  <td className="py-6 px-2 text-xs md:text-xl">1200mm</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
+
+      {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
+      <div className='pt-14'>
+        <CTASection />
+      </div>
     </div>
   );
 };

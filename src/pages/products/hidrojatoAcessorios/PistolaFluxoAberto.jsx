@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 import AppleCoverFlow from "@/components/AppleCoverFlow";
+import CTASection from "@/components/CTASection";
 
 // Import da imagem
 import pistolaFluxoAbertoMTFA from '@/assets/images/pistola-fluxo-aberto-mtfa.png';
@@ -11,9 +12,9 @@ import pistolaFluxoAbertoMTFA from '@/assets/images/pistola-fluxo-aberto-mtfa.pn
 const PistolaFluxoAberto = () => {
   const navigate = useNavigate();
   const slides = [
-      { id: 1, title: 'Pistola Fluxo Aberto MTFA', artist: 'Trifásico', cover: pistolaFluxoAbertoMTFA, color: '#FF5101' },
-      { id: 2, title: 'Pistola Fluxo Aberto MTFA', artist: 'Vista lateral', cover: pistolaFluxoAbertoMTFA, color: '#FF5101' },
-      { id: 3, title: 'Pistola Fluxo Aberto MTFA', artist: 'Detalhes', cover: pistolaFluxoAbertoMTFA, color: '#FF5101' }
+      { id: 1, title: 'Pistola Fluxo Aberto MTFA',  cover: pistolaFluxoAbertoMTFA, color: '#FF5101' },
+      { id: 2, title: 'Pistola Fluxo Aberto MTFA',  cover: pistolaFluxoAbertoMTFA, color: '#FF5101' },
+      { id: 3, title: 'Pistola Fluxo Aberto MTFA',  cover: pistolaFluxoAbertoMTFA, color: '#FF5101' }
     ];
 
   // Garante que a página inicie no topo
@@ -87,29 +88,29 @@ const PistolaFluxoAberto = () => {
           </div>
 
           <div className="w-full overflow-hidden rounded-xl shadow-md">
-  <table className="w-full border-collapse table-fixed bg-white">
-    <thead>
-      <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[22%] uppercase">Modelo</th>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[13%] uppercase">Código</th>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%] uppercase">Pressão (bar)</th>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[10%] uppercase">Peso (kg)</th>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[25%] uppercase">Entrada</th>
-        <th className="py-6 px-1 font-bold text-sm md:text-base text-center w-[15%] uppercase">Comp. Total</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr className="text-gray-800 border-b border-gray-200">
-        <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center font-bold">Pistola MTFA 1400BAR</td>
-        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">1001.4005</td>
-        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center">1.400</td>
-        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center">4,2</td>
-        <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-base text-center">Engate ER - 12 M22 PL</td>
-        <td className="py-8 px-1 text-sm md:text-lg text-center whitespace-nowrap">1200mm</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+            <table className="w-full border-collapse table-fixed bg-white">
+              <thead>
+                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[22%] uppercase">Modelo</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[13%] uppercase">Código</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[15%] uppercase">Pressão (bar)</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[10%] uppercase">Peso (kg)</th>
+                  <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base text-center w-[25%] uppercase">Entrada</th>
+                  <th className="py-6 px-1 font-bold text-sm md:text-base text-center w-[15%] uppercase">Comp. Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="text-gray-800 border-b border-gray-200">
+                  <td className="py-8 px-2 border-r border-gray-200 text-sm md:text-lg text-center font-bold">Pistola MTFA 1400BAR</td>
+                  <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center whitespace-nowrap">1001.4005</td>
+                  <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center">1.400</td>
+                  <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-lg text-center">4,2</td>
+                  <td className="py-8 px-1 border-r border-gray-200 text-sm md:text-base text-center">Engate ER - 12 M22 PL</td>
+                  <td className="py-8 px-1 text-sm md:text-lg text-center whitespace-nowrap">1200mm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <style dangerouslySetInnerHTML={{ __html: `
             .custom-scrollbar::-webkit-scrollbar { height: 8px; }
@@ -120,37 +121,9 @@ const PistolaFluxoAberto = () => {
       </section>
 
       {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div 
-            className="rounded-[30px] p-8 md:p-12 border-2 shadow-2xl"
-            style={{ backgroundColor: '#d3d3d3', borderColor: '#FF6B0A' }}
-          >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              <div 
-                className="flex-shrink-0 w-16 h-16 rounded-full border-4 flex items-center justify-center text-4xl font-black"
-                style={{ color: '#FF6B0A', borderColor: '#FF6B0A' }}
-              >
-                !
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-black text-3xl font-bold mb-6">Atenção</h3>
-                <p className="text-black text-xl leading-relaxed mb-8">
-                  Para garantir a segurança e o desempenho ideal, utilize sempre 
-                  <span style={{ color: '#FF6B0A' }} className="font-bold"> Peças e Acessórios Originais Mamuth</span>.
-                </p>
-                <button
-                  onClick={() => navigate('/contato')}
-                  className="px-10 py-4 rounded-full font-bold text-black text-lg transition-all hover:scale-105"
-                  style={{ backgroundColor: '#FF6B0A' }}
-                >
-                  Fale Conosco
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className='pt-14'>
+        <CTASection />
+      </div>
     </div>
   );
 };

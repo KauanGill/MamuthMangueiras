@@ -1,97 +1,101 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import ProductCard from '@/components/ProductCard'; // Certifique-se de que o caminho está correto
 import poliamidaSap1500 from '@/assets/images/poliamida-sap-ate1500.png';
 import poliamidaUap2800 from '@/assets/images/mangueiras-conexoes.jpg';
-import niplesM24DKO from '@/assets/images/niples-m24dko-1.png';
+import niplesM24DKO from '@/assets/images/niples-m24dko-cp-produtos.png';
 import niplesAdaptador from '@/assets/images/niples-adaptador-hp9-16.png';
-import mangueiraWaterblast from '@/assets/images/mangueira-waterblast.jpg';
+import mangueiraWaterblast from '@/assets/images/mangueira-waterblast-cp.png';
 import mangueira10kPsi from '@/assets/images/mangueira-10000psi.png';
 import luvasUniao from '@/assets/images/luvas-de-uniao.png';
 import luvasEmendaUap from '@/assets/images/luvas-emenda-uap.png';
 import engatesRapidos from '@/assets/images/engates-rapidos.png';
-import distribuidoresUap from '@/assets/images/distribuidores-uap-em-y.png';
-import distribuidorFluxo from '@/assets/images/distribuidores-fluxo-sap.png'
+import distribuidoresUap from '@/assets/images/distribuidores-uap-y-t-90-cp.png';
+import distribuidorFluxo from '@/assets/images/distribuidores-fluxo-sap-cp.png'
 import path from 'path';
 
 const PaginaCategoria = () => {
+  const {t} = useTranslation();
   // Dados simulados para o "Produto 1"
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'Poliamida SAP até 1.500 bar',
+      name: t('categorias.mangueiras.titlePoliamida2800'),
+      path: '/mangueiras-conexoes/poliamida-uap-2800bar',
+      description: t('categorias.mangueiras.subtitlePoliamida2800'),
+      image: poliamidaUap2800, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.mangueiras.titlePoliamida1500'),
       path: '/mangueiras-conexoes/poliamida-sap-1500bar',
-      description: 'APLICAÇÃO Utilizadas em sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento. São também conhecidas popularmente como “rabichos” ou “lanças flexíveis”',
+      description: t('categorias.mangueiras.subtitlePoliamida1500'),
       image: poliamidaSap1500, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Poliamida UAP até 2.800 bar',
-      path: '/mangueiras-conexoes/poliamida-uap-2800bar',
-      description: 'APLICAÇÃO Utilizadas em sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento. São também conhecidas popularmente como “rabichos” ou “lanças flexíveis”',
-      image: poliamidaUap2800, 
+      name: t('categorias.mangueiras.titleWaterblast'),
+      path:'/mangueiras-conexoes/mangueira-waterblast',
+      description: t('categorias.mangueiras.subtitleWaterblast'),
+      image: mangueiraWaterblast, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.mangueiras.titleMangueira10k'),
+      path: '/mangueiras-conexoes/mangueira-ate-10000psi',
+      description: t('categorias.mangueiras.subtitleMangueira10k'),
+      image: mangueira10kPsi, 
       category: 'Categoria Principal'
     },
     {
       name: 'Niples M24DKO-1',
       path: '/mangueiras-conexoes/niples-m24dko1',
-      description: 'Conexões, Uniões, Adaptadores e Engates, são itens necessários para unir, acoplar e adaptar mangueiras e acessórios. A MAMUTH possui uma linha completa destes itens para atender todas as necessidades. Também atendemos solicitações e fabricamos itens sob medida e encomenda. Nosso portfólio de divide em duas linhas, a limitada até 1500 BAR e a que pode ser utilizada em pressões de até 2800 Bar todos esses itens são fabricados em aço inoxidável de alta performance.',
+      description: t('categorias.mangueiras.subtitleNiples'),
       image: niplesM24DKO, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Niples (Adaptador HP 9-16 HP X 9-16 JIC-1)',
+      name: t('categorias.mangueiras.titleNiplesAdap'),
       path: '/mangueiras-conexoes/niples-adaptador-hp-9-16',
-      description: 'Conexões, Uniões, Adaptadores e Engates, são itens necessários para unir, acoplar e adaptar mangueiras e acessórios. A MAMUTH possui uma linha completa destes itens para atender todas as necessidades. Também atendemos solicitações e fabricamos itens sob medida e encomenda. Nosso portfólio de divide em duas linhas, a limitada até 1500 BAR e a que pode ser utilizada em pressões de até 2800 Bar todos esses itens são fabricados em aço inoxidável de alta performance.',
+      description: t('categorias.mangueiras.subtitleNiplesAdap'),
       image: niplesAdaptador, 
       category: 'Categoria Principal'
-    },{
-      name: 'Mangueira Waterblast para Hidrojateamento',
-      path:'/mangueiras-conexoes/mangueira-waterblast',
-      description: 'Recomendadas para sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento; Tubo interno fabricado em borracha sintética resistente a água envolta por espirais trançadas de fio de aço, coberta com uma camada de borracha sintética resistente ao ozônio, intempéries e calor;',
-      image: mangueiraWaterblast, 
-      category: 'Categoria Principal'
     },
+    
     {
-      name: 'Mangueira até 10.000 psi',
-      path: '/mangueiras-conexoes/mangueira-ate-10000psi',
-      description: 'Recomendadas para sistemas de limpeza, desobstrução, remoção de resíduos e preparação de superfícies com o uso de Hidrojateamento; Tubo interno fabricado em borracha sintética resistente a água envolta por espirais trançadas de fio de aço, coberta com uma camada de borracha sintética resistente ao ozônio, intempéries e calor;',
-      image: mangueira10kPsi, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Luvas de União',
+      name: t('categorias.mangueiras.titleLuvasUniao'),
       path: '/mangueiras-conexoes/luvas-de-uniao',
-      description: 'Conexões indicadas para bombas, mangueiras e acessórios de hidrojateamento com pressão de até 1.500 bar (22.000 psi)',
+      description: t('categorias.mangueiras.subtitleLuvasUniao'),
       image: luvasUniao, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Luvas de Emenda UAP até 3.200bar',
+      name: t('categorias.mangueiras.titleLuvasEmenda'),
       path: '/mangueiras-conexoes/luvas-de-emenda-uap',
-      description: 'Conexões indicadas para bombas, mangueiras, varetas e acessórios de hidrojateamento com pressão de até 3.200 bar (46.400 psi)',
+      description: t('categorias.mangueiras.subtitleLuvasEmenda'),
       image: luvasEmendaUap, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Engates Rápidos',
+      name: t('categorias.mangueiras.titleEngates'),
       path: '/mangueiras-conexoes/engates-rapidos',
-      description: 'Os Engates Rápido modelos ER12 e ER20 são indicados para unir mangueiras de forma prática e segura. Estes engates possuem uma porca roscada que rosqueiam e engatam os lados macho e fêmea não havendo a necessidade da utilização de uma chave para torquear, somente o aperto manual.',
+      description: t('categorias.mangueiras.subtitleEngates'),
       image: engatesRapidos, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Distribuidores UAP em Y, T e cotovelo 90°',
+      name: t('categorias.mangueiras.titleLuvasDistribuidorUAP'),
       path: '/mangueiras-conexoes/distribuidores-uap-y-t-90°',
-      description: 'Distribuidores são usados para dividir o fluxo de água e multiplicar ou número de mangueiras a serem utilizadas em Ultra Alta Pressão.',
+      description: t('categorias.mangueiras.subtitleLuvasDistribuidorUAP'),
       image: distribuidoresUap, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Distribuidores de Fluxo SAP',
+      name: t('categorias.mangueiras.titleDistribuidorSAP'),
       path: '/mangueiras-conexoes/distribuidores-fluxo-sap',
-      description: 'Distribuidores são utilizados para dividir o fluxo de água e multiplicar o número de mangueiras a serem utilizadas, permitindo que múltiplas operações ocorram simultaneamente. Com esses dispositivos, é possível otimizar o uso de recursos hídricos, direcionando a água para diferentes pontos de aplicação de forma eficiente e controlada. Além disso, os distribuidores garantem uma distribuição uniforme do fluxo, essencial para a manutenção da pressão adequada em todas as saídas, o que resulta em maior produtividade e detalhes nas operações.',
+      description: t('categorias.mangueiras.subtitleDistribuidorSAP'),
       image: distribuidorFluxo, 
       category: 'Categoria Principal'
     },
@@ -118,7 +122,7 @@ const PaginaCategoria = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight"
             >
-              Mangueiras e Conexões
+              {t('produtos.titleMangueiras')}
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
@@ -126,7 +130,7 @@ const PaginaCategoria = () => {
               transition={{ delay: 0.2 }}
               className="text-lg text-gray-300 max-w-2xl mx-auto"
             >
-              Soluções robustas e tecnologia de ponta para sua operação industrial.
+              {t('categorias.mangueiras.subtitle')}
             </motion.p>
           </div>
 

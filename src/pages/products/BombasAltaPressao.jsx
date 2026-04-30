@@ -1,60 +1,87 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import ProductCard from '@/components/ProductCard'; // Certifique-se de que o caminho está correto
 import bombaMTI600 from '@/assets/images/bomba-mti600.png';
 import bombaMTI50FF from '@/assets/images/bomba-mti-50ff.png';
 import bombaMTI500 from '@/assets/images/bomba-mti500.png';
 import bombaMTI350 from '@/assets/images/bombas-altapressao.png';
-import bombaMTI250 from '@/assets/images/bomba-mti250.png';
+import bombaMTI250 from '@/assets/images/bomba-mti-250.png';
+import BombaFalch125 from '@/assets/images/falch-pump-150.png';
+import BombaFalch250 from '@/assets/images/falch-pump-250.png';
+import BombaFalch500 from '@/assets/images/falch-pump-500-cp-produtos.png';
 import path from 'node:path';
+import { t } from 'i18next';
 
 const PaginaCategoria = () => {
+  const {t} = useTranslation();
   // Dados simulados para o "Produto 1"
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'MTI-600',
+      name: t('categorias.bombas.titlePump125'),
+      path: '/bombas-de-alta-pressao/bomba-falch-pump-125kw',
+      description: t('categorias.bombas.subtitlePump125'),
+      image: BombaFalch125, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.bombas.titlePump250'),
+      path: '/bombas-de-alta-pressao/bomba-falch-pump-250kw',
+      description: t('categorias.bombas.subtitlePump250'),
+      image: BombaFalch250, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.bombas.titlePump500'),
+      path: '/bombas-de-alta-pressao/bomba-falch-pump-500kw',
+      description: t('categorias.bombas.subtitlePump500'),
+      image: BombaFalch500, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.bombas.title600'),
       path: '/bombas-de-alta-pressao/bomba-mti-600',
-      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 600 bar e vazão de até 35L/min.',
+      description: t('categorias.bombas.subtitle600'),
       image: bombaMTI600, 
       category: 'Categoria Principal'
     },
     {
-      name: 'MTI-50FF',
-      path: '/bombas-de-alta-pressao/bomba-mti-50ff',
-      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 160 bar e vazão de até 150L/min.',
-      image: bombaMTI50FF, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'MTI-500',
+      name: t('categorias.bombas.title500'),
       path: '/bombas-de-alta-pressao/bomba-mti-500',
-      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostáticos com pressão de 500 bar e vazão de 20L/min.',
+      description: t('categorias.bombas.subtitle500'),
       image: bombaMTI500, 
       category: 'Categoria Principal'
     },
     {
-      name: 'MTI-350',
+      name: t('categorias.bombas.title350'),
       path: '/bombas-de-alta-pressao/bomba-mti-350',
-      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostáticos com pressão de 350 bar e vazão de 19L/min.',
+      description: t('categorias.bombas.subtitle350'),
       image: bombaMTI350, 
       category: 'Categoria Principal'
-    },{
-      name: 'MTI-250',
+    },
+    {
+      name: t('categorias.bombas.title250'),
       path: '/bombas-de-alta-pressao/bomba-mti-250',
-      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostáticos com pressão de 250 bar e vazão de 17L/min.',
+      description: t('categorias.bombas.subtitle250'),
       image: bombaMTI250, 
       category: 'Categoria Principal'
     },
     {
-      name: 'MTI-200',
+      name: t('categorias.bombas.title200'),
       path: '/bombas-de-alta-pressao/bomba-mti-200',
-      description: 'Bomba Tríplex para hidrolavadoras ou testes hidrostaticos com pressão de 200 bar e vazão de 45L/min.',
+      description: t('categorias.bombas.subtitle200'),
       image: bombaMTI350, 
       category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.bombas.title50ff'),
+      path: '/bombas-de-alta-pressao/bomba-mti-50ff',
+      description: t('categorias.bombas.subtitle50ff'),
+      image: bombaMTI50FF, 
+      category: 'Categoria Principal'
     }
-   
   ];
 
   const handleProductClick = (product) => {
@@ -77,7 +104,7 @@ const PaginaCategoria = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight"
             >
-              Bombas de Alta Pressão
+              {t('produtos.titleBombas')}
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
@@ -85,7 +112,7 @@ const PaginaCategoria = () => {
               transition={{ delay: 0.2 }}
               className="text-lg text-gray-300 max-w-2xl mx-auto"
             >
-              Soluções robustas e tecnologia de ponta para sua operação industrial.
+              {t('categorias.lavadoras.subtitle')}
             </motion.p>
           </div>
 

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 import AppleCoverFlow from "@/components/AppleCoverFlow";
+import CTASection from "@/components/CTASection";
 
 // Import da imagem
 import bombaMTI200 from '@/assets/images/bombas-altapressao.png';
@@ -11,9 +12,9 @@ import bombaMTI200 from '@/assets/images/bombas-altapressao.png';
 const BombaMTI200 = () => {
   const navigate = useNavigate();
   const slides = [
-        { id: 1, title: 'Bomba MTI-200', artist: 'Trifásico', cover: bombaMTI200, color: '#FF5101' },
-        { id: 2, title: 'Bomba MTI-200', artist: 'Vista lateral', cover: bombaMTI200, color: '#FF5101' },
-        { id: 3, title: 'Bomba MTI-200', artist: 'Detalhes', cover: bombaMTI200, color: '#FF5101' }
+        { id: 1, title: 'Bomba MTI-200',  cover: bombaMTI200, color: '#FF5101' },
+        { id: 2, title: 'Bomba MTI-200',  cover: bombaMTI200, color: '#FF5101' },
+        { id: 3, title: 'Bomba MTI-200',  cover: bombaMTI200, color: '#FF5101' }
   ];
 
   // Garante que a página inicie no topo
@@ -70,70 +71,36 @@ const BombaMTI200 = () => {
           </div>
 
           <div className="w-full overflow-hidden rounded-xl shadow-md">
-  <table className="w-full border-collapse table-fixed bg-white">
-    <thead>
-      <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Modelo</th>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Pressão (bar)</th>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Vazão (L/min)</th>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Potência (cv)</th>
-        <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Rotação (cv)</th>
-        <th className="py-6 px-1 font-bold text-sm md:text-base whitespace-nowrap text-center">Eixo (mm)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr className="text-gray-800 border-b border-gray-200">
-        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">MTI-200</td>
-        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">200</td>
-        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">45</td>
-        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">20</td>
-        <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">1750</td>
-        <td className="py-8 px-1 text-xs md:text-lg text-center whitespace-nowrap">24</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-          <style dangerouslySetInnerHTML={{ __html: `
-            .custom-scrollbar::-webkit-scrollbar { height: 8px; }
-            .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-            .custom-scrollbar::-webkit-scrollbar-thumb { background: #FF6B0A; border-radius: 10px; }
-          `}} />
+          <table className="w-full border-collapse table-fixed bg-white">
+            <thead>
+              <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
+                <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Modelo</th>
+                <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Pressão (bar)</th>
+                <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Vazão (L/min)</th>
+                <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Potência (cv)</th>
+                <th className="py-6 px-1 border-r border-orange-400 font-bold text-sm md:text-base whitespace-nowrap text-center">Rotação (cv)</th>
+                <th className="py-6 px-1 font-bold text-sm md:text-base whitespace-nowrap text-center">Eixo (mm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="text-gray-800 border-b border-gray-200">
+                <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">MTI-200</td>
+                <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">200</td>
+                <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">45</td>
+                <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">20</td>
+                <td className="py-8 px-1 border-r border-gray-200 text-xs md:text-lg text-center whitespace-nowrap">1750</td>
+                <td className="py-8 px-1 text-xs md:text-lg text-center whitespace-nowrap">24</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         </div>
       </section>
 
       {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div 
-            className="rounded-[30px] p-8 md:p-12 border-2 shadow-2xl"
-            style={{ backgroundColor: '#d3d3d3', borderColor: '#FF6B0A' }}
-          >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              <div 
-                className="flex-shrink-0 w-16 h-16 rounded-full border-4 flex items-center justify-center text-4xl font-black"
-                style={{ color: '#FF6B0A', borderColor: '#FF6B0A' }}
-              >
-                !
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-black text-3xl font-bold mb-6">Atenção</h3>
-                <p className="text-black text-xl leading-relaxed mb-8">
-                  Para garantir a segurança e o desempenho ideal, utilize sempre 
-                  <span style={{ color: '#FF6B0A' }} className="font-bold"> Peças e Acessórios Originais Mamuth</span>.
-                </p>
-                <button
-                  onClick={() => navigate('/contato')}
-                  className="px-10 py-4 rounded-full font-bold text-black text-lg transition-all hover:scale-105"
-                  style={{ backgroundColor: '#FF6B0A' }}
-                >
-                  Fale Conosco
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className='pt-14'>
+        <CTASection />
+      </div>
     </div>
   );
 };

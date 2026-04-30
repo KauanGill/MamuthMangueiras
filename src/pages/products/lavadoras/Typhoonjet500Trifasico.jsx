@@ -5,8 +5,9 @@ import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
-import ProductVideo from "@/components/ProductVideo";
 import AppleCoverFlow from "@/components/AppleCoverFlow";
+import VideoSection from "@/components/VideoSection";
+import CTASection from "@/components/CTASection";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -15,13 +16,12 @@ import "swiper/css/pagination"; 5
 // Import da imagem
 import typhoon500Trifasico from "@/assets/images/typhoon-jet-500-trifasico.png"; 
 import typhoon500Combustao from "@/assets/images/typhoon-jet-200-combustao.png"; 
-import typhoon5003 from "@/assets/images/typhoonjet-500bar-1200L.png";
-import typhoonVideo from "@/assets/images/video-sobre.mp4"
 import iconCombustao from "@/assets/images/icon-combustao.svg"
 import iconTrifasico from "@/assets/images/icon-trifasico.svg"
 
 const Typhoon500Trifasico = () => {
   const navigate = useNavigate();
+  const [aberto, setAberto] = useState(null);
 
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
@@ -29,11 +29,6 @@ const Typhoon500Trifasico = () => {
   const slides = [
     { id: 1, title: 'Typhoon Jet 500', artist: 'Trifásico', cover: typhoon500Trifasico, color: '#FF5101' },
     { id: 2, title: 'Typhoon Jet 500', artist: 'Combustão', cover: typhoon500Combustao, color: '#FF5101' },
-  ];
-  const currentProduct = [
-    {
-      videoUrl: typhoonVideo,
-    },
   ];
   // Garante que a página inicie no topo
   useEffect(() => {
@@ -116,7 +111,7 @@ const Typhoon500Trifasico = () => {
       {/* SEÇÃO DE TABELA: CINZA CLARO COM CARD ARREDONDADO */}
       <section className="py-1 px-4 bg-white">
         {/* Mantive o max-w-4xl conforme solicitado */}
-        <div className="max-w-4xl mx-auto text-center p-4 md:p-8 rounded-[30px] shadow-sm" style={{backgroundColor:'#d3d3d3'}}>
+        <div className="max-w-4xl hidden md:block mx-auto text-center p-4 md:p-8 rounded-[30px] shadow-sm" style={{backgroundColor:'#d3d3d3'}}>
           
           <div className="flex flex-col items-center mb-10">
             <div 
@@ -203,47 +198,97 @@ const Typhoon500Trifasico = () => {
                 <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base text-center">1200</td>
                 <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">20</td>
                 <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">280</td>
-                <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center text-green-700">Gasolina</td>
+                <td className="py-6 px-1 border-r border-gray-200 text-[10px] sm:text-xs md:text-base font-semibold text-center">Gasolina</td>
                 <td className="py-6 px-1 text-[10px] sm:text-xs md:text-base font-semibold text-center">1200x800x900</td>
               </tr>
             </tbody>
           </table>
         </div>
         </div>
-      </section>
-      <ProductVideo videoUrl={typhoonVideo} />
-      {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div 
-            className="rounded-[30px] p-8 md:p-12 border-2 shadow-2xl"
-            style={{ backgroundColor: '#d3d3d3', borderColor: '#FF6B0A' }}
-          >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              <div 
-                className="flex-shrink-0 w-16 h-16 rounded-full border-4 flex items-center justify-center text-4xl font-black"
-                style={{ color: '#FF6B0A', borderColor: '#FF6B0A' }}
-              >
-                !
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-black text-3xl font-bold mb-6">Atenção</h3>
-                <p className="text-black text-xl leading-relaxed mb-8">
-                  Para garantir a segurança e o desempenho ideal, utilize sempre 
-                  <span style={{ color: '#FF6B0A' }} className="font-bold"> Peças e Acessórios Originais Mamuth</span>.
-                </p>
-                <button
-                  onClick={() => navigate('/contato')}
-                  className="px-10 py-4 rounded-full font-bold text-black text-lg transition-all hover:scale-105"
-                  style={{ backgroundColor: '#FF6B0A' }}
+        <div className="md:hidden space-y-10">
+          <div className="flex items-center gap-3 mb-4">
+              <h2 className="text-2xl text-center font-bold text-[#000]">Veja mais informações técnicas sobre este produto:</h2>
+            </div>
+    {/* ===== GRUPO 1: Trifásico ===== */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={iconTrifasico} alt="Trifásico" className="w-10 h-10" />
+              <h2 className="text-xl font-bold text-[#0E0E68]">Trifásico</h2>
+            </div>
+  
+            <div className="space-y-4">
+              {/* CARD 1 */}
+              <div className="rounded-xl shadow-lg border-2 overflow-hidden transition-all duration-300" style={{ borderColor: '#FF6B0A' }}>
+                <button 
+                  onClick={() => setAberto(aberto === 't1' ? null : 't1')}
+                  className="w-full flex justify-between items-center p-5 bg-white"
                 >
-                  Fale Conosco
+                  <h3 className="font-bold text-lg text-[#0E0E68]">Typhoon-Jet 500</h3>
+                  <span className="text-2xl text-[#FF6B0A] font-light">
+                    {aberto === 't1' ? '−' : '+'}
+                  </span>
                 </button>
+                
+                <div className={`transition-all duration-300 ease-in-out ${aberto === 't1' ? 'max-h-60 opacity-100 p-5 pt-0' : 'max-h-0 opacity-0'}`}>
+                  <div className="grid grid-cols-2 gap-2 text-sm border-t pt-4">
+                    <p><strong>Pressão(bar):</strong> 500</p>
+                    <p><strong>Pressão(PSI):</strong> 7252</p>
+                    <p><strong>Vazão(L/min):</strong> 20 </p>
+                    <p><strong>Vazão(L/h)</strong> 1200 </p>
+                    <p><strong>Potência(cv)</strong> 20</p>
+                    <p><strong>Peso:</strong> 320 kg</p>
+                    <p><strong>Tipo de Tensão:</strong>Trifásico</p>
+                    <p><strong>Dimensões(mm):</strong> 1200x800x950</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          {/* ===== GRUPO 2: Combustão ===== */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={iconCombustao} alt="Combustão" className="w-10 h-10" />
+              <h2 className="text-xl font-bold text-[#0E0E68]">Combustão</h2>
+            </div>
+  
+            <div className="space-y-4">
+              {/* CARD 1 */}
+              <div className="rounded-xl shadow-lg border-2 overflow-hidden transition-all duration-300" style={{ borderColor: '#FF6B0A' }}>
+                <button 
+                  onClick={() => setAberto(aberto === 't1' ? null : 't1')}
+                  className="w-full flex justify-between items-center p-5 bg-white"
+                >
+                  <h3 className="font-bold text-lg text-[#0E0E68]">Typhoon-Jet 500</h3>
+                  <span className="text-2xl text-[#FF6B0A] font-light">
+                    {aberto === 't1' ? '−' : '+'}
+                  </span>
+                </button>
+                
+                <div className={`transition-all duration-300 ease-in-out ${aberto === 't1' ? 'max-h-60 opacity-100 p-5 pt-0' : 'max-h-0 opacity-0'}`}>
+                  <div className="grid grid-cols-2 gap-2 text-sm border-t pt-4">
+                    <p><strong>Pressão(bar):</strong> 500</p>
+                    <p><strong>Pressão(PSI):</strong> 7252 </p>
+                    <p><strong>Vazão(L/min):</strong> 20</p>
+                    <p><strong>Vazão(L/h)</strong> 1200 </p>
+                    <p><strong>Potência(cv):</strong> 20</p>
+                    <p><strong>Peso:</strong> 280 kg</p>
+                    <p><strong>Tipo de Tensão</strong> Gasolina</p>
+                    <p><strong>Dimensões(mm):</strong>1200x800x900</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div>
+          <VideoSection videoUrl="https://www.youtube.com/watch?v=M9I8rx1XVyI" />
+      </div>
+      {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
+     <div>
+      <CTASection />
+     </div>
     </div>
   );
 };

@@ -70,3 +70,13 @@
   transform: scale(1.15); /* Aumenta a imagem em 15% (1.15) */
   box-shadow: 0 20px 60px rgba(0,0,0,0.5); /* Aumenta a sombra para dar mais destaque */
 }
+.swiper-slide-custom {
+  cursor: pointer;
+  pointer-events: auto !important; /* Força a ativação dos eventos de clique */
+}
+
+/* Evite que o 'album-info' ou a 'reflection' bloqueiem o clique se estiverem mal posicionados */
+.album-wrapper {
+  position: relative;
+  z-index: 10;
+}

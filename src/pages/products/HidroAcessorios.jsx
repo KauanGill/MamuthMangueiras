@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import ProductCard from '@/components/ProductCard'; // Certifique-se de que o caminho está correto
 import tubecleanMamuth from '@/assets/images/tubeclean-mamuth.jpeg';
 import powerBoxMamuth from '@/assets/images/powerbox-mamuth-2800.jpeg';
-import pistolaRotativaViper40k from '@/assets/images/hidro-acessorios.jpg';
+import pistolaRotativaViper40k from '@/assets/images/pistola-rotativa-viper-40k-cp.png';
 import pistolaPneumatica2G from '@/assets/images/pistola-pneumatica-2g.png';
-import pistolaFluxoFechadoMTFF from '@/assets/images/pistola-fluxo-fechado-mtff.jpeg';
-import pistolaFluxoAbertoMTFA from '@/assets/images/pistola-fluxo-aberto-mtfa.png';
+import pistolaFluxoFechadoMTFF from '@/assets/images/pistola-fluxo-fechado-15k-cp.png';
+import pistolaFluxoAbertoMTFA from '@/assets/images/pistola-fluxo-aberto-22k-cp.png';
 import pedalFluxoAbertoMTPA from '@/assets/images/pedal-fluxo-aberto-mtpa.jpeg';
 import malhaSeguranca from '@/assets/images/malha-de-seguranca.png';
 import lancaTuboinox from '@/assets/images/lanca-tubo-inox.png';
@@ -17,90 +18,92 @@ import cabecoteRotativo3D from '@/assets/images/cabecote-rotativo-3d.png';
 import path from 'node:path';
 
 const PaginaCategoria = () => {
+  const {t} = useTranslation();
   // Dados simulados para o "Produto 1"
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'Tubeclean Mamuth',
-      path: '/hidrojatos-e-acessorios/tubeclean-mamuth',
-      description: 'Ferramenta projetada para auxiliar o operador na limpeza eficiente de evaporadores e diversas tubulações, especialmente em posições verticais. Ideal para remover resíduos e obstruções, garantindo a manutenção adequada e o funcionamento contínuo dos sistemas.',
-      image: tubecleanMamuth, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Power Box MAMUTH 2.800',
-      path: '/hidrojatos-e-acessorios/powerbox-mamuth-2800',
-      description: 'O Power Box MAMUTH 2800 Bar é um acessório que deve ser utilizado em conjunto com a pistola MTP 2.800 Bar Gatilho Duplo ou com a Pistola Rotativa Viper 40K,',
-      image: powerBoxMamuth, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Pistola Rotativa Viper 40k',
+      name: t('categorias.hidroacesso.titleViper40k'),
       path: '/hidrojatos-e-acessorios/pistola-rotativa-viper-40k',
-      description: 'O sistema é projetado para isolar o circuito pneumático, garantindo que a pressão de água e a rotação da lança sejam acionadas somente quando ambos os gatilhos são pressionados simultaneamente, proporcionando um controle preciso e seguro.',
+      description: t('categorias.hidroacesso.subtitleViper40k'),
       image: pistolaRotativaViper40k, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Pistola Pneumática 2G MTPT 2.800 Bar',
+      name: t('categorias.hidroacesso.titlePneumatica'),
       path: '/hidrojatos-e-acessorios/pistola-Pneumatica-2g-mtpt-2800',
-      description: 'Proporcionam maior robustez e durabilidade, garantindo que o equipamento suporte condições de trabalho exigentes sem comprometer a integridade estrutural.',
+      description: t('categorias.hidroacesso.subtitlePneumatica'),
       image: pistolaPneumatica2G, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Pistola Fluxo Fechado MTFF 1.200 Bar',
+      name: t('categorias.hidroacesso.titlePFechado'),
       path: '/hidrojatos-e-acessorios/pistola-fluxo-fechado-mtff-1200',
-      description: 'Desenvolvido para suportar condições extremas, proporcionando durabilidade e longa vida útil ao equipamento.',
+      description: t('categorias.hidroacesso.subtitlePFechado'),
       image: pistolaFluxoFechadoMTFF, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Pistola Fluxo Aberto MTFA 1.400 Bar',
+      name: t('categorias.hidroacesso.titlePAberto'),
       path: '/hidrojatos-e-acessorios/pistola-fluxo-aberto-mtfa-1400',
-      description: 'Equipamentos de última geração para aplicações industriais exigentes.',
+      description: t('categorias.hidroacesso.subtitlePAberto'),
       image: pistolaFluxoAbertoMTFA, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Pedal de Fluxo Aberto MTPA 1.400 Bar',
+      name: t('categorias.hidroacesso.titleTubeclean'),
+      path: '/hidrojatos-e-acessorios/tubeclean-mamuth',
+      description: t('categorias.hidroacesso.subtitleTubeclean'),
+      image: tubecleanMamuth, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: t('categorias.hidroacesso.titlePowerBox'),
+      path: '/hidrojatos-e-acessorios/powerbox-mamuth-2800',
+      description: t('categorias.hidroacesso.subtitlePowerBox'),
+      image: powerBoxMamuth, 
+      category: 'Categoria Principal'
+    },
+    
+    {
+      name: t('categorias.hidroacesso.titlePedal'),
       path: '/hidrojatos-e-acessorios/pedal-fluxo-aberto-mtpa-1400',
-      description: 'O Pedal de Fluxo Aberto MTPA 1.400 Bar é indicado para trabalhos quando o operador de hidrojato precisa utilizar as duas mãos, ideais para executar limpeza em trocadores de calor ou tubulações em geral, esse acessório traz maior segurança e conforto visto que o operador possui total controle na liberação do fluxo de água nos pés.',
+      description: t('categorias.hidroacesso.subtitlePedal'),
       image: pedalFluxoAbertoMTPA, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Malha de Segurança',
+      name: t('categorias.hidroacesso.titleMalha'),
       path: '/hidrojatos-e-acessorios/malha-de-seguranca',
-      description: 'Dispositivo de segurança utilizado em uniões de mangueiras e tubos com o objetivo de evitar o movimento brusco ou chicoteamento em caso de rompimento das conexões.',
+      description: t('categorias.hidroacesso.subtitleMalha'),
       image: malhaSeguranca, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Lança e Tubo Inox',
+      name: t('categorias.hidroacesso.titleLanca'),
       path: '/hidrojatos-e-acessorios/lanca-e-tubo-inox',
-      description: 'Conhecidas como Varetas ou Lanças, essas são utilizadas como condutoras de fluxo, ou como prolongadores para bicos e mangueiras. Podem ser fabricadas em qualquer comprimento.',
+      description: t('categorias.hidroacesso.subtitleLanca'),
       image: lancaTuboinox, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Laço de Segurança',
+      name: t('categorias.hidroacesso.titleLaco'),
       path: '/hidrojatos-e-acessorios/laco-de-seguranca',
-      description: 'Dispositivo de segurança utilizado em uniões de mangueiras e tubos com o objetivo de evitar o movimento brusco ou chicoteamento em caso de rompimento das conexões.',
+      description: t('categorias.hidroacesso.subtitleLaco'),
       image: lacoSeguranca, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Distorcedor de Mangueira UAP MT2800',
+      name: t('categorias.hidroacesso.titleDistorcedor'),
       path: '/hidrojatos-e-acessorios/distorcedor-de-mangueira-uap',
-      description: 'O Distorcedor é um item de segurança que quando utilizado junto a mangueira elimina o esforço por torção do terminal, evitando assim a quebra prematura e posteriores acidentes.',
+      description: t('categorias.hidroacesso.subtitleDistorcedor'),
       image: distorcedorMangueiraUap, 
       category: 'Categoria Principal'
     },
     {
-      name: 'Cabeçote Rotativo 3D Torrent NLB',
+      name: t('categorias.hidroacesso.titleCabecote'),
       path: '/hidrojatos-e-acessorios/cabecote-rotativo-3d-torrent-nlb',
-      description: 'O Cabeçote 3D Torrent NLB é uma ferramenta avançada projetada especificamente para a limpeza eficiente de tanques. Este dispositivo não apenas reduz drasticamente o tempo de limpeza, mas também proporciona total segurança na operação, eliminando a necessidade de um operador em espaços confinados, o que é essencial para minimizar riscos.',
+      description: t('categorias.hidroacesso.subtitleCabecote'),
       image: cabecoteRotativo3D, 
       category: 'Categoria Principal'
     },
@@ -127,7 +130,7 @@ const PaginaCategoria = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-6xl font-bold mb-6 text-white tracking-tight"
             >
-              Hidrojato e Acessórios
+              {t('produtos.titleAcessorioHidro')}
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
@@ -135,7 +138,7 @@ const PaginaCategoria = () => {
               transition={{ delay: 0.2 }}
               className="text-lg text-gray-300 max-w-2xl mx-auto"
             >
-              Soluções robustas e tecnologia de ponta para sua operação industrial.
+              {t('categorias.lavadoras.subtitle')}
             </motion.p>
           </div>
 

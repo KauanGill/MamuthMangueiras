@@ -3,6 +3,8 @@ import { color, motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
+import CTASection from "@/components/CTASection";
+
 // Import da imagem
 import bicoSafira from '@/assets/images/bico-safira.png';
 
@@ -26,16 +28,6 @@ const BicoSafira = () => {
         style={{ backgroundColor: 'var(--color-dark-blue)', zIndex: 1 }}
       >
         <div className="max-w-7xl mx-auto text-center">
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white text-4xl md:text-5xl font-bold mb-12 tracking-tight leading-loose" 
-            style={{ lineHeight: '1.4' }}
-          >
-         Bico Safira
-          </motion.h1>
-
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -58,7 +50,7 @@ const BicoSafira = () => {
             className="text-5xl md:text-6xl font-bold mb-10 text-left "
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Outras Informações
+            Bico Safira
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-10 text-left">
            Os bicos ou insertos são utilizados em acessórios aplicados no processo de hidrojateamento 
@@ -69,6 +61,9 @@ const BicoSafira = () => {
           </p>
         </div>
       </section>
+      <div className='pt-14'>
+        <CTASection />
+      </div>
     </div>
   );
 };

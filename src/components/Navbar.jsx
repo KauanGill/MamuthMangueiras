@@ -1,22 +1,46 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from '@/components/Logo';
 
+import Br from '@/assets/icons/icone-brasil.png'
+import En from '@/assets/icons/icone-estados-unidos.png'
+import Es from '@/assets/icons/icone-espanha.png'
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isNoticiasOpen, setIsNoticiasOpen] = useState(false);
-  const [isNoticiasMobileOpen, setIsNoticiasMobileOpen] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Sobre', path: '/sobre' },
-    { name: 'Produtos', path: '/produtos' },
-    { name: 'Notícias', path: '/noticias' },
-    { name: 'Contato', path: '/contato' },
+    { name: t('menu_home', 'Home'), path: '/' },
+    { name: t('paginas.sobre'), path: '/sobre' },
+    { name: t('paginas.produtos'), path: '/produtos' },
+    { name: t('paginas.noticias'), path: '/noticias' },
+    { name: t('paginas.contato'), path: '/contato' },
   ];
+
+  const flagButtonStyle = {
+    width: '32px',
+    height: '32px',
+    borderRadius: '50%',
+    border: 'none',
+    cursor: 'pointer',
+    padding: '0',
+    overflow: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transition: 'transform 0.2s ease-in-out',
+    backgroundColor: '#1a1a1a', 
+  };
+
+  const activeStyle = {
+    transform: 'scale(1.15)',
+    boxShadow: '0 0 8px rgba(0,0,0,0.2)',
+  };
 
   const isActive = (path) => location.pathname === path;
 
@@ -30,77 +54,49 @@ const Navbar = () => {
             <Logo size="md" />
           </Link>
 
-          {/* Desktop */}
-          <div className="hidden md:flex items-center space-x-1 relative">
-            {navLinks.map((link) => {
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`px-4 py-2 rounded-lg text-sm transition-all ${
+                  isActive(link.path) 
+                    ? 'bg-white text-[#FE5100] font-bold' // Fundo branco, texto laranja e negrito
+                    : 'text-gray-700 hover:bg-gray-100 font-medium'
+                }`}
+                // Removido o style dinâmico de background
+              >
+                {link.name}
+              </Link>
+            ))}
 
-              if (link.name === 'Notícias') {
-                return (
-                  <div
-                    key={link.path}
-                    className="relative"
-                    onMouseEnter={() => setIsNoticiasOpen(true)}
-                    onMouseLeave={() => setIsNoticiasOpen(false)}
-                  >
-                    <Link
-                      to={link.path}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-1 transition-all ${
-                        isActive(link.path)
-                          ? 'text-white'
-                          : 'text-gray-700 hover:bg-gray-100'
-                      }`}
-                      style={isActive(link.path) ? { backgroundColor: '#FE5100' } : {}}
-                    >
-                      Notícias
-                      <ChevronDown size={16} />
-                    </Link>
+            {/* Seletor de Idiomas */}
+            <div className="flex items-center ml-4 pl-4 space-x-3">
+              <button 
+                onClick={() => i18n.changeLanguage('pt')}
+                style={{...flagButtonStyle, ...(i18n.language === 'pt' ? activeStyle : {})}}
+                className="hover:scale-110"
+              >
+                <img src={Br} alt="Português" className="w-full h-full object-cover" />
+              </button>
 
-                    <AnimatePresence>
-                      {isNoticiasOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-[#FE5100] overflow-hidden"
-                        >
-                          <button
-                            className="block w-full text-left px-4 py-3 text-sm font-medium rounded-lg
-                            text-gray-700 transition-all
-                            hover:text-white hover:bg-[#FE5100]"
-                          >
-                            Materiais Ricos
-                          </button>
+              <button 
+                onClick={() => i18n.changeLanguage('en')}
+                style={{...flagButtonStyle, ...(i18n.language.startsWith('en') ? activeStyle : {})}}
+                className="hover:scale-110"
+              >
+                <img src={En} alt="English" className="w-full h-full object-cover" />
+              </button>
 
-                          <button
-                            className="block w-full text-left px-4 py-3 text-sm font-medium rounded-lg
-                            text-gray-700 transition-all
-                            hover:text-white hover:bg-[#FE5100]"
-                          >
-                            Artigos
-                          </button>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              }
-
-              return (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                    isActive(link.path)
-                      ? 'text-white'
-                      : 'text-gray-700 hover:bg-gray-100'
-                  }`}
-                  style={isActive(link.path) ? { backgroundColor: '#FE5100' } : {}}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
+              <button 
+                onClick={() => i18n.changeLanguage('es')}
+                style={{...flagButtonStyle, ...(i18n.language === 'es' ? activeStyle : {})}}
+                className="hover:scale-110"
+              >
+                <img src={Es} alt="Español" className="w-full h-full object-cover" />
+              </button>
+            </div>
           </div>
 
           {/* Mobile Button */}
@@ -113,76 +109,54 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden border-t border-gray-200"
+            className="md:hidden border-t border-gray-200 bg-white"
           >
             <div className="px-4 py-4 space-y-2">
-              {navLinks.map((link) => {
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-4 py-3 rounded-lg text-sm transition-all ${
+                    isActive(link.path) 
+                      ? 'bg-white text-[#FE5100] font-bold' // Fundo branco, texto laranja e negrito no mobile
+                      : 'text-gray-700 hover:bg-gray-100 font-medium'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
 
-                if (link.name === 'Notícias') {
-                  return (
-                    <div key={link.path}>
-                      <Link
-                        to={link.path}
-                        onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition"
-                      >
-                        Notícias
-                      </Link>
+              {/* Seletor Mobile */}
+              <div className="flex items-center justify-center py-6 mt-2 border-t border-gray-100 space-x-8">
+                <button onClick={() => { i18n.changeLanguage('pt'); setIsOpen(false); }} className="flex flex-col items-center gap-1">
+                  <div style={{...flagButtonStyle, ...(i18n.language === 'pt' ? activeStyle : {})}}>
+                    <img src={Br} className="w-full h-full object-cover" alt="PT" />
+                  </div>
+                  <span className="text-xs font-bold text-gray-500">PT</span>
+                </button>
 
-                      <button
-                        onClick={() => setIsNoticiasMobileOpen(!isNoticiasMobileOpen)}
-                        className="w-full text-left px-6 py-2 text-sm text-gray-600"
-                      >
-                        ▼ Submenu
-                      </button>
+                <button onClick={() => { i18n.changeLanguage('en'); setIsOpen(false); }} className="flex flex-col items-center gap-1">
+                  <div style={{...flagButtonStyle, ...(i18n.language.startsWith('en') ? activeStyle : {})}}>
+                    <img src={En} className="w-full h-full object-cover" alt="EN" />
+                  </div>
+                  <span className="text-xs font-bold text-gray-500">EN</span>
+                </button>
 
-                      <AnimatePresence>
-                        {isNoticiasMobileOpen && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="pl-8 mt-2 space-y-2 border-l-2 border-[#FE5100]"
-                          >
-                            <button className="block w-full text-left py-2 text-sm text-gray-600 hover:text-white hover:bg-[#FE5100] rounded-lg transition-all px-3">
-                              Materiais Ricos
-                            </button>
-
-                            <button className="block w-full text-left py-2 text-sm text-gray-600 hover:text-white hover:bg-[#FE5100] rounded-lg transition-all px-3">
-                              Artigos
-                            </button>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  );
-                }
-
-                return (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    onClick={() => setIsOpen(false)}
-                    className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                      isActive(link.path)
-                        ? 'text-white'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                    style={isActive(link.path) ? { backgroundColor: '#FE5100' } : {}}
-                  >
-                    {link.name}
-                  </Link>
-                );
-              })}
+                <button onClick={() => { i18n.changeLanguage('es'); setIsOpen(false); }} className="flex flex-col items-center gap-1">
+                  <div style={{...flagButtonStyle, ...(i18n.language === 'es' ? activeStyle : {})}}>
+                    <img src={Es} className="w-full h-full object-cover" alt="ES" />
+                  </div>
+                  <span className="text-xs font-bold text-gray-500">ES</span>
+                </button>
+              </div>
             </div>
           </motion.div>
         )}

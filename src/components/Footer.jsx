@@ -2,16 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 import { FaTiktok } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 import Logo from '@/components/Logo';
 import { CONTACT_INFO } from '@/constants/contactInfo';
 
 const Footer = () => {
+  const {t} = useTranslation(); 
   const quickLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Sobre', path: '/sobre' },
-    { name: 'Produtos', path: '/produtos' },
-    { name: 'Notícias', path: '/noticias' },
-    { name: 'Contato', path: '/contato' },
+    { name: t('paginas.sobre'), path: '/sobre' },
+    { name: t('paginas.produtos'), path: '/produtos' },
+    { name: t('paginas.noticias'), path: '/noticias' },
+    { name: t('paginas.contato'), path: '/contato' },
   ];
 
   return (
@@ -24,13 +26,13 @@ const Footer = () => {
               <Logo size="md" className="brightness-0 invert"/>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Qualidade de peso, Garantia de força. Soluções completas em equipamentos industriais e hidrojateamento.
+              {t('footer.textFooter')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Links Rápidos</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.titleLinks')}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -47,7 +49,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Contato</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.titleContato')}</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -71,14 +73,18 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-2 text-gray-300 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>{CONTACT_INFO.address.full}</span>
+                <span><strong>{t('contato.matriz')}</strong> {t('footer.endereco')}</span>
               </li>
+              <li className="flex items-start space-x-2 text-gray-300 text-sm">
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span><strong>{t('contato.filial')}</strong> {t('footer.endereco2')}</span>
+              </li>    
             </ul>
           </div>
 
           {/* Social Media */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Redes Sociais</h3>
+            <h3 className="text-lg font-bold mb-4">{t('footer.titleRedes')}</h3>
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/mamuthmangueirasoficial/"
@@ -133,7 +139,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-gray-300 text-sm">
-            © {new Date().getFullYear()} Mamuth. Todos os direitos reservados.
+            © {new Date().getFullYear()} {t('footer.textDireitos')}
           </p>
         </div>
       </div>

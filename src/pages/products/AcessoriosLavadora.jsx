@@ -17,34 +17,6 @@ const PaginaCategoria = () => {
   // Você pode repetir este objeto ou criar um array com variações
   const produtosDaCategoria = [
     {
-      name: 'Válvula Reguladora 550 bar',
-      path: '/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-550bar',
-      description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança.',
-      image: valvulaReguladora550bar, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Válvula Reguladora 350 bar',
-      path: '/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-350bar',
-      description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança.',
-      image: valvulaReguladora350bar, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Válvula Reguladora 200 bar Alta Vazão',
-      path: '/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-200bar-alta-vazao',
-      description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança. Indicada para bombas de alta vazão.',
-      image: valvulaReguladora200bar, 
-      category: 'Categoria Principal'
-    },
-    {
-      name: 'Válvula de Segurança 660 bar',
-      path: '/acessorios-lavadoras-de-alta-pressao/valvula-de-seguranca-660bar',
-      description: 'Válvula de Segurança que limita a pressão máxima do sistema de alta pressão. Quando for excedida a pressão a válvula abre liberando a pressão excessiva.',
-      image: valvulaSeguranca660bar, 
-      category: 'Categoria Principal'
-    },
-    {
       name: 'Pistola 660 bar',
       path: '/acessorios-lavadoras-de-alta-pressao/pistola-660bar',
       description: 'Gatilhos e lanças indicadas para hidrolavadoras de alta pressão',
@@ -71,7 +43,36 @@ const PaginaCategoria = () => {
       description: 'Bico Jato Abrasivo 500bar',
       image: bicoJatoAbrasivo, 
       category: 'Categoria Principal'
+    },
+    {
+      name: 'Válvula Reguladora 550 bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-550bar',
+      description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança.',
+      image: valvulaReguladora550bar, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: 'Válvula Reguladora 350 bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-350bar',
+      description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança.',
+      image: valvulaReguladora350bar, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: 'Válvula Reguladora 200 bar Alta Vazão',
+      path: '/acessorios-lavadoras-de-alta-pressao/valvula-reguladora-200bar-alta-vazao',
+      description: 'Válvula Reguladora de Pressão (By-Pass) com função de segurança. Indicada para bombas de alta vazão.',
+      image: valvulaReguladora200bar, 
+      category: 'Categoria Principal'
+    },
+    {
+      name: 'Válvula de Segurança 660 bar',
+      path: '/acessorios-lavadoras-de-alta-pressao/valvula-de-seguranca-660bar',
+      description: 'Válvula de Segurança que limita a pressão máxima do sistema de alta pressão. Quando for excedida a pressão a válvula abre liberando a pressão excessiva.',
+      image: valvulaSeguranca660bar, 
+      category: 'Categoria Principal'
     }
+    
    
   ];
 
@@ -83,7 +84,7 @@ const PaginaCategoria = () => {
   return (
     <>
       <Helmet>
-        <title>Acessórios para Lavadoras de Alta Pressão - Mamuth Mangueiras</title>
+        <title>Acessórios para Hidrolavadoras de Alta Pressão - Mamuth Mangueiras</title>
       </Helmet>
 
       {/* Hero Section - Mesmo estilo da página de Linhas de Produtos */}

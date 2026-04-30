@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react'; // 1. Importe o useRef
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 
@@ -10,19 +10,25 @@ import 'swiper/css/pagination';
 import './CoverFlowStyles.css';
 
 const AppleCoverFlow = ({ slides }) => {
+  // 2. Crie a referência para controlar o Swiper
+  const swiperRef = useRef(null);
+
   return (
     <div className="coverflow-container">
       <Swiper
+        // 3. Atribua a instância do Swiper à nossa referência
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        // slidesPerView 'auto' com o stretch negativo cria o visual coverflow ideal
         slidesPerView={'auto'} 
-        initialSlide={1}
+        initialSlide={Math.floor(slides.length / 2)}
         coverflowEffect={{
           rotate: 35,    
-          stretch: -20,  // VALOR CHAVE: Negativo para aproximar os slides
-          depth: 120,    // Profundidade para destacar o central
+          stretch: -20,  
+          depth: 120,    
           modifier: 1,
           slideShadows: true,
         }}
@@ -34,8 +40,17 @@ const AppleCoverFlow = ({ slides }) => {
         modules={[EffectCoverflow, Navigation, Pagination]}
         className="mySwiper"
       >
-        {slides.map((album) => (
-          <SwiperSlide key={album.id} className="swiper-slide-custom">
+        {slides.map((album, index) => ( // 4. Use o 'index' do map
+          <SwiperSlide 
+            key={album.id} 
+            className="swiper-slide-custom"
+            // 5. Adicione o evento de clique manual
+            onClick={() => {
+              if (swiperRef.current) {
+                swiperRef.current.slideTo(index);
+              }
+            }}
+          >
             <div className="album-wrapper">
               <img src={album.cover} alt={album.title} className="album-image" />
               <div className="reflection" />

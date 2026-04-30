@@ -11,7 +11,7 @@ import ProductCard from "@/components/ProductCard";
 
 const ProductCarousel = ({ products }) => {
   return (
-    <div className="max-w-7xl mx-auto px-4">
+    <div className="max-w-7xl mx-auto pb-12 px-4">
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={24}
@@ -34,7 +34,7 @@ const ProductCarousel = ({ products }) => {
         }}
       >
         {products.map((product, index) => (
-          <SwiperSlide key={index} className="h-auto">
+          <SwiperSlide key={index} className="h-auto pb-12">
             <div className="h-full">
               <ProductCard {...product} />
             </div>

@@ -1,11 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
+import i18n from 'i18next';
 import { motion, AnimatePresence, color } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { X } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 import { Droplet, Wrench, Settings, Zap, Shield, Award, Clock, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import WhatsappButton from '@/components/WhatsappButton';
 import CTAButton from '@/components/CTAButton';
+import CTASection from "@/components/CTASection";
 import SectionTitle from '@/components/SectionTitle';
 import ProductCard from '@/components/ProductCard';
 import ServiceCard from '@/components/ServiceCard';
@@ -17,10 +21,15 @@ import { useToast } from '@/components/ui/use-toast';
 import ProductCarousel from "@/components/ProductCarousel";
 
 
-import bombaAltaPressao from "@/assets/images/bomba-alta-pressao-titulo.png";
-import lavadoraAltaPressao from "@/assets/images/lavadora-alta-pressao.png";
-import vestimentaProtecao from "@/assets/images/vestimenta-protecao.png";
 import mangueiraConexao from "@/assets/images/mangueiras-conexoes.jpg";
+import lavadoraAltaPressao from "@/assets/images/typhoonjet-50cv-eletrica.png";
+import vestimentaProtecao from "@/assets/images/macacao-hydro-shel-sap-3.png";
+import robo from "@/assets/images/robo-line-worker-250-cp.png";
+import bombaAltaPressao from "@/assets/images/falch-pump-500-cp.png";
+import bicoHidrojato from "@/assets/images/bico-rotativo-r-cp.png";
+import acessoriosHidro from "@/assets/images/pistola-rotativa-viper-40k-cp.png";
+import acessoriosLavadora from "@/assets/images/acessorios-lavadora.png";
+import pecasBomba from "@/assets/images/cabecote-rotativo-3d-2.png";
 import argentina from "@/assets/images/bandeira-da-argentina.png";
 import bolivia from "@/assets/images/bandeira-da-bolivia.png";
 import colombia from "@/assets/images/bandeira-da-colombia.png";
@@ -32,16 +41,19 @@ import mexico from "@/assets/images/bandeira-do-mexico.png";
 import paraguai from "@/assets/images/bandeira-do-paraguai.png";
 import peru from "@/assets/images/bandeira-do-peru.png";
 import americaDoSul from "@/assets/images/mapa_atuacao_mamuth_sem_fundo.png";
-import bicoHidrojato from "@/assets/images/bicos-hidrojatos.png";
-import pecasBomba from "@/assets/images/pecas-para-bomba.png";
-import acessoriosHidro from "@/assets/images/hidro-acessorios.png";
-import acessoriosLavadora from "@/assets/images/acessorios-lavadora.png";
 import path from 'node:path';
 
 const Home = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const {t} = useTranslation();
+
+  const [activeIndex, setActiveIndex] = React.useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   const handleCTAClick = () => {
     navigate('/contato');
@@ -65,60 +77,104 @@ const Home = () => {
 
   const products = [
     {
-      name: 'Bombas de Alta Pressão',
-      description: 'Peças originais e de alta qualidade para manutenção e prolongamento da vida útil dos equipamentos.',
-      image: bombaAltaPressao,
-      specs: ['Pressão até 3000 bar', 'Alta durabilidade', 'Manutenção facilitada'],
-      path :'/bombas-alta-pressao'
-    },
-    {
-      name: 'Lavadoras de Alta Pressão',
-      description: 'Equipamentos robustos projetados para operações industriais de alta exigência, com tecnologia de ponta e máxima eficiência.',
-      image: lavadoraAltaPressao,
-      specs: ['Tecnologia avançada', 'Economia de água', 'Resultados superiores'],
-      path: '/lavadoras'
-    },
-    {
-      name: 'Vestimentas de Proteção',
-      description: 'Soluções completas para limpeza de alta pressão, ideais para remoção de incrustações e contaminantes.',
-      image: vestimentaProtecao,
-      specs: ['Alta confiabilidade', 'Eficiência energética', 'Suporte técnico'],
-      path: '/vestimentas'
-    },
-    {
-      name: 'Mangueiras e Conexões',
-      description: 'Linha completa de equipamentos hidráulicos de precisão para diversas aplicações industriais.',
+      name: t('produtos.titleMangueiras'),
+      description: t('produtos.textMangueiras'),
       image: mangueiraConexao,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
+      specs: [
+        t('produtos.specs1Mangueiras'), 
+        t('produtos.specs2Mangueiras'), 
+        t('produtos.specs3Mangueiras')
+
+      ],
       path: '/mangueiras-conexoes'
     },
     {
-      name: 'Bicos para Hidrojato',
-      description: 'Projetos personalizados desenvolvidos especificamente para atender necessidades únicas de cada cliente.',
+      name: t('produtos.titleLavadoras'),
+      description: t('produtos.textLavadoras'),
+      image: lavadoraAltaPressao,
+      specs: [
+        t('produtos.specs1Lavadoras'), 
+        t('produtos.specs2Lavadoras'), 
+        t('produtos.specs3Lavadoras')
+      ],
+      path: '/lavadoras'
+    },
+    {
+      name: t('produtos.titleVestimentas'),
+      description: t('produtos.textVestimentas'),
+      image: vestimentaProtecao,
+      specs: [
+        t('produtos.specs1Vestimentas'), 
+        t('produtos.specs2Vestimentas'), 
+        t('produtos.specs3Vestimentas')
+      ],
+      path: '/vestimentas'
+    },
+    {
+      name: t('produtos.titleRobo'),
+      description: t('produtos.textRobo'),
+      image: robo,
+      specs: [
+        t('produtos.specs1Robo'), 
+        t('produtos.specs2Robo'), 
+        t('produtos.specs3Robo')
+      ],
+      path :'/robo'
+    },
+    {
+      name: t('produtos.titleBombas'),
+      description: t('produtos.textBombas'),
+      image: bombaAltaPressao,
+      specs: [
+        t('produtos.specs1Bombas'), 
+        t('produtos.specs2Bombas'), 
+        t('produtos.specs3Bombas')
+      ],
+      path :'/bombas-alta-pressao'
+    },
+    {
+      name: t('produtos.titleBicos'),
+      description: t('produtos.textBicos'),
       image: bicoHidrojato,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
+      specs: [
+        t('produtos.specs1Bicos'), 
+        t('produtos.specs2Bicos'), 
+        t('produtos.specs3Bicos')
+      ],
       path: '/bicos-hidrojatos'
     },
     {
-      name: 'Peças para Bombas de Hidrojato',
-      description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações.',
-      image: pecasBomba,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
-      path: '/pecas-bombas'
-    },
-    {
-      name: 'Hidrojato/Acessórios',
-      description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações industriais.',
+      name: t('produtos.titleAcessorioHidro'),
+      description: t('produtos.textAcessorioHidro'),
       image: acessoriosHidro,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
+      specs: [
+        t('produtos.specs1AcessorioHidro'), 
+        t('produtos.specs2AcessorioHidro'), 
+        t('produtos.specs3AcessorioHidro')
+      ],
       path: '/hidrojato-acessorios'
     },
     {
-      name: 'Acessórios para Lavadoras de Alta Pressão',
-      description: 'Ampla variedade de acessórios e componentes para complementar e otimizar suas operações industriais.',
+      name: t('produtos.titleAcessoriosLavadoras'),
+      description: t('produtos.textAcessoriosLavadoras'),
       image: acessoriosLavadora,
-      specs: ['Engenharia dedicada', 'Flexibilidade total', 'Garantia estendida'],
+      specs: [
+        t('produtos.specs1AcessoriosLavadoras'), 
+        t('produtos.specs2AcessoriosLavadoras'), 
+        t('produtos.specs3AcessoriosLavadoras')
+      ],
       path: '/acessorios-lavadoras'
+    },
+    {
+      name: t('produtos.titlePecas'),
+      description: t('produtos.textPecas'),
+      image: pecasBomba,
+      specs: [
+        t('produtos.specs1Pecas'), 
+        t('produtos.specs2Pecas'), 
+        t('produtos.specs3Pecas')
+      ],
+      path: '/pecas-bombas'
     },
     
   ];
@@ -126,47 +182,67 @@ const Home = () => {
   const services = [
     {
       icon: Droplet,
-      title: 'Portfólio Completo em SAP e HP',
-      description: 'A Mamuth atua com um portfólio completo de soluções em SAP (alta pressão) e UHP (ultra-alta pressão), atendendo operações industriais que exigem desempenho, segurança e confiabilidade.',
-      benefits: ['Equipamentos, componentes e acessórios para diferentes regimes de pressão.', 'Soluções aplicáveis a ambientes industriais, offshore, naval e infraestrutura.', 'Configurações alinhadas à demanda real de cada operação.', 'Foco em eficiência operacional e continuidade.'],
-      buttonText: 'Conhecer as soluções'
+      title: t('home.titlePortifolio'),
+      description: t('home.subtitlePortifolio'),
+      benefits: [
+        t('home.texto1Portifolio'),
+        t('home.texto2Portifolio'), 
+        t('home.texto3Portifolio'), 
+        t('home.texto4Portifolio')
+      ],
+      buttonText: t('home.btnPortifolio')
     },
     {
       icon: Wrench,
-      title: 'Conhecimento aplicado ao hidrojato',
-      description: 'Nossa atuação é guiada por conhecimento técnico e entendimento profundo das aplicações de hidrojato, apoiando nossos clientes na escolha da solução mais adequada para cada cenário.',
-      benefits: ['Apoio técnico na definição de pressão, vazão e configuração do sistema.', 'Análise do contexto operacional e das condições de uso.', 'Orientação técnica para composição correta do conjunto.', 'Redução de riscos, falhas operacionais e custos desnecessários.'],
-      buttonText: 'Fale com um especialista'
+      title:  t('home.titleConhecer'),
+      description: t('home.subtitleConhecer'),
+      benefits: [
+        t('home.texto1Conhecer'), 
+        t('home.texto2Conhecer'), 
+        t('home.texto3Conhecer'), 
+        t('home.texto4Conhecer')
+      ],
+      buttonText: t('home.btnConhecer')
     },
     {
       icon: Settings,
-      title: 'Suporte Técnico e Pós-Venda',
-      description: 'A Mamuth oferece uma estrutura de suporte técnico e pós-venda voltada à estabilidade e segurança da operação ao longo do tempo, acompanhando o cliente após a aquisição.',
-      benefits: ['Suporte técnico para aplicação, instalação e operação.', 'Orientação para boas práticas e manutenção preventiva.', 'Apoio contínuo para ajustes, ampliações ou evoluções da solução.', 'Atendimento ágil e comunicação direta.'],
-      buttonText: 'Solicitar suporte'
+      title: t('home.titleSuporte'),
+      description: t('home.subtitleSuporte'),
+      benefits: [
+        t('home.texto1Suporte'), 
+        t('home.texto2Suporte'), 
+        t('home.texto3Suporte'), 
+        t('home.texto4Suporte')
+      ],
+      buttonText: t('home.btnSuporte')
 
     },
     {
       icon: Zap,
-      title: 'Parcerias Estratégicas Internacionais',
-      description: 'A Mamuth mantém parcerias sólidas com fabricantes de referência internacional, levando ao mercado latino-americano soluções reconhecidas pela excelência em engenharia, robustez e confiabilidade operacional.',
-      benefits: ['Parceria estratégica com Falch e Parker Polyflex, referências globais em hidrojato e alta pressão.', 'Acesso a tecnologias desenvolvidas sob rigorosos padrões da engenharia alemã.', 'Atuação como elo técnico entre fabricante e cliente final.', 'Suporte técnico, orientação de aplicação e acompanhamento pós-venda na América Latina.'],
-      buttonText: 'Saiba mais',
+      title: t('home.titleParcerias'),
+      description: t('home.subtitleParcerias'),
+      benefits: [
+        t('home.texto1Parcerias'), 
+        t('home.texto2Parcerias'), 
+        t('home.texto3Parcerias'), 
+        t('home.texto4Parcerias')
+      ],
+      buttonText: t('home.btnParcerias'),
       link: "/sobre#parceirosmamuth"
     },
   ];
 
   const differentials = [
-    { icon: Shield, title: 'Qualidade Garantida', description: 'Equipamentos certificados e testados' },
-    { icon: Award, title: 'Experiência Comprovada', description: 'Mais de 20 anos no mercado' },
-    { icon: Clock, title: 'Atendimento Ágil', description: 'Suporte técnico 24/7 disponível' },
-    { icon: Users, title: 'Equipe Especializada', description: 'Profissionais altamente qualificados' },
+    { icon: Shield, title: t('home.titleQualidade'), description: t('home.textoQualidade') },
+    { icon: Award, title: t('home.titleExperiencia'), description: t('home.textoExperiencia') },
+    { icon: Clock, title: t('home.titleAtendimento'), description: t('home.textoAtendimento') },
+    { icon: Users, title: t('home.titleEquipe'), description: t('home.textoEquipe') },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Mamuth - Qualidade de peso, Garantia de força | Equipamentos Industriais</title>
+        <title>Mamuth - Qualidade de peso, Garantia de força</title>
         <meta name="description" content="Mamuth oferece soluções completas em equipamentos de alta pressão, hidrojateamento e limpeza industrial. Qualidade e eficiência para sua empresa." />
       </Helmet>
 
@@ -195,18 +271,17 @@ const Home = () => {
           >
 
             <h1 className="text-5xl md:text-7xl !leading-normal font-bold mb-6">
-              Qualidade de <br className="md:hidden" />
-              Peso <br className="md:block" />
-              Garantia de <br className="md:hidden" />
-              Força
+              {t('home.title')}
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Com anos de experiência, somos especialistas em fornecer mangueiras robustas de alta pressão, ideais para aplicações na indústria pesada. Nossos produtos garantem segurança e eficiência em diversos setores, como naval e siderúrgico.
+              {t('home.subtitle')}
             </p>
             <CTAButton onClick={handleCTAClick}>
-              Fale com Nossos Especialistas
+              {t('home.cta')}
             </CTAButton>
           </motion.div>
+          <div>
+    </div>
         </div>
       </section>
       {/* Latin America Presence Section */}
@@ -223,85 +298,103 @@ const Home = () => {
       className="text-center max-w-5xl mx-auto mb-20"
     >
       <h2 className="text-2xl md:text-4xl font-bold text-[#FF5101]">
-        Presente em toda a América Latina a Mamuth alia experiência e excelência
-        para atender às demandas do mercado internacional, oferecendo soluções
-        robustas e seguras para operações industriais de alta complexidade.
+        {t('home.titleMapa')}
       </h2>
     </motion.div>
 
     {/* GRID CONTEÚDO */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
 
       {/* COLUNA ESQUERDA - FLAGS + SETORES */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false }}
-        transition={{ duration: 0.6 }}
-      >
+     <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.6 }}
+    >
+      {/* Flags - Mantive seu código original */}
+      <div className="flex flex-wrap gap-3 mb-10 justify-center md:justify-start">
+        <img src={peru} alt="Peru" className="h-10 object-contain" />
+        <img src={brasil} alt="Brasil" className="h-10 object-contain" />
+        <img src={argentina} alt="Argentina" className="h-10 object-contain" />
+        <img src={mexico} alt="México" className="h-10 object-contain" />
+        <img src={colombia} alt="Colômbia" className="h-10 object-contain" />
+      </div>
 
-        {/* Flags */}
-        <div className="flex flex-wrap gap-3 mb-10 justify-center md:justify-start">
-          <img src={peru} alt="Peru" className="h-10 object-contain" />
-          <img src={brasil} alt="Brasil" className="h-10 object-contain" />
-          <img src={argentina} alt="Argentina" className="h-10 object-contain" />
-          <img src={mexico} alt="México" className="h-10 object-contain" />
-          <img src={colombia} alt="Colômbia" className="h-10 object-contain" />
-        </div>
+      <div className="flex flex-wrap gap-3 mb-12 justify-center md:justify-start">
+        <img src={guatemala} alt="Guatemala" className="h-10 object-contain" />
+        <img src={venezuela} alt="Venezuela" className="h-10 object-contain" />
+        <img src={bolivia} alt="Bolívia" className="h-10 object-contain" />
+        <img src={equador} alt="Equador" className="h-10 object-contain" />
+        <img src={paraguai} alt="Paraguai" className="h-10 object-contain" />
+      </div>
 
-        <div className="flex flex-wrap gap-3 mb-12 justify-center md:justify-start">
-          <img src={guatemala} alt="Guatemala" className="h-10 object-contain" />
-          <img src={venezuela} alt="Venezuela" className="h-10 object-contain" />
-          <img src={bolivia} alt="Bolívia" className="h-10 object-contain" />
-          <img src={equador} alt="Equador" className="h-10 object-contain" />
-          <img src={paraguai} alt="Paraguai" className="h-10 object-contain" />
-        </div>
+      <h3 className="text-3xl font-bold mb-6 text-[var(--color-dark-blue)]">
+        {t('home.subtitleMapa')}
+      </h3>
+      <h4 className="text-2xl font-bold mb-6 text-[var(--color-dark-blue)]">
+        {t('home.descriptionMapa')}
+      </h4>
 
-        <h3 className="text-3xl font-bold mb-6 text-[var(--color-dark-blue)]">
-          Nossos setores
-        </h3>
+      {/* Início da UL com Efeito Sanfona */}
+      <ul className="space-y-4 text-gray-800">
+        {[
+          { title: t('home.sucroEnergetica'), text: t('home.textoSucro') },
+          { title: t('home.offshore'), text: t('home.textoOffshore') },
+          { title: t('home.industriaNaval'), text: t('home.textoNaval') },
+          { title: t('home.construcaoCivil'), text: t('home.textoConstrucao') },
+          { title: t('home.petroquimica'), text: t('home.textoPetroquimica') },
+          { title: t('home.papelCelulose'), text: t('home.textoPapel') },
+          { title: t('home.mineracao'), text: t('home.textoMineracao') },
+          { title: t('home.geracaoEnergia'), text: t('home.textoEnergia') },
+        ].map((item, index) => (
+          <li key={index} className="border-b border-gray-100 pb-2">
+            <div 
+              className="flex items-center justify-between cursor-pointer group"
+              onClick={() => toggleAccordion(index)}
+            >
+              <div className="flex items-start gap-3">
+                <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101] shrink-0" />
+                <span className="text-lg font-bold text-[#FF5101]">
+                  {item.title}
+                </span>
+              </div>
+              
+              {/* O sinal de + na cor do título */}
+              <motion.span 
+                className="text-2xl font-bold text-[#FF5101] ml-4"
+                animate={{ rotate: activeIndex === index ? 45 : 0 }}
+              >
+                +
+              </motion.span>
+            </div>
 
-        <ul className="space-y-4 text-gray-800">
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className="text-lg">
-              Limpeza de evaporadores, caldeiras, aquecedores, linha de xarope
-              e tubulações em geral.
-            </span>
+            <AnimatePresence>
+              {activeIndex === index && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <p className="pl-6 pt-2 pb-4 text-lg text-gray-700">
+                    {item.text}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className="text-lg">
-              Hidrojateamento, limpeza de concreto, preparação de superfície
-              e apicoamento.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className="text-lg">
-              Limpeza de trocadores de calor, tubulações, corte de refratários
-              e limpeza de tanques e caldeiras.
-            </span>
-          </li>
-
-          <li className="flex items-start gap-3">
-            <span className="w-3 h-3 mt-2 rounded-full bg-[#FF5101]" />
-            <span className="text-lg">
-              Limpeza de duto forno, tubulações, corte de refratários
-              e limpeza de torre ciclone.
-            </span>
-          </li>
-        </ul>
-      </motion.div>
+        ))}
+      </ul>
+    </motion.div>
 
       {/* COLUNA DIREITA - MAPA */}
       <div className="flex justify-center lg:justify-end">
         <img
           src={americaDoSul}
           alt="Presença da Mamuth na América Latina"
-          className="w-[400px] md:w-[600px] lg:w-[700px] object-contain"
+          className="w-[400px] md:w-[800px] lg:w-[1000px] object-contain"
         />
       </div>
 
@@ -312,10 +405,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-              Nossas Linhas de Produtos
+              {t('home.titleProdutos')}
             </h2>
             <p className="text-lg md:text-2xl max-w-2xl mx-auto text-white">
-              Equipamentos de alta qualidade para todas as suas necessidades industriais
+              {t('home.subtitleProdutos')}
             </p>
           </div>
             <ProductCarousel products={products} />
@@ -342,13 +435,13 @@ const Home = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold mb-6" style={{ color: 'var(--color-dark-blue)' }}>
-                Excelência em Soluções Industriais
+                {t('home.titleExcelencia')}
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                A Mamuth é referência nacional em equipamentos de alta pressão e soluções para limpeza industrial. Com mais de duas décadas de experiência, oferecemos produtos e serviços que combinam tecnologia de ponta, eficiência operacional e suporte técnico especializado.
+                {t('home.subtitleExcelencia1')}
               </p>
               <p className="text-lg text-gray-600">
-                Nossa missão é fornecer soluções completas que aumentem a produtividade e reduzam custos operacionais de nossos clientes, sempre com o compromisso de qualidade, segurança e sustentabilidade.
+                {t('home.subtitleExcelencia2')}
               </p>
             </motion.div>
             <motion.div
@@ -376,8 +469,8 @@ const Home = () => {
       <section className="py-16" style={{ backgroundColor: 'var(--color-dark-blue)' }} >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 text-white lg:px-8">
           <SectionTitle
-            title="Por que escolher a Mamuth Hidrojato"    
-            subtitle="Especialização técnica, portfólio completo em SAP e HP e suporte que acompanha a operação"
+            title={t('home.titleEscolher')}    
+            subtitle={t('home.subtitleEscolher')}
             titleColor="text-white"
             subtitleColor="text-white"
           />
@@ -392,33 +485,11 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* Final CTA Section */}
-       <section className="py-16 text-white" style={{ backgroundColor: '#FF5101' }}>
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Precisa de uma Solução Específica?
-              </h2>
-              <p className="text-xl mb-8">
-                Nossa equipe técnica está pronta para desenvolver a solução perfeita para sua operação
-              </p>
-              <button
-                onClick={() => handleProductClick()}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold bg-white text-lg transition-all hover:shadow-lg transform hover:-translate-y-0.5"
-                style={{ color: 'var(--color-dark-blue)' }}
-              >
-                Solicite um Orçamento
-              </button>
-            </motion.div>
-          </div>
-        </section>
-    <>
+       <CTASection />
       <CertificacoesSection />
+      <WhatsappButton />
+    <>
+
     </>
             </>
           );

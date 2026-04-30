@@ -15,3 +15,11 @@
 .max-w-7xl .swiper-pagination {
   bottom: 0 !important; /* Fixa os pontos no final do espaço criado */
 }
+.swiper {
+  padding-bottom: 40px !important;
+}
+
+/* Ou, se quiser mover a posição exata das bolinhas */
+.swiper-pagination {
+  bottom: 0px !important; /* Ajuste este valor conforme necessário */
+}

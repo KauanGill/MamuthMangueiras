@@ -4,16 +4,18 @@ import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom';
 
 import AppleCoverFlow from "@/components/AppleCoverFlow";
+import CTASection from "@/components/CTASection";
 
 // Import da imagem
 import poliamidaSap1500 from '@/assets/images/poliamida-sap-ate1500.png';
+import seloParker from "@/assets/images/selo-certificado-parker.png";
 
 const PoliamidaSAP1500 = () => {
   const navigate = useNavigate();
   const slides = [
-        { id: 1, title: 'Poliamida SAP', artist: 'Trifásico', cover: poliamidaSap1500, color: '#FF5101' },
-        { id: 2, title: 'Poliamida SAP', artist: 'Vista lateral', cover: poliamidaSap1500, color: '#FF5101' },
-        { id: 3, title: 'Poliamida SAP', artist: 'Detalhes', cover: poliamidaSap1500, color: '#FF5101' }
+        { id: 1, title: 'Poliamida SAP', cover: poliamidaSap1500, color: '#FF5101' },
+        { id: 2, title: 'Poliamida SAP', cover: poliamidaSap1500, color: '#FF5101' },
+        { id: 3, title: 'Poliamida SAP', cover: poliamidaSap1500, color: '#FF5101' }
   ];
 
   // Garante que a página inicie no topo
@@ -40,11 +42,16 @@ const PoliamidaSAP1500 = () => {
       {/* SEÇÃO DE TEXTOS: BRANCA - SEUS TEXTOS ORIGINAIS AQUI */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 
-            className="text-5xl md:text-6xl font-bold mb-10 text-left "
+         <h2 
+            className="text-5xl md:text-6xl font-bold mb-10 text-left flex items-center gap-4"
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            Poliamida SAP
+            Poliamida SAP 1500
+            <img 
+              src={seloParker}
+              alt="Selo de Qualidade" 
+              className="w-16 h-auto md:w-32 md:h-auto object-contain" 
+            />
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed font-bold mb-10 text-left">
@@ -83,20 +90,20 @@ const PoliamidaSAP1500 = () => {
             </h2>
           </div>
 
-          <div className="overflow-x-auto pb-4 custom-scrollbar">
-            <table className="w-full min-w-[1200px] border-collapse rounded-xl overflow-hidden shadow-md">
+          <div className="w-full overflow-hidden rounded-xl shadow-md border border-gray-200">
+            <table className="w-full border-collapse">
               <thead>
-                <tr className="text-white" style={{ backgroundColor: '#FF6B0A' }}>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Modelo</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Interno (mm)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Diâmetro Externo (mm)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">P. Trabalho (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">P. Trabalho (psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg text-orange-200">P. Ruptura (bar)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">P. Ruptura (psi)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Raio Curvatura (mm)</th>
-                  <th className="py-6 px-4 border-r border-orange-400 font-bold text-lg">Peso (kg/m)</th>
-                  <th className="py-6 px-4 font-bold text-lg">Ø Terminal (mm)</th>
+                <tr className="text-white text-sm" style={{ backgroundColor: '#FF6B0A' }}>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold">Modelo</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold">Ø Int. (mm)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold">Ø Ext. (mm)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold">P. Trab (bar)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold">P. Trab (psi)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold">P. Rupt (bar)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold">P. Rupt (psi)</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold">Raio Curv.</th>
+                  <th className="py-4 px-2 border-r border-orange-400 font-bold">Peso (kg/m)</th>
+                  <th className="py-4 px-2 font-bold">Ø Term.</th>
                 </tr>
               </thead>
               <tbody>
@@ -110,63 +117,29 @@ const PoliamidaSAP1500 = () => {
                   { mod: "8/2", di: "8,0", de: "15,8", ptb: "1.000", ptp: "14.500", prb: "2.500", prp: "36.250", rc: "90", p: "0,350", dt: "20,0" },
                   { mod: "8/4", di: "8,0", de: "15,2", ptb: "1.500", ptp: "21.750", prb: "3.800", prp: "54.375", rc: "175", p: "0,440", dt: "20,5" },
                 ].map((item, index) => (
-                  <tr key={index} className="bg-white text-gray-800 border-b border-gray-200 hover:bg-orange-50 transition-colors">
-                    <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl">{item.mod}</td>
-                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.di}</td>
-                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.de}</td>
-                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.ptb}</td>
-                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.ptp}</td>
-                    <td className="py-8 px-4 border-r border-gray-200 font-bold text-xl text-center text-orange-600 bg-orange-50/10">{item.prb}</td>
-                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.prp}</td>
-                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.rc}</td>
-                    <td className="py-8 px-4 border-r border-gray-200 text-xl text-center">{item.p}</td>
-                    <td className="py-8 px-4 text-xl text-center font-semibold">{item.dt}</td>
+                  <tr key={index} className="bg-white text-gray-800 border-b border-gray-200 hover:bg-orange-50 transition-colors text-xs md:text-sm">
+                    <td className="py-3 px-2 border-r border-gray-200 font-bold">{item.mod}</td>
+                    <td className="py-3 px-2 border-r border-gray-200 text-center">{item.di}</td>
+                    <td className="py-3 px-2 border-r border-gray-200 text-center">{item.de}</td>
+                    <td className="py-3 px-2 border-r border-gray-200 text-center">{item.ptb}</td>
+                    <td className="py-3 px-2 border-r border-gray-200 text-center">{item.ptp}</td>
+                    <td className="py-3 px-2 border-r border-gray-200 font-bold text-center text-orange-600 bg-orange-50/30">{item.prb}</td>
+                    <td className="py-3 px-2 border-r border-gray-200 text-center">{item.prp}</td>
+                    <td className="py-3 px-2 border-r border-gray-200 text-center">{item.rc}</td>
+                    <td className="py-3 px-2 border-r border-gray-200 text-center">{item.p}</td>
+                    <td className="py-3 px-2 text-center font-semibold">{item.dt}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-
-          <style dangerouslySetInnerHTML={{ __html: `
-            .custom-scrollbar::-webkit-scrollbar { height: 8px; }
-            .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-            .custom-scrollbar::-webkit-scrollbar-thumb { background: #FF6B0A; border-radius: 10px; }
-          `}} />
         </div>
       </section>
 
       {/* SEÇÃO FINAL: ATENÇÃO (CINZA ESCURO E LARANJA #FF6B0A) */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div 
-            className="rounded-[30px] p-8 md:p-12 border-2 shadow-2xl"
-            style={{ backgroundColor: '#d3d3d3', borderColor: '#FF6B0A' }}
-          >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              <div 
-                className="flex-shrink-0 w-16 h-16 rounded-full border-4 flex items-center justify-center text-4xl font-black"
-                style={{ color: '#FF6B0A', borderColor: '#FF6B0A' }}
-              >
-                !
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-black text-3xl font-bold mb-6">Atenção</h3>
-                <p className="text-black text-xl leading-relaxed mb-8">
-                  Para garantir a segurança e o desempenho ideal, utilize sempre 
-                  <span style={{ color: '#FF6B0A' }} className="font-bold"> Peças e Acessórios Originais Mamuth</span>.
-                </p>
-                <button
-                  onClick={() => navigate('/contato')}
-                  className="px-10 py-4 rounded-full font-bold text-black text-lg transition-all hover:scale-105"
-                  style={{ backgroundColor: '#FF6B0A' }}
-                >
-                  Fale Conosco
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className='pt-14'>
+        <CTASection />
+      </div>
     </div>
   );
 };
